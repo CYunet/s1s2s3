@@ -1,77 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <title>S1/S2/S3 Artefact Pedagogique</title>
+  <meta name="color-scheme" content="dark light">
+  <title>Perceived Value Co-creation in AI-Era Consulting</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="hero">
-    <div class="hero__content">
+    <div class="hero__shell">
       <div class="hero__topbar">
-        <div>
+        <div class="hero__copy">
           <h1 class="hero__title" id="mainTitle"></h1>
           <p class="hero__subtitle" id="subtitle"></p>
         </div>
-        <div class="toolbar" aria-label="Outils d'interface">
-          <button class="tool-btn" id="langBtn" type="button" aria-label="Changer de langue">FR | EN</button>
-          <button class="tool-btn" id="themeBtn" type="button" aria-label="Changer de theme">Theme clair</button>
+        <div class="toolbar">
+          <button class="tool-btn tool-btn--lang" id="langBtn" type="button" aria-label="Toggle language"></button>
+          <button class="tool-btn" id="themeBtn" type="button" aria-label="Toggle color theme"></button>
         </div>
       </div>
-      <p class="hero__intro" id="introText"></p>
-      <div class="hero__meta">
-        <section class="meta-card">
-          <p class="meta-card__title" id="caseTitle"></p>
-          <div class="meta-grid" id="caseGrid"></div>
-        </section>
-      </div>
-      <nav class="hero__actions" aria-label="Sections detaillees">
-        <button class="action-btn" type="button" data-panel-open="theory" id="btnTheory"></button>
-        <button class="action-btn action-btn--secondary" type="button" data-panel-open="spheres" id="btnSpheres"></button>
-      </nav>
+      <nav class="section-nav" id="sectionNav" aria-label="Primary sections"></nav>
     </div>
   </header>
 
   <main id="main" class="layout">
-    <section class="timeline-card" aria-labelledby="timelineHeading">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker" id="timelineKicker"></p>
-          <h2 class="section-title" id="timelineHeading"></h2>
-        </div>
-        <p class="section-note" id="tlDesc"></p>
-      </div>
-
-      <div class="phase-nav" id="phaseNav" role="tablist" aria-label="Phases de mission"></div>
-      <article class="phase-detail" id="phContent" aria-live="polite"></article>
-    </section>
+    <section class="content-section" id="why"></section>
+    <section class="content-section" id="theory"></section>
+    <section class="content-section" id="spheres"></section>
+    <section class="content-section" id="illustration"></section>
   </main>
 
-  <footer class="page-footer" aria-label="Signature">
+  <footer class="page-footer">
     <p class="page-footer__signature" id="heroSignature"></p>
   </footer>
-
-  <div class="panel-shell" id="panelShell" hidden>
-    <div class="panel-backdrop" data-panel-close="true"></div>
-    <aside class="panel" id="detailPanel" aria-modal="true" aria-labelledby="panelTitle" role="dialog">
-      <div class="panel__grabber" aria-hidden="true"></div>
-      <header class="panel__header">
-        <div>
-          <p class="panel__eyebrow" id="panelEyebrow"></p>
-          <h2 class="panel__title" id="panelTitle"></h2>
-        </div>
-        <button class="tool-btn" id="panelCloseBtn" type="button" data-panel-close="true" aria-label="Fermer le panneau">Fermer</button>
-      </header>
-      <div class="panel__body" id="panelBody"></div>
-    </aside>
-  </div>
 
   <script src="./content.js"></script>
   <script src="./app.js"></script>
