@@ -27,15 +27,15 @@ window.ARTEFACT_CONTENT = {
       whyResearch: {
         kicker: "RESEARCH POSITIONING",
         titleLines: [
-          "Why perceived value research matters",
-          "for consulting business model redesign"
+          "Understanding perceived value co-creation",
+          "in consulting in the AI era"
         ],
         questionLabel: "THE QUESTION",
-        questionHtml: "Consulting firms are betting their business model redesign on AI. The augmented consultant will produce faster, better, safer — and clients will derive greater perceived value from it.<br><br><span class=\"accent-blue\">But will they?</span>",
+        questionHtml: "Consulting firms are redesigning their business models around AI. But this redesign will only be sustainable if it actually leads, from the client's standpoint, to stronger perceived value co-creation.<br><br><span class=\"accent-blue\">That is precisely the link this research seeks to understand.</span>",
         whyLabel: "WHY IT MATTERS",
-        whyHtml: "The question matters because <strong>perceived value in consulting is not delivered — it is co-created, and it only becomes real through the client's perception.</strong> Producing more, faster, cheaper does not guarantee greater perceived value. Academic literature on management consulting further suggests that perceived value co-creation has historically fallen short of its potential. <strong>So why would AI change that?</strong>",
+        whyHtml: "The question matters because <strong>in consulting, perceived value is not simply delivered — it is co-created, and it only becomes real through the client's perception.</strong> Redesigning a business model around AI does not, by itself, guarantee a better co-creation experience, fairer attribution, or greater perceived value. Academic literature on management consulting further suggests that perceived value co-creation has historically fallen short of its potential. <strong>Business model redesign therefore cannot be understood seriously without understanding the conditions under which this co-creation actually holds.</strong>",
         gapLabel: "THE RESEARCH GAP",
-        gapHtml: "<strong class=\"accent-amber\">Theoretically:</strong> existing literature documents the constituent links of perceived value co-creation in consulting — but no framework synthesizes them into a unified sequence, nor theorizes how AI reconfigures each link. <strong class=\"accent-amber\">In practice:</strong> emerging business models assume clients will derive greater perceived value from AI-augmented delivery — without theorizing the conditions under which this perception actually occurs."
+        gapHtml: "<strong class=\"accent-amber\">Theoretically:</strong> existing literature documents the constituent links of perceived value co-creation in consulting — but no framework synthesizes them into a unified sequence, nor theorizes how AI reconfigures each link. <strong class=\"accent-amber\">In practice:</strong> emerging consulting business models assume that AI-augmented delivery will generate greater perceived value for clients — without theorizing the conditions under which that perception actually forms."
       },
       theory: {
         kicker: "THEORETICAL FRAMEWORK",
@@ -290,15 +290,15 @@ window.ARTEFACT_CONTENT = {
       whyResearch: {
         kicker: "POSITIONNEMENT DE LA RECHERCHE",
         titleLines: [
-          "Pourquoi la valeur perçue est décisive",
-          "dans la refonte du business model du conseil"
+          "Comprendre la co-création de valeur perçue",
+          "dans le conseil à l'ère de l'IA"
         ],
         questionLabel: "LA QUESTION",
-        questionHtml: "Les cabinets de conseil misent aujourd'hui sur l'IA pour refondre leur business model. Le pari implicite est simple : un consultant augmenté produira plus vite, mieux et de manière plus sûre — et le client en retirera une valeur perçue supérieure.<br><br><span class=\"accent-blue\">Mais ce lien n'a rien d'automatique.</span>",
+        questionHtml: "Les cabinets de conseil refondent aujourd'hui leur business model autour de l'IA. Mais cette refonte ne sera soutenable que si elle conduit réellement, du point de vue du client, à une co-création de valeur perçue plus forte.<br><br><span class=\"accent-blue\">C'est précisément ce lien que cette recherche cherche à comprendre.</span>",
         whyLabel: "POURQUOI CELA COMPTE",
-        whyHtml: "La question est centrale parce que <strong>dans le conseil, la valeur perçue n'est pas simplement délivrée : elle est co-créée, et seule la perception du client la rend effective.</strong> Produire davantage, plus vite ou à moindre coût ne suffit donc pas à accroître la valeur perçue. La littérature sur le conseil en management suggère en outre que la co-création de valeur perçue y demeure historiquement incomplète. <strong>Dès lors, pourquoi l'IA inverserait-elle spontanément cette limite ?</strong>",
+        whyHtml: "La question est centrale parce que <strong>dans le conseil, la valeur perçue n'est pas simplement délivrée : elle est co-créée, et seule la perception du client la rend effective.</strong> Refondre un business model autour de l'IA ne garantit donc ni une meilleure expérience de co-création, ni une attribution plus juste, ni une valeur perçue plus élevée. La littérature sur le conseil en management suggère en outre que la co-création de valeur perçue y demeure historiquement incomplète. <strong>La refonte du business model ne peut donc être pensée sérieusement sans comprendre les conditions dans lesquelles cette co-création tient réellement.</strong>",
         gapLabel: "LE GAP THÉORIQUE ET PRATIQUE",
-        gapHtml: "<strong class=\"accent-amber\">Sur le plan théorique :</strong> la littérature documente les liens constitutifs de la co-création de valeur perçue dans le conseil, mais aucun cadre ne les articule dans une séquence unifiée ni ne théorise la manière dont l'IA reconfigure chacun de ces liens. <strong class=\"accent-amber\">Sur le plan pratique :</strong> les business models émergents supposent que le client retirera une valeur perçue supérieure d'une délivrance augmentée par l'IA, sans expliciter les conditions dans lesquelles cette perception se forme réellement."
+        gapHtml: "<strong class=\"accent-amber\">Sur le plan théorique :</strong> la littérature documente les liens constitutifs de la co-création de valeur perçue dans le conseil, mais aucun cadre ne les articule dans une séquence unifiée ni ne théorise la manière dont l'IA reconfigure chacun de ces liens. <strong class=\"accent-amber\">Sur le plan pratique :</strong> les nouveaux business models du conseil fondés sur l'IA supposent qu'une délivrance augmentée générera une valeur perçue supérieure pour le client, sans expliciter les conditions dans lesquelles cette perception se forme réellement."
       },
       theory: {
         kicker: "CADRE THÉORIQUE",
