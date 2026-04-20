@@ -1,5 +1,7 @@
 # S1 / S2 / S3 Artefact
 
+A pedagogical artifact presenting PhD research on the perceived value of consulting in the age of AI.
+
 Version refondue de l'artefact pedagogique pour un usage Git/GitHub.
 
 ## Fichiers
