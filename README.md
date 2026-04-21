@@ -148,11 +148,11 @@ Implemented:
 - floating contextual cloud-chatbot UI
 - page-aware chatbot context
 - server endpoint for OpenAI Responses API
+- Vercel Web Analytics via `/_vercel/insights/script.js`
 
 Not yet included:
 
 - deployment configuration file for a specific hosting provider
-- analytics
 - authoring CMS
 - automated tests
 
