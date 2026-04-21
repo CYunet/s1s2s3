@@ -4,7 +4,9 @@
     lang: document.documentElement.getAttribute("lang") || "en",
     theme: document.documentElement.getAttribute("data-theme") || "dark",
     activePhase: 0,
-    activeSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why"
+    activeSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
+    chatHistories: {},
+    chatPending: {}
   };
 
   var els = {
@@ -34,6 +36,13 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function stripHtml(value) {
+    return String(value || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   function renderHero() {
@@ -101,23 +110,419 @@
       "</div>";
   }
 
-  function buildPhaseDetail(phase) {
+  function findIllustrationStage(data, stageId) {
+    var stages = data.stages || [];
+    var i;
+
+    for (i = 0; i < stages.length; i += 1) {
+      if (stages[i].id === stageId) {
+        return stages[i];
+      }
+    }
+
+    return null;
+  }
+
+  function buildPhaseDetail(phase, stageLabel) {
+    var detailLabels = getContent().illustration.detailLabels || {};
+    var titleWithWeek = phase.week
+      ? phase.title + " - " + phase.week
+      : phase.title;
+
     return (
       '<div class="timeline-detail">' +
       '<div class="timeline-detail__top">' +
-      '<span class="timeline-detail__week">' + escapeHtml(phase.week) + "</span>" +
-      '<span class="timeline-detail__badge tone-' + escapeHtml(phase.tone) + '">' + escapeHtml(phase.badge) + "</span>" +
+      (stageLabel
+        ? '<span class="timeline-detail__stage">' + escapeHtml(stageLabel) + "</span>"
+        : "") +
       "</div>" +
-      '<h3 class="timeline-detail__title">' + escapeHtml(phase.title) + "</h3>" +
+      '<h3 class="timeline-detail__title">' + escapeHtml(titleWithWeek) + "</h3>" +
+      '<div class="timeline-detail__meta">' +
+      '<div class="timeline-detail__meta-row">' +
+      '<span class="timeline-detail__label">' + escapeHtml(detailLabels.situation || "") + "</span>" +
+      '<div class="timeline-detail__value">' +
+      buildSituationBadge(phase.badge, phase.tone, true) +
+      "</div>" +
+      "</div>" +
+      '<div class="timeline-detail__meta-row">' +
+      '<span class="timeline-detail__label">' + escapeHtml(detailLabels.propositions || "") + "</span>" +
+      '<div class="timeline-detail__value">' +
+      buildPropositionPills(phase.propositions, "timeline-detail__props", true) +
+      "</div>" +
+      "</div>" +
+      '<div class="timeline-detail__meta-row">' +
+      '<span class="timeline-detail__label">' + escapeHtml(detailLabels.dimensions || "") + "</span>" +
+      '<div class="timeline-detail__value">' +
+      buildDimensionPills(phase.dimensions, true) +
+      "</div>" +
+      "</div>" +
+      "</div>" +
       '<p class="timeline-detail__body">' + escapeHtml(phase.body) + "</p>" +
       '<p class="timeline-detail__observable">' + escapeHtml(phase.observable) + "</p>" +
       "</div>"
     );
   }
 
+  function buildPropositionPills(items, className) {
+    var glossary = ((getContent().illustration || {}).glossary || {}).propositions || {};
+
+    if (!items || !items.length) {
+      return "";
+    }
+
+    return (
+      '<span class="' + className + '">' +
+      items.map(function (item) {
+        return buildExplainableToken("timeline-prop", item, glossary[item]);
+      }).join("") +
+      "</span>"
+    );
+  }
+
+  function buildDimensionPills(items) {
+    var glossary = ((getContent().illustration || {}).glossary || {}).dimensions || {};
+
+    if (!items || !items.length) {
+      return "";
+    }
+
+    return (
+      '<span class="timeline-dimensions">' +
+      items.map(function (item) {
+        var key = String(item).toLowerCase();
+        return buildExplainableToken("timeline-dimension timeline-dimension--" + key, item, glossary[item]);
+      }).join("") +
+      "</span>"
+    );
+  }
+
+  function buildSituationBadge(label, tone, isDetail) {
+    var glossary = ((getContent().illustration || {}).glossary || {}).situations || {};
+    var classes = isDetail
+      ? "timeline-detail__badge tone-" + tone
+      : "timeline-chip__badge tone-" + tone;
+
+    return buildExplainableToken(classes, label, glossary[label]);
+  }
+
+  function buildExplainableToken(className, label, definition) {
+    var attrs = "";
+
+    if (definition) {
+      attrs += ' title="' + escapeHtml(definition) + '"';
+      attrs += ' aria-label="' + escapeHtml(label + ". " + definition) + '"';
+      attrs += ' class="' + escapeHtml(className) + ' is-explainable"';
+    } else {
+      attrs += ' class="' + escapeHtml(className) + '"';
+    }
+
+    return '<span' + attrs + '>' + escapeHtml(label) + "</span>";
+  }
+
+  function getChatHistoryKey() {
+    return state.lang + ":" + String(state.activePhase);
+  }
+
+  function getChatHistory() {
+    return state.chatHistories[getChatHistoryKey()] || [];
+  }
+
+  function isChatPending() {
+    return Boolean(state.chatPending[getChatHistoryKey()]);
+  }
+
+  function getChatRoleLabel(role) {
+    if (role === "assistant") {
+      return "AI";
+    }
+
+    return state.lang === "fr" ? "Vous" : "You";
+  }
+
+  function formatMessageText(text) {
+    return String(text || "")
+      .split(/\n{2,}/)
+      .map(function (paragraph) {
+        return "<p>" + escapeHtml(paragraph).replace(/\n/g, "<br>") + "</p>";
+      })
+      .join("");
+  }
+
+  function buildChatMessage(message) {
+    var roleClass = message.role === "user" ? "chatbot-message--user" : "chatbot-message--assistant";
+    var pendingClass = message.pending ? " chatbot-message--pending" : "";
+
+    return (
+      '<article class="chatbot-message ' + roleClass + pendingClass + '">' +
+      '<div class="chatbot-message__role">' + escapeHtml(getChatRoleLabel(message.role)) + "</div>" +
+      '<div class="chatbot-message__bubble">' + formatMessageText(message.text) + "</div>" +
+      "</article>"
+    );
+  }
+
+  function buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel) {
+    var theory = getContent().theory;
+    var glossary = data.glossary || {};
+
+    return {
+      language: state.lang,
+      current: {
+        stage: activeStageLabel,
+        stageId: active.stage,
+        stageSummary: activeStage ? activeStage.summary : "",
+        substep: active.title,
+        week: active.week,
+        situation: {
+          code: active.badge,
+          definition: ((glossary.situations || {})[active.badge]) || ""
+        },
+        propositions: (active.propositions || []).map(function (item) {
+          return {
+            code: item,
+            definition: ((glossary.propositions || {})[item]) || ""
+          };
+        }),
+        dimensions: (active.dimensions || []).map(function (item) {
+          return {
+            code: item,
+            definition: ((glossary.dimensions || {})[item]) || ""
+          };
+        }),
+        body: active.body,
+        observable: active.observable
+      },
+      illustration: {
+        stages: (data.stages || []).map(function (stage) {
+          return {
+            id: stage.id,
+            index: stage.index,
+            title: stage.title,
+            span: stage.span,
+            summary: stage.summary
+          };
+        }),
+        postMission: data.postMission || {},
+        phases: (data.phases || []).map(function (phase) {
+          var phaseStage = findIllustrationStage(data, phase.stage);
+          return {
+            stage: phaseStage ? phaseStage.title : (data.postMission && data.postMission.label) || "",
+            stageId: phase.stage,
+            title: phase.title,
+            week: phase.week,
+            situation: {
+              code: phase.badge,
+              definition: ((glossary.situations || {})[phase.badge]) || ""
+            },
+            propositions: (phase.propositions || []).map(function (item) {
+              return {
+                code: item,
+                definition: ((glossary.propositions || {})[item]) || ""
+              };
+            }),
+            dimensions: (phase.dimensions || []).map(function (item) {
+              return {
+                code: item,
+                definition: ((glossary.dimensions || {})[item]) || ""
+              };
+            }),
+            body: phase.body,
+            observable: phase.observable
+          };
+        })
+      },
+      theory: {
+        intro: stripHtml(theory.introHtml),
+        propositions: (theory.propositionDetails || []).map(function (item) {
+          return {
+            badge: item.badge,
+            title: item.title,
+            text: item.text
+          };
+        }),
+        observationalFramework: {
+          text: (theory.observationalFramework || {}).text || "",
+          chips: ((theory.observationalFramework || {}).chips || []).map(function (chip) {
+            return chip.text;
+          })
+        },
+        model: {
+          intro: (theory.rpcDiagram || {}).intro || "",
+          links: ((theory.rpcDiagram || {}).links || []).map(function (item) {
+            return {
+              label: item.label,
+              positive: item.positive,
+              negative: item.negative,
+              contingency: item.contingency
+            };
+          })
+        }
+      }
+    };
+  }
+
+  function buildChatbotPanel(data, active, activeStageLabel, activeStage) {
+    var chat = data.chatbot || {};
+    var history = getChatHistory();
+    var pending = isChatPending();
+    var messagesHtml = history.length
+      ? history.map(buildChatMessage).join("")
+      : buildChatMessage({ role: "assistant", text: chat.welcome || "" });
+    var suggestions = chat.suggestions || [];
+
+    if (pending) {
+      messagesHtml += buildChatMessage({
+        role: "assistant",
+        text: chat.thinking || "",
+        pending: true
+      });
+    }
+
+    return (
+      '<aside class="chatbot-panel">' +
+      '<div class="chatbot-panel__head">' +
+      '<span class="chatbot-panel__icon" aria-hidden="true">AI</span>' +
+      '<div class="chatbot-panel__copy">' +
+      '<h3 class="chatbot-panel__title">' + escapeHtml(chat.title || "") + "</h3>" +
+      '<p class="chatbot-panel__note">' + escapeHtml(chat.note || "") + "</p>" +
+      "</div>" +
+      "</div>" +
+      '<div class="chatbot-context">' +
+      '<p class="chatbot-context__heading">' + escapeHtml(chat.contextLabel || "") + "</p>" +
+      '<div class="chatbot-context__grid">' +
+      '<div class="chatbot-context__row">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextStage || "") + "</span>" +
+      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(activeStageLabel || (activeStage && activeStage.title) || "") + "</span></div>" +
+      "</div>" +
+      '<div class="chatbot-context__row">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextSubstep || "") + "</span>" +
+      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(active.title + (active.week ? " - " + active.week : "")) + "</span></div>" +
+      "</div>" +
+      '<div class="chatbot-context__row">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextSituation || "") + "</span>" +
+      '<div class="chatbot-context__value">' + buildSituationBadge(active.badge, active.tone, false) + "</div>" +
+      "</div>" +
+      '<div class="chatbot-context__row">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextPropositions || "") + "</span>" +
+      '<div class="chatbot-context__value">' + buildPropositionPills(active.propositions, "timeline-chip__props") + "</div>" +
+      "</div>" +
+      '<div class="chatbot-context__row chatbot-context__row--full">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextDimensions || "") + "</span>" +
+      '<div class="chatbot-context__value">' + buildDimensionPills(active.dimensions) + "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      '<div class="chatbot-suggestions">' +
+      '<p class="chatbot-suggestions__label">' + escapeHtml(chat.suggestionsLabel || "") + "</p>" +
+      '<div class="chatbot-suggestions__list">' +
+      suggestions.map(function (question) {
+        return '<button class="chatbot-suggestion" type="button" data-chat-suggestion="' + escapeHtml(question) + '"' + (pending ? " disabled" : "") + '>' + escapeHtml(question) + "</button>";
+      }).join("") +
+      "</div>" +
+      "</div>" +
+      '<div class="chatbot-messages" aria-live="polite">' + messagesHtml + "</div>" +
+      '<form class="chatbot-form">' +
+      '<label class="chatbot-form__label" for="chatbotQuestion">' + escapeHtml(chat.inputLabel || "") + "</label>" +
+      '<div class="chatbot-form__row">' +
+      '<textarea class="chatbot-form__input" id="chatbotQuestion" name="question" rows="4" placeholder="' + escapeHtml(chat.placeholder || "") + '"' + (pending ? " disabled" : "") + "></textarea>" +
+      '<button class="chatbot-form__button" type="submit"' + (pending ? " disabled" : "") + ">" + escapeHtml(chat.send || "") + "</button>" +
+      "</div>" +
+      "</form>" +
+      "</aside>"
+    );
+  }
+
+  function focusChatInput() {
+    var input = els.illustration.querySelector(".chatbot-form__input");
+    if (input) {
+      input.focus();
+    }
+  }
+
+  function submitChatQuestion(question) {
+    var data = getContent().illustration;
+    var chat = data.chatbot || {};
+    var trimmed = String(question || "").trim();
+    var key = getChatHistoryKey();
+    var active = data.phases[state.activePhase];
+    var activeStage = findIllustrationStage(data, active.stage);
+    var activeStageLabel = activeStage
+      ? activeStage.index + ". " + activeStage.title
+      : (data.postMission && data.postMission.label) || "";
+    var previousHistory;
+
+    if (!trimmed || state.chatPending[key]) {
+      return;
+    }
+
+    previousHistory = getChatHistory().slice();
+    previousHistory.push({ role: "user", text: trimmed });
+    state.chatHistories[key] = previousHistory;
+    state.chatPending[key] = true;
+    renderIllustration();
+
+    if (window.location.protocol === "file:") {
+      state.chatHistories[key] = previousHistory.concat([{ role: "assistant", text: chat.localMode || "" }]);
+      state.chatPending[key] = false;
+      renderIllustration();
+      focusChatInput();
+      return;
+    }
+
+    fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        language: state.lang,
+        question: trimmed,
+        history: previousHistory.slice(0, -1).slice(-6),
+        context: buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel)
+      })
+    }).then(function (response) {
+      return response.json().catch(function () {
+        return {};
+      }).then(function (payload) {
+        if (!response.ok || !payload.answer) {
+          throw new Error(payload.error || "backend");
+        }
+
+        return payload.answer;
+      });
+    }).then(function (answer) {
+      state.chatHistories[key] = (state.chatHistories[key] || []).concat([
+        { role: "assistant", text: answer }
+      ]);
+    }).catch(function () {
+      state.chatHistories[key] = (state.chatHistories[key] || []).concat([
+        { role: "assistant", text: chat.backendError || "" }
+      ]);
+    }).finally(function () {
+      state.chatPending[key] = false;
+      renderIllustration();
+      focusChatInput();
+    });
+  }
+
   function renderIllustration() {
     var data = getContent().illustration;
     var active = data.phases[state.activePhase];
+    var activeStage = findIllustrationStage(data, active.stage);
+    var activeStageLabel = activeStage
+      ? activeStage.index + ". " + activeStage.title
+      : (data.postMission && data.postMission.label) || "";
+    var missionPhases = data.phases.filter(function (phase) {
+      return phase.stage !== "postmission";
+    });
+    var postPhase = null;
+    var postIndex = -1;
+
+    data.phases.forEach(function (phase, index) {
+      if (phase.stage === "postmission") {
+        postPhase = phase;
+        postIndex = index;
+      }
+    });
 
     els.illustration.innerHTML =
       '<p class="section-kicker">' + escapeHtml(data.kicker) + "</p>" +
@@ -126,31 +531,112 @@
       '<h2 class="section-title">' + escapeHtml(data.title) + "</h2>" +
       '<p class="timeline-label">' + escapeHtml(data.subtitle) + "</p>" +
       '<p class="timeline-intro">' + escapeHtml(data.intro) + "</p>" +
+      '<p class="timeline-legend">' + escapeHtml(data.legend) + "</p>" +
       "</div>" +
-      '<div class="timeline-chips" role="tablist" aria-label="' + escapeHtml(data.subtitle) + '">' +
-      data.phases.map(function (phase, index) {
-        var chipClasses = ["timeline-chip"];
+      '<div class="mission-process" aria-hidden="true">' +
+      (data.stages || []).map(function (stage) {
+        var processClasses = ["mission-process__step"];
 
-        if (index === state.activePhase) {
-          chipClasses.push("is-active");
-        }
-        if (index === 0) {
-          chipClasses.push("is-first");
-        }
-        if (index === data.phases.length - 1) {
-          chipClasses.push("is-last");
+        if (active.stage === stage.id) {
+          processClasses.push("is-active");
         }
 
         return (
-          '<button class="' + chipClasses.join(" ") + '" type="button" data-phase="' + index + '" role="tab" aria-selected="' + String(index === state.activePhase) + '">' +
-          '<span class="timeline-chip__week">' + escapeHtml(phase.week) + "</span>" +
-          '<span class="timeline-chip__badge tone-' + escapeHtml(phase.tone) + '">' + escapeHtml(phase.badge) + "</span>" +
-          '<span class="timeline-chip__title">' + escapeHtml(phase.title) + "</span>" +
-          "</button>"
+          '<div class="' + processClasses.join(" ") + '">' +
+          '<span class="mission-process__copy">' +
+          '<span class="mission-process__heading">' +
+          '<span class="mission-process__index">' + escapeHtml(stage.index) + ".</span>" +
+          '<span class="mission-process__title">' + escapeHtml(stage.title) + "</span>" +
+          "</span>" +
+          '<span class="mission-process__span">' + escapeHtml(stage.span) + "</span>" +
+          "</span>" +
+          "</div>"
         );
       }).join("") +
       "</div>" +
-      buildPhaseDetail(active) +
+      '<div class="timeline-map" role="tablist" aria-label="' + escapeHtml(data.subtitle) + '">' +
+      '<div class="timeline-groups">' +
+      (data.stages || []).map(function (stage, stageIndex) {
+        var groupClasses = ["timeline-group", "timeline-group--" + stage.id];
+        var stagePhases = missionPhases.filter(function (phase) {
+          return phase.stage === stage.id;
+        });
+        var stepCount = stagePhases.length;
+        var groupWeight = stepCount + 1;
+        var stepsHtml = stagePhases.map(function (phase, sequenceIndex) {
+          var chipClasses = ["timeline-chip"];
+          var realIndex = data.phases.indexOf(phase);
+
+          if (realIndex === state.activePhase) {
+            chipClasses.push("is-active");
+          }
+
+          return (
+            '<div class="timeline-substep">' +
+            '<button class="' + chipClasses.join(" ") + '" type="button" data-phase="' + realIndex + '" role="tab" aria-selected="' + String(realIndex === state.activePhase) + '">' +
+            '<span class="timeline-chip__title">' + escapeHtml(phase.title) + "</span>" +
+            '<span class="timeline-chip__week">' + escapeHtml(phase.week) + "</span>" +
+            '<span class="timeline-chip__meta">' +
+            '<span class="timeline-chip__meta-row timeline-chip__meta-row--situation">' +
+            buildSituationBadge(phase.badge, phase.tone, false) +
+            "</span>" +
+            '<span class="timeline-chip__meta-row timeline-chip__meta-row--propositions">' +
+            buildPropositionPills(phase.propositions, "timeline-chip__props", false) +
+            "</span>" +
+            "</span>" +
+            "</button>" +
+            (sequenceIndex < stagePhases.length - 1
+              ? '<span class="timeline-substep__connector" aria-hidden="true"></span>'
+              : "") +
+            "</div>"
+          );
+        }).join("");
+
+        if (active.stage === stage.id) {
+          groupClasses.push("is-active");
+        }
+
+        return (
+          '<div class="timeline-group-wrap" style="--group-weight:' + groupWeight + ';">' +
+          '<section class="' + groupClasses.join(" ") + '">' +
+          '<div class="timeline-group__head">' +
+          '<p class="timeline-group__summary">' + escapeHtml(stage.summary) + "</p>" +
+          "</div>" +
+          '<div class="timeline-group__steps">' + stepsHtml + "</div>" +
+          "</section>" +
+          (stageIndex < (data.stages || []).length - 1
+            ? '<span class="timeline-group__transfer" aria-hidden="true"></span>'
+            : "") +
+          "</div>"
+        );
+      }).join("") +
+      "</div>" +
+      (postPhase
+        ? '<div class="timeline-postscript">' +
+          '<div class="timeline-postscript__head">' +
+          '<p class="timeline-postscript__label">' + escapeHtml(data.postMission.label) + "</p>" +
+          '<p class="timeline-postscript__summary">' + escapeHtml(data.postMission.summary) + "</p>" +
+          '</div>' +
+          '<div class="timeline-postscript__flow">' +
+          '<span class="timeline-postscript__connector" aria-hidden="true"></span>' +
+          '<button class="timeline-chip timeline-chip--postscript' + (postIndex === state.activePhase ? ' is-active' : '') + '" type="button" data-phase="' + postIndex + '" role="tab" aria-selected="' + String(postIndex === state.activePhase) + '">' +
+          '<span class="timeline-chip__title">' + escapeHtml(postPhase.title) + "</span>" +
+          '<span class="timeline-chip__week">' + escapeHtml(postPhase.week) + "</span>" +
+          '<span class="timeline-chip__meta">' +
+          '<span class="timeline-chip__meta-row timeline-chip__meta-row--situation">' +
+          buildSituationBadge(postPhase.badge, postPhase.tone, false) +
+          "</span>" +
+          '<span class="timeline-chip__meta-row timeline-chip__meta-row--propositions">' +
+          buildPropositionPills(postPhase.propositions, "timeline-chip__props", false) +
+          "</span>" +
+          "</span>" +
+          "</button>" +
+          "</div>" +
+          "</div>"
+        : "") +
+      "</div>" +
+      buildPhaseDetail(active, activeStageLabel) +
+      buildChatbotPanel(data, active, activeStageLabel, activeStage) +
       "</div>";
   }
 
@@ -514,6 +1000,12 @@
     });
 
     document.addEventListener("click", function (event) {
+      var suggestionButton = event.target.closest("[data-chat-suggestion]");
+      if (suggestionButton) {
+        submitChatQuestion(suggestionButton.getAttribute("data-chat-suggestion"));
+        return;
+      }
+
       var phaseButton = event.target.closest("[data-phase]");
       if (phaseButton) {
         state.activePhase = Number(phaseButton.getAttribute("data-phase"));
@@ -528,6 +1020,24 @@
           target.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
+    });
+
+    document.addEventListener("submit", function (event) {
+      var form = event.target.closest(".chatbot-form");
+      var input;
+
+      if (!form) {
+        return;
+      }
+
+      event.preventDefault();
+      input = form.querySelector(".chatbot-form__input");
+
+      if (!input) {
+        return;
+      }
+
+      submitChatQuestion(input.value);
     });
   }
 
