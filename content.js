@@ -67,7 +67,7 @@ window.ARTEFACT_CONTENT = {
             tone: "cognitive",
             label: "Cognitive",
             letter: "C",
-            text: "The client ability to interpret, understand and evaluate what was co-produced — and to whom they attribute it"
+            text: "The ability to interpret, understand and evaluate what was co-produced — so mission outputs become intelligible, assessable, appropriable and usable as managerial knowledge"
           }
         ],
         sequenceHtml: "<strong>SEQUENCE</strong> <span class=\"sequence-pill sequence-pill--relational\">R</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--processual\">P</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--cognitive\">C</span> <em>with proposed feedback loop P → R</em>",
@@ -225,7 +225,7 @@ window.ARTEFACT_CONTENT = {
           dimensions: {
             "R": "R: relational dimension. Trust, legitimacy and political judgment.",
             "P": "P: processual dimension. The co-creation experience, its legibility and role distribution.",
-            "C": "C: cognitive dimension. The client's ability to interpret, understand, evaluate and attribute what was co-produced."
+            "C": "C: cognitive dimension. The ability to interpret, understand and evaluate what was co-produced, so mission outputs become intelligible, assessable, appropriable and usable as managerial knowledge."
           }
         },
         chatbot: {
@@ -439,7 +439,7 @@ window.ARTEFACT_CONTENT = {
             tone: "cognitive",
             label: "Cognitive",
             letter: "C",
-            text: "La capacité du client à interpréter, comprendre et évaluer ce qui a été co-produit — et à qui il l'attribue"
+            text: "La capacité à interpréter, comprendre et évaluer ce qui a été co-produit — afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale"
           }
         ],
         sequenceHtml: "<strong>SÉQUENCE</strong> <span class=\"sequence-pill sequence-pill--relational\">R</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--processual\">P</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--cognitive\">C</span> <em>avec boucle de rétroaction proposée P → R</em>",
@@ -597,7 +597,7 @@ window.ARTEFACT_CONTENT = {
           dimensions: {
             "R": "R : dimension relationnelle. Confiance, légitimité et jugement politique.",
             "P": "P : dimension processuelle. L'expérience de co-création, sa lisibilité et la distribution des rôles.",
-            "C": "C : dimension cognitive. La capacité du client à interpréter, comprendre, évaluer et attribuer ce qui a été co-produit."
+            "C": "C : dimension cognitive. La capacité à interpréter, comprendre et évaluer ce qui a été co-produit, afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale."
           }
         },
         chatbot: {

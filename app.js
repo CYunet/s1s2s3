@@ -17,6 +17,7 @@
     subtitle: document.getElementById("subtitle"),
     langBtn: document.getElementById("langBtn"),
     themeBtn: document.getElementById("themeBtn"),
+    floatingChatBtn: document.getElementById("floatingChatBtn"),
     sectionNav: document.getElementById("sectionNav"),
     heroSignature: document.getElementById("heroSignature"),
     why: document.getElementById("why"),
@@ -57,6 +58,10 @@
     els.mainTitle.textContent = locale.hero.title;
     els.subtitle.textContent = locale.hero.subtitle;
     els.heroSignature.textContent = locale.hero.signature;
+    if (els.floatingChatBtn) {
+      els.floatingChatBtn.setAttribute("aria-label", (locale.illustration.chatbot || {}).title || "Open framework AI assistant");
+      els.floatingChatBtn.setAttribute("title", (locale.illustration.chatbot || {}).title || "Open framework AI assistant");
+    }
     syncLanguageButton();
     syncThemeButton();
   }
@@ -436,6 +441,19 @@
     if (input) {
       input.focus();
     }
+  }
+
+  function openChatbotPanel() {
+    var panel;
+
+    activateSection("illustration", false);
+    panel = els.illustration.querySelector(".chatbot-panel");
+
+    if (panel) {
+      panel.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    window.setTimeout(focusChatInput, 260);
   }
 
   function submitChatQuestion(question) {
@@ -966,6 +984,10 @@
       syncThemeButton();
     });
 
+    if (els.floatingChatBtn) {
+      els.floatingChatBtn.addEventListener("click", openChatbotPanel);
+    }
+
     els.sectionNav.addEventListener("click", function (event) {
       var button = event.target.closest("[data-target]");
       if (!button) {
@@ -1038,6 +1060,24 @@
       }
 
       submitChatQuestion(input.value);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      var input = event.target.closest(".chatbot-form__input");
+      var form;
+
+      if (!input || event.key !== "Enter" || event.shiftKey || event.isComposing) {
+        return;
+      }
+
+      event.preventDefault();
+      form = input.closest(".chatbot-form");
+
+      if (form && typeof form.requestSubmit === "function") {
+        form.requestSubmit();
+      } else if (form) {
+        submitChatQuestion(input.value);
+      }
     });
   }
 
