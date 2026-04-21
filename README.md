@@ -9,7 +9,7 @@ The application is bilingual (`EN` / `FR`) and presents:
 - `Observation framework`
 - `Illustration`
 
-It also includes a cloud chatbot in the `Illustration` section, designed to answer only through the research framework used in the artefact.
+It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer only through the research framework used in the artefact.
 
 ## What the app does
 
@@ -18,7 +18,7 @@ It also includes a cloud chatbot in the `Illustration` section, designed to answ
 - illustrates the framework through a fictional consulting mission
 - allows step-by-step exploration of the mission timeline
 - provides glossary tooltips for `S1/S2/S3`, `P1/P2/P3` and `R/P/C`
-- offers a contextual chatbot tied to the currently active mission step
+- offers a contextual chatbot tied to the current reading section and, in `Illustration`, to the currently active mission step
 
 ## Project structure
 
@@ -70,6 +70,7 @@ The chatbot is intentionally constrained.
 
 It receives:
 
+- the current reading section (`Why this research`, `Theoretical framework`, `Observation framework`, or `Illustration`)
 - the current active mission step
 - the current stage
 - the current situation (`S1/S2/S3`)
@@ -81,6 +82,9 @@ It receives:
 It must answer:
 
 - only within the framework of this research
+- in the language selected in the UI
+- with priority given to the current reading section
+- with priority given to the clicked mission sub-step when the user is in `Illustration`
 - without introducing outside theories or concepts
 - with explicit bounded inference when the user asks about a hypothetical case not directly illustrated
 
@@ -139,7 +143,8 @@ Implemented:
 - observation framework diagram
 - mission timeline with active-step detail panel
 - glossary tooltips
-- contextual cloud-chatbot UI
+- floating contextual cloud-chatbot UI
+- page-aware chatbot context
 - server endpoint for OpenAI Responses API
 
 Not yet included:

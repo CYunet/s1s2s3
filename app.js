@@ -5,6 +5,7 @@
     theme: document.documentElement.getAttribute("data-theme") || "dark",
     activePhase: 0,
     activeSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
+    chatSourceSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
     chatHistories: {},
     chatPending: {}
   };
@@ -28,6 +29,19 @@
 
   function getContent() {
     return content.locales[state.lang] || content.locales.en;
+  }
+
+  function getSectionLabel(sectionId) {
+    var nav = getContent().nav || [];
+    var i;
+
+    for (i = 0; i < nav.length; i += 1) {
+      if (nav[i].id === sectionId) {
+        return nav[i].label;
+      }
+    }
+
+    return sectionId || "";
   }
 
   function escapeHtml(value) {
@@ -224,8 +238,12 @@
     return '<span' + attrs + '>' + escapeHtml(label) + "</span>";
   }
 
+  function getChatContextSectionId() {
+    return state.chatSourceSection || state.activeSection || "illustration";
+  }
+
   function getChatHistoryKey() {
-    return state.lang + ":" + String(state.activePhase);
+    return state.lang + ":" + getChatContextSectionId() + ":" + String(state.activePhase);
   }
 
   function getChatHistory() {
@@ -265,12 +283,81 @@
     );
   }
 
+  function buildActivePageContext(sectionId) {
+    var locale = getContent();
+    var why = locale.whyResearch || {};
+    var theory = locale.theory || {};
+    var spheres = locale.spheres || {};
+    var illustration = locale.illustration || {};
+
+    if (sectionId === "why") {
+      return {
+        id: "why",
+        label: getSectionLabel("why"),
+        role: "research positioning and practitioner relevance",
+        title: (why.titleLines || []).join(" "),
+        excerpts: {
+          question: stripHtml(why.questionHtml || ""),
+          whyItMatters: stripHtml(why.whyHtml || ""),
+          researchGap: stripHtml(why.gapHtml || "")
+        }
+      };
+    }
+
+    if (sectionId === "theory") {
+      return {
+        id: "theory",
+        label: getSectionLabel("theory"),
+        role: "theoretical framework",
+        excerpts: {
+          intro: stripHtml(theory.introHtml || ""),
+          researchGap: (theory.researchGapParagraphs || []).join(" "),
+          propositions: (theory.propositionDetails || []).map(function (item) {
+            return {
+              badge: item.badge,
+              title: item.title,
+              text: item.text
+            };
+          }),
+          model: (theory.rpcDiagram || {}).intro || "",
+          observationalFramework: (theory.observationalFramework || {}).text || ""
+        }
+      };
+    }
+
+    if (sectionId === "spheres") {
+      return {
+        id: "spheres",
+        label: getSectionLabel("spheres"),
+        role: "S1/S2/S3 observational framework",
+        title: spheres.title || "",
+        intro: spheres.intro || "",
+        cards: (spheres.cards || []).map(function (item) {
+          return {
+            title: item.title,
+            text: item.text
+          };
+        })
+      };
+    }
+
+    return {
+      id: "illustration",
+      label: getSectionLabel("illustration"),
+      role: "fictional mission illustration and active sub-step",
+      title: illustration.title || "",
+      intro: illustration.intro || ""
+    };
+  }
+
   function buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel) {
     var theory = getContent().theory;
     var glossary = data.glossary || {};
+    var sourceSectionId = getChatContextSectionId();
 
     return {
       language: state.lang,
+      activePage: buildActivePageContext(sourceSectionId),
       current: {
         stage: activeStageLabel,
         stageId: active.stage,
@@ -369,6 +456,7 @@
     var chat = data.chatbot || {};
     var history = getChatHistory();
     var pending = isChatPending();
+    var sourceSectionLabel = getSectionLabel(getChatContextSectionId());
     var messagesHtml = history.length
       ? history.map(buildChatMessage).join("")
       : buildChatMessage({ role: "assistant", text: chat.welcome || "" });
@@ -394,6 +482,10 @@
       '<div class="chatbot-context">' +
       '<p class="chatbot-context__heading">' + escapeHtml(chat.contextLabel || "") + "</p>" +
       '<div class="chatbot-context__grid">' +
+      '<div class="chatbot-context__row">' +
+      '<span class="chatbot-context__label">' + escapeHtml(chat.contextPage || "") + "</span>" +
+      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(sourceSectionLabel) + "</span></div>" +
+      "</div>" +
       '<div class="chatbot-context__row">' +
       '<span class="chatbot-context__label">' + escapeHtml(chat.contextStage || "") + "</span>" +
       '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(activeStageLabel || (activeStage && activeStage.title) || "") + "</span></div>" +
@@ -445,8 +537,12 @@
 
   function openChatbotPanel() {
     var panel;
+    var sourceSectionId = state.activeSection;
 
+    state.chatSourceSection = sourceSectionId;
     activateSection("illustration", false);
+    state.chatSourceSection = sourceSectionId;
+    renderIllustration();
     panel = els.illustration.querySelector(".chatbot-panel");
 
     if (panel) {
@@ -990,11 +1086,14 @@
 
     els.sectionNav.addEventListener("click", function (event) {
       var button = event.target.closest("[data-target]");
+      var targetId;
       if (!button) {
         return;
       }
 
-      activateSection(button.getAttribute("data-target"), true);
+      targetId = button.getAttribute("data-target");
+      state.chatSourceSection = targetId;
+      activateSection(targetId, true);
     });
 
     els.sectionNav.addEventListener("keydown", function (event) {
@@ -1018,6 +1117,7 @@
 
       event.preventDefault();
       buttons[nextIndex].focus();
+      state.chatSourceSection = buttons[nextIndex].getAttribute("data-target");
       activateSection(buttons[nextIndex].getAttribute("data-target"), false);
     });
 
@@ -1031,6 +1131,7 @@
       var phaseButton = event.target.closest("[data-phase]");
       if (phaseButton) {
         state.activePhase = Number(phaseButton.getAttribute("data-phase"));
+        state.chatSourceSection = "illustration";
         renderIllustration();
         return;
       }

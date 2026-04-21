@@ -66,7 +66,7 @@ Show how the framework can be read through a fictional consulting mission.
 
 ### Goal 3
 
-Enable users to interrogate each mission step through the framework, not outside it.
+Enable users to interrogate each section, and each mission step in `Illustration`, through the framework, not outside it.
 
 ### Goal 4
 
@@ -143,11 +143,13 @@ Requirement:
 
 ### 6. Contextual cloud chatbot
 
-The chatbot must answer questions from the currently active mission step.
+The chatbot must answer questions from the currently active reading section. In `Illustration`, it must also answer from the currently active mission sub-step.
 
 Requirement:
 
-- it must know the active step context at the moment of questioning
+- it must know the active reading section at the moment of questioning
+- it must know the active step context when the user is in `Illustration`
+- it must answer in the language currently selected in the UI
 - it must answer only from the supplied framework and illustration context
 - it must explicitly signal bounded inference when answering hypotheticals
 
@@ -156,15 +158,18 @@ Requirement:
 ### Functional requirements
 
 - display a visible AI assistant block in the `Illustration` section
+- display a persistent floating AI assistant button across the app
 - show current context:
+  - reading page
   - stage
   - sub-step
   - situation
   - proposition(s)
   - value dimensions
 - allow free-form questions
+- allow `Enter` to submit and `Shift+Enter` to insert a line break
 - provide suggestion chips
-- preserve short conversation history per active step and language
+- preserve short conversation history per active page, active step and language
 - call a server endpoint rather than OpenAI directly from the browser
 
 ### Theoretical guardrails
@@ -181,7 +186,8 @@ The chatbot must:
 - use `P1 / P2 / P3`
 - use `R / P / C`
 - use `S1 / S2 / S3`
-- reason from the active illustration step
+- reason from the active reading section
+- reason from the active illustration step when the user is in `Illustration`
 
 ### Technical requirements
 
@@ -206,7 +212,9 @@ The chatbot must:
 
 ### Chatbot
 
+- the floating assistant button must remain visible without obstructing reading
 - context must be visible before the user asks
+- the displayed context must include the active reading page
 - responses must be readable in long-form text
 - loading and failure states must be explicit
 

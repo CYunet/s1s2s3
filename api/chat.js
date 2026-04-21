@@ -107,6 +107,7 @@ function buildArtefactSourceDigest(body, rawSource) {
     sourceLoaded: Boolean(rawSource),
     sourceSizeChars: rawSource ? rawSource.length : 0,
     runtimeLanguage: artefactBundle.language || body.language || "",
+    activePage: artefactBundle.activePage || {},
     currentLabels: {
       stage: current.stage || "",
       substep: current.substep || "",
@@ -138,6 +139,9 @@ function buildInstructions(language) {
     "You must answer strictly from three primary sources only: the academic note loaded by the server, the artefact content bundle provided in the user message, and the server-loaded content.js artefact source.",
     "Use the academic note as the conceptual anchor for the research problem, propositions, observational framework and illustrative case.",
     "Use the artefact content bundle as the displayed source of truth for the active step, the current illustration, the propositions, the dimensions and the observational situation shown to the user.",
+    "Always take the activePage object in the artefact bundle as the user's current reading context.",
+    "If activePage.id is illustration, prioritize the current clicked mission sub-step as the operational context.",
+    "If activePage.id is why, theory, or spheres, prioritize that section's role and excerpts, while using the current mission sub-step only as secondary illustration context when relevant.",
     "Use content.js as a primary wording and coherence source for the artefact's internal content, labels, glossary and section texts.",
     "Do not introduce outside theories, citations, examples, concepts, or facts not present in the supplied material.",
     "Treat P1, P2 and P3 as exploratory theoretical propositions; treat S1, S2 and S3 as an observational framework; treat R, P and C as perceived value dimensions.",
@@ -146,7 +150,7 @@ function buildInstructions(language) {
     "If the illustration contains a close counterpart, mention it explicitly.",
     "Never claim empirical proof or certainty beyond the supplied exploratory framework.",
     "Keep the answer concise and structured with short labels or short sections such as: Current step, Framework reading, Closest counterpart or bounded inference, Boundary of answer.",
-    "Respond entirely in " + targetLanguage + ".",
+    "Respond entirely in " + targetLanguage + ", matching the user's selected UI language.",
     "Return plain text only."
   ].join(" ");
 }
@@ -169,6 +173,9 @@ function buildPrompt(body) {
     "",
     "Co-primary source 3 - content.js artefact digest:",
     JSON.stringify(artefactSourceDigest, null, 2),
+    "",
+    "Current active page shortcut:",
+    JSON.stringify(artefactBundle.activePage || {}, null, 2),
     "",
     "Current active context shortcut:",
     JSON.stringify(artefactBundle.current || {}, null, 2)
