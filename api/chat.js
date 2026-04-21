@@ -179,11 +179,13 @@ function toResponsesMessages(history) {
   return (history || []).filter(function (item) {
     return item && (item.role === "user" || item.role === "assistant") && item.text;
   }).slice(-6).map(function (item) {
+    var contentType = item.role === "assistant" ? "output_text" : "input_text";
+
     return {
       role: item.role,
       content: [
         {
-          type: "input_text",
+          type: contentType,
           text: String(item.text)
         }
       ]
