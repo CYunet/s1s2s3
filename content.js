@@ -110,16 +110,16 @@ window.ARTEFACT_CONTENT = {
               contingency: "Protected through P2, but only conditionally through P3."
             },
             {
-              label: "P → C",
-              positive: "Visible co-creation with AI may enrich the diversity and novelty of insights when the client is cognitively engaged in the process.",
-              negative: "AI may also decouple knowledge from co-production: the client receives outputs without genuinely participating in how they were generated.",
-              contingency: "Depends on substantive explicitation, absorptive capacity and engagement."
-            },
-            {
               label: "P → R",
               positive: "A fluid co-creation experience can reinforce consultant legitimacy as the mission unfolds.",
               negative: "Spectacular AI outputs may shift credit from the consultant to the AI, inverting the expected feedback loop.",
               contingency: "Depends on contribution readability, AI literacy and algorithm aversion."
+            },
+            {
+              label: "P → C",
+              positive: "Visible co-creation with AI may enrich the diversity and novelty of insights when the client is cognitively engaged in the process.",
+              negative: "AI may also decouple knowledge from co-production: the client receives outputs without genuinely participating in how they were generated.",
+              contingency: "Depends on substantive explicitation, absorptive capacity and engagement."
             }
           ],
           footer: "Supervisor note: the original contribution lies less in inventing the R → P → C sequence than in theorising how AI contingently amplifies, destabilises or inverts each relation."
@@ -483,16 +483,16 @@ window.ARTEFACT_CONTENT = {
               contingency: "Protégé par P2, mais seulement de façon conditionnelle via P3."
             },
             {
-              label: "P → C",
-              positive: "Une co-création visible avec l'IA peut enrichir la diversité et la nouveauté des insights lorsque le client est cognitivement engagé dans le processus.",
-              negative: "L'IA peut aussi découpler la connaissance de la co-production : le client reçoit des outputs sans participer réellement à la manière dont ils ont été générés.",
-              contingency: "Dépend de l'explicitation substantive, de la capacité d'absorption et de l'engagement."
-            },
-            {
               label: "P → R",
               positive: "Une expérience de co-création fluide peut renforcer la légitimité du consultant au fil de la mission.",
               negative: "Des outputs IA spectaculaires peuvent déplacer le crédit du consultant vers l'IA, en inversant la boucle de rétroaction attendue.",
               contingency: "Dépend de la lisibilité des contributions, de l'AI literacy et de l'algorithm aversion."
+            },
+            {
+              label: "P → C",
+              positive: "Une co-création visible avec l'IA peut enrichir la diversité et la nouveauté des insights lorsque le client est cognitivement engagé dans le processus.",
+              negative: "L'IA peut aussi découpler la connaissance de la co-production : le client reçoit des outputs sans participer réellement à la manière dont ils ont été générés.",
+              contingency: "Dépend de l'explicitation substantive, de la capacité d'absorption et de l'engagement."
             }
           ],
           footer: "Note de supervision : la contribution originale réside moins dans l'invention de la séquence R → P → C que dans la théorisation de la manière dont l'IA amplifie, déstabilise ou inverse chaque relation de façon contingente."

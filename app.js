@@ -825,17 +825,14 @@
       '<div class="diagram-sequence">' +
       '<div class="diagram-node">' +
       '<div class="diagram-node__head"><span class="diagram-node__dot diagram-node__dot--r">R</span><span class="diagram-node__title">' + escapeHtml(data.nodeLabels.relational) + "</span></div>" +
-      '<p>' + escapeHtml(theory.dimensionCards[0].text) + "</p>" +
       "</div>" +
       '<div class="diagram-sequence__arrow">→</div>' +
       '<div class="diagram-node">' +
       '<div class="diagram-node__head"><span class="diagram-node__dot diagram-node__dot--p">P</span><span class="diagram-node__title">' + escapeHtml(data.nodeLabels.processual) + "</span></div>" +
-      '<p>' + escapeHtml(theory.dimensionCards[1].text) + "</p>" +
       "</div>" +
       '<div class="diagram-sequence__arrow">→</div>' +
       '<div class="diagram-node">' +
       '<div class="diagram-node__head"><span class="diagram-node__dot diagram-node__dot--c">C</span><span class="diagram-node__title">' + escapeHtml(data.nodeLabels.cognitive) + "</span></div>" +
-      '<p>' + escapeHtml(theory.dimensionCards[2].text) + "</p>" +
       "</div>" +
       "</div>" +
       '<div class="link-grid">' +
