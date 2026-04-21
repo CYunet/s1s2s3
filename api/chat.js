@@ -83,6 +83,53 @@ function getArtefactSource() {
   return artefactSourceCache;
 }
 
+function normalizeText(text) {
+  return String(text || "").replace(/\s+/g, " ").trim();
+}
+
+function truncateText(text, maxChars) {
+  var normalized = normalizeText(text);
+
+  if (normalized.length <= maxChars) {
+    return normalized;
+  }
+
+  return normalized.slice(0, maxChars) + " …[truncated]";
+}
+
+function buildArtefactSourceDigest(body, rawSource) {
+  var artefactBundle = body.context || {};
+  var current = artefactBundle.current || {};
+  var theory = artefactBundle.theory || {};
+
+  return {
+    sourceFile: "content.js",
+    sourceLoaded: Boolean(rawSource),
+    sourceSizeChars: rawSource ? rawSource.length : 0,
+    runtimeLanguage: artefactBundle.language || body.language || "",
+    currentLabels: {
+      stage: current.stage || "",
+      substep: current.substep || "",
+      week: current.week || "",
+      situation: current.situation || {},
+      propositions: current.propositions || [],
+      dimensions: current.dimensions || []
+    },
+    theoryDigest: {
+      intro: theory.intro || "",
+      propositions: (theory.propositions || []).map(function (item) {
+        return {
+          badge: item.badge,
+          title: item.title
+        };
+      }),
+      observationalFramework: theory.observationalFramework || {},
+      model: theory.model || {}
+    },
+    sourcePreview: truncateText(rawSource, 3000)
+  };
+}
+
 function buildInstructions(language) {
   var targetLanguage = language === "fr" ? "French" : "English";
 
@@ -108,19 +155,20 @@ function buildPrompt(body) {
   var academicNote = getAcademicNote();
   var artefactSource = getArtefactSource();
   var artefactBundle = body.context || {};
+  var artefactSourceDigest = buildArtefactSourceDigest(body, artefactSource);
 
   return [
     "User question:",
     body.question,
     "",
     "Co-primary source 1 - Academic note (NOTE_ACADEMIQUE.md):",
-    academicNote || "[Academic note unavailable]",
+    truncateText(academicNote || "[Academic note unavailable]", 16000),
     "",
     "Co-primary source 2 - Artefact content bundle (current display context):",
     JSON.stringify(artefactBundle, null, 2),
     "",
-    "Co-primary source 3 - content.js artefact source:",
-    artefactSource || "[content.js unavailable]",
+    "Co-primary source 3 - content.js artefact digest:",
+    JSON.stringify(artefactSourceDigest, null, 2),
     "",
     "Current active context shortcut:",
     JSON.stringify(artefactBundle.current || {}, null, 2)
@@ -225,7 +273,11 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         model: model,
         instructions: buildInstructions(body.language),
-        input: messages
+        input: messages,
+        max_output_tokens: 700,
+        reasoning: {
+          effort: "low"
+        }
       })
     });
   } catch (error) {
