@@ -9,7 +9,7 @@ The application is bilingual (`EN` / `FR`) and presents:
 - `Observation framework`
 - `Illustration`
 
-It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer only through the research framework used in the artefact.
+It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer with the current page as context: strictly from the research framework when the user asks about the framework, and with clearly marked practical extrapolation when the user asks for implications or ideas.
 
 ## What the app does
 
@@ -66,7 +66,7 @@ The current repository structure is compatible with deployments that support sta
 
 ## Chatbot architecture
 
-The chatbot is intentionally constrained.
+The chatbot is context-aware and intentionally bounded, but not mechanically rigid.
 
 It receives:
 
@@ -81,12 +81,13 @@ It receives:
 
 It must answer:
 
-- only within the framework of this research
+- strictly within the framework of this research when the user asks what the framework says, asks for definitions, or asks about `P1/P2/P3`, `R/P/C` or `S1/S2/S3`
+- with clearly marked practical extrapolation when the user asks for implications, alternative scenarios, examples or ideas
 - in the language selected in the UI
 - with priority given to the current reading section
 - with priority given to the clicked mission sub-step when the user is in `Illustration`
-- without introducing outside theories or concepts
-- with explicit bounded inference when the user asks about a hypothetical case not directly illustrated
+- without introducing outside academic citations or presenting extrapolations as thesis findings
+- with concise signalling when the answer is a bounded inference or a practical extrapolation
 
 The frontend never calls OpenAI directly.
 
@@ -130,7 +131,8 @@ Its core constraints are:
 - `P1`, `P2`, `P3` are exploratory theoretical propositions
 - `S1`, `S2`, `S3` form an observational framework, not a prescriptive recipe
 - `R`, `P`, `C` are the perceived value dimensions mobilized by the framework
-- the chatbot must remain inside this conceptual perimeter
+- the chatbot must preserve this conceptual perimeter when explaining the research framework
+- practical ideas must be clearly distinguished from what the framework itself establishes
 
 ## Current status
 
@@ -161,4 +163,4 @@ Before public deployment:
 - choose the target hosting platform for `/api/chat`
 - configure `OPENAI_API_KEY`
 - run an end-to-end visual and conversational validation
-- verify that chatbot answers remain inside the research framework in both languages
+- verify that framework answers remain source-grounded and that practical extrapolations are clearly labelled in both languages

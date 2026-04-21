@@ -142,6 +142,30 @@
     return null;
   }
 
+  function buildMissionProcessStep(stage, isActive, extraClass) {
+    var processClasses = ["mission-process__step"];
+
+    if (extraClass) {
+      processClasses.push(extraClass);
+    }
+
+    if (isActive) {
+      processClasses.push("is-active");
+    }
+
+    return (
+      '<div class="' + processClasses.join(" ") + '" aria-hidden="true">' +
+      '<span class="mission-process__copy">' +
+      '<span class="mission-process__heading">' +
+      '<span class="mission-process__index">' + escapeHtml(stage.index) + ".</span>" +
+      '<span class="mission-process__title">' + escapeHtml(stage.title) + "</span>" +
+      "</span>" +
+      '<span class="mission-process__span">' + escapeHtml(stage.span) + "</span>" +
+      "</span>" +
+      "</div>"
+    );
+  }
+
   function buildPhaseDetail(phase, stageLabel) {
     var detailLabels = getContent().illustration.detailLabels || {};
     var titleWithWeek = phase.week
@@ -649,23 +673,7 @@
       "</div>" +
       '<div class="mission-process" aria-hidden="true">' +
       (data.stages || []).map(function (stage) {
-        var processClasses = ["mission-process__step"];
-
-        if (active.stage === stage.id) {
-          processClasses.push("is-active");
-        }
-
-        return (
-          '<div class="' + processClasses.join(" ") + '">' +
-          '<span class="mission-process__copy">' +
-          '<span class="mission-process__heading">' +
-          '<span class="mission-process__index">' + escapeHtml(stage.index) + ".</span>" +
-          '<span class="mission-process__title">' + escapeHtml(stage.title) + "</span>" +
-          "</span>" +
-          '<span class="mission-process__span">' + escapeHtml(stage.span) + "</span>" +
-          "</span>" +
-          "</div>"
-        );
+        return buildMissionProcessStep(stage, active.stage === stage.id, "");
       }).join("") +
       "</div>" +
       '<div class="timeline-map" role="tablist" aria-label="' + escapeHtml(data.subtitle) + '">' +
@@ -712,6 +720,7 @@
 
         return (
           '<div class="timeline-group-wrap" style="--group-weight:' + groupWeight + ';">' +
+          buildMissionProcessStep(stage, active.stage === stage.id, "timeline-group__process") +
           '<section class="' + groupClasses.join(" ") + '">' +
           '<div class="timeline-group__head">' +
           '<p class="timeline-group__summary">' + escapeHtml(stage.summary) + "</p>" +

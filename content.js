@@ -231,7 +231,7 @@ window.ARTEFACT_CONTENT = {
         chatbot: {
           title: "Framework AI assistant",
           iconLabel: "AI assistant",
-          note: "Answers are strictly limited to the research framework presented in this artefact. No concepts outside P1/P2/P3, R/P/C and S1/S2/S3 are introduced.",
+          note: "Answers use the current page as context. When you ask about the research framework, the assistant stays strictly within the sources; when you ask for implications or ideas, it may offer cautious practical extrapolations.",
           contextLabel: "Current context",
           contextPage: "Reading page",
           contextStage: "Stage",
@@ -240,11 +240,11 @@ window.ARTEFACT_CONTENT = {
           contextPropositions: "Propositions",
           contextDimensions: "Value dimensions",
           suggestionsLabel: "Try asking",
-          inputLabel: "Ask about this page through the framework",
+          inputLabel: "Ask the framework AI assistant",
           placeholder: "For example: What would Exploration look like in S2, and how could that affect perceived value across the mission?",
           send: "Ask",
-          thinking: "Thinking through the framework...",
-          emptyQuestion: "Ask a question about the current page through the framework.",
+          thinking: "Thinking...",
+          emptyQuestion: "Ask a question about the current page, the framework or a practical implication.",
           localMode: "The chatbot needs a server endpoint to call a cloud GPT-5.4 model. Open the artefact through its deployed server environment rather than as a local file.",
           backendError: "The cloud assistant is unavailable right now. Check that the server endpoint is deployed and that the OpenAI API key is configured.",
           suggestions: [
@@ -252,7 +252,7 @@ window.ARTEFACT_CONTENT = {
             "Which proposition is most visible in this step, and why?",
             "How do the R, P and C dimensions appear in this step?"
           ],
-          welcome: "I answer from the current reading page and, in Illustration, from the clicked mission sub-step, using only the theoretical framework, the research propositions, the S1/S2/S3 observational framework and the associated value dimensions.",
+          welcome: "Ask me about the page, the framework, or a practical implication. If you ask what the framework says, I stay strictly within the sources; if you ask for ideas, I will clearly distinguish extrapolation from the research frame.",
           sections: {
             current: "Current step",
             counterpart: "Closest counterpart in the illustration",
@@ -263,7 +263,7 @@ window.ARTEFACT_CONTENT = {
           boundaryCurrent: "This answer stays within the research framework and relies only on the current step as constructed in the illustration.",
           boundaryDirect: "This answer stays within the research framework and relies on a direct counterpart already present in the illustration.",
           boundaryInference: "This answer stays within the research framework. Because the illustration provides no direct counterpart for this case, the answer is a bounded theoretical inference from P1, P2, P3 and S1/S2/S3.",
-          fallback: "I can answer only within the framework used in this artefact. Try asking about S1/S2/S3, P1/P2/P3, R/P/C, transparency, attribution, AI literacy, algorithm aversion or perceived value in the current step."
+          fallback: "Try asking about S1/S2/S3, P1/P2/P3, R/P/C, transparency, attribution, AI literacy, algorithm aversion, perceived value, or a practical implication for the active page."
         },
         stages: [
           {
@@ -604,7 +604,7 @@ window.ARTEFACT_CONTENT = {
         chatbot: {
           title: "Assistant IA de lecture",
           iconLabel: "Assistant IA",
-          note: "Les réponses restent strictement limitées au cadre de recherche présenté dans cet artefact. Aucun concept extérieur à P1/P2/P3, R/P/C et S1/S2/S3 n'est introduit.",
+          note: "Les réponses utilisent la page active comme contexte. Si vous interrogez le cadre de recherche, l'assistant reste strictement dans les sources ; si vous demandez des implications ou des idées, il peut proposer des extrapolations praticiennes prudentes.",
           contextLabel: "Contexte actuel",
           contextPage: "Page de lecture",
           contextStage: "Étape",
@@ -613,11 +613,11 @@ window.ARTEFACT_CONTENT = {
           contextPropositions: "Propositions",
           contextDimensions: "Dimensions de valeur",
           suggestionsLabel: "Essayer par exemple",
-          inputLabel: "Interroger cette page au prisme du cadre",
+          inputLabel: "Interroger l'assistant IA du cadre",
           placeholder: "Par exemple : que donnerait l'Exploration en S2, et comment cela pourrait-il affecter la valeur perçue sur la mission ?",
           send: "Interroger",
-          thinking: "Analyse du cadre en cours...",
-          emptyQuestion: "Posez une question sur la page active au prisme du cadre.",
+          thinking: "Réflexion en cours...",
+          emptyQuestion: "Posez une question sur la page active, le cadre ou une implication pratique.",
           localMode: "Le chatbot nécessite un endpoint serveur pour appeler un modèle cloud GPT-5.4. Ouvrez l'artefact dans son environnement déployé plutôt qu'en mode fichier local.",
           backendError: "L'assistant cloud est indisponible pour le moment. Vérifiez que l'endpoint serveur est bien déployé et que la clé API OpenAI est configurée.",
           suggestions: [
@@ -625,7 +625,7 @@ window.ARTEFACT_CONTENT = {
             "Quelle proposition est la plus visible dans cette étape, et pourquoi ?",
             "Comment les dimensions R, P et C apparaissent-elles dans cette étape ?"
           ],
-          welcome: "Je réponds à partir de la page de lecture actuelle et, dans Illustration, de la sous-étape cliquée, en mobilisant uniquement le cadre théorique, les propositions de recherche, le cadre d'observation S1/S2/S3 et les dimensions de valeur associées.",
+          welcome: "Interrogez-moi sur la page, le cadre ou une implication pratique. Si vous demandez ce que dit le cadre, je reste strictement dans les sources ; si vous cherchez des idées, je distinguerai clairement l'extrapolation du cadre de recherche.",
           sections: {
             current: "Étape actuelle",
             counterpart: "Contrepoint le plus proche dans l'illustration",
@@ -636,7 +636,7 @@ window.ARTEFACT_CONTENT = {
           boundaryCurrent: "Cette réponse reste strictement dans le cadre de recherche et s'appuie uniquement sur l'étape active telle qu'elle est construite dans l'illustration.",
           boundaryDirect: "Cette réponse reste strictement dans le cadre de recherche et s'appuie sur un contrepoint direct déjà présent dans l'illustration.",
           boundaryInference: "Cette réponse reste strictement dans le cadre de recherche. Comme l'illustration ne fournit pas ici de contrepoint direct, la réponse constitue une inférence théorique bornée à partir de P1, P2, P3 et de S1/S2/S3.",
-          fallback: "Je ne peux répondre qu'à l'intérieur du cadre utilisé par cet artefact. Essayez par exemple une question sur S1/S2/S3, P1/P2/P3, R/P/C, la transparence, l'attribution, l'AI literacy, l'algorithm aversion ou la valeur perçue dans l'étape active."
+          fallback: "Essayez par exemple une question sur S1/S2/S3, P1/P2/P3, R/P/C, la transparence, l'attribution, l'AI literacy, l'algorithm aversion, la valeur perçue ou une implication pratique pour la page active."
         },
         stages: [
           {

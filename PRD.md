@@ -66,7 +66,7 @@ Show how the framework can be read through a fictional consulting mission.
 
 ### Goal 3
 
-Enable users to interrogate each section, and each mission step in `Illustration`, through the framework, not outside it.
+Enable users to interrogate each section, and each mission step in `Illustration`, either through the framework itself or through clearly marked practical extrapolations derived from it.
 
 ### Goal 4
 
@@ -76,7 +76,7 @@ Provide a bilingual artefact with coherent UX in English and French.
 
 - generic consulting education
 - generic AI education
-- open-ended chatbot answering beyond the thesis framework
+- unbounded chatbot answers that blur thesis-grounded claims and speculative advice
 - production consulting tool
 - literature review platform
 
@@ -150,8 +150,9 @@ Requirement:
 - it must know the active reading section at the moment of questioning
 - it must know the active step context when the user is in `Illustration`
 - it must answer in the language currently selected in the UI
-- it must answer only from the supplied framework and illustration context
-- it must explicitly signal bounded inference when answering hypotheticals
+- it must answer strictly from the supplied framework and illustration context when the user asks what the framework says
+- it may provide practical extrapolations when the user asks for implications, examples, alternative scenarios or ideas
+- it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
 
 ## Chatbot product requirements
 
@@ -176,10 +177,11 @@ Requirement:
 
 The chatbot must not:
 
-- import outside concepts
+- import outside academic concepts or citations as if they belonged to the thesis framework
 - cite literature not already embedded in the artefact prompt context
 - answer as if the framework were statistically validated
 - confuse the observational framework with a prescriptive managerial recipe
+- present practical extrapolations as findings of the research
 
 The chatbot must:
 
@@ -188,6 +190,7 @@ The chatbot must:
 - use `S1 / S2 / S3`
 - reason from the active reading section
 - reason from the active illustration step when the user is in `Illustration`
+- keep answers concise and avoid repeatedly reciting the active context unless it is useful
 
 ### Technical requirements
 
@@ -216,6 +219,7 @@ The chatbot must:
 - context must be visible before the user asks
 - the displayed context must include the active reading page
 - responses must be readable in long-form text
+- responses should feel natural and practitioner-friendly, not like a repeated template
 - loading and failure states must be explicit
 
 ## Content governance requirements
@@ -269,19 +273,20 @@ The artefact is successful if:
 - a supervisor recognizes theoretical consistency across sections
 - a practitioner can understand the main logic without prior exposure to the thesis
 - the timeline clarifies how theory becomes observable in the mission
-- the chatbot answers remain bounded by the research framework
+- the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
 
 ## Risks
 
 ### Risk 1
 
-The chatbot may drift outside the framework if the server prompt is too weak.
+The chatbot may blur the boundary between framework-grounded answers and practical extrapolation.
 
 Mitigation:
 
-- strict server-side instructions
-- send only artefact-grounded context
+- conditional server-side instructions by user intent
+- send artefact-grounded context for anchoring
+- require clear labelling of practical extrapolations
 
 ### Risk 2
 

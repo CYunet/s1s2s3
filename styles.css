@@ -701,6 +701,10 @@ button {
   text-transform: uppercase;
 }
 
+.timeline-group__process {
+  display: none;
+}
+
 .timeline-map {
   display: grid;
   gap: 1rem;
@@ -1592,7 +1596,13 @@ button:focus-visible {
   }
 
   .mission-process {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+
+  .timeline-group__process {
+    display: grid;
+    width: 100%;
+    margin: 0 0 0.65rem;
   }
 
   .timeline-groups {
