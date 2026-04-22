@@ -29,9 +29,24 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.md`: human-readable companion document containing the site texts organized by section
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.docx`: Word-readable versions of the companion document
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
 - `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
+- `scripts/generate-content-document.mjs`: regenerates the companion content document from `content.js`
 - `SUPERVISOR_COHERENCE_REPORT.md`: internal coherence review document
+
+## Human-readable content companion
+
+`docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.md` is the source version of the companion document. It is generated from `content.js` to keep it aligned with the interactive artefact.
+
+Run the following command whenever the artefact texts or project documentation are updated:
+
+```bash
+node scripts/generate-content-document.mjs
+```
+
+The script also regenerates the Word-readable `.doc` and `.docx` files.
 
 ## Primary source library
 
