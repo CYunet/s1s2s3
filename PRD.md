@@ -152,12 +152,17 @@ Primary sources:
 - `content.js`
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md`
 
+Secondary source:
+
+- `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`, used only as a conversational corpus for prior user questions, interpretive tensions and refinement needs
+
 Requirement:
 
 - it must know the active reading section at the moment of questioning
 - it must know the active step context when the user is in `Illustration`
 - it must answer in the language currently selected in the UI
 - it must answer strictly from the supplied framework and illustration context when the user asks what the framework says
+- it must not treat the secondary chatbot conversation corpus as a validated theoretical source
 - it may provide practical extrapolations when the user asks for implications, examples, alternative scenarios or ideas
 - it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
 - it must treat the REGEN-A source as working material that enriches the research background without overriding the current academic note or artefact wording
@@ -174,6 +179,7 @@ Requirement:
 - allow `Enter` to submit and `Shift+Enter` to insert a line break
 - provide suggestion chips
 - preserve short conversation history per active page, active step and language
+- support a manually maintained research corpus of selected production conversations with contextual metadata
 - call a server endpoint rather than OpenAI directly from the browser
 
 ### Theoretical guardrails
@@ -185,6 +191,7 @@ The chatbot must not:
 - answer as if the framework were statistically validated
 - confuse the observational framework with a prescriptive managerial recipe
 - present practical extrapolations as findings of the research
+- use prior chatbot conversations to override the validated framework
 
 The chatbot must:
 
@@ -193,6 +200,7 @@ The chatbot must:
 - use `S1 / S2 / S3`
 - reason from the active reading section
 - reason from the active illustration step when the user is in `Illustration`
+- treat the conversation corpus as secondary evidence of user interpretation, not as primary theory
 - keep answers concise and avoid repeatedly reciting the active context unless it is useful
 
 ### Technical requirements

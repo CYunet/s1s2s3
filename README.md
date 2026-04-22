@@ -31,6 +31,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.md`: human-readable companion document containing the site texts organized by section
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.docx`: Word-readable versions of the companion document
+- `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`: manually maintained secondary corpus of production chatbot conversations, with contextual metadata for research use
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
 - `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
 - `scripts/generate-content-document.mjs`: regenerates the companion content document from `content.js`
@@ -58,6 +59,16 @@ The chatbot uses four co-primary sources:
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md` as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier `S1/S2/S3` reasoning
 
 The original PowerPoint is archived in `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`. The chatbot uses the Markdown extraction, treated conservatively: it enriches the research background but does not override the current academic note or artefact wording.
+
+The chatbot also receives `research/CHATBOT_CONVERSATIONS_PRODUCTION.md` as a secondary conversational corpus. It can inform how prior users have questioned or interpreted the framework, but it is not treated as a validated theoretical source.
+
+## Chatbot conversation corpus
+
+`research/CHATBOT_CONVERSATIONS_PRODUCTION.md` records production chatbot conversations that are manually supplied for research purposes. Each entry should preserve the conversation verbatim and include contextual metadata such as active page, illustration step when applicable, situation, propositions and value dimensions.
+
+This corpus is a secondary source for the chatbot, not a primary theoretical source. It can help identify user questions, interpretive tensions and possible refinement needs, but it must not override the validated academic note, artefact wording, `content.js` or REGEN-A working source.
+
+The current app does not automatically persist chatbot conversations. Any future automated collection should include explicit user information, limited data capture and an appropriate research-governance process.
 
 ## Runtime modes
 

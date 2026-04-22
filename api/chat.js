@@ -4,6 +4,7 @@ var path = require("path");
 var academicNoteCache = null;
 var artefactSourceCache = null;
 var regenaSourceCache = null;
+var chatbotConversationSourceCache = null;
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -111,6 +112,33 @@ function getRegenaSource() {
   return regenaSourceCache;
 }
 
+function getChatbotConversationSource() {
+  var candidates = [
+    path.join(process.cwd(), "research", "CHATBOT_CONVERSATIONS_PRODUCTION.md"),
+    path.join(__dirname, "..", "research", "CHATBOT_CONVERSATIONS_PRODUCTION.md")
+  ];
+  var i;
+
+  if (chatbotConversationSourceCache !== null) {
+    return chatbotConversationSourceCache;
+  }
+
+  chatbotConversationSourceCache = "";
+
+  for (i = 0; i < candidates.length; i += 1) {
+    try {
+      chatbotConversationSourceCache = fs.readFileSync(candidates[i], "utf8").trim();
+      if (chatbotConversationSourceCache) {
+        break;
+      }
+    } catch (error) {
+      chatbotConversationSourceCache = "";
+    }
+  }
+
+  return chatbotConversationSourceCache;
+}
+
 function normalizeText(text) {
   return String(text || "").replace(/\s+/g, " ").trim();
 }
@@ -169,6 +197,7 @@ function buildInstructions(language) {
     "Use the artefact content bundle as the displayed source of truth for the active page, active step, propositions, dimensions and observational situation shown to the user.",
     "Use content.js as a wording and coherence source for the artefact's internal content, labels, glossary and section texts.",
     "Use the REGEN-A source as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier S1/S2/S3 reasoning; do not let it override the current academic note or artefact wording.",
+    "Use the chatbot conversation corpus only as a secondary source about prior user questions, tensions and clarifications. Because user conversations are not controlled theoretical material, do not use them to establish the framework and do not let them override the academic note, artefact wording, content.js or REGEN-A source. Treat them only as research material that can reveal interpretive issues or refinement needs.",
     "Always take the activePage object as the user's current reading context. Use it silently by default, and mention the active page briefly and naturally only when it helps orient the answer.",
     "If activePage.id is illustration, use the clicked mission sub-step as the operational context.",
     "If activePage.id is why, theory, or spheres, prioritize that section's role and excerpts; do not assume the user is asking from a mission sub-step.",
@@ -191,6 +220,7 @@ function buildPrompt(body) {
   var academicNote = getAcademicNote();
   var artefactSource = getArtefactSource();
   var regenaSource = getRegenaSource();
+  var chatbotConversationSource = getChatbotConversationSource();
   var artefactBundle = body.context || {};
   var artefactSourceDigest = buildArtefactSourceDigest(body, artefactSource);
 
@@ -209,6 +239,9 @@ function buildPrompt(body) {
     "",
     "Co-primary source 4 - REGEN-A doctoral workshop working source:",
     truncateText(regenaSource || "[REGEN-A source unavailable]", 12000),
+    "",
+    "Secondary source - Chatbot conversation corpus:",
+    truncateText(chatbotConversationSource || "[Chatbot conversation corpus unavailable]", 12000),
     "",
     "Current active page shortcut:",
     JSON.stringify(artefactBundle.activePage || {}, null, 2),
