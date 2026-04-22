@@ -552,7 +552,11 @@
       : (data.postMission && data.postMission.label) || "";
 
     if (!els.chatbotHost) {
-      return;
+      els.chatbotHost = document.createElement("section");
+      els.chatbotHost.className = "chatbot-host";
+      els.chatbotHost.id = "chatbotHost";
+      els.chatbotHost.hidden = true;
+      els.main.appendChild(els.chatbotHost);
     }
 
     if (!state.chatOpen) {
