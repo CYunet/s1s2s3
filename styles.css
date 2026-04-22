@@ -218,6 +218,14 @@ button {
   display: none;
 }
 
+.chatbot-host {
+  scroll-margin-top: 7rem;
+}
+
+.chatbot-host[hidden] {
+  display: none;
+}
+
 .section-kicker {
   margin: 0 0 0.75rem;
   color: var(--text-faint);

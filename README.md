@@ -9,7 +9,7 @@ The application is bilingual (`EN` / `FR`) and presents:
 - `Observation framework`
 - `Illustration`
 
-It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer with the current page as context: strictly from the research framework when the user asks about the framework, and with clearly marked practical extrapolation when the user asks for implications or ideas.
+It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer with the current page as context without changing the active reading section: strictly from the research framework when the user asks about the framework, and with clearly marked practical extrapolation when the user asks for implications or ideas.
 
 ## What the app does
 

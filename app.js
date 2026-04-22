@@ -6,6 +6,7 @@
     activePhase: 0,
     activeSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
     chatSourceSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
+    chatOpen: false,
     chatHistories: {},
     chatPending: {}
   };
@@ -19,6 +20,7 @@
     langBtn: document.getElementById("langBtn"),
     themeBtn: document.getElementById("themeBtn"),
     floatingChatBtn: document.getElementById("floatingChatBtn"),
+    chatbotHost: document.getElementById("chatbotHost"),
     sectionNav: document.getElementById("sectionNav"),
     heroSignature: document.getElementById("heroSignature"),
     why: document.getElementById("why"),
@@ -267,7 +269,10 @@
   }
 
   function getChatHistoryKey() {
-    return state.lang + ":" + getChatContextSectionId() + ":" + String(state.activePhase);
+    var sectionId = getChatContextSectionId();
+    var phaseSuffix = sectionId === "illustration" ? ":" + String(state.activePhase) : "";
+
+    return state.lang + ":" + sectionId + phaseSuffix;
   }
 
   function getChatHistory() {
@@ -298,10 +303,14 @@
   function buildChatMessage(message) {
     var roleClass = message.role === "user" ? "chatbot-message--user" : "chatbot-message--assistant";
     var pendingClass = message.pending ? " chatbot-message--pending" : "";
+    var roleLabel = message.role === "user" ? getChatRoleLabel(message.role) : "";
+    var roleHtml = roleLabel
+      ? '<div class="chatbot-message__role">' + escapeHtml(roleLabel) + "</div>"
+      : "";
 
     return (
       '<article class="chatbot-message ' + roleClass + pendingClass + '">' +
-      '<div class="chatbot-message__role">' + escapeHtml(getChatRoleLabel(message.role)) + "</div>" +
+      roleHtml +
       '<div class="chatbot-message__bubble">' + formatMessageText(message.text) + "</div>" +
       "</article>"
     );
@@ -378,11 +387,10 @@
     var theory = getContent().theory;
     var glossary = data.glossary || {};
     var sourceSectionId = getChatContextSectionId();
+    var currentContext = null;
 
-    return {
-      language: state.lang,
-      activePage: buildActivePageContext(sourceSectionId),
-      current: {
+    if (sourceSectionId === "illustration") {
+      currentContext = {
         stage: activeStageLabel,
         stageId: active.stage,
         stageSummary: activeStage ? activeStage.summary : "",
@@ -406,7 +414,13 @@
         }),
         body: active.body,
         observable: active.observable
-      },
+      };
+    }
+
+    return {
+      language: state.lang,
+      activePage: buildActivePageContext(sourceSectionId),
+      current: currentContext,
       illustration: {
         stages: (data.stages || []).map(function (stage) {
           return {
@@ -480,10 +494,9 @@
     var chat = data.chatbot || {};
     var history = getChatHistory();
     var pending = isChatPending();
-    var sourceSectionLabel = getSectionLabel(getChatContextSectionId());
     var messagesHtml = history.length
       ? history.map(buildChatMessage).join("")
-      : buildChatMessage({ role: "assistant", text: chat.welcome || "" });
+      : "";
     var suggestions = chat.suggestions || [];
 
     if (pending) {
@@ -501,35 +514,6 @@
       '<div class="chatbot-panel__copy">' +
       '<h3 class="chatbot-panel__title">' + escapeHtml(chat.title || "") + "</h3>" +
       '<p class="chatbot-panel__note">' + escapeHtml(chat.note || "") + "</p>" +
-      "</div>" +
-      "</div>" +
-      '<div class="chatbot-context">' +
-      '<p class="chatbot-context__heading">' + escapeHtml(chat.contextLabel || "") + "</p>" +
-      '<div class="chatbot-context__grid">' +
-      '<div class="chatbot-context__row">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextPage || "") + "</span>" +
-      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(sourceSectionLabel) + "</span></div>" +
-      "</div>" +
-      '<div class="chatbot-context__row">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextStage || "") + "</span>" +
-      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(activeStageLabel || (activeStage && activeStage.title) || "") + "</span></div>" +
-      "</div>" +
-      '<div class="chatbot-context__row">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextSubstep || "") + "</span>" +
-      '<div class="chatbot-context__value"><span class="chatbot-context__text">' + escapeHtml(active.title + (active.week ? " - " + active.week : "")) + "</span></div>" +
-      "</div>" +
-      '<div class="chatbot-context__row">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextSituation || "") + "</span>" +
-      '<div class="chatbot-context__value">' + buildSituationBadge(active.badge, active.tone, false) + "</div>" +
-      "</div>" +
-      '<div class="chatbot-context__row">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextPropositions || "") + "</span>" +
-      '<div class="chatbot-context__value">' + buildPropositionPills(active.propositions, "timeline-chip__props") + "</div>" +
-      "</div>" +
-      '<div class="chatbot-context__row chatbot-context__row--full">' +
-      '<span class="chatbot-context__label">' + escapeHtml(chat.contextDimensions || "") + "</span>" +
-      '<div class="chatbot-context__value">' + buildDimensionPills(active.dimensions) + "</div>" +
-      "</div>" +
       "</div>" +
       "</div>" +
       '<div class="chatbot-suggestions">' +
@@ -553,24 +537,43 @@
   }
 
   function focusChatInput() {
-    var input = els.illustration.querySelector(".chatbot-form__input");
+    var input = els.chatbotHost ? els.chatbotHost.querySelector(".chatbot-form__input") : null;
     if (input) {
       input.focus();
     }
   }
 
+  function renderChatbotHost() {
+    var data = getContent().illustration;
+    var active = data.phases[state.activePhase];
+    var activeStage = findIllustrationStage(data, active.stage);
+    var activeStageLabel = activeStage
+      ? activeStage.index + ". " + activeStage.title
+      : (data.postMission && data.postMission.label) || "";
+
+    if (!els.chatbotHost) {
+      return;
+    }
+
+    if (!state.chatOpen) {
+      els.chatbotHost.hidden = true;
+      els.chatbotHost.innerHTML = "";
+      return;
+    }
+
+    els.chatbotHost.hidden = false;
+    els.chatbotHost.innerHTML = buildChatbotPanel(data, active, activeStageLabel, activeStage);
+  }
+
   function openChatbotPanel() {
-    var panel;
     var sourceSectionId = state.activeSection;
 
     state.chatSourceSection = sourceSectionId;
-    activateSection("illustration", false);
-    state.chatSourceSection = sourceSectionId;
-    renderIllustration();
-    panel = els.illustration.querySelector(".chatbot-panel");
+    state.chatOpen = true;
+    renderChatbotHost();
 
-    if (panel) {
-      panel.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (els.chatbotHost) {
+      els.chatbotHost.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     window.setTimeout(focusChatInput, 260);
@@ -596,12 +599,12 @@
     previousHistory.push({ role: "user", text: trimmed });
     state.chatHistories[key] = previousHistory;
     state.chatPending[key] = true;
-    renderIllustration();
+    renderChatbotHost();
 
     if (window.location.protocol === "file:") {
       state.chatHistories[key] = previousHistory.concat([{ role: "assistant", text: chat.localMode || "" }]);
       state.chatPending[key] = false;
-      renderIllustration();
+      renderChatbotHost();
       focusChatInput();
       return;
     }
@@ -637,7 +640,7 @@
       ]);
     }).finally(function () {
       state.chatPending[key] = false;
-      renderIllustration();
+      renderChatbotHost();
       focusChatInput();
     });
   }
@@ -759,7 +762,6 @@
         : "") +
       "</div>" +
       buildPhaseDetail(active, activeStageLabel) +
-      buildChatbotPanel(data, active, activeStageLabel, activeStage) +
       "</div>";
   }
 
@@ -1100,6 +1102,7 @@
       targetId = button.getAttribute("data-target");
       state.chatSourceSection = targetId;
       activateSection(targetId, true);
+      renderChatbotHost();
     });
 
     els.sectionNav.addEventListener("keydown", function (event) {
@@ -1125,6 +1128,7 @@
       buttons[nextIndex].focus();
       state.chatSourceSection = buttons[nextIndex].getAttribute("data-target");
       activateSection(buttons[nextIndex].getAttribute("data-target"), false);
+      renderChatbotHost();
     });
 
     document.addEventListener("click", function (event) {
@@ -1139,6 +1143,7 @@
         state.activePhase = Number(phaseButton.getAttribute("data-phase"));
         state.chatSourceSection = "illustration";
         renderIllustration();
+        renderChatbotHost();
         return;
       }
 
@@ -1195,6 +1200,7 @@
     renderTheory();
     renderSpheres();
     renderIllustration();
+    renderChatbotHost();
     updateSectionVisibility();
   }
 

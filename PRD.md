@@ -166,15 +166,10 @@ Requirement:
 
 ### Functional requirements
 
-- display a visible AI assistant block in the `Illustration` section
+- display the chatbot in an independent host so opening it never changes the active reading section
 - display a persistent floating AI assistant button across the app
-- show current context:
-  - reading page
-  - stage
-  - sub-step
-  - situation
-  - proposition(s)
-  - value dimensions
+- keep the current context implicit in the UI, while sending it to the server prompt
+- when useful, let the assistant mention the active page or active illustration step naturally in the answer
 - allow free-form questions
 - allow `Enter` to submit and `Shift+Enter` to insert a line break
 - provide suggestion chips
@@ -224,8 +219,8 @@ The chatbot must:
 ### Chatbot
 
 - the floating assistant button must remain visible without obstructing reading
-- context must be visible before the user asks
-- the displayed context must include the active reading page
+- context must be used by the assistant without forcing a visible technical context block
+- the active reading page must be passed to the chatbot request
 - responses must be readable in long-form text
 - responses should feel natural and practitioner-friendly, not like a repeated template
 - loading and failure states must be explicit
