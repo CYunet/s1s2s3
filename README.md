@@ -29,7 +29,20 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
+- `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
+- `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
 - `SUPERVISOR_COHERENCE_REPORT.md`: internal coherence review document
+
+## Primary source library
+
+The chatbot uses four co-primary sources:
+
+- `NOTE_ACADEMIQUE.md` as the current conceptual anchor
+- the active artefact content bundle sent by the frontend as the current-screen source of truth
+- `content.js` as the exact wording and coherence source for the artefact
+- `sources/REGENA_ATELIER_DOCTORAL_2025.md` as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier `S1/S2/S3` reasoning
+
+The original PowerPoint is archived in `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`. The chatbot uses the Markdown extraction, treated conservatively: it enriches the research background but does not override the current academic note or artefact wording.
 
 ## Runtime modes
 
@@ -78,6 +91,7 @@ It receives:
 - the value dimensions associated with that step
 - the illustration overview
 - the relevant theoretical framework excerpts
+- the server-loaded primary source library
 
 It must answer:
 

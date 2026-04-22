@@ -145,6 +145,13 @@ Requirement:
 
 The chatbot must answer questions from the currently active reading section. In `Illustration`, it must also answer from the currently active mission sub-step.
 
+Primary sources:
+
+- `NOTE_ACADEMIQUE.md`
+- active artefact content bundle
+- `content.js`
+- `sources/REGENA_ATELIER_DOCTORAL_2025.md`
+
 Requirement:
 
 - it must know the active reading section at the moment of questioning
@@ -153,6 +160,7 @@ Requirement:
 - it must answer strictly from the supplied framework and illustration context when the user asks what the framework says
 - it may provide practical extrapolations when the user asks for implications, examples, alternative scenarios or ideas
 - it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
+- it must treat the REGEN-A source as working material that enriches the research background without overriding the current academic note or artefact wording
 
 ## Chatbot product requirements
 

@@ -3,6 +3,7 @@ var path = require("path");
 
 var academicNoteCache = null;
 var artefactSourceCache = null;
+var regenaSourceCache = null;
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -83,6 +84,33 @@ function getArtefactSource() {
   return artefactSourceCache;
 }
 
+function getRegenaSource() {
+  var candidates = [
+    path.join(process.cwd(), "sources", "REGENA_ATELIER_DOCTORAL_2025.md"),
+    path.join(__dirname, "..", "sources", "REGENA_ATELIER_DOCTORAL_2025.md")
+  ];
+  var i;
+
+  if (regenaSourceCache !== null) {
+    return regenaSourceCache;
+  }
+
+  regenaSourceCache = "";
+
+  for (i = 0; i < candidates.length; i += 1) {
+    try {
+      regenaSourceCache = fs.readFileSync(candidates[i], "utf8").trim();
+      if (regenaSourceCache) {
+        break;
+      }
+    } catch (error) {
+      regenaSourceCache = "";
+    }
+  }
+
+  return regenaSourceCache;
+}
+
 function normalizeText(text) {
   return String(text || "").replace(/\s+/g, " ").trim();
 }
@@ -136,18 +164,19 @@ function buildInstructions(language) {
 
   return [
     "You are the AI reading assistant embedded in a doctoral artefact about perceived value co-creation in AI-era consulting.",
-    "Use three primary sources as the foundation: the academic note loaded by the server, the artefact content bundle provided in the user message, and the server-loaded content.js artefact source.",
+    "Use four primary sources as the foundation: the academic note loaded by the server, the artefact content bundle provided in the user message, the server-loaded content.js artefact source, and the REGEN-A doctoral workshop source.",
     "Use the academic note as the conceptual anchor for the research problem, propositions, observational framework and illustrative case.",
     "Use the artefact content bundle as the displayed source of truth for the active page, active step, propositions, dimensions and observational situation shown to the user.",
     "Use content.js as a wording and coherence source for the artefact's internal content, labels, glossary and section texts.",
+    "Use the REGEN-A source as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier S1/S2/S3 reasoning; do not let it override the current academic note or artefact wording.",
     "Always take the activePage object as the user's current reading context, but use it silently; do not recap the context unless it directly helps the answer.",
     "If activePage.id is illustration, use the clicked mission sub-step as the operational context.",
     "If activePage.id is why, theory, or spheres, prioritize that section's role and excerpts, while using the current mission sub-step only when useful.",
-    "Apply two answer modes. Framework mode: if the user asks what the framework says, asks for definitions, asks about P1/P2/P3, R/P/C, S1/S2/S3, citations, the thesis logic, or asks to stay within the framework, answer strictly from the three primary sources. Generative mode: if the user asks for practical implications, alternative scenarios, facilitation ideas, examples, or creative exploration, you may go beyond the supplied sources with cautious practical reasoning.",
+    "Apply two answer modes. Framework mode: if the user asks what the framework says, asks for definitions, asks about P1/P2/P3, R/P/C, S1/S2/S3, citations, the thesis logic, or asks to stay within the framework, answer strictly from the primary sources. Generative mode: if the user asks for practical implications, alternative scenarios, facilitation ideas, examples, or creative exploration, you may go beyond the supplied sources with cautious practical reasoning.",
     "In generative mode, clearly separate what is anchored in the research framework from what is your practical extrapolation. Do not present extrapolations as findings of the thesis.",
     "Do not add outside academic citations, named theories, or empirical claims unless they are present in the supplied material. Practical examples may be invented only as illustrative possibilities.",
     "Treat P1, P2 and P3 as exploratory theoretical propositions; treat S1, S2 and S3 as an observational framework; treat R, P and C as perceived value dimensions.",
-    "If the supplied sources differ in level of detail, reconcile them conservatively: preserve the academic note for conceptual framing, the artefact bundle for the current-screen context, and content.js for the artefact's exact internal wording.",
+    "If the supplied sources differ in level of detail, reconcile them conservatively: preserve the academic note for conceptual framing, the artefact bundle for the current-screen context, content.js for the artefact's exact internal wording, and the REGEN-A source as earlier working material.",
     "If the user asks about a scenario not directly present in the illustration and the question is framework-bound, answer as a bounded theoretical inference and say so briefly. If the question is generative, present it as a practical extrapolation.",
     "If the illustration contains a close counterpart, mention it only if useful; do not force a recurring 'closest counterpart' section.",
     "Never claim empirical proof or certainty beyond the supplied exploratory framework.",
@@ -161,6 +190,7 @@ function buildInstructions(language) {
 function buildPrompt(body) {
   var academicNote = getAcademicNote();
   var artefactSource = getArtefactSource();
+  var regenaSource = getRegenaSource();
   var artefactBundle = body.context || {};
   var artefactSourceDigest = buildArtefactSourceDigest(body, artefactSource);
 
@@ -176,6 +206,9 @@ function buildPrompt(body) {
     "",
     "Co-primary source 3 - content.js artefact digest:",
     JSON.stringify(artefactSourceDigest, null, 2),
+    "",
+    "Co-primary source 4 - REGEN-A doctoral workshop working source:",
+    truncateText(regenaSource || "[REGEN-A source unavailable]", 12000),
     "",
     "Current active page shortcut:",
     JSON.stringify(artefactBundle.activePage || {}, null, 2),
