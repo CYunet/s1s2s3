@@ -149,6 +149,7 @@ Implemented:
 - page-aware chatbot context
 - server endpoint for OpenAI Responses API
 - Vercel Web Analytics via `/_vercel/insights/script.js`
+- Simple Analytics privacy-first tracking via `https://scripts.simpleanalyticscdn.com/latest.js`
 
 Not yet included:
 
