@@ -63,6 +63,22 @@
       .trim();
   }
 
+  function renderTextParagraphs(value) {
+    return String(value || "")
+      .split(/(?:<br\s*\/?>\s*){2,}|\n{2,}/i)
+      .map(function (paragraph) {
+        return paragraph
+          .replace(/<br\s*\/?>/gi, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+      })
+      .filter(Boolean)
+      .map(function (paragraph) {
+        return "<p>" + escapeHtml(paragraph) + "</p>";
+      })
+      .join("");
+  }
+
   function getStaticDocumentFilename() {
     return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
   }
@@ -902,7 +918,7 @@
           '<article class="theory-block">' +
           '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
           '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-          '<p>' + escapeHtml(item.text) + "</p>" +
+          '<div class="proposition-detail__body">' + renderTextParagraphs(item.text) + "</div>" +
           "</article>"
         );
       }).join("") +
@@ -924,7 +940,7 @@
       '<article class="theory-block managerial-block">' +
       '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
       '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-      '<p>' + escapeHtml(item.text) + "</p>" +
+      '<div class="proposition-detail__body">' + renderTextParagraphs(item.text) + "</div>" +
       "</article>"
     );
   }

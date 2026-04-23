@@ -605,7 +605,20 @@ button {
   gap: 0.95rem;
 }
 
+.proposition-detail__body {
+  display: grid;
+  gap: 0.95rem;
+}
+
 .gap-block__text p {
+  margin: 0;
+  text-align: justify;
+  text-wrap: pretty;
+  hyphens: auto;
+  line-height: 1.78;
+}
+
+.proposition-detail__body p {
   margin: 0;
   text-align: justify;
   text-wrap: pretty;
