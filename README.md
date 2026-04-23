@@ -18,7 +18,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - illustrates the framework through a fictional consulting mission
 - allows step-by-step exploration of the mission timeline
 - provides glossary tooltips for `S1/S2/S3`, `P1/P2/P3` and `R/P/C`
-- lets users download the full app text as a language-specific Word document from the header
+- lets users regenerate and download the full app text as a language-specific Word document from the header
 - offers a contextual chatbot tied to the current reading section and, in `Illustration`, to the currently active mission step
 
 ## Project structure
@@ -28,6 +28,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `content.js`: bilingual content, theoretical copy, timeline data, chatbot labels
 - `app.js`: rendering logic, navigation, interactions, chatbot frontend
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
+- `api/document.js`: server endpoint regenerating a Word-compatible companion document from the latest deployed `content.js`
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document containing the site texts organized by section
@@ -45,10 +46,12 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 
 `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md` are the source versions of the companion documents. They are generated from `content.js` to keep them aligned with the interactive artefact, and they include the key artefact diagrams in document form.
 
-The deployed app exposes a language-aware download link in the header:
+The deployed app exposes a language-aware download link in the header. On Vercel, the link calls `/api/document?lang=fr` or `/api/document?lang=en`, which rebuilds a Word-compatible `.doc` from the latest deployed `content.js` at click time:
 
-- French UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`
-- English UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`
+- French UI downloads a regenerated `DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc`
+- English UI downloads a regenerated `DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc`
+
+When the app is opened as a local file, the same header link falls back to the static `.docx` files in `docs/`.
 
 Run the following command whenever the artefact texts or project documentation are updated:
 

@@ -63,6 +63,34 @@
       .trim();
   }
 
+  function getStaticDocumentFilename() {
+    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+  }
+
+  function getDynamicDocumentFilename() {
+    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc";
+  }
+
+  function syncDownloadLink() {
+    var locale = getContent();
+    var isLocalFile = window.location.protocol === "file:";
+
+    els.downloadDocLink.textContent = locale.ui.downloadDocLabel;
+    els.downloadDocLink.setAttribute("aria-label", locale.ui.downloadDocAria);
+    els.downloadDocLink.setAttribute("title", locale.ui.downloadDocAria);
+
+    if (isLocalFile) {
+      els.downloadDocLink.href = state.lang === "fr"
+        ? "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx"
+        : "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+      els.downloadDocLink.setAttribute("download", getStaticDocumentFilename());
+      return;
+    }
+
+    els.downloadDocLink.href = "/api/document?lang=" + encodeURIComponent(state.lang);
+    els.downloadDocLink.setAttribute("download", getDynamicDocumentFilename());
+  }
+
   function renderHero() {
     var locale = getContent();
 
@@ -70,16 +98,7 @@
     document.title = locale.ui.pageTitle;
     els.skipLink.textContent = locale.ui.skipLink;
     els.sectionNav.setAttribute("aria-label", locale.ui.navAria);
-    els.downloadDocLink.textContent = locale.ui.downloadDocLabel;
-    els.downloadDocLink.setAttribute("aria-label", locale.ui.downloadDocAria);
-    els.downloadDocLink.setAttribute("title", locale.ui.downloadDocAria);
-    els.downloadDocLink.href = state.lang === "fr"
-      ? "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx"
-      : "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
-    els.downloadDocLink.setAttribute(
-      "download",
-      state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx"
-    );
+    syncDownloadLink();
     els.langBtn.setAttribute("aria-label", locale.ui.languageButtonAria);
     els.themeBtn.setAttribute("aria-label", locale.ui.themeToggleAria);
     els.mainTitle.textContent = locale.hero.title;

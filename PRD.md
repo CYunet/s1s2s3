@@ -175,6 +175,8 @@ Requirement:
 
 - a header link must download the French Word document when the UI is in French
 - a header link must download the English Word document when the UI is in English
+- in the deployed app, the header link must call the server document endpoint so the Word-compatible document is regenerated from the latest deployed app content at click time
+- when opened locally as a static file, the header link may fall back to the pre-generated `.docx` files
 - generated Word documents must include the key artefact diagrams, including the `S1/S2/S3` spheres diagram as an embedded image rather than a text table
 - companion documents must be regenerated when app content or documentation is updated
 
@@ -298,7 +300,7 @@ The artefact is successful if:
 - the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
 - the French and English human-readable companion documents remain aligned with the site content and are regenerated when documentation is updated
-- the language-aware Word download provides the correct companion document from the app header
+- the language-aware Word download provides the correct companion document from the app header and, in production, regenerates it from the latest deployed app content
 
 ## Risks
 

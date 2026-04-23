@@ -29,11 +29,11 @@ In consulting, perceived value is not simply delivered to the client; it is buil
 
 Yet the massive introduction of AI into consulting practices changes the situation of this co-creation. It transforms how contributions are produced, made visible, attributed to actors, appropriated and mobilized in the managerial action of the client organization, where perceived value alone actually takes shape. This research explores this transformation at work. How is the perceived value of consulting thus reconfigured by AI? Under what conditions is it strengthened or weakened?
 
-In other words, how does AI reconfigure the perceived value of consulting missions?
+In other words, how does the integration of AI in consulting practices reconfigure the co-creation of perceived value for clients?
 
 ### WHY IT MATTERS
 
-The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this perceived value co-creation occurs in the AI era.
+The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation and, consequently, client-perceived value (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this perceived value co-creation occurs in the AI era.
 
 ### AN OPEN QUESTION
 

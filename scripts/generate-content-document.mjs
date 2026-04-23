@@ -768,23 +768,39 @@ function buildLocaleDocument(artefact, lang, figureAssets) {
   return doc;
 }
 
-fs.mkdirSync(docsDir, { recursive: true });
+function generateContentDocuments() {
+  fs.mkdirSync(docsDir, { recursive: true });
 
-const artefact = loadArtefactContent();
-const figureAssets = ensureFigureAssets(artefact);
+  const artefact = loadArtefactContent();
+  const figureAssets = ensureFigureAssets(artefact);
 
-["fr", "en"].forEach((lang) => {
-  const paths = outputPaths(lang);
-  const doc = buildLocaleDocument(artefact, lang, figureAssets);
-  fs.writeFileSync(paths.markdownPath, renderMarkdown(doc.blocks), "utf8");
-  fs.writeFileSync(paths.wordHtmlPath, renderWordHtml(doc.blocks), "utf8");
-  const docxCreated = convertWordHtmlToDocx(paths.wordHtmlPath, paths.wordDocxPath);
+  ["fr", "en"].forEach((lang) => {
+    const paths = outputPaths(lang);
+    const doc = buildLocaleDocument(artefact, lang, figureAssets);
+    fs.writeFileSync(paths.markdownPath, renderMarkdown(doc.blocks), "utf8");
+    fs.writeFileSync(paths.wordHtmlPath, renderWordHtml(doc.blocks), "utf8");
+    const docxCreated = convertWordHtmlToDocx(paths.wordHtmlPath, paths.wordDocxPath);
 
-  console.log(`Generated ${path.relative(root, paths.markdownPath)}`);
-  console.log(`Generated ${path.relative(root, paths.wordHtmlPath)}`);
-  if (docxCreated) {
-    console.log(`Generated ${path.relative(root, paths.wordDocxPath)}`);
-  } else {
-    console.log(`Skipped ${path.relative(root, paths.wordDocxPath)} because textutil was unavailable or failed.`);
-  }
-});
+    console.log(`Generated ${path.relative(root, paths.markdownPath)}`);
+    console.log(`Generated ${path.relative(root, paths.wordHtmlPath)}`);
+    if (docxCreated) {
+      console.log(`Generated ${path.relative(root, paths.wordDocxPath)}`);
+    } else {
+      console.log(`Skipped ${path.relative(root, paths.wordDocxPath)} because textutil was unavailable or failed.`);
+    }
+  });
+}
+
+export {
+  buildLocaleDocument,
+  generateContentDocuments,
+  loadArtefactContent,
+  outputPaths,
+  renderMarkdown,
+  renderSphereSvg,
+  renderWordHtml
+};
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  generateContentDocuments();
+}
