@@ -39,13 +39,15 @@ L'intégration de l'IA dans le conseil, ne génère pas nécessairement une vale
 
 Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil. Nous y apportons toutefois une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.
 
-• La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).
+- La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).
 
-• La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).
+- La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).
 
-• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.
+- Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.
 
 Au plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.
+
+<div style="page-break-after: always;"></div>
 
 ## 2. CADRE THÉORIQUE
 
@@ -196,6 +198,8 @@ S1/S2/S3 est un cadre d’observation empirique, pas une nouvelle proposition th
 
 Chaque situation rend certains mécanismes particulièrement observables : S1 la base relationnelle, S2 la transparence latente et l’attribution, S3 l’observabilité simultanée des trois dimensions.
 
+<div style="page-break-after: always;"></div>
+
 ## 3. CADRE D'OBSERVATION
 
 ### Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA
@@ -217,6 +221,8 @@ L'IA est utilisée séparément par le consultant et/ou le client, sans orchestr
 #### S3 — Co-création tripartite
 
 La co-création se déploie dans une triade explicite : consultant, client et IA. Le consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation. Observable : les trois propositions (P1, P2, P3) y sont simultanément observables. La dimension cognitive de la valeur perçue peut y être plus riche — mais l'auteur de la production devient contestable (Raisch & Krakowski 2020 ; Baird & Maruping 2021).
+
+<div style="page-break-after: always;"></div>
 
 ## 4. ILLUSTRATION
 

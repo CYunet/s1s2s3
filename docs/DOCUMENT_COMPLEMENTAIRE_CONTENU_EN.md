@@ -39,13 +39,15 @@ The integration of AI into consulting does not necessarily generate superior val
 
 At the theoretical level, this research mobilizes a dual perspective (marketing and information systems), analyzed through the prism of its application to the consulting field. It nevertheless brings an original perspective to it: to our knowledge, there is no unified framework for exploring the pressing question of perceived value co-creation in consulting in the AI era, even though this question is central to guiding the necessary transformation of consulting practices.
 
-• The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).
+- The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).
 
-• The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).
+- The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).
 
-• Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.
+- Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.
 
 At the praxeological level, our analysis of the “grey” literature observes that consulting actors are indeed integrating AI into their practices while exploring possibilities for business model innovation. By focusing on the conditions under which consulting value is co-created in the AI era and ultimately perceived by the client, this research should help shed light on these initiatives.
+
+<div style="page-break-after: always;"></div>
 
 ## 2. THEORETICAL FRAMEWORK
 
@@ -196,6 +198,8 @@ S1/S2/S3 is an empirical observational framework, not a new theoretical proposit
 
 Each situation makes certain mechanisms particularly observable: S1 the relational baseline, S2 latent transparency and attribution, S3 the simultaneous observability of the three dimensions.
 
+<div style="page-break-after: always;"></div>
+
 ## 3. OBSERVATION FRAMEWORK
 
 ### The 3 spheres of perceived value co-creation in consulting in the AI era
@@ -217,6 +221,8 @@ AI is used separately by the consultant and/or the client, without shared orches
 #### S3 — Tripartite co-creation
 
 Co-creation unfolds in an explicit triad: consultant, client and AI. The consultant no longer monopolizes the central role; orchestration, attribution and legitimacy become more distributed and more subject to negotiation. Observable: the three propositions (P1, P2, P3) are simultaneously observable. The cognitive dimension of perceived value may be richer — but the author of the production becomes contestable (Raisch & Krakowski 2020; Baird & Maruping 2021).
+
+<div style="page-break-after: always;"></div>
 
 ## 4. ILLUSTRATION
 

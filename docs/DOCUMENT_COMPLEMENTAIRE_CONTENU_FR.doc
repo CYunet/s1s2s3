@@ -18,11 +18,13 @@
     h1, h2, h3, h4, .block-label, .toc-group, .toc-table, .footer { text-align: left; }
     h1 { font-size: 26pt; margin-top: 24pt; border-bottom: 2px solid #ddd; padding-bottom: 6pt; }
     h2 { font-size: 20pt; margin-top: 22pt; color: #2b2520; }
+    .doc-heading--section { page-break-before: always; }
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
     p, li { font-size: 11pt; }
     .doc-meta { margin-top: -6pt; font-size: 9.5pt; color: #6d6258; text-align: left; }
-    .doc-paragraph, .definition-text, li { text-align: justify; }
+    .doc-paragraph { margin: 0 0 11pt; text-align: justify; }
+    .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
     .toc-group { margin: 14pt 0 4pt; font-size: 12pt; font-weight: 600; }
@@ -30,12 +32,12 @@
     .toc-table td { padding: 4pt 0; font-size: 11pt; }
     .toc-label { width: 86%; text-align: left; }
     .toc-page { width: 14%; text-align: right; white-space: nowrap; }
-    .page-break { page-break-after: always; text-align: left; }
+    .page-break { page-break-before: always; height: 0; margin: 0; }
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
     .figure-image { max-width: 100%; height: auto; border: 0; }
-    .figure-image--spheres { width: 13.75cm; height: auto; }
+    .figure-image--spheres { width: 12.2cm; height: auto; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
@@ -46,6 +48,8 @@
     strong { color: #1f1a16; }
     a { color: #2357a8; text-decoration: underline; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 24pt 0; }
+    .doc-list { margin: 6pt 0 14pt 0; padding-left: 20pt; }
+    .doc-list li { margin: 0 0 8pt 0; line-height: 1.5; }
     .footer { font-size: 9pt; color: #777; text-align: center; }
   </style>
 </head>
@@ -56,8 +60,8 @@
 <p class="doc-paragraph">Ce texte est disponible également en ligne : <a href="https://s1s2s3.vercel.app">https://s1s2s3.vercel.app</a></p>
 <h2 class="doc-heading doc-heading--2">Table des matières</h2>
 <p class="toc-group">Version française</p><table class="toc-table"><tbody><tr><td class="toc-label">1. Positionnement de la recherche</td><td class="toc-page">p. 2</td></tr><tr><td class="toc-label">2. Cadre théorique</td><td class="toc-page">p. 3</td></tr><tr><td class="toc-label">3. Cadre d'observation</td><td class="toc-page">p. 8</td></tr><tr><td class="toc-label">4. Illustration</td><td class="toc-page">p. 10</td></tr></tbody></table>
-<p class="page-break" style="page-break-after: always;">&nbsp;</p>
-<h2 class="doc-heading doc-heading--2">1. POSITIONNEMENT DE LA RECHERCHE</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">1. POSITIONNEMENT DE LA RECHERCHE</h2>
 <h3 class="doc-heading doc-heading--3">Comprendre la co-création de valeur perçue dans le conseil à l'ère de l'IA</h3>
 <h3 class="doc-heading doc-heading--3">LA QUESTION</h3>
 <p class="doc-paragraph">Le conseil augmenté par l'IA est souvent présenté comme une promesse de valeur supérieure pour les clients, car il permet de produire plus vite, mieux, plus fort, moins cher, plus sûr. Or, la valeur est subjective, et sa perception par le client, en rien automatique.</p>
@@ -68,11 +72,12 @@
 <p class="doc-paragraph">L'intégration de l'IA dans le conseil, ne génère pas nécessairement une valeur supérieure pour le client. Paradoxalement, l’IA peut à la fois renforcer le processus de production du conseil et fragiliser la situation de co-création, et par conséquent la valeur perçue par le client (faible lisibilité du processus ou du résultat, questionnement sur la légitimité du conseil produit, floutage des contributions, défaut d’appropriation des connaissances managériales produites). D’autant que la littérature sur le conseil en management, suggère que la co-création de connaissances managériales, et par la même, de valeur perçue par le client, demeure historiquement inaboutie (au profit d’un simple transfert de bonnes pratiques). Dès lors, la réussite du modèle de consultant augmenté par l’IA, dépend d’une meilleure compréhension des conditions dans lesquelles cette co-création de valeur perçue se produit à l’ère de l’IA.</p>
 <h3 class="doc-heading doc-heading--3">UNE QUESTION LAISSÉE OUVERTE</h3>
 <p class="doc-paragraph">Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil. Nous y apportons toutefois une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.</p>
-<p class="doc-paragraph">• La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).</p>
-<p class="doc-paragraph">• La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).</p>
-<p class="doc-paragraph">• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.</p>
+<ul class="doc-list"><li>La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).</li></ul>
+<ul class="doc-list"><li>La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).</li></ul>
+<ul class="doc-list"><li>Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.</li></ul>
 <p class="doc-paragraph">Au plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.</p>
-<h2 class="doc-heading doc-heading--2">2. CADRE THÉORIQUE</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">2. CADRE THÉORIQUE</h2>
 <p class="doc-paragraph">Nous formulons trois propositions de recherche pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil. Ces propositions sont dérivées de notre revue de la littérature, et articulées selon un ordre séquentiel (P1, P2, P3). P1 pose les dimensions de la valeur perçue du conseil, qui font l’objet d’une reconfiguration à l’ère de l’IA ; P2 en pose le mécanisme médiateur, à savoir la transparence. P3 pose les conditions de la reconfiguration, qui permettent à P2 de fonctionner.</p>
 <h3 class="doc-heading doc-heading--3">L’ABSENCE DE CADRE D’EXPLORATION</h3>
 <p class="doc-paragraph">Notre recherche propose de formaliser les effets de l'IA sur la co-création de valeur perçue du conseil, au travers d’un cadre d'analyse et d'un cadre d'observation originaux.</p>
@@ -124,14 +129,15 @@
 <p class="doc-paragraph">La co-destruction de valeur (Plé &amp; Cáceres 2010 ; Lumivalo et al. 2024) constitue la condition limite lorsque P2 et P3 échouent simultanément.</p>
 <h3 class="doc-heading doc-heading--3">LA NÉCESSITÉ D’UN CADRE D’OBSERVATION DE LA CO-CRÉATION DE VALEUR PERÇUE DU CONSEIL À L’ÈRE DE L’IA</h3>
 <p class="doc-paragraph">Les propositions de recherche explorent les conditions pour que l'intégration de l'IA génère davantage de valeur perçue co-créée — à travers les dimensions relationnelles, processuelles et cognitives du conseil. Les travaux sur la valeur perçue montrent cependant à quel point elle est une notion multi-dimensionnelle et subjective, donc par définition difficile à évaluer. Elle est pour certains, la mesure avec laquelle un client se sent dans une meilleure situation ou dans une situation moins favorable, à travers des expériences liées à la consommation (Grönroos et Voima, 2013). Pour d’autres, des facteurs consensuels la caractérisent, tels que jugement comparatif, personnelle, dynamique, contextuelle (Rivière et Mencarelli, 2012). Dans le domaine du conseil, qui évolue par définition en contexte ambigu et incertain (Svensson, 2010), nous ne risquerons donc pas à établir une échelle de mesure, et préférons adopter l’approche pragmatiste, qui observe la valeur perçue à l’oeuvre, s’intéressant aux activités de mise en valeur, comme surcroit de justification du conseil (Bourgoin, 2014). Qu’en est-il de ces activités lorsque l’IA floute les contributions des acteurs ? Pour observer la reconfiguration de la valeur perçue du conseil à l’ère de l’IA, il nous semble ainsi nécessaire de reposer un cadre d’observation spécifique au conseil et à l’IA, permettant d’apprécier les effets de l’intégration de l’IA sur la co-création de valeur perçue en situation de conseil, au travers de nos propositions de recherche (P1, P2, P3). Notre cadre d’observation (S1/S2/S3) situe chaque interaction consultant-client dans une configuration de co-création, au sein de la sphère conjointe de co-création de valeur (Grönroos et Voima, 2013), rendant empiriquement observables les mécanismes théoriques de P1, P2 et P3.</p>
-<ul><li>S1 — Dyade humaine. IA absente. Base relationnelle.</li><li>S2 — IA en silo. Attribution et transparence latentes.</li><li>S3 — Co-création tripartite. Toutes les dimensions sont observables.</li></ul>
+<ul class="doc-list"><li>S1 — Dyade humaine. IA absente. Base relationnelle.</li><li>S2 — IA en silo. Attribution et transparence latentes.</li><li>S3 — Co-création tripartite. Toutes les dimensions sont observables.</li></ul>
 <h3 class="doc-heading doc-heading--3">Séquencement d'observation</h3>
 <h4 class="doc-heading doc-heading--4">Situation initiale de co-création</h4>
 <p class="doc-paragraph">La situation initiale de co-création S1, se situe ainsi sans IA (dyade classique consultant-client). Observée au prisme de notre proposition P1 (reconfiguration multi-dimensionnelle de la valeur perçue), lorsque la légitimité relationnelle du consultant n'est pas déjà disponible, des séquences qui commencent en S1 peuvent aider à la construire avant une intégration plus explicite de l'IA en S2/S3. Lorsque le capital de confiance préalable existe déjà — y compris à partir d'interactions antérieures ou de missions précédentes — d'autres points d'entrée restent possibles. Dans tous les cas, la transparence (P2) doit être calibrée au profil interprétatif du client (P3).</p>
 <h3 class="doc-heading doc-heading--3">STATUT DU CADRE D’OBSERVATION</h3>
 <p class="doc-paragraph">S1/S2/S3 est un cadre d’observation empirique, pas une nouvelle proposition théorique.</p>
 <p class="doc-paragraph">Chaque situation rend certains mécanismes particulièrement observables : S1 la base relationnelle, S2 la transparence latente et l’attribution, S3 l’observabilité simultanée des trois dimensions.</p>
-<h2 class="doc-heading doc-heading--2">3. CADRE D'OBSERVATION</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">3. CADRE D'OBSERVATION</h2>
 <h3 class="doc-heading doc-heading--3">Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA</h3>
 <p class="doc-paragraph">Le diagramme des 3 sphères de co-création consultant-client-IA constitue le cadre d'observation à travers lequel les propositions de recherche sur la co-création de valeur perçue sont examinées empiriquement, dans trois configurations consultant-client-IA. Par ailleurs, au sein de ce cadre, l'orchestration dynamique et temporelle des situations de co-création, peut par ailleurs constituer un levier managérial, sans être une prescription figée.</p>
 <div class="figure"><p class="figure-title">Figure — Les 3 sphères de la co-création consultant-client-IA</p><p class="figure-image-wrap"><img class="figure-image figure-image--spheres" src="assets/spheres-fr.png" alt="Les 3 sphères de la co-création consultant-client-IA" width="520"></p></div>
@@ -141,7 +147,8 @@
 <p class="doc-paragraph">L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive. Le consultant tend néanmoins à conserver le rôle central visible, même lorsque l'IA contribue en arrière-plan. Le risque d'attribution floutée des contributions consultant / IA par le client est latent — la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes. Observable : modalités de transparence, schémas d'attribution, fragilité de la légitimité.</p>
 <h4 class="doc-heading doc-heading--4">S3 — Co-création tripartite</h4>
 <p class="doc-paragraph">La co-création se déploie dans une triade explicite : consultant, client et IA. Le consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation. Observable : les trois propositions (P1, P2, P3) y sont simultanément observables. La dimension cognitive de la valeur perçue peut y être plus riche — mais l'auteur de la production devient contestable (Raisch &amp; Krakowski 2020 ; Baird &amp; Maruping 2021).</p>
-<h2 class="doc-heading doc-heading--2">4. ILLUSTRATION</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">4. ILLUSTRATION</h2>
 <h3 class="doc-heading doc-heading--3">Scénario fictif d'une mission de conseil : audit de plateforme digitale</h3>
 <p class="doc-paragraph">Thomas (consultant) et Marie (cliente, société TechX)</p>
 <p class="doc-paragraph">Ce scénario illustre, de manière fictive et purement indicative, la co-création de valeur perçue à l'oeuvre dans le conseil, à travers la séquence R→P→C, examinée au prisme des trois propositions de la recherche (P1, P2, P3) et du cadre d'observation S1/S2/S3, y compris leur capacité à être défendues politiquement dans l'organisation.</p>

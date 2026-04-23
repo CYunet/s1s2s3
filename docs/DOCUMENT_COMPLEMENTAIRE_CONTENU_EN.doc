@@ -18,11 +18,13 @@
     h1, h2, h3, h4, .block-label, .toc-group, .toc-table, .footer { text-align: left; }
     h1 { font-size: 26pt; margin-top: 24pt; border-bottom: 2px solid #ddd; padding-bottom: 6pt; }
     h2 { font-size: 20pt; margin-top: 22pt; color: #2b2520; }
+    .doc-heading--section { page-break-before: always; }
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
     p, li { font-size: 11pt; }
     .doc-meta { margin-top: -6pt; font-size: 9.5pt; color: #6d6258; text-align: left; }
-    .doc-paragraph, .definition-text, li { text-align: justify; }
+    .doc-paragraph { margin: 0 0 11pt; text-align: justify; }
+    .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
     .toc-group { margin: 14pt 0 4pt; font-size: 12pt; font-weight: 600; }
@@ -30,12 +32,12 @@
     .toc-table td { padding: 4pt 0; font-size: 11pt; }
     .toc-label { width: 86%; text-align: left; }
     .toc-page { width: 14%; text-align: right; white-space: nowrap; }
-    .page-break { page-break-after: always; text-align: left; }
+    .page-break { page-break-before: always; height: 0; margin: 0; }
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
     .figure-image { max-width: 100%; height: auto; border: 0; }
-    .figure-image--spheres { width: 13.75cm; height: auto; }
+    .figure-image--spheres { width: 12.2cm; height: auto; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
@@ -46,6 +48,8 @@
     strong { color: #1f1a16; }
     a { color: #2357a8; text-decoration: underline; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 24pt 0; }
+    .doc-list { margin: 6pt 0 14pt 0; padding-left: 20pt; }
+    .doc-list li { margin: 0 0 8pt 0; line-height: 1.5; }
     .footer { font-size: 9pt; color: #777; text-align: center; }
   </style>
 </head>
@@ -56,8 +60,8 @@
 <p class="doc-paragraph">This text is also available online: <a href="https://s1s2s3.vercel.app">https://s1s2s3.vercel.app</a></p>
 <h2 class="doc-heading doc-heading--2">Table of contents</h2>
 <p class="toc-group">English version</p><table class="toc-table"><tbody><tr><td class="toc-label">1. Research positioning</td><td class="toc-page">p. 2</td></tr><tr><td class="toc-label">2. Theoretical framework</td><td class="toc-page">p. 3</td></tr><tr><td class="toc-label">3. Observation framework</td><td class="toc-page">p. 8</td></tr><tr><td class="toc-label">4. Illustration</td><td class="toc-page">p. 10</td></tr></tbody></table>
-<p class="page-break" style="page-break-after: always;">&nbsp;</p>
-<h2 class="doc-heading doc-heading--2">1. RESEARCH POSITIONING</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">1. RESEARCH POSITIONING</h2>
 <h3 class="doc-heading doc-heading--3">Understanding perceived value co-creation in consulting in the AI era</h3>
 <h3 class="doc-heading doc-heading--3">THE QUESTION</h3>
 <p class="doc-paragraph">AI-augmented consulting is often presented as a promise of superior value for clients, because it enables work to be produced faster, better, stronger, cheaper and more safely. Yet value is subjective, and the client’s perception of it is by no means automatic.</p>
@@ -68,11 +72,12 @@
 <p class="doc-paragraph">The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation and, consequently, client-perceived value (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this perceived value co-creation occurs in the AI era.</p>
 <h3 class="doc-heading doc-heading--3">AN OPEN QUESTION</h3>
 <p class="doc-paragraph">At the theoretical level, this research mobilizes a dual perspective (marketing and information systems), analyzed through the prism of its application to the consulting field. It nevertheless brings an original perspective to it: to our knowledge, there is no unified framework for exploring the pressing question of perceived value co-creation in consulting in the AI era, even though this question is central to guiding the necessary transformation of consulting practices.</p>
-<p class="doc-paragraph">• The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).</p>
-<p class="doc-paragraph">• The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).</p>
-<p class="doc-paragraph">• Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.</p>
+<ul class="doc-list"><li>The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).</li></ul>
+<ul class="doc-list"><li>The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).</li></ul>
+<ul class="doc-list"><li>Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.</li></ul>
 <p class="doc-paragraph">At the praxeological level, our analysis of the “grey” literature observes that consulting actors are indeed integrating AI into their practices while exploring possibilities for business model innovation. By focusing on the conditions under which consulting value is co-created in the AI era and ultimately perceived by the client, this research should help shed light on these initiatives.</p>
-<h2 class="doc-heading doc-heading--2">2. THEORETICAL FRAMEWORK</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">2. THEORETICAL FRAMEWORK</h2>
 <p class="doc-paragraph">We formulate three research propositions to explore how the integration of AI reconfigures perceived value in consulting. These propositions are derived from our literature review and articulated in a sequential order (P1, P2, P3). P1 sets out the dimensions of consulting perceived value that are reconfigured in the AI era; P2 sets out the mediating mechanism, namely transparency. P3 sets out the conditions of the reconfiguration, which allow P2 to operate.</p>
 <h3 class="doc-heading doc-heading--3">THE ABSENCE OF AN EXPLORATORY FRAMEWORK</h3>
 <p class="doc-paragraph">This research proposes to formalize the effects of AI on perceived value co-creation in consulting through an original analytical framework and observational framework.</p>
@@ -124,14 +129,15 @@
 <p class="doc-paragraph">Value co-destruction (Plé &amp; Cáceres 2010; Lumivalo et al. 2024) constitutes the boundary condition when P2 and P3 fail simultaneously.</p>
 <h3 class="doc-heading doc-heading--3">THE NEED FOR AN OBSERVATIONAL FRAMEWORK OF PERCEIVED VALUE CO-CREATION IN AI-ERA CONSULTING</h3>
 <p class="doc-paragraph">The research propositions explore the conditions under which AI integration generates more co-created perceived value — through the relational, processual and cognitive dimensions of consulting. Yet work on perceived value shows how multidimensional and subjective this notion is, and therefore by definition difficult to evaluate. For some, it is the measure by which a client feels in a better or less favorable situation through consumption-related experiences (Grönroos and Voima, 2013). For others, consensual factors characterize it, such as comparative judgment, personal, dynamic and contextual character (Rivière and Mencarelli, 2012). In the consulting domain, which by definition evolves in ambiguous and uncertain contexts (Svensson, 2010), we therefore do not attempt to establish a measurement scale, and prefer to adopt the pragmatist approach, which observes perceived value at work by focusing on valuation activities as an additional layer of justification for consulting (Bourgoin, 2014). What happens to these activities when AI blurs actors’ contributions? To observe the reconfiguration of consulting perceived value in the AI era, it therefore seems necessary to restate an observational framework specific to consulting and AI, enabling the effects of AI integration on perceived value co-creation in consulting situations to be assessed through our research propositions (P1, P2, P3). Our observational framework (S1/S2/S3) situates each consultant-client interaction within a configuration of co-creation, inside the joint sphere of value co-creation (Grönroos and Voima, 2013), making the theoretical mechanisms of P1, P2 and P3 empirically observable.</p>
-<ul><li>S1 — Human dyad. AI absent. Relational baseline.</li><li>S2 — AI in silo. Attribution and transparency latent.</li><li>S3 — Tripartite co-creation. All dimensions observable.</li></ul>
+<ul class="doc-list"><li>S1 — Human dyad. AI absent. Relational baseline.</li><li>S2 — AI in silo. Attribution and transparency latent.</li><li>S3 — Tripartite co-creation. All dimensions observable.</li></ul>
 <h3 class="doc-heading doc-heading--3">Observational sequencing</h3>
 <h4 class="doc-heading doc-heading--4">Initial co-creation situation</h4>
 <p class="doc-paragraph">The initial co-creation situation S1 is therefore located without AI (the classical consultant-client dyad). Observed through our proposition P1 (multidimensional reconfiguration of perceived value), when the consultant’s relational legitimacy is not already available, sequences that begin in S1 may help build it before a more explicit integration of AI in S2/S3. When prior trust capital already exists — including from previous interactions or earlier missions — other entry points remain possible. In all cases, transparency (P2) must be calibrated to the client’s interpretive profile (P3).</p>
 <h3 class="doc-heading doc-heading--3">OBSERVATIONAL STATUS</h3>
 <p class="doc-paragraph">S1/S2/S3 is an empirical observational framework, not a new theoretical proposition.</p>
 <p class="doc-paragraph">Each situation makes certain mechanisms particularly observable: S1 the relational baseline, S2 latent transparency and attribution, S3 the simultaneous observability of the three dimensions.</p>
-<h2 class="doc-heading doc-heading--2">3. OBSERVATION FRAMEWORK</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">3. OBSERVATION FRAMEWORK</h2>
 <h3 class="doc-heading doc-heading--3">The 3 spheres of perceived value co-creation in consulting in the AI era</h3>
 <p class="doc-paragraph">The diagram of the 3 consultant-client-AI co-creation spheres constitutes the observational framework through which the research propositions on perceived value co-creation are examined empirically, across three consultant-client-AI configurations. Within this framework, the dynamic and temporal orchestration of co-creation situations may also constitute a managerial lever, without being a fixed prescription.</p>
 <div class="figure"><p class="figure-title">Figure — The 3 spheres of consultant-client-AI co-creation</p><p class="figure-image-wrap"><img class="figure-image figure-image--spheres" src="assets/spheres-en.png" alt="The 3 spheres of consultant-client-AI co-creation" width="520"></p></div>
@@ -141,7 +147,8 @@
 <p class="doc-paragraph">AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation. The consultant nevertheless tends to retain the visible central role, even when AI contributes in the background. The risk of blurred attribution of consultant / AI contributions by the client is latent — relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered. Observable: transparency modalities, attribution patterns, legitimacy fragility.</p>
 <h4 class="doc-heading doc-heading--4">S3 — Tripartite co-creation</h4>
 <p class="doc-paragraph">Co-creation unfolds in an explicit triad: consultant, client and AI. The consultant no longer monopolizes the central role; orchestration, attribution and legitimacy become more distributed and more subject to negotiation. Observable: the three propositions (P1, P2, P3) are simultaneously observable. The cognitive dimension of perceived value may be richer — but the author of the production becomes contestable (Raisch &amp; Krakowski 2020; Baird &amp; Maruping 2021).</p>
-<h2 class="doc-heading doc-heading--2">4. ILLUSTRATION</h2>
+<div class="page-break" style="page-break-before: always;"></div>
+<h2 class="doc-heading doc-heading--2 doc-heading--section">4. ILLUSTRATION</h2>
 <h3 class="doc-heading doc-heading--3">Fictional consulting scenario: digital platform audit</h3>
 <p class="doc-paragraph">Thomas (consultant) and Marie (client, TechX)</p>
 <p class="doc-paragraph">This scenario illustrates, in a fictional and purely indicative way, perceived value co-creation at work in consulting through the R→P→C sequence, examined through the three research propositions (P1, P2, P3) and the S1/S2/S3 observational framework, including their capacity to be politically defended within the organization.</p>

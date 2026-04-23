@@ -87,7 +87,7 @@ function renderSphereSvg(labels) {
     .join("");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-label="${escapeHtml(fallbackTitle)}">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="${escapeHtml(fallbackTitle)}">
   <defs>
     <radialGradient id="aiBall" cx="30%" cy="30%"><stop offset="0%" stop-color="#b784ff"/><stop offset="100%" stop-color="#8a5cf6"/></radialGradient>
     <radialGradient id="coBall" cx="30%" cy="30%"><stop offset="0%" stop-color="#ff77bb"/><stop offset="100%" stop-color="#e53e96"/></radialGradient>
@@ -102,53 +102,53 @@ function renderSphereSvg(labels) {
       .button { font-size: 23px; font-weight: 800; }
     </style>
   </defs>
-  <rect x="38" y="38" width="1524" height="1524" rx="46" fill="#fffdf9"/>
-  <text class="title" x="800" y="108" text-anchor="middle">${titleSvg}</text>
+  <rect x="38" y="38" width="1524" height="824" rx="46" fill="#fffdf9"/>
+  <text class="title" x="800" y="84" text-anchor="middle">${titleSvg}</text>
 
-  <ellipse cx="800" cy="650" rx="620" ry="430" fill="none" stroke="#16bb84" stroke-width="5"/>
-  <ellipse cx="800" cy="650" rx="405" ry="255" fill="none" stroke="#8a5cf6" stroke-width="5"/>
-  <ellipse cx="800" cy="650" rx="250" ry="135" fill="none" stroke="#f09400" stroke-width="5"/>
+  <ellipse cx="800" cy="360" rx="620" ry="240" fill="none" stroke="#16bb84" stroke-width="5"/>
+  <ellipse cx="800" cy="360" rx="405" ry="150" fill="none" stroke="#8a5cf6" stroke-width="5"/>
+  <ellipse cx="800" cy="360" rx="250" ry="82" fill="none" stroke="#f09400" stroke-width="5"/>
 
-  <line x1="800" y1="330" x2="515" y2="560" stroke="#575757" stroke-width="4"/>
-  <line x1="800" y1="330" x2="1085" y2="560" stroke="#575757" stroke-width="4"/>
-  <line x1="800" y1="330" x2="720" y2="650" stroke="#575757" stroke-width="4"/>
-  <line x1="800" y1="330" x2="880" y2="650" stroke="#575757" stroke-width="4"/>
-  <line x1="525" y1="580" x2="720" y2="650" stroke="#575757" stroke-width="4"/>
-  <line x1="1075" y1="580" x2="880" y2="650" stroke="#575757" stroke-width="4"/>
-  <line x1="770" y1="650" x2="830" y2="650" stroke="#575757" stroke-width="5"/>
+  <line x1="800" y1="178" x2="535" y2="330" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="178" x2="1065" y2="330" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="178" x2="725" y2="360" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="178" x2="875" y2="360" stroke="#575757" stroke-width="4"/>
+  <line x1="545" y1="343" x2="720" y2="360" stroke="#575757" stroke-width="4"/>
+  <line x1="1055" y1="343" x2="880" y2="360" stroke="#575757" stroke-width="4"/>
+  <line x1="770" y1="360" x2="830" y2="360" stroke="#575757" stroke-width="5"/>
 
-  <circle cx="800" cy="330" r="50" fill="url(#aiBall)"/>
-  <circle cx="510" cy="575" r="39" fill="url(#aiBall)"/>
-  <circle cx="1090" cy="575" r="39" fill="url(#aiBall)"/>
-  <circle cx="720" cy="650" r="60" fill="url(#coBall)"/>
-  <circle cx="880" cy="650" r="60" fill="url(#clBall)"/>
+  <circle cx="800" cy="178" r="50" fill="url(#aiBall)"/>
+  <circle cx="530" cy="335" r="39" fill="url(#aiBall)"/>
+  <circle cx="1070" cy="335" r="39" fill="url(#aiBall)"/>
+  <circle cx="720" cy="360" r="60" fill="url(#coBall)"/>
+  <circle cx="880" cy="360" r="60" fill="url(#clBall)"/>
 
-  <text class="node" x="800" y="343" text-anchor="middle">${ai}</text>
-  <text class="small-node" x="510" y="586" text-anchor="middle">${ai}</text>
-  <text class="small-node" x="1090" y="586" text-anchor="middle">${ai}</text>
-  <text class="node" x="720" y="663" text-anchor="middle">CO</text>
-  <text class="node" x="880" y="663" text-anchor="middle">CL</text>
+  <text class="node" x="800" y="191" text-anchor="middle">${ai}</text>
+  <text class="small-node" x="530" y="346" text-anchor="middle">${ai}</text>
+  <text class="small-node" x="1070" y="346" text-anchor="middle">${ai}</text>
+  <text class="node" x="720" y="373" text-anchor="middle">CO</text>
+  <text class="node" x="880" y="373" text-anchor="middle">CL</text>
 
-  <rect x="680" y="805" width="240" height="76" rx="38" fill="#fffdf9" stroke="#e18a00" stroke-width="2"/>
-  <text class="sphere-label" x="800" y="853" text-anchor="middle" fill="#e18a00">S1</text>
-  <rect x="680" y="930" width="240" height="76" rx="38" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
-  <text class="sphere-label" x="800" y="978" text-anchor="middle" fill="#8a5cf6">S2</text>
-  <rect x="680" y="1065" width="240" height="76" rx="38" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
-  <text class="sphere-label" x="800" y="1113" text-anchor="middle" fill="#14b87d">S3</text>
+  <rect x="680" y="500" width="240" height="76" rx="38" fill="#fffdf9" stroke="#e18a00" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="548" text-anchor="middle" fill="#e18a00">S1</text>
+  <rect x="680" y="588" width="240" height="76" rx="38" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="636" text-anchor="middle" fill="#8a5cf6">S2</text>
+  <rect x="680" y="676" width="240" height="76" rx="38" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="724" text-anchor="middle" fill="#14b87d">S3</text>
 
-  <circle cx="390" cy="1282" r="15" fill="#e53e96"/>
-  <text class="legend" x="422" y="1292">${consultant}</text>
-  <circle cx="730" cy="1282" r="15" fill="#18add0"/>
-  <text class="legend" x="762" y="1292">${client}</text>
-  <circle cx="1040" cy="1282" r="15" fill="#8a5cf6"/>
-  <text class="legend" x="1072" y="1292">${ai}</text>
+  <circle cx="390" cy="790" r="15" fill="#e53e96"/>
+  <text class="legend" x="422" y="800">${consultant}</text>
+  <circle cx="730" cy="790" r="15" fill="#18add0"/>
+  <text class="legend" x="762" y="800">${client}</text>
+  <circle cx="1040" cy="790" r="15" fill="#8a5cf6"/>
+  <text class="legend" x="1072" y="800">${ai}</text>
 
-  <rect x="220" y="1420" width="300" height="66" rx="33" fill="#fffdf9" stroke="#f6a21b" stroke-width="2"/>
-  <text class="button" x="370" y="1462" text-anchor="middle" fill="#e18a00">${s1}</text>
-  <rect x="590" y="1420" width="340" height="66" rx="33" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
-  <text class="button" x="760" y="1462" text-anchor="middle" fill="#8a5cf6">${s2}</text>
-  <rect x="1000" y="1420" width="420" height="66" rx="33" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
-  <text class="button" x="1210" y="1462" text-anchor="middle" fill="#14b87d">${s3}</text>
+  <rect x="220" y="830" width="300" height="46" rx="23" fill="#fffdf9" stroke="#f6a21b" stroke-width="2"/>
+  <text class="button" x="370" y="860" text-anchor="middle" fill="#e18a00">${s1}</text>
+  <rect x="590" y="830" width="340" height="46" rx="23" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
+  <text class="button" x="760" y="860" text-anchor="middle" fill="#8a5cf6">${s2}</text>
+  <rect x="1000" y="830" width="420" height="46" rx="23" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
+  <text class="button" x="1210" y="860" text-anchor="middle" fill="#14b87d">${s3}</text>
 </svg>
 `;
 }
@@ -212,6 +212,19 @@ function makeDoc() {
 
   function paragraph(text) {
     splitParagraphs(text).forEach((item) => {
+      const bulletItems = item
+        .split(/\n+/)
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      if (bulletItems.length && bulletItems.every((line) => /^•\s+/.test(line))) {
+        blocks.push({
+          type: "list",
+          items: bulletItems.map((line) => line.replace(/^•\s+/, "").trim())
+        });
+        return;
+      }
+
       blocks.push({ type: "paragraph", text: item });
     });
   }
@@ -310,6 +323,7 @@ function addLocale(doc, lang, locale, options = {}) {
   heading(3, why.gapLabel || "The research gap");
   paragraph(why.gapHtml || "");
 
+  doc.pageBreak();
   heading(2, `2. ${theory.kicker || "Theoretical framework"}`);
   heading(3, theory.title || "");
   paragraph(theory.introHtml || "");
@@ -368,6 +382,7 @@ function addLocale(doc, lang, locale, options = {}) {
     paragraph(theory.findingsNote);
   }
 
+  doc.pageBreak();
   heading(2, `3. ${spheres.kicker || "Observation framework"}`);
   heading(3, spheres.title || "");
   paragraph(spheres.intro || "");
@@ -391,6 +406,7 @@ function addLocale(doc, lang, locale, options = {}) {
     definition("S3", spheres.diagram.s3 || "");
   }
 
+  doc.pageBreak();
   heading(2, `4. ${illustration.kicker || "Illustration"}`);
   heading(3, illustration.title || "");
   paragraph(illustration.subtitle || "");
@@ -543,7 +559,10 @@ function renderWordFigure(block) {
 function renderWordHtml(blocks) {
   const body = blocks.map((block) => {
     if (block.type === "heading") {
-      return `<h${block.level} class="doc-heading doc-heading--${block.level}">${escapeHtml(block.text)}</h${block.level}>`;
+      const sectionClass = block.level === 2 && /^\d+\.\s/.test(block.text)
+        ? " doc-heading--section"
+        : "";
+      return `<h${block.level} class="doc-heading doc-heading--${block.level}${sectionClass}">${escapeHtml(block.text)}</h${block.level}>`;
     }
     if (block.type === "paragraph") {
       return `<p class="doc-paragraph">${escapeHtml(block.text).replace(/\n/g, "<br>")}</p>`;
@@ -571,10 +590,10 @@ function renderWordHtml(blocks) {
       return renderWordFigure(block);
     }
     if (block.type === "list") {
-      return `<ul>${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+      return `<ul class="doc-list">${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
     }
     if (block.type === "pageBreak") {
-      return `<p class="page-break" style="page-break-after: always;">&nbsp;</p>`;
+      return `<div class="page-break" style="page-break-before: always;"></div>`;
     }
     return "<hr>";
   }).join("\n");
@@ -599,11 +618,13 @@ function renderWordHtml(blocks) {
     h1, h2, h3, h4, .block-label, .toc-group, .toc-table, .footer { text-align: left; }
     h1 { font-size: 26pt; margin-top: 24pt; border-bottom: 2px solid #ddd; padding-bottom: 6pt; }
     h2 { font-size: 20pt; margin-top: 22pt; color: #2b2520; }
+    .doc-heading--section { page-break-before: always; }
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
     p, li { font-size: 11pt; }
     .doc-meta { margin-top: -6pt; font-size: 9.5pt; color: #6d6258; text-align: left; }
-    .doc-paragraph, .definition-text, li { text-align: justify; }
+    .doc-paragraph { margin: 0 0 11pt; text-align: justify; }
+    .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
     .toc-group { margin: 14pt 0 4pt; font-size: 12pt; font-weight: 600; }
@@ -611,12 +632,12 @@ function renderWordHtml(blocks) {
     .toc-table td { padding: 4pt 0; font-size: 11pt; }
     .toc-label { width: 86%; text-align: left; }
     .toc-page { width: 14%; text-align: right; white-space: nowrap; }
-    .page-break { page-break-after: always; text-align: left; }
+    .page-break { page-break-before: always; height: 0; margin: 0; }
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
     .figure-image { max-width: 100%; height: auto; border: 0; }
-    .figure-image--spheres { width: 13.75cm; height: auto; }
+    .figure-image--spheres { width: 12.2cm; height: auto; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
@@ -627,6 +648,8 @@ function renderWordHtml(blocks) {
     strong { color: #1f1a16; }
     a { color: #2357a8; text-decoration: underline; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 24pt 0; }
+    .doc-list { margin: 6pt 0 14pt 0; padding-left: 20pt; }
+    .doc-list li { margin: 0 0 8pt 0; line-height: 1.5; }
     .footer { font-size: 9pt; color: #777; text-align: center; }
   </style>
 </head>
