@@ -176,7 +176,9 @@ Les propositions de recherche explorent les conditions pour que l'intégration d
 
 ### STATUT DU CADRE D’OBSERVATION
 
-S1/S2/S3 est un cadre d’observation : il permet d’examiner empiriquement les mécanismes de P1, P2 et P3, sans constituer une prescription figée.
+S1/S2/S3 est un cadre d’observation empirique, pas une nouvelle proposition théorique.
+
+Chaque situation rend certains mécanismes particulièrement observables : S1 la base relationnelle, S2 la transparence latente et l’attribution, S3 l’observabilité simultanée des trois dimensions.
 
 ## 3. CADRE D'OBSERVATION
 

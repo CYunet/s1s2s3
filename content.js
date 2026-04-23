@@ -162,7 +162,7 @@ window.ARTEFACT_CONTENT = {
         },
         practitionerPrompt: {
           label: "OBSERVATIONAL STATUS",
-          text: "S1/S2/S3 is an observational framework: it allows the mechanisms of P1, P2 and P3 to be examined empirically, without constituting a fixed prescription."
+          text: "S1/S2/S3 is an empirical observational framework, not a new theoretical proposition.<br><br>Each situation makes certain mechanisms particularly observable: S1 the relational baseline, S2 latent transparency and attribution, S3 the simultaneous observability of the three dimensions."
         }
       },
       spheres: {
@@ -536,7 +536,7 @@ window.ARTEFACT_CONTENT = {
         },
         practitionerPrompt: {
           label: "STATUT DU CADRE D’OBSERVATION",
-          text: "S1/S2/S3 est un cadre d’observation : il permet d’examiner empiriquement les mécanismes de P1, P2 et P3, sans constituer une prescription figée."
+          text: "S1/S2/S3 est un cadre d’observation empirique, pas une nouvelle proposition théorique.<br><br>Chaque situation rend certains mécanismes particulièrement observables : S1 la base relationnelle, S2 la transparence latente et l’attribution, S3 l’observabilité simultanée des trois dimensions."
         }
       },
       spheres: {

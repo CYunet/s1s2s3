@@ -176,7 +176,9 @@ The research propositions explore the conditions under which AI integration gene
 
 ### OBSERVATIONAL STATUS
 
-S1/S2/S3 is an observational framework: it allows the mechanisms of P1, P2 and P3 to be examined empirically, without constituting a fixed prescription.
+S1/S2/S3 is an empirical observational framework, not a new theoretical proposition.
+
+Each situation makes certain mechanisms particularly observable: S1 the relational baseline, S2 latent transparency and attribution, S3 the simultaneous observability of the three dimensions.
 
 ## 3. OBSERVATION FRAMEWORK
 
