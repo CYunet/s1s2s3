@@ -1,8 +1,8 @@
-# Companion document for the artefact content
+# Perceived value co-creation in AI-era consulting — an exploratory framework
 
-This document reproduces, word for word, the English version of the interactive application’s textual content. It is intended for human reading outside the interface and is regenerated from content.js, the master source for the app content.
+_Yunes, Clément - University of Bordeaux_
 
-Online application: [https://s1s2s3.vercel.app](https://s1s2s3.vercel.app)
+This text is also available online: [https://s1s2s3.vercel.app](https://s1s2s3.vercel.app)
 
 ## Table of contents
 
@@ -43,7 +43,7 @@ At the theoretical level, this research mobilizes a dual perspective (marketing 
 
 • The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).
 
-• Academic work attempting to synthesize these two bodies of literature around consulting value remains rare. Research focuses on the purposes of consulting (technical and political), discusses its value (conditions of formation, measurement), or examines the transformation of the business model. This research contributes to that synthesis by focusing on the exploration of perceived value, into which we integrate the specific dimension related to AI.
+• Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.
 
 At the praxeological level, our analysis of the “grey” literature observes that consulting actors are indeed integrating AI into their practices while exploring possibilities for business model innovation. By focusing on the conditions under which consulting value is co-created in the AI era and ultimately perceived by the client, this research should help shed light on these initiatives.
 

@@ -252,11 +252,17 @@ function makeDoc() {
     });
   }
 
+  function meta(text) {
+    if (text) {
+      blocks.push({ type: "meta", text: stripHtml(text) });
+    }
+  }
+
   function spacer() {
     blocks.push({ type: "spacer" });
   }
 
-  return { blocks, heading, paragraph, list, toc, definition, figure, pageBreak, linkParagraph, spacer };
+  return { blocks, heading, paragraph, list, toc, definition, figure, pageBreak, linkParagraph, meta, spacer };
 }
 
 function addLocale(doc, lang, locale, options = {}) {
@@ -432,6 +438,9 @@ function renderMarkdown(blocks) {
     if (block.type === "linkParagraph") {
       return `${markdownEscape(block.text)} [${markdownEscape(block.label)}](${block.url})`;
     }
+    if (block.type === "meta") {
+      return `_${markdownEscape(block.text)}_`;
+    }
     if (block.type === "toc") {
       return block.groups.map((group) => {
         const rows = group.items.map((item) => `| ${markdownEscape(item.label)} | ${markdownEscape(item.page)} |`).join("\n");
@@ -493,7 +502,7 @@ function renderWordFigure(block) {
   if (block.kind === "spheres") {
     if (block.data.imageFileUrl || block.data.image) {
       const src = block.data.image || block.data.imageFileUrl;
-      return `<div class="figure">${title}<p class="figure-image-wrap"><img class="figure-image" src="${escapeHtml(src)}" alt="${escapeHtml(block.title)}"></p></div>`;
+      return `<div class="figure">${title}<p class="figure-image-wrap"><img class="figure-image figure-image--spheres" src="${escapeHtml(src)}" alt="${escapeHtml(block.title)}" width="520"></p></div>`;
     }
     const cards = block.data.cards || [];
     const cells = cards.map((card) => (
@@ -545,6 +554,9 @@ function renderWordHtml(blocks) {
     if (block.type === "linkParagraph") {
       return `<p class="doc-paragraph">${escapeHtml(block.text)} <a href="${escapeHtml(block.url)}">${escapeHtml(block.label)}</a></p>`;
     }
+    if (block.type === "meta") {
+      return `<p class="doc-meta">${escapeHtml(block.text)}</p>`;
+    }
     if (block.type === "toc") {
       return block.groups.map((group) => (
         `<p class="toc-group">${escapeHtml(group.label)}</p>` +
@@ -571,7 +583,7 @@ function renderWordHtml(blocks) {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Document complémentaire - contenus de l'artefact</title>
+  <title>La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire</title>
   <style>
     @page WordSection1 {
       margin: 2cm 2cm 2.25cm 2cm;
@@ -590,6 +602,7 @@ function renderWordHtml(blocks) {
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
     p, li { font-size: 11pt; }
+    .doc-meta { margin-top: -6pt; font-size: 9.5pt; color: #6d6258; text-align: left; }
     .doc-paragraph, .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
@@ -602,7 +615,8 @@ function renderWordHtml(blocks) {
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
-    .figure-image { width: 100%; height: auto; border: 0; }
+    .figure-image { max-width: 100%; height: auto; border: 0; }
+    .figure-image--spheres { width: 13.75cm; height: auto; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
@@ -754,11 +768,17 @@ function buildLocaleDocument(artefact, lang, figureAssets) {
   const doc = makeDoc();
   const isFrench = lang === "fr";
 
-  doc.heading(1, isFrench ? "Document complémentaire des contenus de l'artefact" : "Companion document for the artefact content");
-  doc.paragraph(isFrench
-    ? "Ce document restitue, mot pour mot, la version française des contenus textuels de l'application interactive. Il est destiné à une lecture humaine hors interface et régénéré depuis content.js, source maître des contenus de l'app."
-    : "This document reproduces, word for word, the English version of the interactive application’s textual content. It is intended for human reading outside the interface and is regenerated from content.js, the master source for the app content.");
-  doc.linkParagraph(isFrench ? "Application en ligne :" : "Online application:", "https://s1s2s3.vercel.app", "https://s1s2s3.vercel.app");
+  doc.heading(1, isFrench
+    ? "La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire"
+    : "Perceived value co-creation in AI-era consulting — an exploratory framework");
+  doc.meta(isFrench
+    ? "Yunes, Clément - Université de Bordeaux"
+    : "Yunes, Clément - University of Bordeaux");
+  doc.linkParagraph(isFrench
+    ? "Ce texte est disponible également en ligne :"
+    : "This text is also available online:",
+    "https://s1s2s3.vercel.app",
+    "https://s1s2s3.vercel.app");
 
   doc.heading(2, isFrench ? "Table des matières" : "Table of contents");
   doc.toc(buildToc(lang));

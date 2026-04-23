@@ -1,8 +1,8 @@
-# Document complémentaire des contenus de l'artefact
+# La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire
 
-Ce document restitue, mot pour mot, la version française des contenus textuels de l'application interactive. Il est destiné à une lecture humaine hors interface et régénéré depuis content.js, source maître des contenus de l'app.
+_Yunes, Clément - Université de Bordeaux_
 
-Application en ligne : [https://s1s2s3.vercel.app](https://s1s2s3.vercel.app)
+Ce texte est disponible également en ligne : [https://s1s2s3.vercel.app](https://s1s2s3.vercel.app)
 
 ## Table des matières
 
@@ -43,9 +43,9 @@ Au plan théorique, notre recherche mobilise une double perspective (marketing, 
 
 • La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).
 
-• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur du conseil, sont rares. Les recherches se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (conditions de sa formation, mesure) ou la transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur l’exploration de la valeur perçue à laquelle nous intégrons la dimension spécifique liée à l’IA.
+• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.
 
-An plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.
+Au plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.
 
 ## 2. CADRE THÉORIQUE
 

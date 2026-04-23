@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Document complémentaire - contenus de l'artefact</title>
+  <title>La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire</title>
   <style>
     @page WordSection1 {
       margin: 2cm 2cm 2.25cm 2cm;
@@ -21,6 +21,7 @@
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
     p, li { font-size: 11pt; }
+    .doc-meta { margin-top: -6pt; font-size: 9.5pt; color: #6d6258; text-align: left; }
     .doc-paragraph, .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
@@ -33,7 +34,8 @@
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
-    .figure-image { width: 100%; height: auto; border: 0; }
+    .figure-image { max-width: 100%; height: auto; border: 0; }
+    .figure-image--spheres { width: 13.75cm; height: auto; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
@@ -49,9 +51,9 @@
 </head>
 <body>
 <div class="WordSection1">
-<h1 class="doc-heading doc-heading--1">Document complémentaire des contenus de l'artefact</h1>
-<p class="doc-paragraph">Ce document restitue, mot pour mot, la version française des contenus textuels de l'application interactive. Il est destiné à une lecture humaine hors interface et régénéré depuis content.js, source maître des contenus de l'app.</p>
-<p class="doc-paragraph">Application en ligne : <a href="https://s1s2s3.vercel.app">https://s1s2s3.vercel.app</a></p>
+<h1 class="doc-heading doc-heading--1">La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire</h1>
+<p class="doc-meta">Yunes, Clément - Université de Bordeaux</p>
+<p class="doc-paragraph">Ce texte est disponible également en ligne : <a href="https://s1s2s3.vercel.app">https://s1s2s3.vercel.app</a></p>
 <h2 class="doc-heading doc-heading--2">Table des matières</h2>
 <p class="toc-group">Version française</p><table class="toc-table"><tbody><tr><td class="toc-label">1. Positionnement de la recherche</td><td class="toc-page">p. 2</td></tr><tr><td class="toc-label">2. Cadre théorique</td><td class="toc-page">p. 3</td></tr><tr><td class="toc-label">3. Cadre d'observation</td><td class="toc-page">p. 8</td></tr><tr><td class="toc-label">4. Illustration</td><td class="toc-page">p. 10</td></tr></tbody></table>
 <p class="page-break" style="page-break-after: always;">&nbsp;</p>
@@ -66,8 +68,8 @@
 <p class="doc-paragraph">L'intégration de l'IA dans le conseil, ne génère pas nécessairement une valeur supérieure pour le client. Paradoxalement, l’IA peut à la fois renforcer le processus de production du conseil et fragiliser la situation de co-création, et par conséquent la valeur perçue par le client (faible lisibilité du processus ou du résultat, questionnement sur la légitimité du conseil produit, floutage des contributions, défaut d’appropriation des connaissances managériales produites). D’autant que la littérature sur le conseil en management, suggère que la co-création de connaissances managériales, et par la même, de valeur perçue par le client, demeure historiquement inaboutie (au profit d’un simple transfert de bonnes pratiques). Dès lors, la réussite du modèle de consultant augmenté par l’IA, dépend d’une meilleure compréhension des conditions dans lesquelles cette co-création de valeur perçue se produit à l’ère de l’IA.</p>
 <h3 class="doc-heading doc-heading--3">UNE QUESTION LAISSÉE OUVERTE</h3>
 <p class="doc-paragraph">Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil, et y apporte une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.</p>
-<p class="doc-paragraph">• La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).<br>• La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).<br>• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur du conseil, sont rares. Les recherches se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (conditions de sa formation, mesure) ou la transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur l’exploration de la valeur perçue à laquelle nous intégrons la dimension spécifique liée à l’IA.</p>
-<p class="doc-paragraph">An plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.</p>
+<p class="doc-paragraph">• La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).<br>• La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).<br>• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.</p>
+<p class="doc-paragraph">Au plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives.</p>
 <h2 class="doc-heading doc-heading--2">2. CADRE THÉORIQUE</h2>
 <p class="doc-paragraph">Nous formulons trois propositions de recherche pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil. Ces propositions sont dérivées de notre revue de la littérature, et articulées selon un ordre séquentiel (P1, P2, P3). P1 pose les dimensions de la valeur perçue du conseil, qui font l’objet d’une reconfiguration à l’ère de l’IA ; P2 en pose le mécanisme médiateur, à savoir la transparence. P3 pose les conditions de la reconfiguration, qui permettent à P2 de fonctionner.</p>
 <h3 class="doc-heading doc-heading--3">L’ABSENCE DE CADRE D’EXPLORATION</h3>
@@ -117,7 +119,7 @@
 <h2 class="doc-heading doc-heading--2">3. CADRE D'OBSERVATION</h2>
 <h3 class="doc-heading doc-heading--3">Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA</h3>
 <p class="doc-paragraph">Le diagramme des 3 sphères de co-création consultant-client-IA constitue le cadre d'observation à travers lequel les propositions de recherche sur la co-création de valeur perçue sont examinées empiriquement, dans trois configurations consultant-client-IA. Par ailleurs, au sein de ce cadre, l'orchestration dynamique et temporelle des situations de co-création, peut par ailleurs constituer un levier managérial, sans être une prescription figée.</p>
-<div class="figure"><p class="figure-title">Figure — Les 3 sphères de la co-création consultant-client-IA</p><p class="figure-image-wrap"><img class="figure-image" src="assets/spheres-fr.png" alt="Les 3 sphères de la co-création consultant-client-IA"></p></div>
+<div class="figure"><p class="figure-title">Figure — Les 3 sphères de la co-création consultant-client-IA</p><p class="figure-image-wrap"><img class="figure-image figure-image--spheres" src="assets/spheres-fr.png" alt="Les 3 sphères de la co-création consultant-client-IA" width="520"></p></div>
 <h4 class="doc-heading doc-heading--4">S1 — Sans IA</h4>
 <p class="doc-paragraph">Le consultant et le client co-créent dans une dyade humaine. L'IA est totalement absente. Le consultant demeure le seul acteur, central, visible, du processus de co-création, en construisant sa légitimité relationnelle à travers des micro-activités de mise en valeur, i.e. singularisation, signalement d'autorité, démonstrations progressives de compétence (Bourgoin, 2014). Cet ancrage relationnel conditionne l'ouverture du client à l'intégration ultérieure de l'IA. Observable : formation de la confiance, jugement politique, construction de la légitimité.</p>
 <h4 class="doc-heading doc-heading--4">S2 — IA en silo</h4>
