@@ -29,17 +29,19 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
-- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.md`: human-readable companion document containing the site texts organized by section
-- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.docx`: Word-readable versions of the companion document
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document containing the site texts organized by section
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`: Word-readable versions of the French companion document
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md`: English human-readable companion document containing the site texts organized by section
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`: Word-readable versions of the English companion document
 - `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`: manually maintained secondary corpus of production chatbot conversations, with contextual metadata for research use
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
 - `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
-- `scripts/generate-content-document.mjs`: regenerates the companion content document from `content.js`
+- `scripts/generate-content-document.mjs`: regenerates the French and English companion content documents from `content.js`
 - `SUPERVISOR_COHERENCE_REPORT.md`: internal coherence review document
 
 ## Human-readable content companion
 
-`docs/DOCUMENT_COMPLEMENTAIRE_CONTENUS.md` is the source version of the companion document. It is generated from `content.js` to keep it aligned with the interactive artefact.
+`docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md` are the source versions of the companion documents. They are generated from `content.js` to keep them aligned with the interactive artefact, and they include the key artefact diagrams in document form.
 
 Run the following command whenever the artefact texts or project documentation are updated:
 
@@ -47,7 +49,7 @@ Run the following command whenever the artefact texts or project documentation a
 node scripts/generate-content-document.mjs
 ```
 
-The script also regenerates the Word-readable `.doc` and `.docx` files.
+The script also regenerates the Word-readable `.doc` and `.docx` files for both languages.
 
 ## Primary source library
 

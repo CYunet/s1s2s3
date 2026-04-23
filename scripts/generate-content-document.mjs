@@ -1,5 +1,4 @@
 import fs from "node:fs";
-import os from "node:os";
 import path from "node:path";
 import vm from "node:vm";
 import { spawnSync } from "node:child_process";
@@ -8,9 +7,16 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const contentPath = path.join(root, "content.js");
 const docsDir = path.join(root, "docs");
-const markdownPath = path.join(docsDir, "DOCUMENT_COMPLEMENTAIRE_CONTENUS.md");
-const wordHtmlPath = path.join(docsDir, "DOCUMENT_COMPLEMENTAIRE_CONTENUS.doc");
-const wordDocxPath = path.join(docsDir, "DOCUMENT_COMPLEMENTAIRE_CONTENUS.docx");
+
+function outputPaths(lang) {
+  const suffix = lang === "fr" ? "FR" : "EN";
+  const base = `DOCUMENT_COMPLEMENTAIRE_CONTENU_${suffix}`;
+  return {
+    markdownPath: path.join(docsDir, `${base}.md`),
+    wordHtmlPath: path.join(docsDir, `${base}.doc`),
+    wordDocxPath: path.join(docsDir, `${base}.docx`)
+  };
+}
 
 function loadArtefactContent() {
   const source = fs.readFileSync(contentPath, "utf8");
@@ -62,15 +68,6 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
-function escapeXml(value) {
-  return String(value || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
-}
-
 function markdownEscape(value) {
   return String(value || "").replace(/\n/g, "\n\n");
 }
@@ -103,6 +100,14 @@ function makeDoc() {
     blocks.push({ type: "toc", groups });
   }
 
+  function figure(kind, title, data) {
+    blocks.push({ type: "figure", kind, title: stripHtml(title), data });
+  }
+
+  function pageBreak() {
+    blocks.push({ type: "pageBreak" });
+  }
+
   function definition(label, text) {
     if (text) {
       blocks.push({ type: "definition", label: stripHtml(label), text: stripHtml(text) });
@@ -122,17 +127,48 @@ function makeDoc() {
     blocks.push({ type: "spacer" });
   }
 
-  return { blocks, heading, paragraph, list, toc, definition, linkParagraph, spacer };
+  return { blocks, heading, paragraph, list, toc, definition, figure, pageBreak, linkParagraph, spacer };
 }
 
-function addLocale(doc, lang, locale) {
-  const { heading, paragraph, list, definition, spacer } = doc;
+function addLocale(doc, lang, locale, options = {}) {
+  const { heading, paragraph, list, definition, figure, spacer } = doc;
   const why = locale.whyResearch || {};
   const theory = locale.theory || {};
   const spheres = locale.spheres || {};
   const illustration = locale.illustration || {};
+  const labels = lang === "fr"
+    ? {
+        rpcDimensions: "Les dimensions de la valeur perçue du conseil à l'ère de l'IA : R / P / C",
+        propositions: "Propositions de recherche",
+        positive: "Reconfiguration positive",
+        negative: "Reconfiguration négative",
+        contingencies: "Contingences",
+        detailedPropositions: "Propositions de recherche",
+        stages: "Phases de la mission",
+        substeps: "Sous étapes",
+        stage: "Étape",
+        situation: "Situation",
+        phasePropositions: "Propositions examinées",
+        valueDimensions: "Dimensions de la valeur perçue"
+      }
+    : {
+        rpcDimensions: "R / P / C dimensions",
+        propositions: "Research propositions",
+        positive: "Positive reconfiguration",
+        negative: "Negative reconfiguration",
+        contingencies: "Contingencies",
+        detailedPropositions: "Detailed research propositions",
+        stages: "Mission phases",
+        substeps: "Sub-steps",
+        stage: "Stage",
+        situation: "Situation",
+        phasePropositions: "Propositions examined",
+        valueDimensions: "Perceived value dimensions"
+      };
 
-  heading(1, lang === "fr" ? "Version française" : "English Version");
+  if (!options.omitVersionHeading) {
+    heading(1, lang === "fr" ? "Version française" : "English Version");
+  }
 
   heading(2, `1. ${why.kicker || "Why this research"}`);
   heading(3, (why.titleLines || []).join(" "));
@@ -147,52 +183,60 @@ function addLocale(doc, lang, locale) {
   heading(3, theory.title || "");
   paragraph(theory.introHtml || "");
   if (theory.researchGapParagraphs?.length) {
-    heading(3, theory.researchGapLabel || "Research gap");
+    heading(3, theory.researchGapLabel || theory.gapLabel || "Research gap");
     theory.researchGapParagraphs.forEach(paragraph);
   }
   if (theory.dimensionCards?.length) {
-    heading(3, "R / P / C dimensions");
+    heading(3, labels.rpcDimensions);
     theory.dimensionCards.forEach((card) => {
       definition(`${card.letter || ""} — ${card.label || ""}`, card.text);
     });
   }
   if (theory.propositionMiniCards?.length) {
-    heading(3, "Propositions");
+    heading(3, labels.propositions);
     theory.propositionMiniCards.forEach((item) => {
       definition(item.label || item.letter || "", item.text);
     });
   }
   if (theory.rpcDiagram) {
     heading(3, theory.rpcDiagram.title || "R -> P -> C model");
+    figure("rpc", theory.rpcDiagram.title || "R -> P -> C model", {
+      dimensions: theory.dimensionCards || [],
+      diagram: theory.rpcDiagram
+    });
     paragraph(theory.rpcDiagram.intro || "");
     (theory.rpcDiagram.links || []).forEach((link) => {
       heading(4, link.label || "");
-      definition(link.positiveLabel || "Positive", link.positive || "");
-      definition(link.negativeLabel || "Negative", link.negative || "");
-      definition(link.contingencyLabel || "Contingencies", link.contingency || "");
+      definition(link.positiveLabel || labels.positive, link.positive || "");
+      definition(link.negativeLabel || labels.negative, link.negative || "");
+      definition(link.contingencyLabel || labels.contingencies, link.contingency || "");
     });
     paragraph(theory.rpcDiagram.footer || "");
   }
   if (theory.propositionDetails?.length) {
-    heading(3, "Detailed propositions");
+    heading(3, labels.detailedPropositions);
     theory.propositionDetails.forEach((item) => {
       heading(4, `${item.badge} — ${item.title}`);
       paragraph(item.text || "");
     });
   }
   if (theory.observationalFramework) {
-    heading(3, theory.observationalFramework.title || "Observational framework");
+    heading(3, theory.observationalFramework.title || theory.observationalFramework.label || "Observational framework");
     paragraph(theory.observationalFramework.text || "");
     list((theory.observationalFramework.chips || []).map((chip) => chip.text));
   }
-  if (theory.practitionerPrompt) {
-    heading(3, theory.practitionerPrompt.title || "Practitioner relevance");
+  if (theory.practitionerPrompt?.text) {
+    heading(3, theory.practitionerPrompt.title || theory.practitionerPrompt.label || "Practitioner relevance");
     paragraph(theory.practitionerPrompt.text || "");
   }
 
   heading(2, `3. ${spheres.kicker || "Observation framework"}`);
   heading(3, spheres.title || "");
   paragraph(spheres.intro || "");
+  figure("spheres", spheres.diagramLabels?.title || spheres.title || "S1/S2/S3", {
+    labels: spheres.diagramLabels || {},
+    cards: spheres.cards || []
+  });
   (spheres.cards || []).forEach((card) => {
     heading(4, card.title || "");
     paragraph(card.text || "");
@@ -214,35 +258,26 @@ function addLocale(doc, lang, locale) {
   paragraph(illustration.legend || "");
 
   if (illustration.stages?.length) {
-    heading(3, "Major stages");
+    heading(3, labels.stages);
+    figure("timeline", labels.stages, {
+      stages: illustration.stages || [],
+      phases: illustration.phases || []
+    });
     illustration.stages.forEach((stage) => {
       definition(`${stage.index}. ${stage.title} — ${stage.span}`, stage.summary || "");
     });
   }
 
   if (illustration.phases?.length) {
-    heading(3, "Mission sub-steps");
+    heading(3, labels.substeps);
     illustration.phases.forEach((phase) => {
       heading(4, `${phase.title} — ${phase.week}`);
-      definition("Stage", phase.stage || "");
-      definition("Situation", phase.badge || "");
-      definition("Propositions", (phase.propositions || []).join(", "));
-      definition("Value dimensions", (phase.dimensions || []).join(", "));
+      definition(labels.stage, phase.stage || "");
+      definition(labels.situation, phase.badge || "");
+      definition(labels.phasePropositions, (phase.propositions || []).join(", "));
+      definition(labels.valueDimensions, (phase.dimensions || []).join(", "));
       paragraph(phase.body || "");
       paragraph(phase.observable || "");
-    });
-  }
-
-  if (illustration.glossary) {
-    heading(3, "Glossary");
-    Object.entries(illustration.glossary.situations || {}).forEach(([key, value]) => {
-      definition(key, value);
-    });
-    Object.entries(illustration.glossary.propositions || {}).forEach(([key, value]) => {
-      definition(key, value);
-    });
-    Object.entries(illustration.glossary.dimensions || {}).forEach(([key, value]) => {
-      definition(key, value);
     });
   }
 
@@ -266,14 +301,93 @@ function renderMarkdown(blocks) {
     if (block.type === "toc") {
       return block.groups.map((group) => {
         const rows = group.items.map((item) => `| ${markdownEscape(item.label)} | ${markdownEscape(item.page)} |`).join("\n");
-        return `**${markdownEscape(group.label)}**\n\n| Partie | Page |\n| --- | ---: |\n${rows}`;
+        const sectionColumn = group.sectionColumn || "Partie";
+        return `**${markdownEscape(group.label)}**\n\n| ${markdownEscape(sectionColumn)} | Page |\n| --- | ---: |\n${rows}`;
       }).join("\n\n");
+    }
+    if (block.type === "figure") {
+      return renderMarkdownFigure(block);
     }
     if (block.type === "list") {
       return block.items.map((item) => `- ${markdownEscape(item)}`).join("\n");
     }
+    if (block.type === "pageBreak") {
+      return "<div style=\"page-break-after: always;\"></div>";
+    }
     return "";
   }).join("\n\n").replace(/\n{4,}/g, "\n\n\n") + "\n";
+}
+
+function renderMarkdownFigure(block) {
+  if (block.kind === "rpc") {
+    const dimensions = block.data.dimensions || [];
+    const line = dimensions.map((item) => `${item.letter} (${item.label})`).join("  →  ");
+    const feedback = dimensions.length >= 2 ? `${dimensions[1].letter}  →  ${dimensions[0].letter} (feedback loop)` : "";
+    return `**Figure — ${markdownEscape(block.title)}**\n\n\`\`\`text\n${line}\n${feedback}\n\`\`\``;
+  }
+  if (block.kind === "spheres") {
+    const cards = block.data.cards || [];
+    const rows = cards.map((card) => `| ${markdownEscape(card.title)} | ${markdownEscape(card.text)} |`).join("\n");
+    return `**Figure — ${markdownEscape(block.title)}**\n\n| Configuration | Description |\n| --- | --- |\n${rows}`;
+  }
+  if (block.kind === "timeline") {
+    const stages = block.data.stages || [];
+    const phases = block.data.phases || [];
+    const rows = phases.map((phase) => {
+      const stage = stages.find((item) => item.id === phase.stage);
+      return `| ${markdownEscape(stage ? `${stage.index}. ${stage.title}` : phase.stage)} | ${markdownEscape(`${phase.title} — ${phase.week}`)} | ${markdownEscape(phase.badge)} | ${markdownEscape((phase.propositions || []).join(", "))} | ${markdownEscape((phase.dimensions || []).join(", "))} |`;
+    }).join("\n");
+    return `**Figure — ${markdownEscape(block.title)}**\n\n| Phase | Sous-étape | S | P | R/P/C |\n| --- | --- | --- | --- | --- |\n${rows}`;
+  }
+  return `**Figure — ${markdownEscape(block.title)}**`;
+}
+
+function renderWordFigure(block) {
+  const title = `<p class="figure-title">Figure — ${escapeHtml(block.title)}</p>`;
+  if (block.kind === "rpc") {
+    const dimensions = block.data.dimensions || [];
+    const cells = dimensions.map((item, index) => (
+      `<td class="figure-cell"><p class="figure-node">${escapeHtml(item.letter)} — ${escapeHtml(item.label)}</p><p>${escapeHtml(item.text)}</p></td>` +
+      (index < dimensions.length - 1 ? `<td class="figure-arrow">→</td>` : "")
+    )).join("");
+    return `<div class="figure">${title}<table class="figure-table"><tbody><tr>${cells}</tr><tr><td class="figure-small" colspan="5">R ← P : feedback loop / boucle de rétroaction</td></tr></tbody></table></div>`;
+  }
+
+  if (block.kind === "spheres") {
+    const cards = block.data.cards || [];
+    const cells = cards.map((card) => (
+      `<td class="figure-cell"><p class="figure-node">${escapeHtml(card.title)}</p><p>${escapeHtml(card.text)}</p></td>`
+    )).join("");
+    return `<div class="figure">${title}<table class="figure-table"><tbody><tr>${cells}</tr></tbody></table></div>`;
+  }
+
+  if (block.kind === "timeline") {
+    const stages = block.data.stages || [];
+    const phases = block.data.phases || [];
+    const rows = phases.map((phase) => {
+      const stage = stages.find((item) => item.id === phase.stage);
+      const stageLabel = stage ? `${stage.index}. ${stage.title}` : phase.stage;
+      return `<tr>
+        <td class="figure-cell"><p>${escapeHtml(stageLabel)}</p></td>
+        <td class="figure-cell"><p><strong>${escapeHtml(phase.title)} — ${escapeHtml(phase.week)}</strong></p></td>
+        <td class="figure-cell"><p>${escapeHtml(phase.badge)}</p></td>
+        <td class="figure-cell"><p>${escapeHtml((phase.propositions || []).join(", "))}</p></td>
+        <td class="figure-cell"><p>${escapeHtml((phase.dimensions || []).join(", "))}</p></td>
+      </tr>`;
+    }).join("");
+    return `<div class="figure">${title}<table class="figure-table"><tbody>
+      <tr>
+        <td class="figure-cell"><p><strong>Phase</strong></p></td>
+        <td class="figure-cell"><p><strong>Sub-step / Sous-étape</strong></p></td>
+        <td class="figure-cell"><p><strong>S</strong></p></td>
+        <td class="figure-cell"><p><strong>P</strong></p></td>
+        <td class="figure-cell"><p><strong>R/P/C</strong></p></td>
+      </tr>
+      ${rows}
+    </tbody></table></div>`;
+  }
+
+  return `<div class="figure">${title}</div>`;
 }
 
 function renderWordHtml(blocks) {
@@ -300,8 +414,14 @@ function renderWordHtml(blocks) {
         `</tbody></table>`
       )).join("\n");
     }
+    if (block.type === "figure") {
+      return renderWordFigure(block);
+    }
     if (block.type === "list") {
       return `<ul>${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+    }
+    if (block.type === "pageBreak") {
+      return `<div class="page-break"></div>`;
     }
     return "<hr>";
   }).join("\n");
@@ -336,6 +456,15 @@ function renderWordHtml(blocks) {
     .toc-table td { padding: 4pt 0; font-size: 11pt; }
     .toc-label { width: 86%; text-align: left; }
     .toc-page { width: 14%; text-align: right; white-space: nowrap; }
+    .page-break { page-break-after: always; }
+    .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
+    .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
+    .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
+    .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
+    .figure-cell p { margin: 0; text-align: left; font-size: 9.5pt; }
+    .figure-node { text-align: center; font-weight: 700; font-size: 13pt; }
+    .figure-arrow { text-align: center; font-weight: 700; font-size: 16pt; color: #7a7066; }
+    .figure-small { font-size: 9pt; color: #675d54; text-align: left; }
     strong { color: #1f1a16; }
     a { color: #2357a8; text-decoration: underline; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 24pt 0; }
@@ -354,210 +483,79 @@ ${body}
 `;
 }
 
-function docxRun(text, options = {}) {
-  const styles = [];
-  if (options.bold) styles.push("<w:b/>");
-  if (options.italic) styles.push("<w:i/>");
-  if (options.size) styles.push(`<w:sz w:val="${options.size}"/>`);
-  const rPr = styles.length ? `<w:rPr>${styles.join("")}</w:rPr>` : "";
-  return String(text || "").split("\n").map((line, index) => {
-    const breakTag = index > 0 ? "<w:br/>" : "";
-    return `<w:r>${rPr}${breakTag}<w:t xml:space="preserve">${escapeXml(line)}</w:t></w:r>`;
-  }).join("");
-}
-
-function docxParagraph(text, options = {}) {
-  const alignment = options.justify ? "both" : (options.align || "left");
-  const spacing = `<w:spacing w:before="${options.before ?? 0}" w:after="${options.after ?? 120}" w:line="276" w:lineRule="auto"/>`;
-  const pageBreak = options.pageBreakBefore ? "<w:pageBreakBefore/>" : "";
-  return `<w:p><w:pPr>${pageBreak}<w:jc w:val="${alignment}"/>${spacing}</w:pPr>${docxRun(text, options)}</w:p>`;
-}
-
-function docxTableRows(items) {
-  const rows = items.map((item) => `
-    <w:tr>
-      <w:tc><w:tcPr><w:tcW w:w="8500" w:type="dxa"/></w:tcPr>${docxParagraph(item.label, { size: 22, after: 60 })}</w:tc>
-      <w:tc><w:tcPr><w:tcW w:w="1500" w:type="dxa"/></w:tcPr>${docxParagraph(item.page, { size: 22, align: "right", after: 60 })}</w:tc>
-    </w:tr>
-  `).join("");
-
-  return `<w:tbl>
-    <w:tblPr><w:tblW w:w="0" w:type="auto"/><w:tblBorders>
-      <w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/>
-    </w:tblBorders></w:tblPr>
-    ${rows}
-  </w:tbl>`;
-}
-
-function renderDocxBody(blocks) {
-  const headingSizes = { 1: 52, 2: 40, 3: 30, 4: 25 };
-  const headingBefore = { 1: 360, 2: 300, 3: 240, 4: 180 };
-  const headingAfter = { 1: 180, 2: 140, 3: 120, 4: 100 };
-
-  return blocks.map((block) => {
-    if (block.type === "heading") {
-      return docxParagraph(block.text, {
-        bold: true,
-        size: headingSizes[block.level] || 24,
-        before: headingBefore[block.level] || 120,
-        after: headingAfter[block.level] || 100
-      });
-    }
-    if (block.type === "paragraph") {
-      return docxParagraph(block.text, { justify: true, size: 22, after: 140 });
-    }
-    if (block.type === "definition") {
-      return [
-        docxParagraph(block.label, { bold: true, size: 22, after: 40 }),
-        docxParagraph(block.text, { justify: true, size: 22, after: 120 })
-      ].join("");
-    }
-    if (block.type === "linkParagraph") {
-      return docxParagraph(`${block.text} ${block.label}`, { justify: true, size: 22, after: 140 });
-    }
-    if (block.type === "toc") {
-      return block.groups.map((group) => [
-        docxParagraph(group.label, { bold: true, size: 24, before: 160, after: 80 }),
-        docxTableRows(group.items)
-      ].join("")).join("");
-    }
-    if (block.type === "list") {
-      return block.items.map((item) => docxParagraph(`• ${item}`, { justify: true, size: 22, after: 80 })).join("");
-    }
-    return `<w:p><w:r><w:br w:type="page"/></w:r></w:p>`;
-  }).join("\n");
-}
-
-function createDocx(blocks) {
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "s1s2s3-docx-"));
-  const relsDir = path.join(tempDir, "_rels");
-  const wordDir = path.join(tempDir, "word");
-  const wordRelsDir = path.join(wordDir, "_rels");
-  const docPropsDir = path.join(tempDir, "docProps");
-
-  fs.mkdirSync(relsDir, { recursive: true });
-  fs.mkdirSync(wordRelsDir, { recursive: true });
-  fs.mkdirSync(docPropsDir, { recursive: true });
+function convertWordHtmlToDocx(wordHtmlPath, wordDocxPath) {
   fs.rmSync(wordDocxPath, { force: true });
-
-  fs.writeFileSync(path.join(tempDir, "[Content_Types].xml"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
-  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
-  <Default Extension="xml" ContentType="application/xml"/>
-  <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
-  <Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/>
-  <Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>
-  <Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>
-</Types>`, "utf8");
-
-  fs.writeFileSync(path.join(relsDir, ".rels"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
-  <Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/>
-  <Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/>
-</Relationships>`, "utf8");
-
-  fs.writeFileSync(path.join(wordRelsDir, "document.xml.rels"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
-  <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>
-</Relationships>`, "utf8");
-
-  fs.writeFileSync(path.join(wordDir, "document.xml"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
-  <w:body>
-    ${renderDocxBody(blocks)}
-    <w:sectPr>
-      <w:footerReference w:type="default" r:id="rId1"/>
-      <w:pgSz w:w="11906" w:h="16838"/>
-      <w:pgMar w:top="1134" w:right="1134" w:bottom="1276" w:left="1134" w:header="708" w:footer="708" w:gutter="0"/>
-    </w:sectPr>
-  </w:body>
-</w:document>`, "utf8");
-
-  fs.writeFileSync(path.join(wordDir, "footer1.xml"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <w:p>
-    <w:pPr><w:jc w:val="center"/></w:pPr>
-    <w:r><w:t>Page </w:t></w:r>
-    <w:r><w:fldChar w:fldCharType="begin"/></w:r>
-    <w:r><w:instrText xml:space="preserve"> PAGE </w:instrText></w:r>
-    <w:r><w:fldChar w:fldCharType="separate"/></w:r>
-    <w:r><w:t>1</w:t></w:r>
-    <w:r><w:fldChar w:fldCharType="end"/></w:r>
-  </w:p>
-</w:ftr>`, "utf8");
-
-  fs.writeFileSync(path.join(docPropsDir, "core.xml"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <dc:title>Contenus textuels de l'artefact</dc:title>
-  <dc:creator>Codex</dc:creator>
-  <dcterms:created xsi:type="dcterms:W3CDTF">${new Date().toISOString()}</dcterms:created>
-</cp:coreProperties>`, "utf8");
-
-  fs.writeFileSync(path.join(docPropsDir, "app.xml"), `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties">
-  <Application>Codex</Application>
-</Properties>`, "utf8");
-
-  const result = spawnSync("zip", ["-qr", wordDocxPath, "."], {
-    cwd: tempDir,
+  const result = spawnSync("textutil", ["-convert", "docx", "-output", wordDocxPath, wordHtmlPath], {
+    cwd: docsDir,
     encoding: "utf8"
   });
 
   if (result.error || result.status !== 0) {
-    fs.rmSync(tempDir, { recursive: true, force: true });
     return false;
   }
 
-  fs.rmSync(tempDir, { recursive: true, force: true });
   return fs.existsSync(wordDocxPath);
+}
+
+function buildToc(lang) {
+  return lang === "fr"
+    ? [{
+        label: "Version française",
+        sectionColumn: "Partie",
+        items: [
+          { label: "1. Positionnement de la recherche", page: "p. 2" },
+          { label: "2. Cadre théorique", page: "p. 3" },
+          { label: "3. Cadre d'observation", page: "p. 8" },
+          { label: "4. Illustration", page: "p. 10" }
+        ]
+      }]
+    : [{
+        label: "English version",
+        sectionColumn: "Section",
+        items: [
+          { label: "1. Research positioning", page: "p. 2" },
+          { label: "2. Theoretical framework", page: "p. 3" },
+          { label: "3. Observation framework", page: "p. 8" },
+          { label: "4. Illustration", page: "p. 10" }
+        ]
+      }];
+}
+
+function buildLocaleDocument(artefact, lang) {
+  const locale = artefact.locales[lang];
+  const doc = makeDoc();
+  const isFrench = lang === "fr";
+
+  doc.heading(1, isFrench ? "Document complémentaire des contenus de l'artefact" : "Companion document for the artefact content");
+  doc.paragraph(isFrench
+    ? "Ce document restitue, mot pour mot, la version française des contenus textuels de l'application interactive. Il est destiné à une lecture humaine hors interface et régénéré depuis content.js, source maître des contenus de l'app."
+    : "This document reproduces, word for word, the English version of the interactive application’s textual content. It is intended for human reading outside the interface and is regenerated from content.js, the master source for the app content.");
+  doc.linkParagraph(isFrench ? "Application en ligne :" : "Online application:", "https://s1s2s3.vercel.app", "https://s1s2s3.vercel.app");
+
+  doc.heading(2, isFrench ? "Table des matières" : "Table of contents");
+  doc.toc(buildToc(lang));
+  doc.pageBreak();
+
+  addLocale(doc, lang, locale, { omitVersionHeading: true });
+  return doc;
 }
 
 fs.mkdirSync(docsDir, { recursive: true });
 
 const artefact = loadArtefactContent();
-const doc = makeDoc();
 
-doc.heading(1, "Contenus textuels de l'artefact");
-doc.paragraph("Ce document complémentaire rassemble les contenus textuels de l'artefact interactif, organisés selon les rubriques du site. Il est destiné à une lecture humaine hors interface, tout en restant aligné avec le contenu source de l'application.");
-doc.paragraph("Il doit être mis à jour en même temps que la documentation du projet lorsque les contenus de l'artefact évoluent.");
-doc.linkParagraph("Application en ligne :", "https://s1s2s3.vercel.app", "https://s1s2s3.vercel.app");
+["fr", "en"].forEach((lang) => {
+  const paths = outputPaths(lang);
+  const doc = buildLocaleDocument(artefact, lang);
+  fs.writeFileSync(paths.markdownPath, renderMarkdown(doc.blocks), "utf8");
+  fs.writeFileSync(paths.wordHtmlPath, renderWordHtml(doc.blocks), "utf8");
+  const docxCreated = convertWordHtmlToDocx(paths.wordHtmlPath, paths.wordDocxPath);
 
-doc.heading(2, "Table des matières");
-doc.toc([
-  {
-    label: "Version française",
-    items: [
-      { label: "1. Positionnement de la recherche", page: "p. 2" },
-      { label: "2. Cadre théorique", page: "p. 3" },
-      { label: "3. Cadre d'observation", page: "p. 8" },
-      { label: "4. Illustration", page: "p. 10" }
-    ]
-  },
-  {
-    label: "English Version",
-    items: [
-      { label: "1. Research positioning", page: "p. 14" },
-      { label: "2. Theoretical framework", page: "p. 15" },
-      { label: "3. Observation framework", page: "p. 20" },
-      { label: "4. Illustration", page: "p. 22" }
-    ]
+  console.log(`Generated ${path.relative(root, paths.markdownPath)}`);
+  console.log(`Generated ${path.relative(root, paths.wordHtmlPath)}`);
+  if (docxCreated) {
+    console.log(`Generated ${path.relative(root, paths.wordDocxPath)}`);
+  } else {
+    console.log(`Skipped ${path.relative(root, paths.wordDocxPath)} because textutil was unavailable or failed.`);
   }
-]);
-
-addLocale(doc, "fr", artefact.locales.fr);
-addLocale(doc, "en", artefact.locales.en);
-
-fs.writeFileSync(markdownPath, renderMarkdown(doc.blocks), "utf8");
-const wordHtml = renderWordHtml(doc.blocks);
-fs.writeFileSync(wordHtmlPath, wordHtml, "utf8");
-
-const docxCreated = createDocx(doc.blocks);
-
-console.log(`Generated ${path.relative(root, markdownPath)}`);
-console.log(`Generated ${path.relative(root, wordHtmlPath)}`);
-if (docxCreated) {
-  console.log(`Generated ${path.relative(root, wordDocxPath)}`);
-} else {
-  console.log("Skipped .docx generation because textutil was unavailable or failed.");
-}
+});

@@ -286,7 +286,7 @@ The artefact is successful if:
 - the timeline clarifies how theory becomes observable in the mission
 - the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
-- the human-readable companion document remains aligned with the site content and is regenerated when documentation is updated
+- the French and English human-readable companion documents remain aligned with the site content and are regenerated when documentation is updated
 
 ## Risks
 

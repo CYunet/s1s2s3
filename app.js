@@ -949,7 +949,7 @@
       buildObservationCard() +
       buildManagerialCard() +
       buildPromptCard() +
-      '<p class="findings-note">' + escapeHtml(theory.findingsNote) + "</p>" +
+      (theory.findingsNote ? '<p class="findings-note">' + escapeHtml(theory.findingsNote) + "</p>" : "") +
       "</div>";
   }
 
