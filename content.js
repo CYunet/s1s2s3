@@ -6,6 +6,8 @@ window.ARTEFACT_CONTENT = {
         skipLink: "Skip to content",
         navAria: "Primary sections",
         themeToggleAria: "Toggle color theme",
+        downloadDocLabel: "Word text",
+        downloadDocAria: "Download the full app text as a Word document",
         languageButtonLabel: "🇫🇷 FR",
         languageButtonAria: "Afficher la version française"
       },
@@ -380,6 +382,8 @@ window.ARTEFACT_CONTENT = {
         skipLink: "Aller au contenu",
         navAria: "Sections principales",
         themeToggleAria: "Changer le thème",
+        downloadDocLabel: "Texte Word",
+        downloadDocAria: "Télécharger le texte complet de l'app au format Word",
         languageButtonLabel: "🇬🇧 EN",
         languageButtonAria: "Show English version"
       },

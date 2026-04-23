@@ -18,6 +18,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - illustrates the framework through a fictional consulting mission
 - allows step-by-step exploration of the mission timeline
 - provides glossary tooltips for `S1/S2/S3`, `P1/P2/P3` and `R/P/C`
+- lets users download the full app text as a language-specific Word document from the header
 - offers a contextual chatbot tied to the current reading section and, in `Illustration`, to the currently active mission step
 
 ## Project structure
@@ -33,6 +34,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`: Word-readable versions of the French companion document
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md`: English human-readable companion document containing the site texts organized by section
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`: Word-readable versions of the English companion document
+- `docs/assets/spheres-fr.*` and `docs/assets/spheres-en.*`: generated diagram assets embedded in the companion Word documents
 - `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`: manually maintained secondary corpus of production chatbot conversations, with contextual metadata for research use
 - `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
 - `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
@@ -43,6 +45,11 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 
 `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md` are the source versions of the companion documents. They are generated from `content.js` to keep them aligned with the interactive artefact, and they include the key artefact diagrams in document form.
 
+The deployed app exposes a language-aware download link in the header:
+
+- French UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`
+- English UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`
+
 Run the following command whenever the artefact texts or project documentation are updated:
 
 ```bash
@@ -50,6 +57,7 @@ node scripts/generate-content-document.mjs
 ```
 
 The script also regenerates the Word-readable `.doc` and `.docx` files for both languages.
+It generates and embeds the `S1/S2/S3` spheres diagram as an image in both language versions.
 
 ## Primary source library
 
@@ -192,6 +200,7 @@ Implemented:
 - server endpoint for OpenAI Responses API
 - Vercel Web Analytics via `/_vercel/insights/script.js`
 - Simple Analytics privacy-first tracking via `https://scripts.simpleanalyticscdn.com/latest.js`
+- language-aware Word document download from the app header
 
 Not yet included:
 

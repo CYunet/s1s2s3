@@ -188,11 +188,7 @@ The diagram of the 3 consultant-client-AI co-creation spheres constitutes the ob
 
 **Figure — The 3 spheres of consultant-client-AI co-creation**
 
-| Configuration | Description |
-| --- | --- |
-| S1 — No AI | Consultant and client co-create in a human dyad. AI is totally absent. The consultant remains the sole central and visible actor of the co-creation process, building relational legitimacy through micro-activities of valuation, i.e. singularization, authority signalling and progressive demonstrations of competence (Bourgoin, 2014). This relational anchoring conditions the client’s openness to subsequent AI integration. Observable: trust formation, political judgment, legitimacy construction. |
-| S2 — Siloed AI use | AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation. The consultant nevertheless tends to retain the visible central role, even when AI contributes in the background. The risk of blurred attribution of consultant / AI contributions by the client is latent — relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered. Observable: transparency modalities, attribution patterns, legitimacy fragility. |
-| S3 — Tripartite co-creation | Co-creation unfolds in an explicit triad: consultant, client and AI. The consultant no longer monopolizes the central role; orchestration, attribution and legitimacy become more distributed and more subject to negotiation. Observable: the three propositions (P1, P2, P3) are simultaneously observable. The cognitive dimension of perceived value may be richer — but the author of the production becomes contestable (Raisch & Krakowski 2020; Baird & Maruping 2021). |
+![The 3 spheres of consultant-client-AI co-creation](assets/spheres-en.png)
 
 #### S1 — No AI
 

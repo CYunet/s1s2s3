@@ -167,6 +167,17 @@ Requirement:
 - it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
 - it must treat the REGEN-A source as working material that enriches the research background without overriding the current academic note or artefact wording
 
+### 7. Downloadable companion documents
+
+The app must provide direct access to the complete human-readable text of the artefact.
+
+Requirement:
+
+- a header link must download the French Word document when the UI is in French
+- a header link must download the English Word document when the UI is in English
+- generated Word documents must include the key artefact diagrams, including the `S1/S2/S3` spheres diagram as an embedded image rather than a text table
+- companion documents must be regenerated when app content or documentation is updated
+
 ## Chatbot product requirements
 
 ### Functional requirements
@@ -287,6 +298,7 @@ The artefact is successful if:
 - the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
 - the French and English human-readable companion documents remain aligned with the site content and are regenerated when documentation is updated
+- the language-aware Word download provides the correct companion document from the app header
 
 ## Risks
 

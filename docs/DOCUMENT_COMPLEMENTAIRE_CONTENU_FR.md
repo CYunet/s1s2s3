@@ -188,11 +188,7 @@ Le diagramme des 3 sphères de co-création consultant-client-IA constitue le ca
 
 **Figure — Les 3 sphères de la co-création consultant-client-IA**
 
-| Configuration | Description |
-| --- | --- |
-| S1 — Sans IA | Le consultant et le client co-créent dans une dyade humaine. L'IA est totalement absente. Le consultant demeure le seul acteur, central, visible, du processus de co-création, en construisant sa légitimité relationnelle à travers des micro-activités de mise en valeur, i.e. singularisation, signalement d'autorité, démonstrations progressives de compétence (Bourgoin, 2014). Cet ancrage relationnel conditionne l'ouverture du client à l'intégration ultérieure de l'IA. Observable : formation de la confiance, jugement politique, construction de la légitimité. |
-| S2 — IA en silo | L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive. Le consultant tend néanmoins à conserver le rôle central visible, même lorsque l'IA contribue en arrière-plan. Le risque d'attribution floutée des contributions consultant / IA par le client est latent — la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes. Observable : modalités de transparence, schémas d'attribution, fragilité de la légitimité. |
-| S3 — Co-création tripartite | La co-création se déploie dans une triade explicite : consultant, client et IA. Le consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation. Observable : les trois propositions (P1, P2, P3) y sont simultanément observables. La dimension cognitive de la valeur perçue peut y être plus riche — mais l'auteur de la production devient contestable (Raisch & Krakowski 2020 ; Baird & Maruping 2021). |
+![Les 3 sphères de la co-création consultant-client-IA](assets/spheres-fr.png)
 
 #### S1 — Sans IA
 

@@ -17,6 +17,7 @@
     skipLink: document.querySelector(".skip-link"),
     mainTitle: document.getElementById("mainTitle"),
     subtitle: document.getElementById("subtitle"),
+    downloadDocLink: document.getElementById("downloadDocLink"),
     langBtn: document.getElementById("langBtn"),
     themeBtn: document.getElementById("themeBtn"),
     floatingChatBtn: document.getElementById("floatingChatBtn"),
@@ -69,6 +70,16 @@
     document.title = locale.ui.pageTitle;
     els.skipLink.textContent = locale.ui.skipLink;
     els.sectionNav.setAttribute("aria-label", locale.ui.navAria);
+    els.downloadDocLink.textContent = locale.ui.downloadDocLabel;
+    els.downloadDocLink.setAttribute("aria-label", locale.ui.downloadDocAria);
+    els.downloadDocLink.setAttribute("title", locale.ui.downloadDocAria);
+    els.downloadDocLink.href = state.lang === "fr"
+      ? "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx"
+      : "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+    els.downloadDocLink.setAttribute(
+      "download",
+      state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx"
+    );
     els.langBtn.setAttribute("aria-label", locale.ui.languageButtonAria);
     els.themeBtn.setAttribute("aria-label", locale.ui.themeToggleAria);
     els.mainTitle.textContent = locale.hero.title;

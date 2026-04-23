@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
 import { spawnSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const contentPath = path.join(root, "content.js");
@@ -66,6 +66,134 @@ function escapeHtml(value) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function renderSphereSvg(labels) {
+  const rawTitle = labels.title || "";
+  const ai = escapeHtml(labels.ai || "AI");
+  const consultant = escapeHtml(labels.consultant || "CO = Consultant");
+  const client = escapeHtml(labels.client || "CL = Client");
+  const s1 = escapeHtml(labels.s1 || "S1");
+  const s2 = escapeHtml(labels.s2 || "S2");
+  const s3 = escapeHtml(labels.s3 || "S3");
+  const isFrench = String(labels.ai || "").toUpperCase() === "IA";
+  const titleLines = isFrench
+    ? ["Les 3 sphères de la co-création", "consultant-client-IA"]
+    : ["The 3 spheres of consultant-client-AI", "co-creation"];
+  const fallbackTitle = rawTitle || titleLines.join(" ");
+  const titleSvg = titleLines
+    .map((line, index) => `<tspan x="800" dy="${index === 0 ? 0 : 48}">${escapeHtml(line)}</tspan>`)
+    .join("");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-label="${escapeHtml(fallbackTitle)}">
+  <defs>
+    <radialGradient id="aiBall" cx="30%" cy="30%"><stop offset="0%" stop-color="#b784ff"/><stop offset="100%" stop-color="#8a5cf6"/></radialGradient>
+    <radialGradient id="coBall" cx="30%" cy="30%"><stop offset="0%" stop-color="#ff77bb"/><stop offset="100%" stop-color="#e53e96"/></radialGradient>
+    <radialGradient id="clBall" cx="30%" cy="30%"><stop offset="0%" stop-color="#5fd8ff"/><stop offset="100%" stop-color="#18add0"/></radialGradient>
+    <style>
+      text { font-family: "IBM Plex Sans", Aptos, Calibri, Arial, sans-serif; }
+      .title { font-size: 42px; font-weight: 700; fill: #251d13; }
+      .node { font-size: 34px; font-weight: 700; fill: #fff; }
+      .small-node { font-size: 29px; font-weight: 700; fill: #fff; }
+      .sphere-label { font-size: 28px; font-weight: 800; }
+      .legend { font-size: 28px; fill: #61584a; }
+      .button { font-size: 23px; font-weight: 800; }
+    </style>
+  </defs>
+  <rect x="38" y="38" width="1524" height="1524" rx="46" fill="#fffdf9"/>
+  <text class="title" x="800" y="108" text-anchor="middle">${titleSvg}</text>
+
+  <ellipse cx="800" cy="650" rx="620" ry="430" fill="none" stroke="#16bb84" stroke-width="5"/>
+  <ellipse cx="800" cy="650" rx="405" ry="255" fill="none" stroke="#8a5cf6" stroke-width="5"/>
+  <ellipse cx="800" cy="650" rx="250" ry="135" fill="none" stroke="#f09400" stroke-width="5"/>
+
+  <line x1="800" y1="330" x2="515" y2="560" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="330" x2="1085" y2="560" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="330" x2="720" y2="650" stroke="#575757" stroke-width="4"/>
+  <line x1="800" y1="330" x2="880" y2="650" stroke="#575757" stroke-width="4"/>
+  <line x1="525" y1="580" x2="720" y2="650" stroke="#575757" stroke-width="4"/>
+  <line x1="1075" y1="580" x2="880" y2="650" stroke="#575757" stroke-width="4"/>
+  <line x1="770" y1="650" x2="830" y2="650" stroke="#575757" stroke-width="5"/>
+
+  <circle cx="800" cy="330" r="50" fill="url(#aiBall)"/>
+  <circle cx="510" cy="575" r="39" fill="url(#aiBall)"/>
+  <circle cx="1090" cy="575" r="39" fill="url(#aiBall)"/>
+  <circle cx="720" cy="650" r="60" fill="url(#coBall)"/>
+  <circle cx="880" cy="650" r="60" fill="url(#clBall)"/>
+
+  <text class="node" x="800" y="343" text-anchor="middle">${ai}</text>
+  <text class="small-node" x="510" y="586" text-anchor="middle">${ai}</text>
+  <text class="small-node" x="1090" y="586" text-anchor="middle">${ai}</text>
+  <text class="node" x="720" y="663" text-anchor="middle">CO</text>
+  <text class="node" x="880" y="663" text-anchor="middle">CL</text>
+
+  <rect x="680" y="805" width="240" height="76" rx="38" fill="#fffdf9" stroke="#e18a00" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="853" text-anchor="middle" fill="#e18a00">S1</text>
+  <rect x="680" y="930" width="240" height="76" rx="38" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="978" text-anchor="middle" fill="#8a5cf6">S2</text>
+  <rect x="680" y="1065" width="240" height="76" rx="38" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
+  <text class="sphere-label" x="800" y="1113" text-anchor="middle" fill="#14b87d">S3</text>
+
+  <circle cx="390" cy="1282" r="15" fill="#e53e96"/>
+  <text class="legend" x="422" y="1292">${consultant}</text>
+  <circle cx="730" cy="1282" r="15" fill="#18add0"/>
+  <text class="legend" x="762" y="1292">${client}</text>
+  <circle cx="1040" cy="1282" r="15" fill="#8a5cf6"/>
+  <text class="legend" x="1072" y="1292">${ai}</text>
+
+  <rect x="220" y="1420" width="300" height="66" rx="33" fill="#fffdf9" stroke="#f6a21b" stroke-width="2"/>
+  <text class="button" x="370" y="1462" text-anchor="middle" fill="#e18a00">${s1}</text>
+  <rect x="590" y="1420" width="340" height="66" rx="33" fill="#fffdf9" stroke="#8a5cf6" stroke-width="2"/>
+  <text class="button" x="760" y="1462" text-anchor="middle" fill="#8a5cf6">${s2}</text>
+  <rect x="1000" y="1420" width="420" height="66" rx="33" fill="#fffdf9" stroke="#14b87d" stroke-width="2"/>
+  <text class="button" x="1210" y="1462" text-anchor="middle" fill="#14b87d">${s3}</text>
+</svg>
+`;
+}
+
+function ensureFigureAssets(artefact) {
+  const assetsDir = path.join(docsDir, "assets");
+  fs.mkdirSync(assetsDir, { recursive: true });
+
+  return ["fr", "en"].reduce((acc, lang) => {
+    const labels = artefact.locales[lang]?.spheres?.diagramLabels || {};
+    const svgFilename = `spheres-${lang}.svg`;
+    const pngFilename = `spheres-${lang}.png`;
+    const svgPath = path.join(assetsDir, svgFilename);
+    const pngPath = path.join(assetsDir, pngFilename);
+
+    fs.writeFileSync(svgPath, renderSphereSvg(labels), "utf8");
+    convertSvgToPng(svgPath, pngPath, assetsDir);
+
+    const imagePath = fs.existsSync(pngPath) ? pngPath : svgPath;
+    const imageFilename = fs.existsSync(pngPath) ? pngFilename : svgFilename;
+
+    acc[lang] = {
+      relativePath: `assets/${imageFilename}`,
+      fileUrl: pathToFileURL(imagePath).href
+    };
+    return acc;
+  }, {});
+}
+
+function convertSvgToPng(svgPath, pngPath, assetsDir) {
+  const thumbnailPath = `${svgPath}.png`;
+
+  fs.rmSync(pngPath, { force: true });
+  fs.rmSync(thumbnailPath, { force: true });
+
+  const result = spawnSync("qlmanage", ["-t", "-s", "1600", "-o", assetsDir, svgPath], {
+    cwd: docsDir,
+    encoding: "utf8"
+  });
+
+  if (result.error || result.status !== 0 || !fs.existsSync(thumbnailPath)) {
+    return false;
+  }
+
+  fs.renameSync(thumbnailPath, pngPath);
+  return fs.existsSync(pngPath);
 }
 
 function markdownEscape(value) {
@@ -235,7 +363,9 @@ function addLocale(doc, lang, locale, options = {}) {
   paragraph(spheres.intro || "");
   figure("spheres", spheres.diagramLabels?.title || spheres.title || "S1/S2/S3", {
     labels: spheres.diagramLabels || {},
-    cards: spheres.cards || []
+    cards: spheres.cards || [],
+    image: options.figureAssets?.[lang]?.relativePath || "",
+    imageFileUrl: options.figureAssets?.[lang]?.fileUrl || ""
   });
   (spheres.cards || []).forEach((card) => {
     heading(4, card.title || "");
@@ -326,6 +456,9 @@ function renderMarkdownFigure(block) {
     return `**Figure — ${markdownEscape(block.title)}**\n\n\`\`\`text\n${line}\n${feedback}\n\`\`\``;
   }
   if (block.kind === "spheres") {
+    if (block.data.image) {
+      return `**Figure — ${markdownEscape(block.title)}**\n\n![${markdownEscape(block.title)}](${block.data.image})`;
+    }
     const cards = block.data.cards || [];
     const rows = cards.map((card) => `| ${markdownEscape(card.title)} | ${markdownEscape(card.text)} |`).join("\n");
     return `**Figure — ${markdownEscape(block.title)}**\n\n| Configuration | Description |\n| --- | --- |\n${rows}`;
@@ -354,6 +487,10 @@ function renderWordFigure(block) {
   }
 
   if (block.kind === "spheres") {
+    if (block.data.imageFileUrl || block.data.image) {
+      const src = block.data.image || block.data.imageFileUrl;
+      return `<div class="figure">${title}<p class="figure-image-wrap"><img class="figure-image" src="${escapeHtml(src)}" alt="${escapeHtml(block.title)}"></p></div>`;
+    }
     const cards = block.data.cards || [];
     const cells = cards.map((card) => (
       `<td class="figure-cell"><p class="figure-node">${escapeHtml(card.title)}</p><p>${escapeHtml(card.text)}</p></td>`
@@ -459,6 +596,8 @@ function renderWordHtml(blocks) {
     .page-break { page-break-after: always; }
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
+    .figure-image-wrap { margin: 0; text-align: center; }
+    .figure-image { width: 100%; height: auto; border: 0; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
     .figure-cell p { margin: 0; text-align: left; font-size: 9.5pt; }
@@ -485,12 +624,22 @@ ${body}
 
 function convertWordHtmlToDocx(wordHtmlPath, wordDocxPath) {
   fs.rmSync(wordDocxPath, { force: true });
-  const result = spawnSync("textutil", ["-convert", "docx", "-output", wordDocxPath, wordHtmlPath], {
+
+  const pandocResult = spawnSync("pandoc", ["-f", "html", wordHtmlPath, "-o", wordDocxPath, "--resource-path", docsDir], {
+    cwd: root,
+    encoding: "utf8"
+  });
+
+  if (!pandocResult.error && pandocResult.status === 0 && fs.existsSync(wordDocxPath)) {
+    return true;
+  }
+
+  const textutilResult = spawnSync("textutil", ["-convert", "docx", "-output", wordDocxPath, wordHtmlPath], {
     cwd: docsDir,
     encoding: "utf8"
   });
 
-  if (result.error || result.status !== 0) {
+  if (textutilResult.error || textutilResult.status !== 0) {
     return false;
   }
 
@@ -521,7 +670,7 @@ function buildToc(lang) {
       }];
 }
 
-function buildLocaleDocument(artefact, lang) {
+function buildLocaleDocument(artefact, lang, figureAssets) {
   const locale = artefact.locales[lang];
   const doc = makeDoc();
   const isFrench = lang === "fr";
@@ -536,17 +685,18 @@ function buildLocaleDocument(artefact, lang) {
   doc.toc(buildToc(lang));
   doc.pageBreak();
 
-  addLocale(doc, lang, locale, { omitVersionHeading: true });
+  addLocale(doc, lang, locale, { omitVersionHeading: true, figureAssets });
   return doc;
 }
 
 fs.mkdirSync(docsDir, { recursive: true });
 
 const artefact = loadArtefactContent();
+const figureAssets = ensureFigureAssets(artefact);
 
 ["fr", "en"].forEach((lang) => {
   const paths = outputPaths(lang);
-  const doc = buildLocaleDocument(artefact, lang);
+  const doc = buildLocaleDocument(artefact, lang, figureAssets);
   fs.writeFileSync(paths.markdownPath, renderMarkdown(doc.blocks), "utf8");
   fs.writeFileSync(paths.wordHtmlPath, renderWordHtml(doc.blocks), "utf8");
   const docxCreated = convertWordHtmlToDocx(paths.wordHtmlPath, paths.wordDocxPath);

@@ -157,6 +157,16 @@ button {
   justify-content: center;
 }
 
+.tool-btn {
+  text-decoration: none;
+}
+
+.tool-btn--download {
+  color: var(--accent-blue);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .tool-chip {
   color: var(--text-soft);
 }
