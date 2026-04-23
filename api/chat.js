@@ -5,6 +5,7 @@ var academicNoteCache = null;
 var artefactSourceCache = null;
 var regenaSourceCache = null;
 var chatbotConversationSourceCache = null;
+var CHATBOT_MAX_OUTPUT_TOKENS = 1600;
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -210,6 +211,7 @@ function buildInstructions(language) {
     "If the illustration contains a close counterpart, mention it only if useful; do not force a recurring 'closest counterpart' section.",
     "Never claim empirical proof or certainty beyond the supplied exploratory framework.",
     "Keep the answer concise, natural and useful. Prefer 2 to 4 short paragraphs or 3 to 5 bullets. Avoid heavy templates, repeated context recaps, and mandatory boundary sections.",
+    "Always finish with a complete sentence. If the answer would become too long, shorten it rather than starting a point that cannot be completed.",
     "Use clear, practitioner-friendly wording while preserving academic precision.",
     "Respond entirely in " + targetLanguage + ", matching the user's selected UI language.",
     "Return plain text only."
@@ -302,6 +304,56 @@ function extractOutputText(payload) {
   return "";
 }
 
+function responseWasTruncated(payload) {
+  return Boolean(
+    payload &&
+    payload.status === "incomplete" &&
+    payload.incomplete_details &&
+    payload.incomplete_details.reason === "max_output_tokens"
+  );
+}
+
+function trimToCompleteBoundary(text) {
+  var clean = String(text || "").trim();
+  var sentenceEnd = Math.max(
+    clean.lastIndexOf("."),
+    clean.lastIndexOf("!"),
+    clean.lastIndexOf("?"),
+    clean.lastIndexOf("…")
+  );
+  var wordBoundary;
+
+  if (!clean) {
+    return "";
+  }
+
+  if (sentenceEnd > clean.length * 0.45) {
+    return clean.slice(0, sentenceEnd + 1).trim();
+  }
+
+  wordBoundary = clean.lastIndexOf(" ");
+  if (wordBoundary > clean.length * 0.45) {
+    return clean.slice(0, wordBoundary).trim() + "…";
+  }
+
+  return clean;
+}
+
+function finalizeAnswer(answer, payload, language) {
+  var clean = String(answer || "").trim();
+  var notice;
+
+  if (!responseWasTruncated(payload)) {
+    return clean;
+  }
+
+  notice = language === "fr"
+    ? "Réponse écourtée par limite technique. Vous pouvez demander une suite ou reformuler la question."
+    : "Answer shortened by a technical limit. You can ask for a continuation or rephrase the question.";
+
+  return trimToCompleteBoundary(clean) + "\n\n" + notice;
+}
+
 module.exports = async function handler(req, res) {
   var apiKey = process.env.OPENAI_API_KEY;
   var model = process.env.OPENAI_MODEL || "gpt-5.4";
@@ -352,7 +404,7 @@ module.exports = async function handler(req, res) {
         model: model,
         instructions: buildInstructions(body.language),
         input: messages,
-        max_output_tokens: 700,
+        max_output_tokens: CHATBOT_MAX_OUTPUT_TOKENS,
         reasoning: {
           effort: "low"
         }
@@ -374,7 +426,7 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  answer = extractOutputText(payload);
+  answer = finalizeAnswer(extractOutputText(payload), payload, body.language);
 
   if (!answer) {
     return sendJson(res, 502, { error: "Empty model response" });
