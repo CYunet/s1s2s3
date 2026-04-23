@@ -37,9 +37,7 @@ L'intégration de l'IA dans le conseil, ne génère pas nécessairement une vale
 
 ### UNE QUESTION LAISSÉE OUVERTE
 
-Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil (voir ci-dessous).
-
-Notre recherche apporte une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil.
+Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil, et y apporte une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.
 
 • La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).
 
