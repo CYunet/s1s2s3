@@ -262,7 +262,7 @@ R
 
 Entretiens individuels en face-à-face avec les dirigeants de TechX. Thomas construit sa légitimité relationnelle par l'écoute active, le signalement d'autorité et des démonstrations progressives de compétence. Aucune IA mobilisée.
 
-Observable : R (base relationnelle) — ligne de base de P1 pour les configurations suivantes
+Observable principal : R (base relationnelle) — ligne de base de P1 pour les configurations suivantes
 
 #### Préparation — Sem. 3
 
@@ -284,7 +284,7 @@ R, P
 
 Thomas utilise l'IA pour transcrire et structurer thématiquement les entretiens sans en informer Marie. Il présente une synthèse structurée attribuée à son propre jugement.
 
-Observable : P2 (transparence nulle) — P3 (mécanisme d'attribution latent) — risque de délégitimation rétrospective
+Observable principal : P2 (transparence nulle) — P3 (mécanisme d'attribution latent) — risque de délégitimation rétrospective
 
 #### Analyse collaborative — Sem. 4-6
 
@@ -306,7 +306,7 @@ R, P, C
 
 Sessions tripartites hebdomadaires : Thomas mobilise l'IA de manière visible comme composante explicite de l'échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.
 
-Observable : P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy et algorithm aversion)
+Observable principal : P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy et algorithm aversion)
 
 #### Affinement — Sem. 7-8
 
@@ -328,7 +328,7 @@ P, C
 
 Thomas alterne entre usage d'IA en silo (structuration des scénarios) et co-création visible avec Marie (validation des options). La transparence est sélective et stratégique.
 
-Observable : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d'attribution
+Observable principal : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d'attribution
 
 #### Validation mutuelle — Sem. 9
 
@@ -350,7 +350,7 @@ C
 
 Thomas finalise les recommandations en utilisant l'IA pour les stress-tester. Marie relit les outputs mais ne peut pas évaluer pleinement la chaîne analytique assistée par IA.
 
-Observable : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d'absorption
+Observable principal : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d'absorption
 
 #### Présentation au COMEX — Sem. 10
 
@@ -372,7 +372,7 @@ R, C
 
 Thomas présente au comité exécutif sans IA visible. Le jugement politique, la construction narrative et l'autorité restent pleinement humains en surface. Pourtant, l'acceptation des recommandations dépend encore du caractère lisible et appropriable du travail assisté par IA si la chaîne analytique est questionnée ou dévoilée. Marie défend les recommandations.
 
-Observable : R (légitimité politique et jugement) + C (évaluation de la chaîne analytique) — P3 (AI literacy du COMEX et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)
+Observable principal : R (légitimité politique et jugement) + C (évaluation de la chaîne analytique) — P3 (AI literacy du COMEX et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)
 
 #### Rétrospective — Post
 
@@ -394,6 +394,6 @@ R, P, C
 
 Évaluation rétrospective de la valeur perçue sur les trois dimensions. Quelle configuration a généré la plus forte valeur perçue dans ses dimensions relationnelle, processuelle et cognitive — et sous quelles conditions ?
 
-Observable : P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices
+Observable principal : P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices
 
 

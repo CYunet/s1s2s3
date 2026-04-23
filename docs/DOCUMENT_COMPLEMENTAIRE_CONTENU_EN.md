@@ -262,7 +262,7 @@ R
 
 Individual face-to-face interviews with TechX senior executives. Thomas builds relational legitimacy through active listening, authority signalling and ramp-up displays of competence. No AI involved.
 
-Observable: R (relational baseline) — P1 baseline for subsequent configurations
+Primary observable: R (relational baseline) — P1 baseline for subsequent configurations
 
 #### Preparation — Wk 3
 
@@ -284,7 +284,7 @@ R, P
 
 Thomas uses AI to transcribe and thematically structure the interviews without informing Marie. He presents a structured synthesis attributed to his own judgment.
 
-Observable: P2 (zero transparency) — P3 (attribution mechanism latent) — Risk of retrospective delegitimisation
+Primary observable: P2 (zero transparency) — P3 (attribution mechanism latent) — Risk of retrospective delegitimisation
 
 #### Collaborative analysis — Wk 4-6
 
@@ -306,7 +306,7 @@ R, P, C
 
 Weekly tripartite sessions: Thomas mobilizes AI visibly as an explicit component of the exchange, Marie challenges outputs, and insights are co-constructed within an explicit triad. All three propositions are simultaneously observable.
 
-Observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)
+Primary observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)
 
 #### Refinement — Wk 7-8
 
@@ -328,7 +328,7 @@ P, C
 
 Thomas alternates between silo AI use (structuring scenarios) and visible co-creation with Marie (validating options). Transparency is selective and strategic.
 
-Observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — Attribution ambiguity
+Primary observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — Attribution ambiguity
 
 #### Mutual validation — Wk 9
 
@@ -350,7 +350,7 @@ C
 
 Thomas finalises recommendations using AI for stress-testing. Marie reviews outputs but cannot fully evaluate the AI-assisted analytical chain.
 
-Observable: P3 (AI literacy as limiting factor) — P1 (cognitive dimension) — Absorptive capacity
+Primary observable: P3 (AI literacy as limiting factor) — P1 (cognitive dimension) — Absorptive capacity
 
 #### COMEX presentation — Wk 10
 
@@ -372,7 +372,7 @@ R, C
 
 Thomas presents to the executive committee without visible AI. Political judgment, narrative construction and authority remain fully human on the surface. Yet acceptance of the recommendations still depends on the legibility and appropriability of the AI-assisted work if the analytical chain is questioned or disclosed. Marie defends the recommendations.
 
-Observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as contextual moderator)
+Primary observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as contextual moderator)
 
 #### Retrospective — Post
 
@@ -394,6 +394,6 @@ R, P, C
 
 Retrospective assessment of perceived value across the three dimensions. Which configuration generated the greatest perceived value across its relational, processual and cognitive dimensions — and under what conditions?
 
-Observable: P1 full (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions
+Primary observable: P1 full (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions
 
 

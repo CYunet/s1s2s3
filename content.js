@@ -303,7 +303,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1"],
             dimensions: ["R"],
             body: "Individual face-to-face interviews with TechX senior executives. Thomas builds relational legitimacy through active listening, authority signalling and ramp-up displays of competence. No AI involved.",
-            observable: "Observable: R (relational baseline) — P1 baseline for subsequent configurations"
+            observable: "Primary observable: R (relational baseline) — P1 baseline for subsequent configurations"
           },
           {
             stage: "scoping",
@@ -314,7 +314,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P2", "P3"],
             dimensions: ["R", "P"],
             body: "Thomas uses AI to transcribe and thematically structure the interviews without informing Marie. He presents a structured synthesis attributed to his own judgment.",
-            observable: "Observable: P2 (zero transparency) — P3 (attribution mechanism latent) — Risk of retrospective delegitimisation"
+            observable: "Primary observable: P2 (zero transparency) — P3 (attribution mechanism latent) — Risk of retrospective delegitimisation"
           },
           {
             stage: "analysis",
@@ -325,7 +325,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
             body: "Weekly tripartite sessions: Thomas mobilizes AI visibly as an explicit component of the exchange, Marie challenges outputs, and insights are co-constructed within an explicit triad. All three propositions are simultaneously observable.",
-            observable: "Observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)"
+            observable: "Primary observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)"
           },
           {
             stage: "analysis",
@@ -336,7 +336,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2"],
             dimensions: ["P", "C"],
             body: "Thomas alternates between silo AI use (structuring scenarios) and visible co-creation with Marie (validating options). Transparency is selective and strategic.",
-            observable: "Observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — Attribution ambiguity"
+            observable: "Primary observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — Attribution ambiguity"
           },
           {
             stage: "analysis",
@@ -347,7 +347,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P3"],
             dimensions: ["C"],
             body: "Thomas finalises recommendations using AI for stress-testing. Marie reviews outputs but cannot fully evaluate the AI-assisted analytical chain.",
-            observable: "Observable: P3 (AI literacy as limiting factor) — P1 (cognitive dimension) — Absorptive capacity"
+            observable: "Primary observable: P3 (AI literacy as limiting factor) — P1 (cognitive dimension) — Absorptive capacity"
           },
           {
             stage: "recommendations",
@@ -358,7 +358,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P3"],
             dimensions: ["R", "C"],
             body: "Thomas presents to the executive committee without visible AI. Political judgment, narrative construction and authority remain fully human on the surface. Yet acceptance of the recommendations still depends on the legibility and appropriability of the AI-assisted work if the analytical chain is questioned or disclosed. Marie defends the recommendations.",
-            observable: "Observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as contextual moderator)"
+            observable: "Primary observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as contextual moderator)"
           },
           {
             stage: "postmission",
@@ -369,7 +369,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
             body: "Retrospective assessment of perceived value across the three dimensions. Which configuration generated the greatest perceived value across its relational, processual and cognitive dimensions — and under what conditions?",
-            observable: "Observable: P1 full (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions"
+            observable: "Primary observable: P1 full (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions"
           }
         ]
       }
@@ -677,7 +677,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1"],
             dimensions: ["R"],
             body: "Entretiens individuels en face-à-face avec les dirigeants de TechX. Thomas construit sa légitimité relationnelle par l'écoute active, le signalement d'autorité et des démonstrations progressives de compétence. Aucune IA mobilisée.",
-            observable: "Observable : R (base relationnelle) — ligne de base de P1 pour les configurations suivantes"
+            observable: "Observable principal : R (base relationnelle) — ligne de base de P1 pour les configurations suivantes"
           },
           {
             stage: "scoping",
@@ -688,7 +688,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P2", "P3"],
             dimensions: ["R", "P"],
             body: "Thomas utilise l'IA pour transcrire et structurer thématiquement les entretiens sans en informer Marie. Il présente une synthèse structurée attribuée à son propre jugement.",
-            observable: "Observable : P2 (transparence nulle) — P3 (mécanisme d'attribution latent) — risque de délégitimation rétrospective"
+            observable: "Observable principal : P2 (transparence nulle) — P3 (mécanisme d'attribution latent) — risque de délégitimation rétrospective"
           },
           {
             stage: "analysis",
@@ -699,7 +699,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
             body: "Sessions tripartites hebdomadaires : Thomas mobilise l'IA de manière visible comme composante explicite de l'échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.",
-            observable: "Observable : P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy et algorithm aversion)"
+            observable: "Observable principal : P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy et algorithm aversion)"
           },
           {
             stage: "analysis",
@@ -710,7 +710,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2"],
             dimensions: ["P", "C"],
             body: "Thomas alterne entre usage d'IA en silo (structuration des scénarios) et co-création visible avec Marie (validation des options). La transparence est sélective et stratégique.",
-            observable: "Observable : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d'attribution"
+            observable: "Observable principal : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d'attribution"
           },
           {
             stage: "analysis",
@@ -721,7 +721,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P3"],
             dimensions: ["C"],
             body: "Thomas finalise les recommandations en utilisant l'IA pour les stress-tester. Marie relit les outputs mais ne peut pas évaluer pleinement la chaîne analytique assistée par IA.",
-            observable: "Observable : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d'absorption"
+            observable: "Observable principal : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d'absorption"
           },
           {
             stage: "recommendations",
@@ -732,7 +732,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P3"],
             dimensions: ["R", "C"],
             body: "Thomas présente au comité exécutif sans IA visible. Le jugement politique, la construction narrative et l'autorité restent pleinement humains en surface. Pourtant, l'acceptation des recommandations dépend encore du caractère lisible et appropriable du travail assisté par IA si la chaîne analytique est questionnée ou dévoilée. Marie défend les recommandations.",
-            observable: "Observable : R (légitimité politique et jugement) + C (évaluation de la chaîne analytique) — P3 (AI literacy du COMEX et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)"
+            observable: "Observable principal : R (légitimité politique et jugement) + C (évaluation de la chaîne analytique) — P3 (AI literacy du COMEX et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)"
           },
           {
             stage: "postmission",
@@ -743,7 +743,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
             body: "Évaluation rétrospective de la valeur perçue sur les trois dimensions. Quelle configuration a généré la plus forte valeur perçue dans ses dimensions relationnelle, processuelle et cognitive — et sous quelles conditions ?",
-            observable: "Observable : P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices"
+            observable: "Observable principal : P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices"
           }
         ]
       }
