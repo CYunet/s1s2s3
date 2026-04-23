@@ -156,6 +156,10 @@ Secondary source:
 
 - `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`, used only as a conversational corpus for prior user questions, interpretive tensions and refinement needs
 
+Supplementary user context:
+
+- user-uploaded text documents, treated as secondary user-provided material rather than validated research sources
+
 Requirement:
 
 - it must know the active reading section at the moment of questioning
@@ -163,6 +167,8 @@ Requirement:
 - it must answer in the language currently selected in the UI
 - it must answer strictly from the supplied framework and illustration context when the user asks what the framework says
 - it must not treat the secondary chatbot conversation corpus as a validated theoretical source
+- it may use uploaded documents when the user explicitly asks to read, compare or reason from them
+- it must not let uploaded documents override the validated framework when answering framework-bound questions
 - it may provide practical extrapolations when the user asks for implications, examples, alternative scenarios or ideas
 - it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
 - it must treat the REGEN-A source as working material that enriches the research background without overriding the current academic note or artefact wording
@@ -191,6 +197,8 @@ Requirement:
 - allow free-form questions
 - allow `Enter` to submit and `Shift+Enter` to insert a line break
 - provide suggestion chips
+- support loading a small number of text-based supplementary documents into the current chatbot context
+- allow removal of loaded documents before or after a question is sent
 - preserve short conversation history per active page, active step and language
 - support a manually maintained research corpus of selected production conversations with contextual metadata
 - call a server endpoint rather than OpenAI directly from the browser
@@ -221,6 +229,7 @@ The chatbot must:
 - model class: cloud LLM compatible with `gpt-5.4`
 - API style: server-side OpenAI Responses API call
 - secret handling: API key server-side only
+- uploaded documents must be read client-side, truncated, and sent server-side only as supplementary prompt material
 
 ## UX requirements
 

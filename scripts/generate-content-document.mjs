@@ -680,18 +680,62 @@ function injectPageBreakAfterToc(wordDocxPath) {
     const documentXmlPath = path.join(tempDir, "word", "document.xml");
     let xml = fs.readFileSync(documentXmlPath, "utf8");
     let changed = false;
+    const pageBreakXml = '<w:p><w:r><w:br w:type="page"/></w:r></w:p>';
 
-    if (!xml.includes('w:br w:type="page"')) {
-      const headingRegex = /<w:p\b(?:(?!<\/w:p>)[\s\S])*<w:pStyle[^>]*w:val="Heading2"[^>]*\/>(?:(?!<\/w:p>)[\s\S])*<w:t[^>]*>1\.(?:(?!<\/w:p>)[\s\S])*<\/w:p>/;
-      const pageBreakXml = '<w:p><w:r><w:br w:type="page"/></w:r></w:p>';
+    const headingRegex = /<w:p\b(?:(?!<\/w:p>)[\s\S])*?<w:pStyle[^>]*w:val="Heading2"[^>]*\/>(?:(?!<\/w:p>)[\s\S])*?<\/w:p>/g;
+    let headingIndex = 0;
+    xml = xml.replace(headingRegex, (match) => {
+      const textMatches = [...match.matchAll(/<w:t[^>]*>([\s\S]*?)<\/w:t>/g)];
+      const text = textMatches.map((item) => item[1]).join("");
 
-      if (!headingRegex.test(xml)) {
-        return false;
+      if (!/^\d+\.\s/.test(text)) {
+        return match;
       }
 
-      xml = xml.replace(headingRegex, `${pageBreakXml}$&`);
-      fs.writeFileSync(documentXmlPath, xml, "utf8");
+      headingIndex += 1;
+      if (headingIndex === 1) {
+        if (match.includes('w:type="page"')) {
+          return match;
+        }
+        changed = true;
+        return `${pageBreakXml}${match}`;
+      }
+
+      const previousSlice = xml.slice(Math.max(0, xml.indexOf(match) - 80), xml.indexOf(match));
+      if (previousSlice.includes('w:type="page"')) {
+        return match;
+      }
+
       changed = true;
+      return `${pageBreakXml}${match}`;
+    });
+
+    const targetCx = "4320000";
+    const targetCy = "2430000";
+    let drawingAdjusted = false;
+
+    xml = xml.replace(/<wp:extent[^>]*cx="(\d+)"[^>]*cy="(\d+)"[^>]*\/>/g, (full, cx, cy) => {
+      if (drawingAdjusted) {
+        return full;
+      }
+      drawingAdjusted = true;
+      changed = true;
+      return `<wp:extent cx="${targetCx}" cy="${targetCy}"/>`;
+    });
+
+    xml = xml.replace(/<a:ext[^>]*cx="(\d+)"[^>]*cy="(\d+)"[^>]*\/>/g, (full, cx, cy) => {
+      if (cx === targetCx && cy === targetCy) {
+        return full;
+      }
+      if (!drawingAdjusted) {
+        return full;
+      }
+      changed = true;
+      return `<a:ext cx="${targetCx}" cy="${targetCy}"/>`;
+    });
+
+    if (changed) {
+      fs.writeFileSync(documentXmlPath, xml, "utf8");
     }
 
     const stylesXmlPath = path.join(tempDir, "word", "styles.xml");

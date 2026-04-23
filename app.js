@@ -8,8 +8,15 @@
     chatSourceSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
     chatOpen: false,
     chatHistories: {},
-    chatPending: {}
+    chatPending: {},
+    chatDocuments: {},
+    chatUploadStatuses: {}
   };
+
+  var CHAT_DOCUMENT_LIMIT = 3;
+  var CHAT_DOCUMENT_MAX_CHARS = 12000;
+  var CHAT_DOCUMENT_TOTAL_MAX_CHARS = 24000;
+  var CHAT_DOCUMENT_ACCEPT = ".txt,.md,.markdown,.csv,.json,.html,.htm,.xml,.yml,.yaml";
 
   var els = {
     html: document.documentElement,
@@ -329,6 +336,59 @@
     return Boolean(state.chatPending[getChatHistoryKey()]);
   }
 
+  function getChatDocuments() {
+    return state.chatDocuments[getChatHistoryKey()] || [];
+  }
+
+  function setChatDocuments(documents) {
+    state.chatDocuments[getChatHistoryKey()] = documents || [];
+  }
+
+  function getChatUploadStatus() {
+    return state.chatUploadStatuses[getChatHistoryKey()] || "";
+  }
+
+  function setChatUploadStatus(message) {
+    state.chatUploadStatuses[getChatHistoryKey()] = message || "";
+  }
+
+  function getChatExtension(filename) {
+    var match = String(filename || "").toLowerCase().match(/(\.[a-z0-9]+)$/);
+    return match ? match[1] : "";
+  }
+
+  function isSupportedChatDocument(file) {
+    return CHAT_DOCUMENT_ACCEPT.split(",").indexOf(getChatExtension(file && file.name)) !== -1;
+  }
+
+  function normalizeChatDocumentText(text) {
+    return String(text || "")
+      .replace(/\u0000/g, "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .trim();
+  }
+
+  function formatChatDocumentSize(chars) {
+    return String(Math.max(1, Math.round(Number(chars || 0) / 1000))) + "k";
+  }
+
+  function buildChatDocumentChip(documentItem, index, chat) {
+    var aria = (chat.uploadRemove || "") + " " + (documentItem.name || "");
+
+    return (
+      '<li class="chatbot-upload__doc">' +
+      '<span class="chatbot-upload__doc-meta">' +
+      '<span class="chatbot-upload__doc-name">' + escapeHtml(documentItem.name || "") + "</span>" +
+      '<span class="chatbot-upload__doc-size">' + escapeHtml(formatChatDocumentSize(documentItem.charCount)) + "</span>" +
+      "</span>" +
+      '<button class="chatbot-upload__doc-remove" type="button" data-chat-doc-remove="' + index + '" aria-label="' + escapeHtml(aria) + '">' +
+      escapeHtml(chat.uploadRemove || "") +
+      "</button>" +
+      "</li>"
+    );
+  }
+
   function getChatRoleLabel(role) {
     if (role === "assistant") {
       return "AI";
@@ -539,6 +599,8 @@
   function buildChatbotPanel(data, active, activeStageLabel, activeStage) {
     var chat = data.chatbot || {};
     var history = getChatHistory();
+    var documents = getChatDocuments();
+    var uploadStatus = getChatUploadStatus();
     var pending = isChatPending();
     var messagesHtml = history.length
       ? history.map(buildChatMessage).join("")
@@ -569,6 +631,29 @@
         return '<button class="chatbot-suggestion" type="button" data-chat-suggestion="' + escapeHtml(question) + '"' + (pending ? " disabled" : "") + '>' + escapeHtml(question) + "</button>";
       }).join("") +
       "</div>" +
+      "</div>" +
+      '<div class="chatbot-upload">' +
+      '<div class="chatbot-upload__head">' +
+      '<p class="chatbot-suggestions__label">' + escapeHtml(chat.uploadLabel || "") + "</p>" +
+      '<label class="chatbot-upload__button"' + (pending ? ' aria-disabled="true"' : "") + '>' +
+      escapeHtml(chat.uploadButton || "") +
+      '<input class="chatbot-upload__input" type="file" accept="' + CHAT_DOCUMENT_ACCEPT + '" multiple' + (pending ? " disabled" : "") + ">" +
+      "</label>" +
+      "</div>" +
+      '<p class="chatbot-upload__hint">' + escapeHtml(chat.uploadHint || "") + "</p>" +
+      (documents.length
+        ? '<div class="chatbot-upload__loaded">' +
+          '<p class="chatbot-upload__loaded-label">' + escapeHtml(chat.uploadLoadedLabel || "") + "</p>" +
+          '<ul class="chatbot-upload__docs">' +
+          documents.map(function (documentItem, index) {
+            return buildChatDocumentChip(documentItem, index, chat);
+          }).join("") +
+          "</ul>" +
+          "</div>"
+        : "") +
+      (uploadStatus
+        ? '<p class="chatbot-upload__status">' + escapeHtml(uploadStatus) + "</p>"
+        : "") +
       "</div>" +
       '<div class="chatbot-messages" aria-live="polite">' + messagesHtml + "</div>" +
       '<form class="chatbot-form">' +
@@ -629,6 +714,87 @@
     window.setTimeout(focusChatInput, 260);
   }
 
+  function removeChatDocument(index) {
+    var data = getContent().illustration;
+    var chat = data.chatbot || {};
+    var documents = getChatDocuments().slice();
+
+    documents.splice(index, 1);
+    setChatDocuments(documents);
+    setChatUploadStatus(chat.uploadStatusRemoved || "");
+    renderChatbotHost();
+  }
+
+  function loadChatDocuments(fileList) {
+    var data = getContent().illustration;
+    var chat = data.chatbot || {};
+    var files = Array.prototype.slice.call(fileList || []);
+    var existing = getChatDocuments().slice();
+    var remainingChars = CHAT_DOCUMENT_TOTAL_MAX_CHARS - existing.reduce(function (sum, item) {
+      return sum + Number(item.charCount || 0);
+    }, 0);
+
+    if (!files.length) {
+      return Promise.resolve();
+    }
+
+    return files.reduce(function (chain, file) {
+      return chain.then(function () {
+        var extension;
+
+        if (existing.length >= CHAT_DOCUMENT_LIMIT) {
+          setChatUploadStatus(chat.uploadStatusTooMany || "");
+          return;
+        }
+
+        if (!isSupportedChatDocument(file)) {
+          setChatUploadStatus(chat.uploadStatusUnsupported || "");
+          return;
+        }
+
+        extension = getChatExtension(file.name).replace(/^\./, "");
+
+        return file.text().then(function (rawText) {
+          var normalized = normalizeChatDocumentText(rawText);
+          var keptText;
+          var keptChars;
+
+          if (!normalized) {
+            setChatUploadStatus(chat.uploadStatusEmpty || "");
+            return;
+          }
+
+          keptChars = Math.min(normalized.length, CHAT_DOCUMENT_MAX_CHARS, Math.max(0, remainingChars));
+
+          if (!keptChars) {
+            setChatUploadStatus(chat.uploadStatusTooMany || "");
+            return;
+          }
+
+          keptText = normalized.slice(0, keptChars);
+          existing.push({
+            name: file.name,
+            type: extension || file.type || "text",
+            text: keptText,
+            charCount: keptText.length
+          });
+          remainingChars -= keptText.length;
+          setChatUploadStatus(
+            normalized.length > keptText.length
+              ? (chat.uploadStatusTooLarge || "")
+              : (chat.uploadStatusLoaded || "")
+          );
+        }).catch(function () {
+          setChatUploadStatus(chat.uploadStatusEmpty || "");
+        });
+      });
+    }, Promise.resolve()).then(function () {
+      setChatDocuments(existing);
+      renderChatbotHost();
+      focusChatInput();
+    });
+  }
+
   function submitChatQuestion(question) {
     var data = getContent().illustration;
     var chat = data.chatbot || {};
@@ -668,7 +834,14 @@
         language: state.lang,
         question: trimmed,
         history: previousHistory.slice(0, -1).slice(-6),
-        context: buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel)
+        context: buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel),
+        documents: getChatDocuments().map(function (item) {
+          return {
+            name: item.name,
+            type: item.type,
+            text: item.text
+          };
+        })
       })
     }).then(function (response) {
       return response.json().catch(function () {
@@ -1183,8 +1356,15 @@
 
     document.addEventListener("click", function (event) {
       var suggestionButton = event.target.closest("[data-chat-suggestion]");
+      var removeButton;
       if (suggestionButton) {
         submitChatQuestion(suggestionButton.getAttribute("data-chat-suggestion"));
+        return;
+      }
+
+      removeButton = event.target.closest("[data-chat-doc-remove]");
+      if (removeButton) {
+        removeChatDocument(Number(removeButton.getAttribute("data-chat-doc-remove")));
         return;
       }
 
@@ -1222,6 +1402,19 @@
       }
 
       submitChatQuestion(input.value);
+    });
+
+    document.addEventListener("change", function (event) {
+      var uploadInput = event.target.closest(".chatbot-upload__input");
+      var files;
+
+      if (!uploadInput) {
+        return;
+      }
+
+      files = uploadInput.files;
+      uploadInput.value = "";
+      loadChatDocuments(files);
     });
 
     document.addEventListener("keydown", function (event) {

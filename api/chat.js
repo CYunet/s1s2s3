@@ -6,6 +6,8 @@ var artefactSourceCache = null;
 var regenaSourceCache = null;
 var chatbotConversationSourceCache = null;
 var CHATBOT_MAX_OUTPUT_TOKENS = 1600;
+var CHAT_DOCUMENT_LIMIT = 3;
+var CHAT_DOCUMENT_MAX_CHARS = 12000;
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -199,6 +201,7 @@ function buildInstructions(language) {
     "Use content.js as a wording and coherence source for the artefact's internal content, labels, glossary and section texts.",
     "Use the REGEN-A source as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier S1/S2/S3 reasoning; do not let it override the current academic note or artefact wording.",
     "Use the chatbot conversation corpus only as a secondary source about prior user questions, tensions and clarifications. Because user conversations are not controlled theoretical material, do not use them to establish the framework and do not let them override the academic note, artefact wording, content.js or REGEN-A source. Treat them only as research material that can reveal interpretive issues or refinement needs.",
+    "If user-uploaded supplementary documents are provided, treat them as user-supplied secondary context. Use them when the user explicitly asks you to read, compare, interpret or reason from them, but do not let them override the primary research sources for claims about the framework itself.",
     "Always take the activePage object as the user's current reading context. Use it silently by default, and mention the active page briefly and naturally only when it helps orient the answer.",
     "If activePage.id is illustration, use the clicked mission sub-step as the operational context.",
     "If activePage.id is why, theory, or spheres, prioritize that section's role and excerpts; do not assume the user is asking from a mission sub-step.",
@@ -218,6 +221,18 @@ function buildInstructions(language) {
   ].join(" ");
 }
 
+function normalizeDocuments(documents) {
+  return (documents || []).filter(function (item) {
+    return item && item.name && item.text;
+  }).slice(0, CHAT_DOCUMENT_LIMIT).map(function (item) {
+    return {
+      name: truncateText(item.name, 240),
+      type: truncateText(item.type || "text", 60),
+      text: truncateText(item.text, CHAT_DOCUMENT_MAX_CHARS)
+    };
+  });
+}
+
 function buildPrompt(body) {
   var academicNote = getAcademicNote();
   var artefactSource = getArtefactSource();
@@ -225,6 +240,7 @@ function buildPrompt(body) {
   var chatbotConversationSource = getChatbotConversationSource();
   var artefactBundle = body.context || {};
   var artefactSourceDigest = buildArtefactSourceDigest(body, artefactSource);
+  var documents = normalizeDocuments(body.documents);
 
   return [
     "User question:",
@@ -244,6 +260,11 @@ function buildPrompt(body) {
     "",
     "Secondary source - Chatbot conversation corpus:",
     truncateText(chatbotConversationSource || "[Chatbot conversation corpus unavailable]", 12000),
+    "",
+    "User-uploaded supplementary documents:",
+    documents.length
+      ? JSON.stringify(documents, null, 2)
+      : "[No user-uploaded documents provided]",
     "",
     "Current active page shortcut:",
     JSON.stringify(artefactBundle.activePage || {}, null, 2),
@@ -378,9 +399,9 @@ module.exports = async function handler(req, res) {
     return sendJson(res, 400, { error: "Invalid JSON body" });
   }
 
-  if (!body || !body.question || !body.context) {
-    return sendJson(res, 400, { error: "Missing question or context" });
-  }
+    if (!body || !body.question || !body.context) {
+      return sendJson(res, 400, { error: "Missing question or context" });
+    }
 
   messages = toResponsesMessages(body.history);
   messages.push({

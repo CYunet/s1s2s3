@@ -1299,6 +1299,124 @@ button {
   gap: 0.45rem;
 }
 
+.chatbot-upload {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+}
+
+.chatbot-upload__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.chatbot-upload__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(93, 161, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(93, 161, 255, 0.12);
+  color: var(--accent-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chatbot-upload__button[aria-disabled="true"] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.chatbot-upload__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chatbot-upload__hint,
+.chatbot-upload__status,
+.chatbot-upload__loaded-label {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.chatbot-upload__hint,
+.chatbot-upload__status {
+  color: var(--text-faint);
+}
+
+.chatbot-upload__loaded {
+  display: grid;
+  gap: 0.38rem;
+}
+
+.chatbot-upload__loaded-label {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.chatbot-upload__docs {
+  display: grid;
+  gap: 0.38rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chatbot-upload__doc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 0.85rem;
+  background: var(--surface);
+}
+
+.chatbot-upload__doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.chatbot-upload__doc-name {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.chatbot-upload__doc-size {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.chatbot-upload__doc-remove {
+  flex: 0 0 auto;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 .chatbot-suggestions__list {
   display: flex;
   flex-wrap: wrap;
@@ -1731,6 +1849,11 @@ button:focus-visible {
   .chatbot-form__row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .chatbot-upload__head {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .chatbot-form__button {

@@ -20,6 +20,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - provides glossary tooltips for `S1/S2/S3`, `P1/P2/P3` and `R/P/C`
 - lets users regenerate and download the full app text as a language-specific Word document from the header
 - offers a contextual chatbot tied to the current reading section and, in `Illustration`, to the currently active mission step
+- lets users attach short text-based supplementary documents to the chatbot for contextual questioning
 
 ## Project structure
 
@@ -131,11 +132,13 @@ It receives:
 - the illustration overview
 - the relevant theoretical framework excerpts
 - the server-loaded primary source library
+- optional user-uploaded supplementary text documents for contextual reading
 
 It must answer:
 
 - strictly within the framework of this research when the user asks what the framework says, asks for definitions, or asks about `P1/P2/P3`, `R/P/C` or `S1/S2/S3`
 - with clearly marked practical extrapolation when the user asks for implications, alternative scenarios, examples or ideas
+- by treating uploaded documents as user-provided supplementary material rather than as validated theoretical sources
 - in the language selected in the UI
 - with priority given to the current reading section
 - with priority given to the clicked mission sub-step when the user is in `Illustration`
@@ -150,6 +153,31 @@ Instead:
 2. `api/chat.js` builds a constrained prompt
 3. the server calls the OpenAI Responses API
 4. the answer is returned to the UI
+
+### Supplementary chatbot documents
+
+The chatbot can receive a small set of user-uploaded supplementary documents.
+
+Current supported formats:
+
+- `.txt`
+- `.md`
+- `.markdown`
+- `.csv`
+- `.json`
+- `.html`
+- `.htm`
+- `.xml`
+- `.yml`
+- `.yaml`
+
+Current limits:
+
+- up to 3 documents per active chatbot context
+- text-based formats only
+- each document is truncated before being sent to the server
+
+These documents are treated as supplementary user context. They can help the assistant read or compare material supplied by the user, but they must not override the primary research sources when the user asks what the framework says.
 
 ## Environment variables
 
@@ -200,6 +228,7 @@ Implemented:
 - glossary tooltips
 - floating contextual cloud-chatbot UI
 - page-aware chatbot context
+- supplementary document upload for the chatbot
 - server endpoint for OpenAI Responses API
 - Vercel Web Analytics via `/_vercel/insights/script.js`
 - Simple Analytics privacy-first tracking via `https://scripts.simpleanalyticscdn.com/latest.js`
