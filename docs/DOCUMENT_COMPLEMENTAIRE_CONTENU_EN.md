@@ -33,7 +33,7 @@ In other words, how does AI reconfigure the perceived value of consulting missio
 
 ### WHY IT MATTERS
 
-The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this co-creation occurs in the AI era.
+The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this perceived value co-creation occurs in the AI era.
 
 ### AN OPEN QUESTION
 
