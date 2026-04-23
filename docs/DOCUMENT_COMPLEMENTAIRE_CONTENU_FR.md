@@ -25,7 +25,7 @@ Ce texte est disponible également en ligne : [https://s1s2s3.vercel.app](https:
 
 Le conseil augmenté par l'IA est souvent présenté comme une promesse de valeur supérieure pour les clients, car il permet de produire plus vite, mieux, plus fort, moins cher, plus sûr. Or, la valeur est subjective, et sa perception par le client, en rien automatique.
 
-Dans le conseil, la valeur perçue n'est pas simplement délivrée au client, elle se construit dans la relation, l'expérience de la mission, l'appropriation par le client des connaissances managériales produites (Ciampi, 2017), qui permettent in-fine, la résolution du problème à traiter. La valeur perçue est donc le fruit d'une co-création.
+Dans le conseil, la valeur perçue n'est pas simplement délivrée au client, elle se construit dans la relation, l'expérience de la mission, l'appropriation par le client des connaissances managériales produites, qui permettent la résolution du problème spécifique à traiter, et in-fine, renforcent le client pour adresser les prochains à venir (Ciampi, 2017). La valeur perçue est donc le fruit d'une co-création.
 
 Or, l’introduction massive de l’IA dans les pratiques du conseil, modifie la situation de cette co-création. Elle transforme la manière dont les contributions sont produites, rendues visibles, attribuées aux acteurs, appropriées et mobilisées dans l'action managériale de l’organisation cliente, où seule se forme effectivement la valeur perçue. Notre recherche explore cette transformation à l’œuvre. En quoi la valeur perçue du conseil est-elle ainsi reconfigurée par l’IA ? Sous quelles conditions se renforce-t-elle ou se fragilise-t-elle ?
 
@@ -37,7 +37,7 @@ L'intégration de l'IA dans le conseil, ne génère pas nécessairement une vale
 
 ### UNE QUESTION LAISSÉE OUVERTE
 
-Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil, et y apporte une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.
+Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil. Nous y apportons toutefois une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.
 
 • La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).
 

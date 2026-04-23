@@ -37,7 +37,7 @@ The integration of AI into consulting does not necessarily generate superior val
 
 ### AN OPEN QUESTION
 
-At the theoretical level, this research mobilizes a dual perspective (marketing and information systems), analyzed through the prism of its application to the consulting field, and brings an original perspective to it: to our knowledge, there is no unified framework for exploring the pressing question of perceived value co-creation in consulting in the AI era, even though this question is central to guiding the necessary transformation of consulting practices.
+At the theoretical level, this research mobilizes a dual perspective (marketing and information systems), analyzed through the prism of its application to the consulting field. It nevertheless brings an original perspective to it: to our knowledge, there is no unified framework for exploring the pressing question of perceived value co-creation in consulting in the AI era, even though this question is central to guiding the necessary transformation of consulting practices.
 
 • The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).
 
