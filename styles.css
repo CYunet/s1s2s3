@@ -326,6 +326,24 @@ button {
   font-size: 1rem;
 }
 
+.lede,
+.callout > p:not(.panel-label),
+.theory-block > p:not(.panel-label),
+.timeline-intro,
+.timeline-legend,
+.timeline-group__summary,
+.timeline-postscript__summary,
+.timeline-detail__body,
+.timeline-detail__observable,
+.sphere-card > p,
+.dimension-card > p,
+.link-card__meta p,
+.prompt-card > p:not(.panel-label) {
+  text-align: justify;
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
 .callout strong,
 .theory-block strong,
 .timeline-detail strong,
