@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import vm from "node:vm";
 import { spawnSync } from "node:child_process";
@@ -267,11 +268,9 @@ function addLocale(doc, lang, locale, options = {}) {
   const labels = lang === "fr"
     ? {
         rpcDimensions: "Les dimensions de la valeur perçue du conseil à l'ère de l'IA : R / P / C",
-        propositions: "Propositions de recherche",
         positive: "Reconfiguration positive",
         negative: "Reconfiguration négative",
         contingencies: "Contingences",
-        detailedPropositions: "Propositions de recherche",
         stages: "Phases de la mission",
         substeps: "Sous étapes",
         stage: "Étape",
@@ -281,11 +280,9 @@ function addLocale(doc, lang, locale, options = {}) {
       }
     : {
         rpcDimensions: "R / P / C dimensions",
-        propositions: "Research propositions",
         positive: "Positive reconfiguration",
         negative: "Negative reconfiguration",
         contingencies: "Contingencies",
-        detailedPropositions: "Detailed research propositions",
         stages: "Mission phases",
         substeps: "Sub-steps",
         stage: "Stage",
@@ -314,20 +311,25 @@ function addLocale(doc, lang, locale, options = {}) {
     heading(3, theory.researchGapLabel || theory.gapLabel || "Research gap");
     theory.researchGapParagraphs.forEach(paragraph);
   }
+  if (theory.propositionDetails?.length) {
+    heading(3, theory.propositionsLabel || "Research propositions");
+    theory.propositionDetails.filter((item) => item.tone !== "managerial").forEach((item) => {
+      heading(4, `${item.badge} — ${item.title}`);
+      paragraph(item.text || "");
+    });
+  }
+  heading(3, theory.modelLabel || "R -> P -> C model");
   if (theory.dimensionCards?.length) {
-    heading(3, labels.rpcDimensions);
+    heading(4, labels.rpcDimensions);
     theory.dimensionCards.forEach((card) => {
       definition(`${card.letter || ""} — ${card.label || ""}`, card.text);
     });
   }
-  if (theory.propositionMiniCards?.length) {
-    heading(3, labels.propositions);
-    theory.propositionMiniCards.forEach((item) => {
-      definition(item.label || item.letter || "", item.text);
-    });
+  if (theory.sequenceHtml) {
+    paragraph(theory.sequenceHtml);
   }
   if (theory.rpcDiagram) {
-    heading(3, theory.rpcDiagram.title || "R -> P -> C model");
+    heading(4, theory.rpcDiagram.title || "R -> P -> C model");
     figure("rpc", theory.rpcDiagram.title || "R -> P -> C model", {
       dimensions: theory.dimensionCards || [],
       diagram: theory.rpcDiagram
@@ -341,21 +343,23 @@ function addLocale(doc, lang, locale, options = {}) {
     });
     paragraph(theory.rpcDiagram.footer || "");
   }
-  if (theory.propositionDetails?.length) {
-    heading(3, labels.detailedPropositions);
-    theory.propositionDetails.forEach((item) => {
-      heading(4, `${item.badge} — ${item.title}`);
-      paragraph(item.text || "");
-    });
-  }
   if (theory.observationalFramework) {
     heading(3, theory.observationalFramework.title || theory.observationalFramework.label || "Observational framework");
     paragraph(theory.observationalFramework.text || "");
     list((theory.observationalFramework.chips || []).map((chip) => chip.text));
   }
+  const managerialDetail = (theory.propositionDetails || []).find((item) => item.tone === "managerial");
+  if (managerialDetail) {
+    heading(3, managerialDetail.badge || "");
+    heading(4, managerialDetail.title || "");
+    paragraph(managerialDetail.text || "");
+  }
   if (theory.practitionerPrompt?.text) {
     heading(3, theory.practitionerPrompt.title || theory.practitionerPrompt.label || "Practitioner relevance");
     paragraph(theory.practitionerPrompt.text || "");
+  }
+  if (theory.findingsNote) {
+    paragraph(theory.findingsNote);
   }
 
   heading(2, `3. ${spheres.kicker || "Observation framework"}`);
@@ -533,13 +537,13 @@ function renderWordHtml(blocks) {
       return `<h${block.level} class="doc-heading doc-heading--${block.level}">${escapeHtml(block.text)}</h${block.level}>`;
     }
     if (block.type === "paragraph") {
-      return `<p>${escapeHtml(block.text).replace(/\n/g, "<br>")}</p>`;
+      return `<p class="doc-paragraph">${escapeHtml(block.text).replace(/\n/g, "<br>")}</p>`;
     }
     if (block.type === "definition") {
-      return `<div class="definition"><p class="block-label"><strong>${escapeHtml(block.label)}</strong></p><p>${escapeHtml(block.text).replace(/\n/g, "<br>")}</p></div>`;
+      return `<div class="definition"><p class="block-label"><strong>${escapeHtml(block.label)}</strong></p><p class="definition-text">${escapeHtml(block.text).replace(/\n/g, "<br>")}</p></div>`;
     }
     if (block.type === "linkParagraph") {
-      return `<p>${escapeHtml(block.text)} <a href="${escapeHtml(block.url)}">${escapeHtml(block.label)}</a></p>`;
+      return `<p class="doc-paragraph">${escapeHtml(block.text)} <a href="${escapeHtml(block.url)}">${escapeHtml(block.label)}</a></p>`;
     }
     if (block.type === "toc") {
       return block.groups.map((group) => (
@@ -558,7 +562,7 @@ function renderWordHtml(blocks) {
       return `<ul>${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
     }
     if (block.type === "pageBreak") {
-      return `<div class="page-break"></div>`;
+      return `<p class="page-break" style="page-break-after: always;">&nbsp;</p>`;
     }
     return "<hr>";
   }).join("\n");
@@ -585,7 +589,8 @@ function renderWordHtml(blocks) {
     h2 { font-size: 20pt; margin-top: 22pt; color: #2b2520; }
     h3 { font-size: 15pt; margin-top: 16pt; color: #3a332d; }
     h4 { font-size: 12.5pt; margin-top: 12pt; color: #4a4038; }
-    p, li { font-size: 11pt; text-align: justify; }
+    p, li { font-size: 11pt; }
+    .doc-paragraph, .definition-text, li { text-align: justify; }
     .block-label { margin: 10pt 0 0; font-size: 11pt; letter-spacing: 0; }
     .definition p:last-child { margin-top: 0; }
     .toc-group { margin: 14pt 0 4pt; font-size: 12pt; font-weight: 600; }
@@ -593,15 +598,16 @@ function renderWordHtml(blocks) {
     .toc-table td { padding: 4pt 0; font-size: 11pt; }
     .toc-label { width: 86%; text-align: left; }
     .toc-page { width: 14%; text-align: right; white-space: nowrap; }
-    .page-break { page-break-after: always; }
+    .page-break { page-break-after: always; text-align: left; }
     .figure { margin: 12pt 0 18pt; padding: 10pt; border: 1px solid #d8d1c7; border-radius: 12pt; background: #fbf7ef; }
     .figure-title { margin: 0 0 8pt; font-size: 10pt; font-weight: 700; color: #5a5047; text-align: left; letter-spacing: .04em; text-transform: uppercase; }
     .figure-image-wrap { margin: 0; text-align: center; }
     .figure-image { width: 100%; height: auto; border: 0; }
     .figure-table { width: 100%; border-collapse: separate; border-spacing: 6pt; }
     .figure-cell { border: 1px solid #d8d1c7; border-radius: 10pt; padding: 8pt; vertical-align: top; background: #fffdf8; }
-    .figure-cell p { margin: 0; text-align: left; font-size: 9.5pt; }
+    .figure-cell p { margin: 0; text-align: justify; font-size: 9.5pt; }
     .figure-node { text-align: center; font-weight: 700; font-size: 13pt; }
+    .figure-cell .figure-node { text-align: center; }
     .figure-arrow { text-align: center; font-weight: 700; font-size: 16pt; color: #7a7066; }
     .figure-small { font-size: 9pt; color: #675d54; text-align: left; }
     strong { color: #1f1a16; }
@@ -622,6 +628,73 @@ ${body}
 `;
 }
 
+function injectPageBreakAfterToc(wordDocxPath) {
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "s1s2s3-docx-"));
+
+  try {
+    const unzipResult = spawnSync("unzip", ["-q", wordDocxPath, "-d", tempDir], {
+      encoding: "utf8"
+    });
+
+    if (unzipResult.error || unzipResult.status !== 0) {
+      return false;
+    }
+
+    const documentXmlPath = path.join(tempDir, "word", "document.xml");
+    let xml = fs.readFileSync(documentXmlPath, "utf8");
+    let changed = false;
+
+    if (!xml.includes('w:br w:type="page"')) {
+      const headingRegex = /<w:p\b(?:(?!<\/w:p>)[\s\S])*<w:pStyle[^>]*w:val="Heading2"[^>]*\/>(?:(?!<\/w:p>)[\s\S])*<w:t[^>]*>1\.(?:(?!<\/w:p>)[\s\S])*<\/w:p>/;
+      const pageBreakXml = '<w:p><w:r><w:br w:type="page"/></w:r></w:p>';
+
+      if (!headingRegex.test(xml)) {
+        return false;
+      }
+
+      xml = xml.replace(headingRegex, `${pageBreakXml}$&`);
+      fs.writeFileSync(documentXmlPath, xml, "utf8");
+      changed = true;
+    }
+
+    const stylesXmlPath = path.join(tempDir, "word", "styles.xml");
+    if (fs.existsSync(stylesXmlPath)) {
+      const stylesXml = fs.readFileSync(stylesXmlPath, "utf8");
+      const justifiedStylesXml = stylesXml.replace(
+        /(<w:style\b[^>]*w:styleId="BodyText"[^>]*>[\s\S]*?<w:pPr>)([\s\S]*?)(<\/w:pPr>)/,
+        (match, start, body, end) => {
+          if (body.includes("<w:jc")) {
+            return `${start}${body.replace(/<w:jc\b[^>]*\/>/, '<w:jc w:val="both" />')}${end}`;
+          }
+
+          return `${start}${body}<w:jc w:val="both" />${end}`;
+        }
+      );
+
+      if (justifiedStylesXml !== stylesXml) {
+        fs.writeFileSync(stylesXmlPath, justifiedStylesXml, "utf8");
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      fs.rmSync(wordDocxPath, { force: true });
+      const zipResult = spawnSync("zip", ["-qr", wordDocxPath, "."], {
+        cwd: tempDir,
+        encoding: "utf8"
+      });
+
+      if (zipResult.error || zipResult.status !== 0) {
+        return false;
+      }
+    }
+
+    return true;
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
 function convertWordHtmlToDocx(wordHtmlPath, wordDocxPath) {
   fs.rmSync(wordDocxPath, { force: true });
 
@@ -631,6 +704,7 @@ function convertWordHtmlToDocx(wordHtmlPath, wordDocxPath) {
   });
 
   if (!pandocResult.error && pandocResult.status === 0 && fs.existsSync(wordDocxPath)) {
+    injectPageBreakAfterToc(wordDocxPath);
     return true;
   }
 
@@ -643,7 +717,12 @@ function convertWordHtmlToDocx(wordHtmlPath, wordDocxPath) {
     return false;
   }
 
-  return fs.existsSync(wordDocxPath);
+  if (!fs.existsSync(wordDocxPath)) {
+    return false;
+  }
+
+  injectPageBreakAfterToc(wordDocxPath);
+  return true;
 }
 
 function buildToc(lang) {
