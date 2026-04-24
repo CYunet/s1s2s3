@@ -147,10 +147,7 @@ The chatbot must answer questions from the currently active reading section. In 
 
 Primary sources:
 
-- `NOTE_ACADEMIQUE.md`
-- active artefact content bundle
-- `content.js`
-- `sources/REGENA_ATELIER_DOCTORAL_2025.md`
+- `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md` as the sole validated framework source for chatbot answers about the exploratory framework
 
 Secondary source:
 
@@ -165,13 +162,14 @@ Requirement:
 - it must know the active reading section at the moment of questioning
 - it must know the active step context when the user is in `Illustration`
 - it must answer in the language currently selected in the UI
-- it must answer strictly from the supplied framework and illustration context when the user asks what the framework says
+- it must answer strictly from `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md` when the user asks what the framework says
+- it must cite the exploratory framework precisely by page when answering framework-bound questions
 - it must not treat the secondary chatbot conversation corpus as a validated theoretical source
 - it may use uploaded documents when the user explicitly asks to read, compare or reason from them
 - it must not let uploaded documents override the validated framework when answering framework-bound questions
 - it may provide practical extrapolations when the user asks for implications, examples, alternative scenarios or ideas
 - it must explicitly distinguish bounded theoretical inference from practical extrapolation when answering hypotheticals
-- it must treat the REGEN-A source as working material that enriches the research background without overriding the current academic note or artefact wording
+- it must treat the current page and current illustration step as contextual reading cues, not as additional primary sources
 
 ### 7. Downloadable companion documents
 
@@ -181,10 +179,8 @@ Requirement:
 
 - a header link must download the French Word document when the UI is in French
 - a header link must download the English Word document when the UI is in English
-- in the deployed app, the header link must call the server document endpoint so the Word-compatible document is regenerated from the latest deployed app content at click time
-- when opened locally as a static file, the header link may fall back to the pre-generated `.docx` files
-- generated Word documents must include the key artefact diagrams, including the `S1/S2/S3` spheres diagram as an embedded image rather than a text table
-- companion documents must be regenerated when app content or documentation is updated
+- the link must point to manually maintained static `.docx` files
+- companion Word documents must remain language-specific and downloadable without changing the header design
 
 ## Chatbot product requirements
 
@@ -202,6 +198,7 @@ Requirement:
 - preserve short conversation history per active page, active step and language
 - support a manually maintained research corpus of selected production conversations with contextual metadata
 - call a server endpoint rather than OpenAI directly from the browser
+- paginate long textual blocks in the reading UI so denser source-driven copy remains readable without shrinking the type
 
 ### Theoretical guardrails
 
@@ -223,6 +220,7 @@ The chatbot must:
 - reason from the active illustration step when the user is in `Illustration`
 - treat the conversation corpus as secondary evidence of user interpretation, not as primary theory
 - keep answers concise and avoid repeatedly reciting the active context unless it is useful
+- explicitly signal when an answer goes beyond the exploratory framework
 
 ### Technical requirements
 
@@ -308,8 +306,8 @@ The artefact is successful if:
 - the timeline clarifies how theory becomes observable in the mission
 - the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
-- the French and English human-readable companion documents remain aligned with the site content and are regenerated when documentation is updated
-- the language-aware Word download provides the correct companion document from the app header and, in production, regenerates it from the latest deployed app content
+- the French and English human-readable companion documents remain aligned with the site content and are updated when documentation is updated
+- the language-aware Word download provides the correct static companion document from the app header in both local and deployed modes
 
 ## Risks
 

@@ -10,7 +10,8 @@
     chatHistories: {},
     chatPending: {},
     chatDocuments: {},
-    chatUploadStatuses: {}
+    chatUploadStatuses: {},
+    blockPages: {}
   };
 
   var CHAT_DOCUMENT_LIMIT = 3;
@@ -86,32 +87,139 @@
       .join("");
   }
 
-  function getStaticDocumentFilename() {
-    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+  function splitHtmlParagraphs(value) {
+    return String(value || "")
+      .split(/(?:<br\s*\/?>\s*){2,}|\n{2,}/i)
+      .map(function (paragraph) {
+        return String(paragraph || "").trim();
+      })
+      .filter(Boolean);
   }
 
-  function getDynamicDocumentFilename() {
-    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc";
+  function splitTextParagraphs(value) {
+    return String(value || "")
+      .split(/\n{2,}/)
+      .map(function (paragraph) {
+        return String(paragraph || "")
+          .replace(/\n/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+      })
+      .filter(Boolean);
+  }
+
+  function renderPlainParagraphs(paragraphs) {
+    return (paragraphs || []).map(function (paragraph) {
+      return "<p>" + escapeHtml(paragraph) + "</p>";
+    }).join("");
+  }
+
+  function getBlockPageIndex(key, total) {
+    var current = Number(state.blockPages[key] || 0);
+
+    if (current < 0) {
+      current = 0;
+    }
+
+    if (current >= total) {
+      current = Math.max(0, total - 1);
+    }
+
+    state.blockPages[key] = current;
+    return current;
+  }
+
+  function groupParagraphs(paragraphs, pageSize) {
+    var groups = [];
+    var size = Math.max(1, Number(pageSize) || 1);
+    var i;
+
+    for (i = 0; i < paragraphs.length; i += size) {
+      groups.push(paragraphs.slice(i, i + size));
+    }
+
+    return groups;
+  }
+
+  function buildPager(key, total, current) {
+    var ui = getContent().ui || {};
+
+    if (total <= 1) {
+      return "";
+    }
+
+    return (
+      '<div class="block-pager">' +
+      '<button class="block-pager__btn" type="button" data-page-key="' + escapeHtml(key) + '" data-page-dir="-1"' + (current <= 0 ? " disabled" : "") + ' aria-label="' + escapeHtml(ui.pagePreviousAria || "Previous page") + '">' +
+      escapeHtml(ui.pagePrevious || "Prev") +
+      "</button>" +
+      '<span class="block-pager__status">' + escapeHtml(String(current + 1) + " / " + String(total)) + "</span>" +
+      '<button class="block-pager__btn" type="button" data-page-key="' + escapeHtml(key) + '" data-page-dir="1"' + (current >= total - 1 ? " disabled" : "") + ' aria-label="' + escapeHtml(ui.pageNextAria || "Next page") + '">' +
+      escapeHtml(ui.pageNext || "Next") +
+      "</button>" +
+      "</div>"
+    );
+  }
+
+  function buildPagedHtmlBody(html, key, pageSize) {
+    var paragraphs = splitHtmlParagraphs(html);
+    var pages = groupParagraphs(paragraphs, pageSize);
+    var current = getBlockPageIndex(key, pages.length || 1);
+
+    if (!pages.length) {
+      return "";
+    }
+
+    return (
+      '<div class="paged-copy">' +
+      '<div class="paged-copy__body">' +
+      pages[current].map(function (paragraph) {
+        return "<p>" + paragraph + "</p>";
+      }).join("") +
+      "</div>" +
+      buildPager(key, pages.length, current) +
+      "</div>"
+    );
+  }
+
+  function buildPagedTextBody(text, key, pageSize) {
+    var paragraphs = splitTextParagraphs(text);
+    var pages = groupParagraphs(paragraphs, pageSize);
+    var current = getBlockPageIndex(key, pages.length || 1);
+
+    if (!pages.length) {
+      return "";
+    }
+
+    return (
+      '<div class="paged-copy">' +
+      '<div class="paged-copy__body">' + renderPlainParagraphs(pages[current]) + "</div>" +
+      buildPager(key, pages.length, current) +
+      "</div>"
+    );
+  }
+
+  function buildPanelLabel(label) {
+    if (!label) {
+      return "";
+    }
+
+    return '<p class="panel-label">' + escapeHtml(label) + "</p>";
+  }
+
+  function getDocumentFilename() {
+    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
   }
 
   function syncDownloadLink() {
     var locale = getContent();
-    var isLocalFile = window.location.protocol === "file:";
+    var filename = getDocumentFilename();
 
     els.downloadDocLink.textContent = locale.ui.downloadDocLabel;
     els.downloadDocLink.setAttribute("aria-label", locale.ui.downloadDocAria);
     els.downloadDocLink.setAttribute("title", locale.ui.downloadDocAria);
-
-    if (isLocalFile) {
-      els.downloadDocLink.href = state.lang === "fr"
-        ? "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx"
-        : "./docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
-      els.downloadDocLink.setAttribute("download", getStaticDocumentFilename());
-      return;
-    }
-
-    els.downloadDocLink.href = "/api/document?lang=" + encodeURIComponent(state.lang);
-    els.downloadDocLink.setAttribute("download", getDynamicDocumentFilename());
+    els.downloadDocLink.href = "./docs/" + filename;
+    els.downloadDocLink.setAttribute("download", filename);
   }
 
   function renderHero() {
@@ -170,16 +278,16 @@
       '<div class="stack">' +
       '<h2 class="section-title">' + escapeHtml(why.titleLines[0]) + '<br>' + escapeHtml(why.titleLines[1]) + "</h2>" +
       '<div class="callout question-callout">' +
-      '<p class="panel-label">' + escapeHtml(why.questionLabel) + "</p>" +
-      "<p>" + why.questionHtml + "</p>" +
+      buildPanelLabel(why.questionLabel) +
+      buildPagedHtmlBody(why.questionHtml, "why-question:" + state.lang, 2) +
       "</div>" +
       '<div class="callout">' +
-      '<p class="panel-label">' + escapeHtml(why.whyLabel) + "</p>" +
-      "<p>" + why.whyHtml + "</p>" +
+      buildPanelLabel(why.whyLabel) +
+      buildPagedHtmlBody(why.whyHtml, "why-why:" + state.lang, 2) +
       "</div>" +
       '<div class="callout gap-callout">' +
-      '<p class="panel-label">' + escapeHtml(why.gapLabel) + "</p>" +
-      "<p>" + why.gapHtml + "</p>" +
+      buildPanelLabel(why.gapLabel) +
+      buildPagedHtmlBody(why.gapHtml, "why-gap:" + state.lang, 2) +
       "</div>" +
       "</div>";
   }
@@ -990,16 +1098,11 @@
 
   function buildGapBlock() {
     var theory = getContent().theory;
-    var paragraphs = theory.researchGapParagraphs || [];
 
     return (
       '<article class="theory-block gap-block">' +
-      '<p class="panel-label">' + escapeHtml(theory.gapLabel) + "</p>" +
-      '<div class="gap-block__text">' +
-      paragraphs.map(function (paragraph) {
-        return "<p>" + paragraph + "</p>";
-      }).join("") +
-      "</div>" +
+      buildPanelLabel(theory.gapLabel) +
+      '<div class="gap-block__text">' + buildPagedTextBody((theory.researchGapParagraphs || []).join("\n\n"), "theory-gap:" + state.lang, 2) + "</div>" +
       "</article>"
     );
   }
@@ -1091,7 +1194,7 @@
           '<article class="theory-block">' +
           '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
           '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-          '<div class="proposition-detail__body">' + renderTextParagraphs(item.text) + "</div>" +
+          '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "theory-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
           "</article>"
         );
       }).join("") +
@@ -1113,7 +1216,7 @@
       '<article class="theory-block managerial-block">' +
       '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
       '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-      '<div class="proposition-detail__body">' + renderTextParagraphs(item.text) + "</div>" +
+      '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "theory-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
       "</article>"
     );
   }
@@ -1123,8 +1226,8 @@
 
     return (
       '<article class="theory-block observational-card">' +
-      '<p class="panel-label">' + escapeHtml(obs.label) + "</p>" +
-      '<p>' + escapeHtml(obs.text) + "</p>" +
+      buildPanelLabel(obs.label) +
+      buildPagedTextBody(obs.text, "theory-observation:" + state.lang, 2) +
       '<div class="chip-row">' +
       obs.chips.map(function (chip) {
         return '<span class="chip chip--' + escapeHtml(chip.tone) + '">' + escapeHtml(chip.text) + "</span>";
@@ -1139,18 +1242,28 @@
 
     return (
       '<article class="prompt-card">' +
-      '<p class="panel-label">' + escapeHtml(prompt.label) + "</p>" +
-      '<p>' + prompt.text + "</p>" +
+      buildPanelLabel(prompt.label) +
+      buildPagedHtmlBody(prompt.text, "theory-prompt:" + state.lang, 2) +
       "</article>"
     );
   }
 
   function renderTheory() {
     var theory = getContent().theory;
+    var overviewBlocks = theory.overviewBlocks || [];
 
     els.theory.innerHTML =
       '<p class="section-kicker">' + escapeHtml(theory.kicker) + "</p>" +
       '<div class="stack">' +
+      (theory.title ? '<h2 class="section-title">' + escapeHtml(theory.title) + "</h2>" : "") +
+      overviewBlocks.map(function (block, index) {
+        return (
+          '<article class="callout">' +
+          buildPanelLabel(block.label) +
+          buildPagedTextBody(block.text, "theory-overview:" + state.lang + ":" + String(index), 2) +
+          "</article>"
+        );
+      }).join("") +
       '<p class="lede">' + theory.introHtml + "</p>" +
       buildGapBlock() +
       '<div class="theory-section">' +
@@ -1165,9 +1278,6 @@
       "</div>" +
       buildRpcDiagram() +
       "</div>" +
-      buildObservationCard() +
-      buildManagerialCard() +
-      buildPromptCard() +
       (theory.findingsNote ? '<p class="findings-note">' + escapeHtml(theory.findingsNote) + "</p>" : "") +
       "</div>";
   }
@@ -1251,7 +1361,7 @@
         return (
           '<article class="sphere-card sphere-card--' + escapeHtml(item.key) + '" id="sphere-' + escapeHtml(item.key) + '">' +
           '<h2 class="sphere-card__title">' + escapeHtml(item.title) + "</h2>" +
-          '<p>' + escapeHtml(item.text) + "</p>" +
+          buildPagedTextBody(item.text, "sphere-card:" + state.lang + ":" + item.key, 2) +
           "</article>"
         );
       }).join("") +
@@ -1357,6 +1467,16 @@
     document.addEventListener("click", function (event) {
       var suggestionButton = event.target.closest("[data-chat-suggestion]");
       var removeButton;
+      var pageButton = event.target.closest("[data-page-key]");
+
+      if (pageButton) {
+        var pageKey = pageButton.getAttribute("data-page-key");
+        var direction = Number(pageButton.getAttribute("data-page-dir") || 0);
+        state.blockPages[pageKey] = Math.max(0, Number(state.blockPages[pageKey] || 0) + direction);
+        renderApp();
+        return;
+      }
+
       if (suggestionButton) {
         submitChatQuestion(suggestionButton.getAttribute("data-chat-suggestion"));
         return;

@@ -9,7 +9,7 @@ The application is bilingual (`EN` / `FR`) and presents:
 - `Observation framework`
 - `Illustration`
 
-It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer with the current page as context without changing the active reading section: strictly from the research framework when the user asks about the framework, and with clearly marked practical extrapolation when the user asks for implications or ideas.
+It also includes a cloud chatbot, accessible through a floating AI assistant button, designed to answer with the current page as context without changing the active reading section: strictly from the exploratory framework source document when the user asks about the framework, and with clearly marked practical extrapolation when the user asks about implications or ideas beyond that framework.
 
 ## What the app does
 
@@ -18,7 +18,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - illustrates the framework through a fictional consulting mission
 - allows step-by-step exploration of the mission timeline
 - provides glossary tooltips for `S1/S2/S3`, `P1/P2/P3` and `R/P/C`
-- lets users regenerate and download the full app text as a language-specific Word document from the header
+- lets users download the full app text as a language-specific Word document from the header
 - offers a contextual chatbot tied to the current reading section and, in `Illustration`, to the currently active mission step
 - lets users attach short text-based supplementary documents to the chatbot for contextual questioning
 
@@ -29,58 +29,49 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `content.js`: bilingual content, theoretical copy, timeline data, chatbot labels
 - `app.js`: rendering logic, navigation, interactions, chatbot frontend
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
-- `api/document.js`: server endpoint regenerating a Word-compatible companion document from the latest deployed `content.js`
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
-- `NOTE_ACADEMIQUE.md`: academic framing text on the research stakes, theoretical framework, observational framework, and illustrative situation
+- `NOTE_ACADEMIQUE.md`: complementary academic framing note for project documentation
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document containing the site texts organized by section
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`: Word-readable versions of the French companion document
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md`: English human-readable companion document containing the site texts organized by section
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`: Word-readable versions of the English companion document
 - `docs/assets/spheres-fr.*` and `docs/assets/spheres-en.*`: generated diagram assets embedded in the companion Word documents
 - `research/CHATBOT_CONVERSATIONS_PRODUCTION.md`: manually maintained secondary corpus of production chatbot conversations, with contextual metadata for research use
-- `sources/REGENA_ATELIER_DOCTORAL_2025.md`: primary working-document source extracted and synthesized from the REGEN-A doctoral workshop deck
+- `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md`: sole primary source used by the chatbot for framework-grounded answers
+- `sources/REGENA_ATELIER_DOCTORAL_2025.md`: archived working-document source kept for project memory
 - `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`: archived original REGEN-A doctoral workshop deck
-- `scripts/generate-content-document.mjs`: regenerates the French and English companion content documents from `content.js`
 - `SUPERVISOR_COHERENCE_REPORT.md`: internal coherence review document
 
 ## Human-readable content companion
 
-`docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md` are the source versions of the companion documents. They are generated from `content.js` to keep them aligned with the interactive artefact, and they include the key artefact diagrams in document form.
+`docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.*` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.*` are manually maintained companion documents.
 
-The deployed app exposes a language-aware download link in the header. On Vercel, the link calls `/api/document?lang=fr` or `/api/document?lang=en`, which rebuilds a Word-compatible `.doc` from the latest deployed `content.js` at click time:
+The app exposes a language-aware download link in the header:
 
-- French UI downloads a regenerated `DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc`
-- English UI downloads a regenerated `DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc`
+- French UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`
+- English UI downloads `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`
 
-When the app is opened as a local file, the same header link falls back to the static `.docx` files in `docs/`.
-
-Run the following command whenever the artefact texts or project documentation are updated:
-
-```bash
-node scripts/generate-content-document.mjs
-```
-
-The script also regenerates the Word-readable `.doc` and `.docx` files for both languages.
-It generates and embeds the `S1/S2/S3` spheres diagram as an image in both language versions.
+The visual design and placement of the header link remain identical across local and deployed modes; only the download target is static.
 
 ## Primary source library
 
-The chatbot uses four co-primary sources:
+The chatbot now uses one sole primary source for framework-grounded answers:
 
-- `NOTE_ACADEMIQUE.md` as the current conceptual anchor
-- the active artefact content bundle sent by the frontend as the current-screen source of truth
-- `content.js` as the exact wording and coherence source for the artefact
-- `sources/REGENA_ATELIER_DOCTORAL_2025.md` as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier `S1/S2/S3` reasoning
+- `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md`
 
-The original PowerPoint is archived in `sources/originals/REGENA_ATELIER_DOCTORAL_2025.pptx`. The chatbot uses the Markdown extraction, treated conservatively: it enriches the research background but does not override the current academic note or artefact wording.
+This source is the normalized textual version of the exploratory framework document and includes page markers used for precise citation in chatbot answers.
 
-The chatbot also receives `research/CHATBOT_CONVERSATIONS_PRODUCTION.md` as a secondary conversational corpus. It can inform how prior users have questioned or interpreted the framework, but it is not treated as a validated theoretical source.
+The chatbot also receives:
+
+- the active artefact page and active illustration step as contextual reading cues only
+- user-uploaded supplementary text documents as secondary user-provided context
+- `research/CHATBOT_CONVERSATIONS_PRODUCTION.md` only as a manually curated secondary research corpus when relevant to interpretation, never as a validated theoretical source
 
 ## Chatbot conversation corpus
 
 `research/CHATBOT_CONVERSATIONS_PRODUCTION.md` records production chatbot conversations that are manually supplied for research purposes. Each entry should preserve the conversation verbatim and include contextual metadata such as active page, illustration step when applicable, situation, propositions and value dimensions.
 
-This corpus is a secondary source for the chatbot, not a primary theoretical source. It can help identify user questions, interpretive tensions and possible refinement needs, but it must not override the validated academic note, artefact wording, `content.js` or REGEN-A working source.
+This corpus is a secondary source for the chatbot, not a primary theoretical source. It can help identify user questions, interpretive tensions and possible refinement needs, but it must not override the exploratory framework source document.
 
 The current app does not automatically persist chatbot conversations. Any future automated collection should include explicit user information, limited data capture and an appropriate research-governance process.
 
@@ -130,13 +121,13 @@ It receives:
 - the propositions associated with that step
 - the value dimensions associated with that step
 - the illustration overview
-- the relevant theoretical framework excerpts
-- the server-loaded primary source library
+- the server-loaded exploratory framework source document
 - optional user-uploaded supplementary text documents for contextual reading
 
 It must answer:
 
-- strictly within the framework of this research when the user asks what the framework says, asks for definitions, or asks about `P1/P2/P3`, `R/P/C` or `S1/S2/S3`
+- strictly within the exploratory framework source document when the user asks what the framework says, asks for definitions, or asks about `P1/P2/P3`, `R/P/C` or `S1/S2/S3`
+- with precise page citations when the answer is framework-bound
 - with clearly marked practical extrapolation when the user asks for implications, alternative scenarios, examples or ideas
 - by treating uploaded documents as user-provided supplementary material rather than as validated theoretical sources
 - in the language selected in the UI
@@ -247,4 +238,4 @@ Before public deployment:
 - choose the target hosting platform for `/api/chat`
 - configure `OPENAI_API_KEY`
 - run an end-to-end visual and conversational validation
-- verify that framework answers remain source-grounded and that practical extrapolations are clearly labelled in both languages
+- verify that framework answers remain grounded in `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md`, with page citations when needed, and that practical extrapolations are clearly labelled in both languages

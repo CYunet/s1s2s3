@@ -2,19 +2,23 @@ window.ARTEFACT_CONTENT = {
   locales: {
     en: {
       ui: {
-        pageTitle: "Perceived Value Co-creation in AI-Era Consulting",
+        pageTitle: "Toward a Reconfiguration of Perceived Value in the AI Era",
         skipLink: "Skip to content",
         navAria: "Primary sections",
         themeToggleAria: "Toggle color theme",
         downloadDocLabel: "Word text",
-        downloadDocAria: "Download the full app text as a Word document",
+        downloadDocAria: "Download the complementary Word document",
         languageButtonLabel: "🇫🇷 FR",
-        languageButtonAria: "Afficher la version française"
+        languageButtonAria: "Afficher la version française",
+        pagePrevious: "Prev",
+        pageNext: "Next",
+        pagePreviousAria: "Show previous page",
+        pageNextAria: "Show next page"
       },
       hero: {
-        title: "Perceived Value Co-creation in AI-Era Consulting — An Exploratory Framework",
-        subtitle: "An exploratory research framework",
-        signature: "Yunes Clément — Université de Bordeaux (France)"
+        title: "Toward a Reconfiguration of Perceived Value in the AI Era: rethinking the co-creation of managerial knowledge.",
+        subtitle: "Exploratory framework",
+        signature: "Yunes, Clément - Université de Bordeaux – April 2026"
       },
       theme: {
         lightLabel: "Light mode",
@@ -27,102 +31,99 @@ window.ARTEFACT_CONTENT = {
         { id: "illustration", label: "Illustration" }
       ],
       whyResearch: {
-        kicker: "RESEARCH POSITIONING",
+        kicker: "1. RESEARCH POSITIONING",
         titleLines: [
-          "Understanding perceived value co-creation",
-          "in consulting in the AI era"
+          "Understanding the effects of the integration of AI",
+          "into consulting practices on perceived value"
         ],
-        questionLabel: "THE QUESTION",
-        questionHtml: "AI-augmented consulting is often presented as a promise of superior value for clients, because it enables work to be produced faster, better, stronger, cheaper and more safely. Yet value is subjective, and the client’s perception of it is by no means automatic.<br><br>In consulting, perceived value is not simply delivered to the client; it is built through the relationship, the mission experience, and the client’s appropriation of the managerial knowledge produced (Ciampi, 2017), which ultimately enables the problem at hand to be resolved. Perceived value is therefore the outcome of co-creation.<br><br>Yet the massive introduction of AI into consulting practices changes the situation of this co-creation. It transforms how contributions are produced, made visible, attributed to actors, appropriated and mobilized in the managerial action of the client organization, where perceived value alone actually takes shape. This research explores this transformation at work. How is the perceived value of consulting thus reconfigured by AI? Under what conditions is it strengthened or weakened?<br><br><span class=\"accent-blue\">In other words, how does the integration of AI in consulting practices reconfigure the co-creation of perceived value for clients?</span>",
-        whyLabel: "WHY IT MATTERS",
-        whyHtml: "The integration of AI into consulting does not necessarily generate superior value for the client. Paradoxically, AI can both strengthen the consulting production process and weaken the co-creation situation and, consequently, client-perceived value (low legibility of the process or result, questioning of the legitimacy of the advice produced, blurring of contributions, lack of appropriation of the managerial knowledge produced). This is all the more salient because the management consulting literature suggests that the co-creation of managerial knowledge, and therefore of client-perceived value, has historically remained unfinished (in favour of a simple transfer of best practices). The success of the AI-augmented consultant model therefore depends on a better understanding of the conditions under which this perceived value co-creation occurs in the AI era.",
-        gapLabel: "AN OPEN QUESTION",
-        gapHtml: "At the theoretical level, this research mobilizes a dual perspective (marketing and information systems), analyzed through the prism of its application to the consulting field. It nevertheless brings an original perspective to it: to our knowledge, there is no unified framework for exploring the pressing question of perceived value co-creation in consulting in the AI era, even though this question is central to guiding the necessary transformation of consulting practices.<br><br>• The marketing literature documents perceived value (definition, central role, measurement scale, and the conditions of its realization, namely co-creation).<br><br>• The information systems literature offers analytical frameworks for AI (capabilities, limits, risks), the conditions of its adoption, the sociotechnical system (role distribution, modes of interaction, attribution of contributions), its effects on production (automation vs augmentation), and knowledge management (augmentation vs impoverishment).<br><br>• Academic work attempting to synthesize these two bodies of literature around the perceived value of consulting remains rare. Work on consulting focuses on the purposes of consulting (technical and political), discusses its value (sources, conditions of formation, measurement), and the necessary transformation of the business model. This research contributes to that synthesis by focusing on the specific link between perceived value co-creation and the integration of AI into consulting practices, which to our knowledge has not yet been explored.<br><br>At the praxeological level, our analysis of the “grey” literature observes that consulting actors are indeed integrating AI into their practices while exploring possibilities for business model innovation. By focusing on the conditions under which consulting value is co-created in the AI era and ultimately perceived by the client, this research should help shed light on these initiatives."
+        questionLabel: "",
+        questionHtml: `AI-augmented consulting is often presented as the future of consulting in the AI era, as a promise of superior value for clients, because it allows work to be produced faster, better, stronger, cheaper and safer. Yet value is subjective, and the client's perception of it is in no way automatic.<br><br>In consulting, perceived value is not simply delivered to the client; it is built through the relationship, the experience of the mission, and the client's appropriation of the managerial knowledge produced, which makes it possible to resolve the specific problem to be addressed and, ultimately, strengthens the client to address the next problems to come (Ciampi, 2017)). Perceived value is therefore the outcome of co-creation (Grönroos & Voima, 2013; Vargo, Stephen & Lusch, Robert F., 2004).<br><br>We believe that the introduction of AI into consulting practices changes the situation of this co-creation of perceived value.<br><br>AI indeed has the potential to transform the way managerial knowledge productions (explicit, but above all tacit), the ultimate purpose of consulting (Ciampi, 2017; Turner, 1982), are produced, augmented, and diffused within an organization (Harfouche et al., 2023), attributed to actors (Raisch & Krakowski, 2020), evaluated, appropriated and mobilized in the managerial action of the client organization, where perceived value alone actually takes shape (Bourgoin, 2014; Ciampi, 2017; Grönroos & Voima, 2013)<br><br>Our research explores this complex transformation at work through the prism of perceived value. How is the perceived value of consulting thus reconfigured by AI? Under what conditions does perceived value become stronger or more fragile?<br><br><span class="accent-blue">In other words, how does AI reconfigure the perceived value of consulting?</span>`,
+        whyLabel: "WHY IS THIS A NECESSARY EXPLORATION?",
+        whyHtml: `The integration of AI into consulting cannot by itself generate superior value for the client. Even in a co-creation situation, paradoxically, AI has the power both to reinforce co-creation (new managerial knowledge) and to weaken the perception of the value that follows from it (questioning of the legitimacy of the consulting output, in a context of blurred contributions and lack of appropriation of the knowledge produced).<br><br>Moreover, the management consulting literature does not ignore the ambivalence of perceived value co-creation in consulting, and suggests that it does not happen automatically (Bourgoin, 2014; Ciampi, 2017; Svensson, 2010).<br><br>The success of the future consulting model in the AI era therefore depends on a better understanding of the conditions under which value co-creation is perceived by the client in the AI era.`,
+        gapLabel: "THEORETICAL AND PRAXEOLOGICAL IMPLICATIONS",
+        gapHtml: `The link between AI and consulting is an emerging but dynamic research field (for example, "AI consulting" generates more than 92,000 results on Google Scholar). Nevertheless, academic work studying the effects of AI on consulting through the prism of perceived value remains, to our knowledge, little explored.<br><br>The dominant consulting literature now agrees that perceived value co-creation is the outcome of a successful interaction with the client. The introduction of AI into consulting practices offers an additional opportunity to augment the consultant's technical dimension, provided that the associated risks are managed (security, ethics, etc.). The political dimension of consulting activity (Turner, 1982), inaccessible to AI (Pakarinen & Huising, 2023; Raisch & Fomina, 2024), is therefore theoretically strengthened.<br><br>However, on the one hand, the particular nature of AI (autonomy of decision and action in an ambiguous and uncertain context (Baird & Maruping, 2021)) gives it properties likely to destabilize the human-AI sociotechnical system of consulting, since no single actor has total control over the results (Raisch & Krakowski, 2020). On the other hand, because the technical and political dimensions of consulting are interdependent (a lack of technical legitimacy weakens political capacity and vice versa (Turner, 1982)), the question of the effects of AI on the perceived value of consulting remains open.<br><br>At the praxeological level, our analysis of the "grey" literature observes that the discourse of consulting actors effectively integrates AI into practices, presents the political dimension of consulting as a now differentiating source of value, and explores possibilities for business model innovation (Masson & Dautrif, 2026).<br><br>By focusing on the mechanisms of the process through which the perceived value of consulting is co-created in the AI era, our work provides a structured analytical and observational framework to shed light on the reconfiguration initiatives currently under way among consulting actors.`
       },
       theory: {
-        kicker: "THEORETICAL FRAMEWORK",
-        introHtml: "We formulate three research propositions to explore how the integration of AI reconfigures perceived value in consulting. These propositions are derived from our literature review and articulated in a sequential order (P1, P2, P3). P1 sets out the dimensions of consulting perceived value that are reconfigured in the AI era; P2 sets out the mediating mechanism, namely transparency. P3 sets out the conditions of the reconfiguration, which allow P2 to operate.",
-        gapLabel: "THE ABSENCE OF AN EXPLORATORY FRAMEWORK",
-        propositionsLabel: "THE THREE PROPOSITIONS",
+        kicker: "2. PROPOSAL FOR AN ANALYTICAL FRAMEWORK",
+        title: "Theoretical framework mobilized",
+        overviewBlocks: [
+          {
+            label: "Perceived value in consulting is a subjective and dynamic notion whose mechanisms still need to be explored",
+            text: `Our research mobilizes the marketing literature (perceived value), the consulting literature (definition, purposes, value), and the information systems literature (the link between AI and knowledge management, and the effects of AI on sociotechnical systems).\n\nPerceived value is a fuzzy notion, even more so in the field of consulting, which by definition evolves in an ambiguous and uncertain context (Svensson, 2010). Yet perceived value presents consensual factors that we adopt: it stems from a comparative judgment, and is personal, dynamic and contextual (Rivière & Mencarelli, 2012). In knowledge-intensive activities such as consulting, perceived value includes three dimensions: functional, emotional and social (Arslanagic-Kalajdzic & Zabkar, 2017). Yet this typology remains descriptive: what are the mechanisms of perceived value creation?`
+          },
+          {
+            label: "Perceived value in consulting is above all a social accomplishment",
+            text: `According to Service-Dominant Logic (SDL), perceived value is necessarily the outcome of co-creation between a provider and a client (Grönroos & Voima, 2013; Vargo, Stephen & Lusch, Robert F., 2004). We logically adopt this perspective, confirmed by several empirical studies in consulting (Oesterle et al., 2020). If the provider establishes a value proposition, only the client can create the effective value, through the use of the service provided in its own environment, and thus transform it into perceived value. To create value alongside the client, the provider must seek to enter the joint sphere, the platform of value co-creation (Grönroos & Voima, 2013). This is within this sphere that we position our first observational focus.\n\nOur second angle draws on the pragmatist perspective: value is a social accomplishment that is produced and realized during recurrent interactions between consultant and client. This perspective places the relationship first and expertise second, as a condition that is not always necessary and never sufficient to initiate the interaction (in Bourgoin, 2014). What happens within consulting interactions such that perceived value can emerge?\n\nThe literature empirically suggests two constitutive links between the dimensions of consulting perceived value: relational trust as a precondition for processual engagement (Bourgoin, 2014; Glückler & Armbrüster, 2003; Nikolova & Devinney, 2012), and the co-creation experience as a condition of cognitive appropriation by the client (Ciampi, 2017; Oesterle et al., 2019). In this framework, co-creation simply enables the joint cognitive activities of problem resolution to take place under the consultant's guidance, such as clarifying the need, defining the solution, and organizing the mission (Aarikka-Stenroos & Jaakkola, 2012; Svensson, 2010). The co-creation of perceived value therefore presupposes a symmetry of roles and responsibilities between consultant and client.\n\nAnother angle considers the stake of interactions in perceived value as more subtle: for the client to perceive the value of consulting, that value must be actively produced through deliberate micro-activities of mise en valeur (in the sense of additional justification, not persuasion without foundation), such as producing the consultant's authority, signalling activity, graphically presenting the diagnosis, and so on, through which the consultant builds legitimacy throughout the mission (Bourgoin, 2014). This approach is all the more relevant because the consulting context feeds on ambiguity, and therefore requires particular myths and discourses whose function is to persuade clients of the value of the service provided (Bourgoin, 2014).`
+          },
+          {
+            label: "AI as a disturbing element of social accomplishment",
+            text: `Yet the integration of AI into consulting practices disrupts, in both cases, the process at work within consultant-client interactions: the joint cognitive activities through which the problem is resolved can now rely more heavily on AI and less on human judgment (for example, automation of the stage of diagnostic clarification); the machine is increasingly capable of performing, on its own, the micro-activities of mise en valeur that are typical of the consultant, who would therefore logically have to seek others.\n\nFor consulting, the stake of the co-creation process at work in interactions is not questioned: it is still a matter of enabling the co-creation of managerial knowledge or producing the additional justification of consulting.\n\nBut if AI takes an increasingly important place in this co-creation, does it not risk destabilizing the symmetry of the interaction? And what then becomes of the client's appropriation and mobilization of the managerial knowledge produced, and, ultimately, of the perception of consulting value that results for the client?\n\nIf AI takes on an ever larger place in this co-creation, from the production of micro-activities of mise en valeur, toward which micro-activities should consulting turn in order to establish its additional justification, and the perceived value that results for the client?\n\nThe mechanics of consulting interactions jam, becoming more blurred and more unstable.\n\nBy making it difficult to allocate results to specific actors (Raisch & Krakowski, 2020), AI opens the way to a reconfiguration of the roles and responsibilities of actors within the co-creation process (Baird & Maruping, 2021; Pakarinen & Huising, 2023; Raisch & Krakowski, 2020). AI becomes a full actor in the co-creation of perceived value (Aarikka-Stenroos & Jaakkola, 2012; Baird & Maruping, 2021; Ciampi, 2017; Harfouche et al., 2023; Oesterle et al., 2019).\n\nIn the AI era, the role of actors in the consulting interaction loses transparency and legibility.\n\nThus, the very source of perceived value co-creation is reconfigured, in the sense of redeploying existing resources into new combinations of operational competences that make it possible to adapt better to the environment (Pavlou & El Sawy, 2006). Our work seeks to grasp this dynamic of reconfiguration.\n\nThe fine-grained observation of the reconfiguration process at work therefore appears not only relevant but necessary in order to understand the co-creation of perceived value in consulting in the AI era.`
+          }
+        ],
+        introHtml: "We formulate three research propositions to explore the way in which AI integration reconfigures perceived value in consulting.",
+        gapLabel: "RESEARCH PROPOSITIONS",
+        propositionsLabel: "THREE PROPOSITIONS, P1, P2, P3",
         modelLabel: "THE R → P → C MODEL",
-        researchGapHtml: "This research proposes to formalize the effects of AI on perceived value co-creation in consulting through an original analytical framework and observational framework.<br><br>The analytical framework formalizes the sequence through which perceived value is co-created in consulting missions.<br><br>The observational framework seeks to structure the empirical observation of the conditions under which consulting perceived value is reconfigured in the AI era.",
         researchGapParagraphs: [
-          "This research proposes to formalize the effects of AI on perceived value co-creation in consulting through an original analytical framework and observational framework.",
-          "The analytical framework formalizes the sequence through which perceived value is co-created in consulting missions.",
-          "The observational framework seeks to structure the empirical observation of the conditions under which consulting perceived value is reconfigured in the AI era.",
-          "The consulting literature empirically supports two constituent links between these dimensions: relational trust as a precondition for processual engagement (Nikolova et al. 2014; Glückler & Armbrüster 2003), and the co-creation experience as a condition of cognitive appropriation — including the client’s absorptive capacity as a decisive factor (Oesterle et al. 2020; Aarikka-Stenroos & Jaakkola 2012). In addition, from a pragmatist perspective, Bourgoin (2014) observes that the relational dimension of perceived value does not emerge spontaneously — it is actively produced through deliberate micro-activities of valuation by which consultants build their legitimacy throughout the mission.",
-          "At the same time, broader literature on management and knowledge work theorizes mechanisms that remain untested in consulting contexts: the blurring of contributions in human-AI systems (Raisch & Krakowski 2020), the recursive augmentation of organizational knowledge through AI (Harfouche et al. 2023), and the implications of delegation frameworks in hybrid human-AI systems (Baird & Maruping 2021)."
+          "These propositions derived from our literature review are articulated in a sequential order (P1, P2, P3).",
+          "• P1 sets out the observable dimensions of consulting perceived value that are reconfigured in the AI era;",
+          "• P2 sets out the mediating mechanism of consulting perceived value in the AI era, namely transparency (understood as legibility).",
+          "• P3 sets out the conditions of reconfiguration, which allow P2 to function."
         ],
         dimensionCards: [
           {
             tone: "relational",
             label: "Relational",
             letter: "R",
-            text: "Trust, legitimacy and political judgment — actively produced, increasingly ambiguous in human-AI systems"
+            text: "Trust, legitimacy and political judgment - actively produced, and increasingly ambiguous in human-AI systems"
           },
           {
             tone: "processual",
             label: "Processual",
             letter: "P",
-            text: "The co-creation experience itself — its nature, legibility and role distribution, reconfigured by AI as a third actor"
+            text: "The co-creation experience itself - its nature, its legibility and the distribution of roles, reconfigured by AI as a third actor in the consultant-client-AI relationship"
           },
           {
             tone: "cognitive",
             label: "Cognitive",
             letter: "C",
-            text: "The ability to interpret, understand and evaluate what was co-produced — so mission outputs become intelligible, assessable, appropriable and usable as managerial knowledge"
+            text: "The capacity to interpret, understand and evaluate what was co-produced by consulting, so that the outputs of the mission become intelligible, assessable, appropriable and mobilizable as managerial knowledge."
           }
         ],
-        sequenceHtml: "<strong>SEQUENCE</strong> <span class=\"sequence-pill sequence-pill--relational\">R</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--processual\">P</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--cognitive\">C</span> <em>with proposed feedback loop R ← P</em>",
-        propositionMiniCards: [
-          {
-            tone: "relational",
-            label: "P1 — WHAT IS RECONFIGURED",
-            text: "The integration of AI into consulting missions reconfigures client-perceived value along three interdependent dimensions: relational, processual and cognitive."
-          },
-          {
-            tone: "processual",
-            label: "P2 — THE MECHANISM",
-            text: "Transparency is the mediating mechanism of consulting perceived value in the AI era."
-          },
-          {
-            tone: "cognitive",
-            label: "P3 — THE CONDITIONS",
-            text: "Three categories of contingency determine whether P2 produces correct attribution: relational, situational and actor-level conditions."
-          }
-        ],
+        sequenceHtml: '<strong>SEQUENCE</strong> <span class="sequence-pill sequence-pill--relational">R</span><span class="sequence-arrow">→</span><span class="sequence-pill sequence-pill--processual">P</span><span class="sequence-arrow">→</span><span class="sequence-pill sequence-pill--cognitive">C</span> <em>with proposed feedback loop R ← P</em>',
+        propositionMiniCards: [],
         findingsNote: "",
         rpcDiagram: {
-          title: "How AI contingently shapes the R → P → C chain",
-          intro: "The original contribution lies less in inventing the R → P → C sequence than in theorizing how AI amplifies, destabilizes or reverses each relation contingently. The causal architecture of the chain remains stable, that is, independent of AI integration into consulting practices: relational anchoring (R) enables processual engagement (P), and processual engagement supports cognitive appropriation (C). What AI modifies, through the mediating mechanism (P2), is the stability of each link — positively or negatively, depending on the contingencies (P3).",
+          title: "How AI contingently reconfigures the chain OF CONSULTING PERCEIVED VALUE R → P → C",
+          intro: "The three dimensions of consulting perceived value in the AI era, set out in Proposition P1, follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature). Relational anchoring (R) enables processual engagement (P), and processual engagement supports cognitive appropriation (C). The causal architecture of the chain remains stable, that is, independent of the integration of AI into consulting practices. In that sense, it is a means of exploring the effects of AI on the dynamics of reconfiguring consulting perceived value. AI modifies, through the mediating mechanism (P2), the stability of each link - positively or negatively, depending on the contingencies (P3). The original contribution of our research lies, in our view, less in inventing the sequence R → P → C than in theorizing the way in which AI amplifies, destabilizes or reverses each relation contingently.",
           nodeLabels: {
             relational: "Relational",
             processual: "Processual",
             cognitive: "Cognitive"
           },
           metaLabels: {
-            positive: "Potential amplification",
-            negative: "Potential destabilisation",
+            positive: "Positive reconfiguration",
+            negative: "Negative reconfiguration",
             contingency: "Contingencies"
           },
           links: [
             {
               label: "R → P",
               positive: "Visible orchestration and credible legitimacy-building can deepen processual engagement when AI use is understood and accepted.",
-              negative: "Masked AI use can weaken legitimacy and retrospectively delegitimize the process in the eyes of the client, for example if the hidden contribution is subsequently discovered by the client.",
-              contingency: "Protected through P2, but only conditionally through P3."
+              negative: "Masked AI use can weaken legitimacy and retrospectively delegitimize the process in the eyes of the client (for example if the hidden contribution is discovered afterwards by the client).",
+              contingency: "Protected by P2, but only conditionally through P3."
             },
             {
               label: "R ← P",
-              positive: "A fluid co-creation experience can reinforce consultant legitimacy as the mission unfolds.",
-              negative: "Spectacular AI outputs may shift credit from the consultant to the AI, inverting the expected feedback loop.",
-              contingency: "Depends on the legibility of contributions by the client (P2), their AI literacy and their algorithm aversion (P3)."
+              positive: "A fluid co-creation experience can reinforce the consultant's legitimacy over the course of the mission.",
+              negative: "A co-creation experience that generates spectacular AI productions (outputs) may shift credit from the consultant to the AI, reversing the expected feedback loop.",
+              contingency: "Depends on the legibility of contributions for the client (P2), on the client's AI literacy and on algorithm aversion (P3)."
             },
             {
               label: "P → C",
-              positive: "Visible co-creation with AI may enrich the diversity and novelty of insights when the client is cognitively engaged in the process.",
-              negative: "AI may also decouple knowledge from co-production: the client receives outputs without genuinely participating in how they were generated.",
-              contingency: "Depends on the consultant’s substantive explicitation (P2) and, through P3, on intelligibility, acceptance and relational and situational conditions."
+              positive: "Visible co-creation with AI can enrich the diversity and novelty of insights when the client is cognitively engaged in the process.",
+              negative: "AI can also decouple knowledge from co-production: the client receives outputs without genuinely participating in how they were generated.",
+              contingency: "Depends on the consultant's substantive explicitation (P2) and, through P3, on intelligibility, acceptance, and relational and situational conditions."
             }
           ],
           footer: "Value co-destruction (Plé & Cáceres 2010; Lumivalo et al. 2024) constitutes the boundary condition when P2 and P3 fail simultaneously."
@@ -131,64 +132,58 @@ window.ARTEFACT_CONTENT = {
           {
             tone: "relational",
             badge: "P1",
-            title: "Multidimensional reconfiguration of perceived value",
-            text: "The integration of AI into consulting missions reconfigures client-perceived value along three interdependent dimensions — relational (trust, legitimacy and political judgment, actively produced through micro-activities of valuation), processual (the co-creation experience itself — its nature, legibility and role distribution), and cognitive (newly co-produced managerial knowledge and capabilities, whose nature, richness and perceived author are reconfigured by AI).<br><br>The political dimension of consulting missions (i.e. “consensus-building”, Turner, 1982), because of its exogenous character, is not considered a fourth dimension of perceived value. We treat it as the context in which legibility, attribution and appropriation affect the ability to carry the outputs.<br><br>AI does not reconfigure the perceived value of consulting in the AI era uniformly. Its effect on each dimension of perceived value (relational, processual, cognitive) depends on how it is introduced and how the client interprets it. The same AI integration may amplify perceived value in one configuration and erode it in another.<br><br>The three dimensions of perceived value in AI-era consulting follow the R→P→C sequence, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature). AI reconfigures each link contingently — by amplifying or destabilizing it — according to P2 and P3.<br><br>Value co-destruction (Plé & Cáceres 2010; Lumivalo et al. 2024) constitutes the boundary condition when P2 and P3 fail simultaneously."
+            title: "P1 - Multidimensional reconfiguration of perceived value",
+            text: `The integration of AI into consulting missions reconfigures the value perceived by the client according to three interdependent dimensions - relational (R, trust, legitimacy and political judgment, actively produced through micro-activities of mise en valeur), processual (P, the co-creation experience itself - its nature, its legibility and the distribution of roles), and cognitive (C, newly co-produced managerial knowledge and capabilities, whose nature, richness and perceived author are reconfigured by AI).\n\nAI does not reconfigure the perceived value of consulting uniformly.\n\nIts effect on each dimension of perceived value (relational, processual, cognitive) depends on the way in which it is introduced and the way the client interprets it. The same AI integration can thus amplify perceived value in one configuration and erode it in another.\n\nThe three dimensions of consulting perceived value in the AI era follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature).\n\nAI reconfigures each link contingently - by amplifying it or destabilizing it - according to P2 and P3.`
           },
           {
             tone: "processual",
             badge: "P2",
-            title: "Transparency as the mediating mechanism",
-            text: "Transparency is the mediating mechanism of perceived value in consulting in the AI era. Transparency is understood here as the intelligibility of the AI-assisted system through its observable effects (Ananny and Crawford, 2018).<br><br>Our analytical framework distinguishes performative transparency (the consultant’s disclosure of AI use) from substantive transparency (the consultant’s mediation of AI interactions and outputs). Substantive transparency weighs more heavily on perceived value because it supports client appropriation.<br><br>According to the understanding retained in this research, transparency in a sociotechnical system cannot be reduced to a punctual act of disclosure, because disclosure alone does not make the mechanisms of the system intelligible. It must instead be assessed through the observable effects it produces across the system.<br><br>This is why the framework distinguishes performative transparency — disclosing AI use in the mission in order to signal openness and foster trust — from substantive transparency — the consultant’s mediation, for the client, of AI-produced interactions and results, in order to offer contextual interpretation and enable their conversion into managerial knowledge.<br><br>Thus, our proposition, which remains to be verified, is that substantive transparency has a stronger influence on perceived value than performative transparency alone, because it fosters the client’s appropriation of consulting outputs (Albu & Flyverbom 2019; Ciampi 2017). P2 therefore treats substantive transparency — rather than mere disclosure — as the mediating mechanism through which AI integration shapes perceived value, depending on the conditions of P3."
+            title: "P2 - Transparency as the mediating mechanism",
+            text: `Transparency is the mediating mechanism of consulting perceived value in the AI era. Transparency is understood here as the intelligibility of the AI-assisted system through its observable effects (Ananny and Crawford, 2018).\n\nPerformative transparency (disclosure by the consultant of the use of AI) is distinct from substantive transparency (mediation by the consultant of AI interactions and outputs, in order to provide a contextual interpretation of them and enable their conversion into managerial knowledge that can be appropriated and mobilized by the client).\n\nP2 therefore posits that substantive transparency weighs more heavily on the perceived value of consulting in the AI era because it favors appropriation by the client and, ultimately, perceived value, depending on the conditions of P3.`
           },
           {
             tone: "cognitive",
             badge: "P3",
-            title: "Moderation conditions",
-            text: "Three categories of contingency determine whether P2 produces correct attribution: relational level (prior trust capital), situational level (mission phase and political stakes), and actor level (AI literacy and algorithm aversion).<br><br>These contingencies are not all, strictly speaking, client-side: only actor-level conditions are directly located on the client side, while relational and situational contingencies exceed the client alone. Political stakes are therefore integrated as a situational contingency, not as the central object of the research.<br><br>In a contingent logic, several levels of conditions may therefore moderate the transparency mechanism posited in P2. However, this research empirically and primarily retains actor-level contingencies, not because they exhaust the phenomenon, but because they constitute, in the AI era, the most theoretically distinctive and most accessible focus in a single exemplary qualitative case design, as we envisage it.<br><br>AI literacy (competence variable, Long et al., 2020) and algorithm aversion (attitudinal variable, Dietvorst et al. 2015) are distinct: a client can be AI-literate while still displaying aversion to AI. AI literacy determines whether the client can follow the consultant’s explicitation, distinguish the contribution of AI from the consultant’s judgment, and understand the limits of what has been produced. Algorithm aversion determines whether these same contributions, even when understood, are accepted as legitimate inputs to managerial judgment.<br><br>Substantive transparency can therefore fail in two ways: either because the explanation is not cognitively appropriate, or because it is understood but normatively disqualified. Correct attribution requires both intelligibility and minimal acceptance.<br><br>In this framework, correct attribution is treated as an important observable condition of client appropriation and, through that appropriation, as a pathway through which transparency acts on perceived value."
-          },
-          {
-            tone: "managerial",
-            badge: "Observational sequencing",
-            title: "Initial co-creation situation",
-            text: "The initial co-creation situation S1 is therefore located without AI (the classical consultant-client dyad). Observed through our proposition P1 (multidimensional reconfiguration of perceived value), when the consultant’s relational legitimacy is not already available, sequences that begin in S1 may help build it before a more explicit integration of AI in S2/S3. When prior trust capital already exists — including from previous interactions or earlier missions — other entry points remain possible. In all cases, transparency (P2) must be calibrated to the client’s interpretive profile (P3)."
+            title: "P3 - Moderation conditions",
+            text: `Three categories of contingency determine whether P2 produces correct attribution: at the relational level, prior trust capital; at the situational level, mission phase and political stakes; and at the actor level, AI literacy (Long & Magerko, 2020) and algorithm aversion (De Jong et al., 2025; Dietvorst et al., 2014).\n\nThese contingencies are not all, strictly speaking, on the client side: only actor-level conditions are directly situated on the client side, whereas relational and situational contingencies exceed the client alone.\n\nThe political stakes of consulting, although central in the formation of consulting perceived value (Turner, 1982), are integrated as a situational contingency and not as the central object of our research.\n\nIn a contingent logic, several levels of conditions may therefore moderate the transparency mechanism posited in P2. However, our research empirically and primarily retains actor-level contingencies, not because they exhaust the phenomenon, but because they constitute, in the AI era, the most theoretically distinctive and the most accessible focus in a single exemplary case qualitative design, as we envisage it.\n\nAI literacy (a competence variable, Long et al., 2020) and algorithm aversion (an attitudinal variable, Dietvorst et al. 2015) are distinct: a client may be AI-literate while still displaying aversion to AI. AI literacy determines whether the client can follow the consultant's explicitation, distinguish the contribution of AI from that of the consultant's judgment, and understand the limits of what has been produced. Algorithm aversion determines whether these same contributions, even when they are understood, are accepted as legitimate inputs to managerial judgment.\n\nSubstantive transparency may therefore fail in two ways: either because the explanation is not cognitively appropriate, or because it is understood but normatively disqualified. Correct attribution requires both intelligibility and minimal acceptance. Value co-destruction (Plé & Cáceres 2010; Lumivalo et al. 2024) constitutes the boundary condition when P2 and P3 fail simultaneously.\n\nIn this framework, correct attribution is treated as an important observable condition of appropriation by the client and, through that appropriation, as a pathway by which transparency acts on perceived value.`
           }
         ],
         observationalFramework: {
-          label: "THE NEED FOR AN OBSERVATIONAL FRAMEWORK OF PERCEIVED VALUE CO-CREATION IN AI-ERA CONSULTING",
-          text: "The research propositions explore the conditions under which AI integration generates more co-created perceived value — through the relational, processual and cognitive dimensions of consulting. Yet work on perceived value shows how multidimensional and subjective this notion is, and therefore by definition difficult to evaluate. For some, it is the measure by which a client feels in a better or less favorable situation through consumption-related experiences (Grönroos and Voima, 2013). For others, consensual factors characterize it, such as comparative judgment, personal, dynamic and contextual character (Rivière and Mencarelli, 2012). In the consulting domain, which by definition evolves in ambiguous and uncertain contexts (Svensson, 2010), we therefore do not attempt to establish a measurement scale, and prefer to adopt the pragmatist approach, which observes perceived value at work by focusing on valuation activities as an additional layer of justification for consulting (Bourgoin, 2014). What happens to these activities when AI blurs actors’ contributions? To observe the reconfiguration of consulting perceived value in the AI era, it therefore seems necessary to restate an observational framework specific to consulting and AI, enabling the effects of AI integration on perceived value co-creation in consulting situations to be assessed through our research propositions (P1, P2, P3). Our observational framework (S1/S2/S3) situates each consultant-client interaction within a configuration of co-creation, inside the joint sphere of value co-creation (Grönroos and Voima, 2013), making the theoretical mechanisms of P1, P2 and P3 empirically observable.",
+          label: "OBSERVATIONAL STATUS OF S1, S2, S3",
+          text: "The 3-spheres diagram of consultant-client-AI co-creation constitutes the observational framework through which our research propositions P1, P2 and P3 are examined empirically. It is therefore not a managerial prescription. The three spheres represent three possible situations of co-creation S1, S2, S3 in the AI era, alone or in combination. All three are situated within the joint sphere of value co-creation (Grönroos & Voima, 2013). Within this framework, the orchestration of co-creation situations is not fixed: it is dynamic and temporal, and the three situations may appear within the same phase of a consulting mission. S1/S2/S3 is an observational framework, not a managerial prescription.",
           chips: [
-            { tone: "s1", text: "S1 — Human dyad. AI absent. Relational baseline." },
-            { tone: "s2", text: "S2 — AI in silo. Attribution and transparency latent." },
-            { tone: "s3", text: "S3 — Tripartite co-creation. All dimensions observable." }
+            { tone: "s1", text: "S1 — No AI" },
+            { tone: "s2", text: "S2 — AI in silo" },
+            { tone: "s3", text: "S3 — Tripartite co-creation" }
           ]
         },
         practitionerPrompt: {
-          label: "OBSERVATIONAL STATUS",
-          text: "S1/S2/S3 is an empirical observational framework, not a new theoretical proposition.<br><br>Each situation makes certain mechanisms particularly observable: S1 the relational baseline, S2 latent transparency and attribution, S3 the simultaneous observability of the three dimensions."
+          label: "STATUS OF THE OBSERVATIONAL FRAMEWORK",
+          text: "• `S1/S2/S3` is an empirical observational framework, not a new theoretical proposition;<br><br>• each situation makes some mechanisms particularly observable: `S1` the relational baseline, `S2` latent transparency and attribution, `S3` the simultaneous observability of the three dimensions."
         }
       },
       spheres: {
-        kicker: "OBSERVATION FRAMEWORK",
+        kicker: "3. OBSERVATIONAL FRAMEWORK S1, S2, S3",
         title: "The 3 spheres of perceived value co-creation in consulting in the AI era",
-        intro: "The diagram of the 3 consultant-client-AI co-creation spheres constitutes the observational framework through which the research propositions on perceived value co-creation are examined empirically, across three consultant-client-AI configurations. Within this framework, the dynamic and temporal orchestration of co-creation situations may also constitute a managerial lever, without being a fixed prescription.",
+        intro: "The diagram of the 3 spheres of consultant-client-AI co-creation constitutes the observational framework through which our research propositions P1, P2 and P3 are examined empirically. It is therefore not a managerial prescription.\n\nThe 3 spheres represent three possible situations of co-creation S1, S2 and S3 in the AI era, alone or in combination. All three are situated within the joint sphere of value co-creation (Grönroos & Voima, 2013).\n\nWithin this framework, the orchestration of co-creation situations is not fixed: it is dynamic and temporal, and the three situations may appear within the same phase of a consulting mission. S1/S2/S3 is an observational framework, not a managerial prescription.",
         cards: [
           {
             key: "s1",
             tone: "s1",
             title: "S1 — No AI",
-            text: "Consultant and client co-create in a human dyad. AI is totally absent. The consultant remains the sole central and visible actor of the co-creation process, building relational legitimacy through micro-activities of valuation, i.e. singularization, authority signalling and progressive demonstrations of competence (Bourgoin, 2014). This relational anchoring conditions the client’s openness to subsequent AI integration. Observable: trust formation, political judgment, legitimacy construction."
+            text: "The consultant and the client co-create in a human dyad.\n\nAI is totally absent.\n\nThe consultant remains the central actor of the co-creation process with the client.\n\nObservable: relational baseline (R): formation of trust, construction of legitimacy, consultant's political judgment.\n\nFor example, R may evolve from weak perceived legitimacy to recognized legitimacy, from relational caution to working trust, from simple provider to an actor whose political judgment becomes sought after."
           },
           {
             key: "s2",
             tone: "s2",
-            title: "S2 — Siloed AI use",
-            text: "AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation. The consultant nevertheless tends to retain the visible central role, even when AI contributes in the background. The risk of blurred attribution of consultant / AI contributions by the client is latent — relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered. Observable: transparency modalities, attribution patterns, legitimacy fragility."
+            title: "S2 — AI in silo",
+            text: "AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation.\n\nThe consultant retains the central role in the relationship with the client, even when AI contributes in the background.\n\nObservable:\n\nModalities of transparency (P2), attribution patterns (P3), fragility of legitimacy (R).\n\nFor example, the risk of blurred attribution of consultant / AI contributions by the client is latent; relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered, depending on the client's AI literacy and algorithm aversion (P3)."
           },
           {
             key: "s3",
             tone: "s3",
             title: "S3 — Tripartite co-creation",
-            text: "Co-creation unfolds in an explicit triad: consultant, client and AI. The consultant no longer monopolizes the central role; orchestration, attribution and legitimacy become more distributed and more subject to negotiation. Observable: the three propositions (P1, P2, P3) are simultaneously observable. The cognitive dimension of perceived value may be richer — but the author of the production becomes contestable (Raisch & Krakowski 2020; Baird & Maruping 2021)."
+            text: "Co-creation unfolds in an explicit triad of consultant, client and AI.\n\nThe consultant no longer monopolizes the central role there; orchestration, attribution and legitimacy become more distributed and more open to negotiation.\n\nObservable:\n\nThe three propositions (P1, P2, P3) and the dimensions of perceived value (R-P-C) are simultaneously observable there.\n\nFor example, the processual and cognitive dimensions of perceived value (P, C) may be richer there, but the consultant's legitimacy (R) may become contestable if the consultant's mediating role in production is not manifest (P2), depending on the client's AI literacy and algorithm aversion (P3)."
           }
         ],
         diagramLabels: {
@@ -197,46 +192,46 @@ window.ARTEFACT_CONTENT = {
           client: "CL = Client",
           ai: "AI",
           s1: "S1 — No AI",
-          s2: "S2 — Siloed AI use",
+          s2: "S2 — AI in silo",
           s3: "S3 — Tripartite co-creation"
         }
       },
       illustration: {
-        kicker: "ILLUSTRATION",
-        title: "Fictional consulting scenario: digital platform audit",
-        subtitle: "Thomas (consultant) and Marie (client, TechX)",
-        intro: "This scenario illustrates, in a fictional and purely indicative way, perceived value co-creation at work in consulting through the R→P→C sequence, examined through the three research propositions (P1, P2, P3) and the S1/S2/S3 observational framework, including their capacity to be politically defended within the organization.",
-        legend: "Fictional 10-week mission: digital platform audit. The mission is structured into three major consulting stages. Each sub-phase indicates the co-creation configuration observed (S) and the research propositions most directly examined (P).",
+        kicker: "4. ILLUSTRATION",
+        title: "Fictional consulting scenario: 10-week digital platform audit",
+        subtitle: "Actors: Thomas (consultant) and Marie (client, TechX company)",
+        intro: "This scenario illustrates, in a fictional way, the co-creation of perceived value at work in consulting, through the sequence R→P→C, examined through the prism of the three research propositions (P1, P2, P3) and the observational framework S1/S2/S3, including their ability to be defended politically within the organization.\n\nThe point of this simulation is to allow us to pre-test, ahead of the empirical phase, the full-scale observational field planned for the study (single exemplary case study).\n\nThe fictional mission is structured into three major phases characteristic of consulting missions (scoping, analysis, recommendations), to which we have added a fourth post-mission phase in order to allow an additional retrospective perspective on the co-creation of perceived value at the end of the mission.",
+        legend: "Each phase is divided into sub-phases within which the observation unfolds: observed co-creation situation (S), research propositions most directly examined (P), observed dimensions of perceived value (R, P, C).",
         detailLabels: {
           situation: "Observed situation",
           propositions: "Proposition(s) examined",
-          dimensions: "Value dimension(s) primarily examined (R/P/C)"
+          dimensions: "Observed dimensions of perceived value (R/P/C)"
         },
         glossary: {
           situations: {
-            "S1": "S1: no AI. Consultant and client co-create in a human dyad.",
-            "S2": "S2: AI in silo. AI is used separately, without shared orchestration or substantive explicitation.",
-            "S3": "S3: tripartite co-creation. Consultant, client and AI co-create in an explicit triad.",
-            "S2/S3": "S2/S3: hybrid configuration alternating between siloed AI use and explicit tripartite co-creation.",
-            "Post": "Post: retrospective reassessment of perceived value after mission delivery."
+            "S1": "S1 — No AI",
+            "S2": "S2 — AI in silo",
+            "S3": "S3 — Tripartite co-creation",
+            "S2/S3": "S2/S3 — Alternation between siloed AI use and explicit tripartite co-creation",
+            "Post": "Post — Retrospective assessment after the mission"
           },
           propositions: {
-            "P1": "P1: what is reconfigured. AI does not reconfigure perceived value uniformly across relational, processual and cognitive dimensions; this variation is conditioned by P2 and P3.",
-            "P2": "P2: the mediating mechanism. Transparency is understood here through its observable effects across the sociotechnical system. The key distinction is between performative transparency (disclosing AI use) and substantive transparency (consultant mediation of AI interactions and outputs so the client can interpret them contextually and appropriate them as managerial knowledge).",
-            "P3": "P3: the moderation conditions. Contingencies are examined at three levels: actor-level (AI literacy and algorithm aversion), relational (prior trust capital), and situational (mission phase and political stakes). At actor level, AI literacy shapes intelligibility, while algorithm aversion shapes acceptance. This research focuses primarily on actor-level conditions, as the most theoretically original and the most tractable in a single qualitative case design. Correct attribution is treated here as a key observable condition of client appropriation and, through that appropriation, of perceived value."
+            "P1": "P1 — Multidimensional reconfiguration of perceived value.",
+            "P2": "P2 — Transparency as the mediating mechanism.",
+            "P3": "P3 — Moderation conditions."
           },
           dimensions: {
-            "R": "R: relational dimension. Trust, legitimacy and political judgment.",
-            "P": "P: processual dimension. The co-creation experience, its legibility and role distribution.",
-            "C": "C: cognitive dimension. The ability to interpret, understand and evaluate what was co-produced, so mission outputs become intelligible, assessable, appropriable and usable as managerial knowledge."
+            "R": "R — Relational dimension",
+            "P": "P — Processual dimension",
+            "C": "C — Cognitive dimension"
           }
         },
         chatbot: {
           title: "Framework AI assistant",
           iconLabel: "AI assistant",
-          note: "Answers use the current page as context. When you ask about the research framework, the assistant stays strictly within the sources; when you ask for implications or ideas, it may offer cautious practical extrapolations.",
+          note: "When you ask specifically about the exploratory framework, the assistant answers strictly from that source document alone and cites it precisely by page. When you ask for ideas or implications beyond the framework, it states explicitly that it is extrapolating beyond it.",
           uploadLabel: "Add supplementary documents",
-          uploadHint: "Supported formats: .txt, .md, .csv, .json, .html, .xml, .yml. These documents are treated as user-provided supplementary context and do not override the framework sources.",
+          uploadHint: "Supported formats: .txt, .md, .csv, .json, .html, .xml, .yml. These documents are treated as supplementary user context and do not override the exploratory framework.",
           uploadLoadedLabel: "Loaded documents",
           uploadButton: "Choose files",
           uploadRemove: "Remove",
@@ -255,29 +250,14 @@ window.ARTEFACT_CONTENT = {
           contextDimensions: "Value dimensions",
           suggestionsLabel: "Try asking",
           inputLabel: "Ask the framework AI assistant",
-          placeholder: "For example: What would Exploration look like in S2, and how could that affect perceived value across the mission?",
+          placeholder: "For example: In the exploratory framework, what exactly does P2 say?",
           send: "Ask",
-          thinking: "Thinking...",
-          emptyQuestion: "Ask a question about the current page, the framework or a practical implication.",
-          localMode: "The chatbot needs a server endpoint to call a cloud GPT-5.4 model. Open the artefact through its deployed server environment rather than as a local file.",
-          backendError: "The cloud assistant is unavailable right now. Check that the server endpoint is deployed and that the OpenAI API key is configured.",
+          thinking: "Thinking through the exploratory framework...",
           suggestions: [
-            "What would this step look like in S2, and how could that affect perceived value?",
-            "Which proposition is most visible in this step, and why?",
-            "How do the R, P and C dimensions appear in this step?"
-          ],
-          welcome: "Ask me about the page, the framework, or a practical implication. If you ask what the framework says, I stay strictly within the sources; if you ask for ideas, I will clearly distinguish extrapolation from the research frame.",
-          sections: {
-            current: "Current step",
-            counterpart: "Closest counterpart in the illustration",
-            inference: "Bounded theoretical inference",
-            reading: "Framework reading",
-            boundary: "Boundary of the answer"
-          },
-          boundaryCurrent: "This answer stays within the research framework and relies only on the current step as constructed in the illustration.",
-          boundaryDirect: "This answer stays within the research framework and relies on a direct counterpart already present in the illustration.",
-          boundaryInference: "This answer stays within the research framework. Because the illustration provides no direct counterpart for this case, the answer is a bounded theoretical inference from P1, P2, P3 and S1/S2/S3.",
-          fallback: "Try asking about S1/S2/S3, P1/P2/P3, R/P/C, transparency, attribution, AI literacy, algorithm aversion, perceived value, or a practical implication for the active page."
+            "In the exploratory framework, what exactly does P2 say?",
+            "On this page, what is the main idea I should retain?",
+            "If you go beyond the framework, what practical implication would you draw from this?"
+          ]
         },
         stages: [
           {
@@ -303,7 +283,7 @@ window.ARTEFACT_CONTENT = {
           }
         ],
         postMission: {
-          label: "Retrospective — Post",
+          label: "4. Retrospective — Post",
           summary: "Retrospective assessment of perceived value across the three dimensions."
         },
         phases: [
@@ -315,8 +295,8 @@ window.ARTEFACT_CONTENT = {
             title: "Exploration",
             propositions: ["P1"],
             dimensions: ["R"],
-            body: "Individual face-to-face interviews with TechX senior executives. Thomas builds relational legitimacy through active listening, authority signalling and ramp-up displays of competence. No AI involved.",
-            observable: "Primary observable: R (relational baseline) — P1 baseline for subsequent configurations"
+            body: "Individual face-to-face interviews with TechX executives. Thomas builds relational legitimacy through active listening, authority signalling and progressive demonstrations of competence. No AI is used.",
+            observable: "Main observable: R (relational baseline), initial P1 test situation for subsequent mission phases"
           },
           {
             stage: "scoping",
@@ -327,7 +307,7 @@ window.ARTEFACT_CONTENT = {
             propositions: ["P2", "P3"],
             dimensions: ["R", "P"],
             body: "Thomas uses AI to transcribe and thematically structure the interviews without informing Marie. He presents a structured synthesis attributed to his own judgment.",
-            observable: "Primary observable: P2 (zero transparency) — P3 (attribution mechanism latent) — Risk of retrospective delegitimisation"
+            observable: "Main observable: P2 (zero transparency) — P3 (latent attribution mechanism) — risk of retrospective delegitimation"
           },
           {
             stage: "analysis",
@@ -337,8 +317,8 @@ window.ARTEFACT_CONTENT = {
             title: "Collaborative analysis",
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
-            body: "Weekly tripartite sessions: Thomas mobilizes AI visibly as an explicit component of the exchange, Marie challenges outputs, and insights are co-constructed within an explicit triad. All three propositions are simultaneously observable.",
-            observable: "Primary observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)"
+            body: "Weekly tripartite sessions: Thomas mobilizes AI visibly as an explicit component of the exchange, Marie challenges the outputs, and the insights are co-constructed in an explicit triad. The three propositions are simultaneously observable there.",
+            observable: "Main observable: P1 (all dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy and algorithm aversion)"
           },
           {
             stage: "analysis",
@@ -348,8 +328,8 @@ window.ARTEFACT_CONTENT = {
             title: "Refinement",
             propositions: ["P1", "P2"],
             dimensions: ["P", "C"],
-            body: "Thomas alternates between silo AI use (structuring scenarios) and visible co-creation with Marie (validating options). Transparency is selective and strategic.",
-            observable: "Primary observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — Attribution ambiguity"
+            body: "Thomas alternates between siloed AI use (structuring scenarios) and visible co-creation with Marie (validation of options). Transparency is selective and strategic.",
+            observable: "Main observable: P2 (performative vs substantive) — P1 (processual reconfiguration) — attribution ambiguity"
           },
           {
             stage: "analysis",
@@ -359,8 +339,8 @@ window.ARTEFACT_CONTENT = {
             title: "Mutual validation",
             propositions: ["P1", "P3"],
             dimensions: ["C"],
-            body: "Thomas finalises recommendations using AI for stress-testing. Marie reviews outputs but cannot fully evaluate the AI-assisted analytical chain.",
-            observable: "Primary observable: P3 (AI literacy as limiting factor) — P1 (cognitive dimension) — Absorptive capacity"
+            body: "Thomas finalizes the recommendations by using AI to stress-test them. Marie reviews the outputs but cannot fully evaluate the AI-assisted analytical chain.",
+            observable: "Main observable: P3 (AI literacy as a limiting factor) — P1 (cognitive dimension) — absorptive capacity"
           },
           {
             stage: "recommendations",
@@ -370,8 +350,8 @@ window.ARTEFACT_CONTENT = {
             title: "COMEX presentation",
             propositions: ["P3"],
             dimensions: ["R", "C"],
-            body: "Thomas presents to the executive committee without visible AI. Political judgment, narrative construction and authority remain fully human on the surface. Yet acceptance of the recommendations still depends on the legibility and appropriability of the AI-assisted work if the analytical chain is questioned or disclosed. Marie defends the recommendations.",
-            observable: "Primary observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as contextual moderator)"
+            body: "Thomas presents to the executive committee without visible AI. Political judgment, narrative construction and authority remain fully human on the surface. Yet the acceptance of the recommendations still depends on the legible and appropriable character of the AI-assisted work if the analytical chain is questioned or disclosed. Marie defends the recommendations.",
+            observable: "Main observable: R (political legitimacy and judgment) + C (evaluation of the analytical chain) — P3 (COMEX AI literacy and disposition toward AI-assisted analysis as a contextual moderator)"
           },
           {
             stage: "postmission",
@@ -381,27 +361,31 @@ window.ARTEFACT_CONTENT = {
             title: "Retrospective",
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
-            body: "Retrospective assessment of perceived value across the three dimensions. Which configuration generated the greatest perceived value across its relational, processual and cognitive dimensions — and under what conditions?",
-            observable: "Primary observable: P1 full (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions"
+            body: "Retrospective assessment of perceived value across the three dimensions. Which configuration generated the strongest perceived value in its relational, processual and cognitive dimensions — and under what conditions?",
+            observable: "Main observable: Full P1 (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions"
           }
         ]
       }
     },
     fr: {
       ui: {
-        pageTitle: "La co-création de valeur perçue dans le conseil à l'ère de l'IA",
+        pageTitle: "Vers une reconfiguration de la valeur perçue à l’ère de l’IA",
         skipLink: "Aller au contenu",
         navAria: "Sections principales",
-        themeToggleAria: "Changer le thème",
-        downloadDocLabel: "Texte Word",
-        downloadDocAria: "Télécharger le texte complet de l'app au format Word",
+        themeToggleAria: "Basculer le thème visuel",
+        downloadDocLabel: "Word text",
+        downloadDocAria: "Télécharger le document Word complémentaire",
         languageButtonLabel: "🇬🇧 EN",
-        languageButtonAria: "Show English version"
+        languageButtonAria: "Show English version",
+        pagePrevious: "Préc.",
+        pageNext: "Suiv.",
+        pagePreviousAria: "Afficher la page précédente",
+        pageNextAria: "Afficher la page suivante"
       },
       hero: {
-        title: "La co-création de valeur perçue dans le conseil à l'ère de l'IA — un cadre exploratoire",
-        subtitle: "Un cadre de recherche exploratoire",
-        signature: "Yunes Clément — Université de Bordeaux (France)"
+        title: "Vers une reconfiguration de la valeur perçue à l’ère de l’IA : repenser la co-création de connaissances managériales.",
+        subtitle: "Cadre exploratoire",
+        signature: "Yunes, Clément - Université de Bordeaux – Avril 2026"
       },
       theme: {
         lightLabel: "Mode clair",
@@ -414,82 +398,79 @@ window.ARTEFACT_CONTENT = {
         { id: "illustration", label: "Illustration" }
       ],
       whyResearch: {
-        kicker: "POSITIONNEMENT DE LA RECHERCHE",
+        kicker: "1. POSITIONNEMENT DE LA RECHERCHE",
         titleLines: [
-          "Comprendre la co-création de valeur perçue",
-          "dans le conseil à l'ère de l'IA"
+          "Comprendre les effets de l’intégration de l’IA",
+          "dans les pratiques du conseil, sur la valeur perçue"
         ],
-        questionLabel: "LA QUESTION",
-        questionHtml: "Le conseil augmenté par l'IA est souvent présenté comme une promesse de valeur supérieure pour les clients, car il permet de produire plus vite, mieux, plus fort, moins cher, plus sûr. Or, la valeur est subjective, et sa perception par le client, en rien automatique.<br><br>Dans le conseil, la valeur perçue n'est pas simplement délivrée au client, elle se construit dans la relation, l'expérience de la mission, l'appropriation par le client des connaissances managériales produites, qui permettent la résolution du problème spécifique à traiter, et in-fine, renforcent le client pour adresser les prochains à venir (Ciampi, 2017). La valeur perçue est donc le fruit d'une co-création.<br><br>Or, l’introduction massive de l’IA dans les pratiques du conseil, modifie la situation de cette co-création. Elle transforme la manière dont les contributions sont produites, rendues visibles, attribuées aux acteurs, appropriées et mobilisées dans l'action managériale de l’organisation cliente, où seule se forme effectivement la valeur perçue. Notre recherche explore cette transformation à l’œuvre. En quoi la valeur perçue du conseil est-elle ainsi reconfigurée par l’IA&nbsp;? Sous quelles conditions se renforce-t-elle&nbsp;ou se fragilise-t-elle&nbsp;?<br><br><span class=\"accent-blue\">Autrement dit, comment l’IA reconfigure-t-elle la valeur perçue des missions de conseil&nbsp;?</span>",
-        whyLabel: "POURQUOI CELA COMPTE",
-        whyHtml: "L'intégration de l'IA dans le conseil, ne génère pas nécessairement une valeur supérieure pour le client. Paradoxalement, l’IA peut à la fois renforcer le processus de production du conseil et fragiliser la situation de co-création, et par conséquent la valeur perçue par le client (faible lisibilité du processus ou du résultat, questionnement sur la légitimité du conseil produit, floutage des contributions, défaut d’appropriation des connaissances managériales produites). D’autant que la littérature sur le conseil en management, suggère que la co-création de connaissances managériales, et par la même, de valeur perçue par le client, demeure historiquement inaboutie (au profit d’un simple transfert de bonnes pratiques). Dès lors, la réussite du modèle de consultant augmenté par l’IA, dépend d’une meilleure compréhension des conditions dans lesquelles cette co-création de valeur perçue se produit à l’ère de l’IA.",
-        gapLabel: "UNE QUESTION LAISSÉE OUVERTE",
-        gapHtml: "Au plan théorique, notre recherche mobilise une double perspective (marketing, systèmes d’information), analysée par le prisme de son application au domaine du conseil. Nous y apportons toutefois une perspective originale : à notre connaissance, il n’existe pas de cadre unifié pour explorer la question pressante de la co-création de valeur perçue du conseil à l’ère de l’IA, pourtant centrale pour guider la nécessaire transformation des pratiques du conseil à l'oeuvre.<br><br>• La littérature marketing, documente la valeur perçue (définition, rôle central, échelle de mesure, conditions de sa réalisation, à savoir la co-création).<br><br>• La littérature sur les systèmes d’informations, propose des cadres d’analyse de l’IA (capacités, limites, risques), des conditions de son adoption, du système socio-technique (répartition des rôles, modalités d’interaction, attributions des contributions), des effets sur la production (automatisation vs augmentation) et la gestion des connaissances (augmentation vs appauvrissement).<br><br>• Les travaux académiques qui tentent une synthèse de ces deux corpus autour de la valeur perçue du conseil, sont rares. Les travaux sur le conseil, se focalisent sur les buts du conseil (techniques et politiques), en discutent la valeur (sources, conditions de sa formation, mesure), la nécessaire transformation du modèle d’affaires. Nos travaux contribuent à cette synthèse en se focalisant sur le lien spécifique entre co-création de valeur perçue et intégration de l'IA dans les pratiques du conseil, non encore exploré à notre connaissance.<br><br>Au plan praxéologique, notre analyse de la littérature « grise », observe que les acteurs du conseil intègrent effectivement l’IA dans leurs pratiques, tout en explorant les possibilités d’innovation des modèles d’affaires. Nos travaux, en se focalisant sur les conditions dans lesquelles la valeur du conseil est co-créée à l’ère de l’IA et au final, perçue par le client, doivent pouvoir éclairer ces initiatives."
+        questionLabel: "",
+        questionHtml: `Le conseil augmenté par l'IA est souvent présenté comme le futur du conseil à l’ère de l’IA, promesse de valeur supérieure pour les clients, car il permet de produire plus vite, mieux, plus fort, moins cher, plus sûr. Or, la valeur est subjective, et sa perception par le client, en rien automatique.<br><br>Dans le conseil, la valeur perçue n'est pas simplement délivrée au client, elle se construit dans la relation, l'expérience de la mission, l'appropriation par le client des connaissances managériales produites, qui permettent la résolution du problème spécifique à traiter, et in-fine, renforcent le client pour adresser les prochains problèmes à venir (Ciampi, 2017)). La valeur perçue est donc le fruit d'une co-création (Grönroos & Voima, 2013; Vargo, Stephen & Lusch, Robert F., 2004).<br><br>Nous pensons que l’introduction de l’IA dans les pratiques du conseil, modifie la situation de cette co-création de valeur perçue.<br><br>L’IA présente en effet le potentiel de transformer la manière dont les productions de connaissance managériales (explicites, mais surtout tacites), but ultime du conseil (Ciampi, 2017; Turner, 1982), sont produites, augmentées, et diffusées au sein d’une organisation (Harfouche et al., 2023), attribuées aux acteurs (Raisch & Krakowski, 2020), évaluées, appropriées et mobilisées dans l'action managériale de l’organisation cliente, où seule se forme effectivement la valeur perçue (Bourgoin, 2014; Ciampi, 2017; Grönroos & Voima, 2013)<br><br>Notre recherche explore cette transformation complexe à l’œuvre, par le prisme de la valeur perçue. En quoi la valeur perçue du conseil est-elle ainsi reconfigurée par l’IA ? Sous quelles conditions la valeur perçue se renforce-t-elle ou se fragilise-t-elle ?<br><br><span class="accent-blue">Autrement dit, comment l’IA reconfigure-t-elle la valeur perçue du conseil ?</span>`,
+        whyLabel: "EN QUOI EST-CE UNE EXPLORATION NÉCESSAIRE ?",
+        whyHtml: `L'intégration de l'IA dans le conseil, ne peut générer à elle seule une valeur supérieure pour le client. Même en situation de co-création, paradoxalement, l’IA a le pouvoir à la fois, de renforcer la co-création (nouvelle connaissances managériales) et de fragiliser la perception de la valeur qui en découle (questionnement sur la légitimité du conseil, dans un contexte de floutage des contributions et de défaut d’appropriation des connaissances produites).<br><br>D’autant que la littérature sur le conseil en management, n’ignore pas l’ambivalence de la co-création de valeur perçue dans le conseil, qui suggère qu’elle ne va pas de soi (Bourgoin, 2014; Ciampi, 2017; Svensson, 2010).<br><br>Dès lors, la réussite du modèle futur du conseil à l’ère de l’IA, dépend d’une meilleure compréhension des conditions dans lesquelles la co-création de valeur est perçue par le client à l’ère de l’IA.`,
+        gapLabel: "IMPLICATIONS THÉORIQUES ET PRAXÉOLOGIQUES",
+        gapHtml: `Le lien entre IA et conseil est un champ de recherche émergent mais dynamique (par exemple, « AI consulting » génère plus de 92000 résultats sur Google Scholar). Néanmoins, les travaux académiques qui étudient les effets de l’IA sur le conseil par le prisme de la valeur perçue sont à notre connaissance, encore peu explorés.<br><br>La littérature dominante du conseil, s’accorde aujourd’hui sur la co-création de valeur perçue comme fruit d’une interaction réussie avec le client. L’introduction de l’IA dans les pratiques du conseil, offre une opportunité supplémentaire d’augmenter la dimension technique du consultant, moyennant la gestion des risques associés (sécurité, éthique, etc.). La dimension politique de l’activité conseil (Turner, 1982), inaccessible à l’IA (Pakarinen & Huising, 2023; Raisch & Fomina, 2024) en sort théoriquement renforcée.<br><br>Cependant d’une part, la nature particulière de l’IA (autonomie de décision et d’action en contexte ambigu et incertain (Baird & Maruping, 2021), lui confère des propriétés susceptibles de déstabiliser le système socio-technique humain-IA du conseil, aucun acteur unique n’ayant de contrôle total sur les résultats (Raisch & Krakowski, 2020). D’autre part, les dimensions techniques et politiques du conseil étant interdépendantes (le manque de légitimité technique fragilise la capacité politique et vice-versa (Turner, 1982), la question des effets de l’IA sur la valeur perçue du conseil reste posée.<br><br>Au plan praxéologique, notre analyse de la littérature « grise », observe que le discours des acteurs du conseil intègre effectivement l’IA dans les pratiques, expose la dimension politique du conseil comme désormais source différenciatrice de valeur, explore les possibilités d’innovation des modèles d’affaires (Masson & Dautrif, 2026).<br><br>Nos travaux, en se focalisant sur les mécanismes du processus de co-création de la valeur perçue du conseil à l’ère de l’IA, apportent un cadre structuré d’analyse et d’observation pour éclairer les initiatives de reconfiguration des acteurs conseil à l’œuvre.`
       },
       theory: {
-        kicker: "CADRE THÉORIQUE",
-        introHtml: "Nous formulons trois propositions de recherche pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil. Ces propositions sont dérivées de notre revue de la littérature, et articulées selon un ordre séquentiel (P1, P2, P3). P1 pose les dimensions de la valeur perçue du conseil, qui font l’objet d’une reconfiguration à l’ère de l’IA&nbsp;; P2 en pose le mécanisme médiateur, à savoir la transparence. P3 pose les conditions de la reconfiguration, qui permettent à P2 de fonctionner.",
-        gapLabel: "L’ABSENCE DE CADRE D’EXPLORATION",
-        propositionsLabel: "LES TROIS PROPOSITIONS",
+        kicker: "2. PROPOSITION D’UN CADRE D’ANALYSE",
+        title: "Cadre théorique mobilisé",
+        overviewBlocks: [
+          {
+            label: "La valeur perçue du conseil est une notion subjective et dynamique, dont les mécanismes restent à explorer",
+            text: `Notre recherche mobilise la littérature du marketing (valeur perçue), la littérature sur le conseil (définition, buts, valeur), la littérature des systèmes d’information (lien entre IA et gestion des connaissances, effets de l’IA sur les systèmes socio-techniques).\n\nLa valeur perçue est une notion floue, à fortiori dans le domaine du conseil, qui évolue par définition, dans un contexte ambigu et incertain (Svensson, 2010). Pour autant  la valeur perçue présente des facteurs consensuels que nous adoptons : elle est issue d’un jugement comparatif, personnelle, dynamique et contextuelle  (Rivière & Mencarelli, 2012). Dans les activités à forte intensité de connaissance, telles que le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017). Pour autant, cette typologie reste descriptive : quels sont les mécanismes de création de la valeur perçue ?`
+          },
+          {
+            label: "La valeur perçue du conseil est avant tout un accomplissement social",
+            text: `Selon le courant de la Logique de Dominance du Service (SDL), la valeur perçue est nécessairement le fruit d’une co-création entre un prestataire et un client (Grönroos & Voima, 2013; Vargo, Stephen & Lusch, Robert F., 2004) . Nous adoptons logiquement cette perspective, confirmée par plusieurs études empiriques dans le conseil (Oesterle et al., 2020). Si le prestataire établit une proposition de valeur, seul le client peut créer la valeur effective, par l’usage du service fourni, dans son propre environnement, et ainsi la transformer en valeur perçue. Le prestataire, pour créer de la valeur aux côtés du client, doit chercher à pénétrer la sphère conjointe, plateforme de co-création de la valeur (Grönroos & Voima, 2013). C’est au sein de cette sphère que nous installerons donc notre première focale d’observation.\n\nNotre second angle de vue mobilise la perspective pragmatiste : la valeur est un accomplissement social qui se produit et est réalisé au cours des interactions récurrentes entre consultant et client. Cette perspective met la relation première, et l’expertise, seconde, condition pas toujours nécessaire et jamais suffisante pour initier l’interaction (in Bourgoin, 2014). Que se passe-t-il au sein des interactions du conseil pour que la valeur perçue puisse émerger ?\n\nLa littérature suggère empiriquement deux liens constitutifs entre les dimensions de la valeur perçue du conseil : la confiance relationnelle comme précondition de l'engagement processuel (Bourgoin, 2014; Glückler & Armbrüster, 2003; Nikolova & Devinney, 2012), et l'expérience de co-création comme condition de l'appropriation cognitive par le client (Ciampi, 2017; Oesterle et al., 2019). Dans ce cadre, la co-création, et permet tout simplement la réalisation des activités cognitives conjointes de résolution du problème, sous pilotage du consultant, comme la clarification du besoin, la définition de la solution, l’organisation de la mission  (Aarikka-Stenroos & Jaakkola, 2012; Svensson, 2010). La co-création de valeur perçue pré-suppose donc une symétrie des rôles et responsabilités du consultant et du client.\n\nUn autre angle de vue considère l’enjeu des interactions dans la valeur perçue, comme plus subtil : pour que le client puisse percevoir la valeur du conseil, celle-ci doit être activement produite, à travers des micro-activités délibérées de mise en valeur (au sens de surcroit de justification, non au sens de persuasion sans fondement), telles que la production de l’autorité du consultant, le signalement de l’activité, la présentation graphique du diagnostic, etc., par lesquelles le consultant construit sa légitimité tout au long de la mission (Bourgoin, 2014). Cette approche est d’autant plus pertinente que  le contexte du conseil se nourrit d’ambiguïté, et donc réclame des mythes et discours particuliers, dont la fonction est de persuader la clientèle de la valeur du service fourni (Bourgoin, 2014).`
+          },
+          {
+            label: "L’IA, élément perturbateur de l’accomplissement social",
+            text: `Or, l’intégration de l’IA dans les pratiques du conseil, vient perturber dans les deux cas, le processus à l’œuvre au sein des interactions entre consultant et client : la réalisation des activités cognitives conjointes de résolution du problème peut désormais s’appuyer plus fortement sur l’IA et moins sur le jugement humain (par exemple, automatisation de l’étape de clarification du diagnostic) ; la machine devient de plus en plus capable de réaliser, seule, les micro-activités typiques de mise en valeur du consultant, lequel devrait donc logiquement en chercher d’autres.\n\nPour le conseil, l’enjeu du processus de co-création à l’oeuvre dans les interactions n’est pas remis en cause : il s’agit bien toujours de permettre la co-création de connaissances managériales ou de produire le surcroit de justification du conseil.\n\nMais si l’IA prend une place toujours importante dans cette co-création, ne risque-t-elle pas de déstabiliser la symétrie de l’interaction ? Et qu’en est-il ensuite, de l’appropriation et la mobilisation par le client, des connaissances managériales produites, et in-fine, de la perception de la valeur du conseil qui en découle pour le client ?\n\nSi l’IA prend en charge une place toujours plus importante dans cette co-création, de la production des micro-activités de mise en valeur, vers quelles micro-activités le conseil doit-il se tourner pour assoir son surcroit de justification, et la valeur perçue qui en découle pour le client ?\n\nLa mécanique des interactions du conseil se grippe, devient plus floue, mouvante.\n\nL’IA, en rendant difficile la répartition des résultats à des acteurs spécifiques (Raisch & Krakowski, 2020), ouvre la voie à une reconfiguration des rôles et responsabilités des acteurs au sein du processus de co-création (Baird & Maruping, 2021; Pakarinen & Huising, 2023; Raisch & Krakowski, 2020). L’IA devient acteur à part entière de la co-création de valeur perçue (Aarikka-Stenroos & Jaakkola, 2012; Baird & Maruping, 2021; Ciampi, 2017; Harfouche et al., 2023; Oesterle et al., 2019).\n\nA l’ère de l’IA, le rôle des acteurs dans l’interaction du conseil perd de sa transparence, de sa lisibilité.\n\nAinsi, la source même de co-création de la valeur perçue se reconfigure, au sens d’un redéploiement des ressources existantes en de nouvelles combinaisons de compétences opérationnelles, permettant de mieux s’adapter à l’environnement (Pavlou & El Sawy, 2006). Notre travail cherche à saisir cette dynamique de reconfiguration.\n\nL’observation fine du processus de reconfiguration à l’oeuvre, apparait donc non seulement pertinente, mais nécessaire pour comprendre la co-création de valeur perçue du conseil à l’ère de l’IA,`
+          }
+        ],
+        introHtml: "Nous formulons trois propositions de recherche pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil.",
+        gapLabel: "PROPOSITIONS DE RECHERCHE",
+        propositionsLabel: "TROIS PROPOSITIONS, P1, P2, P3",
         modelLabel: "LE MODÈLE R → P → C",
-        researchGapHtml: "Notre recherche propose de formaliser les effets de l'IA sur la co-création de valeur perçue du conseil, au travers d’un cadre d'analyse et d'un cadre d'observation originaux.<br><br>Notre cadre d'analyse formalise la séquence par laquelle la valeur perçue se co-crée dans les missions de conseil.<br><br>Notre cadre d'observation cherche à structurer l’observation empirique des conditions de la reconfiguration de la valeur perçue du conseil à l’ère de l’IA.",
         researchGapParagraphs: [
-          "Notre recherche propose de formaliser les effets de l'IA sur la co-création de valeur perçue du conseil, au travers d’un cadre d'analyse et d'un cadre d'observation originaux.",
-          "Notre cadre d'analyse formalise la séquence par laquelle la valeur perçue se co-crée dans les missions de conseil.",
-          "Notre cadre d'observation cherche à structurer l’observation empirique des conditions de la reconfiguration de la valeur perçue du conseil à l’ère de l’IA.",
-          "La littérature sur le conseil étaie empiriquement deux liens constitutifs entre ces dimensions : la confiance relationnelle comme précondition de l'engagement processuel (Nikolova et al. 2014 ; Glückler & Armbrüster 2003), et l'expérience de co-création comme condition de l'appropriation cognitive — y compris la capacité d'absorption du client comme facteur décisif (Oesterle et al. 2020 ; Aarikka-Stenroos & Jaakkola 2012). En outre, dans une perspective pragmatiste, Bourgoin (2014) observe, que la dimension relationnelle de la valeur perçue n'émerge pas spontanément — elle est activement produite à travers des micro-activités délibérées de mise en valeur par lesquelles les consultants construisent leur légitimité tout au long de la mission.",
-          "Parallèlement, une littérature plus large sur le management et le travail de la connaissance théorise des mécanismes encore non testés dans les contextes de conseil : le brouillage des contributions dans les systèmes humain-IA (Raisch & Krakowski 2020), l'augmentation récursive de la connaissance organisationnelle par l'IA (Harfouche et al. 2023), et les implications des cadres de délégation dans les systèmes hybrides humain-IA (Baird & Maruping 2021)."
+          "Ces propositions dérivées de notre revue de la littérature, sont articulées selon un ordre séquentiel (P1, P2, P3).",
+          "• P1 pose les dimensions observables de la valeur perçue du conseil, qui font l’objet d’une reconfiguration à l’ère de l’IA ;",
+          "• P2 pose le mécanisme médiateur de la valeur du perçue du conseil à l’ère de l’IA, à savoir la transparence (au sens de lisibilité).",
+          "• P3 pose les conditions de la reconfiguration, qui permettent à P2 de fonctionner."
         ],
         dimensionCards: [
           {
             tone: "relational",
             label: "Relationnelle",
             letter: "R",
-            text: "Confiance, légitimité et jugement politique — activement produits, et de plus en plus ambigus dans les systèmes humain-IA"
+            text: "Confiance, légitimité et jugement politique - activement produits, et de plus en plus ambigus dans les systèmes humain-IA"
           },
           {
             tone: "processual",
             label: "Processuelle",
             letter: "P",
-            text: "L'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles, reconfigurées par l'IA comme troisième acteur"
+            text: "L'expérience même de co-création - sa nature, sa lisibilité et la distribution des rôles, reconfigurées par l'IA comme troisième acteur de la relation consultant-client-IA"
           },
           {
             tone: "cognitive",
             label: "Cognitive",
             letter: "C",
-            text: "La capacité à interpréter, comprendre et évaluer ce qui a été co-produit — afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale"
+            text: "La capacité à interpréter, comprendre et évaluer ce qui a été co-produit par le conseil, afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale."
           }
         ],
-        sequenceHtml: "<strong>SÉQUENCE</strong> <span class=\"sequence-pill sequence-pill--relational\">R</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--processual\">P</span><span class=\"sequence-arrow\">→</span><span class=\"sequence-pill sequence-pill--cognitive\">C</span> <em>avec boucle de rétroaction proposée R ← P</em>",
-        propositionMiniCards: [
-          {
-            tone: "relational",
-            label: "P1 — CE QUI EST RECONFIGURÉ",
-            text: "L'intégration de l'IA dans les missions de conseil reconfigure la valeur perçue par le client selon trois dimensions interdépendantes : relationnelle, processuelle et cognitive."
-          },
-          {
-            tone: "processual",
-            label: "P2 — LE MÉCANISME",
-            text: "La transparence est le mécanisme médiateur de la valeur perçue du conseil à l’ère de l’IA."
-          },
-          {
-            tone: "cognitive",
-            label: "P3 — LES CONDITIONS",
-            text: "Trois catégories de contingence déterminent si P2 produit une attribution correcte : au niveau relationnel, au niveau situationnel et au niveau acteur."
-          }
-        ],
+        sequenceHtml: '<strong>SÉQUENCE</strong> <span class="sequence-pill sequence-pill--relational">R</span><span class="sequence-arrow">→</span><span class="sequence-pill sequence-pill--processual">P</span><span class="sequence-arrow">→</span><span class="sequence-pill sequence-pill--cognitive">C</span> <em>avec boucle de rétroaction proposée R ← P</em>',
+        propositionMiniCards: [],
         findingsNote: "",
         rpcDiagram: {
-          title: "Comment l'IA reconfigure de façon contingente la chaîne R → P → C",
-          intro: "La contribution originale réside moins dans l'invention de la séquence R → P → C que dans la théorisation de la manière dont l'IA amplifie, déstabilise ou inverse chaque relation de façon contingente. L'architecture causale de la chaine demeure stable, c’est-à-dire indépendante de l’intégration de l’IA dans les pratiques du conseil : l'ancrage relationnel (R) permet l'engagement processuel (P), et l'engagement processuel soutient l'appropriation cognitive (C). Ce que l'IA modifie, à travers le mécanisme médiateur (P2), c'est la stabilité de chaque lien — positivement ou négativement, selon les contingences (P3).",
+          title: "Comment l'IA reconfigure de façon contingente la chaîne DE LA VALEUR PERÇUE DU CONSEIL R → P → C",
+          intro: "Les trois dimensions de la valeur perçue du conseil à l’ère de l’IA, posées en Proposition P1, suivent la séquence R→P→C, avec une boucle de rétroaction proposée R ← P (proposition théorique originale de ce cadre, non directement ancrée dans la littérature). L'ancrage relationnel (R) permet l'engagement processuel (P), et l'engagement processuel soutient l'appropriation cognitive (C). L'architecture causale de la chaine demeure stable, c’est-à-dire indépendante de l’intégration de l’IA dans les pratiques du conseil. En ceci, elle est un moyen d’explorer les effets de l’IA sur la dynamique de reconfiguration de la valeur perçue du conseil. L'IA modifie, à travers le mécanisme médiateur (P2), la stabilité de chaque lien — positivement ou négativement, selon les contingences (P3). La contribution originale de notre recherche, réside selon nous, moins dans l'invention de la séquence R → P → C que dans la théorisation de la manière dont l'IA amplifie, déstabilise ou inverse chaque relation de façon contingente.",
           nodeLabels: {
             relational: "Relationnelle",
             processual: "Processuelle",
             cognitive: "Cognitive"
           },
           metaLabels: {
-            positive: "Amplification potentielle",
-            negative: "Déstabilisation potentielle",
+            positive: "Reconfiguration positive",
+            negative: "Reconfiguration négative",
             contingency: "Contingences"
           },
           links: [
@@ -518,64 +499,58 @@ window.ARTEFACT_CONTENT = {
           {
             tone: "relational",
             badge: "P1",
-            title: "Reconfiguration multidimensionnelle de la valeur perçue",
-            text: "L'intégration de l'IA dans les missions de conseil reconfigure la valeur perçue par le client selon trois dimensions interdépendantes — relationnelle (confiance, légitimité et jugement politique, activement produits à travers des micro-activités de mise en valeur), processuelle (l'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles), et cognitive (les connaissances et capacités managériales nouvelles co-produites, dont la nature, la richesse et l'auteur perçu sont reconfigurés par l'IA).<br><br>La dimension politique des missions de conseil (i.e. « faire consensus », Turner, 1982), par son caractère exogène, n'est pas vue comme une quatrième dimension de la valeur perçue. Nous la traitons comme contexte dans lequel la lisibilité, l'attribution et l'appropriation affectent la capacité à porter les productions.<br><br>L'IA ne reconfigure pas la valeur perçue du conseil à l’ère de l’IA, de manière uniforme. Son effet sur chaque dimension de la valeur perçue (relationnelle, processuelle, cognitive), dépend de la manière dont elle est introduite et de la façon dont le client l'interprète. Une même intégration de l'IA peut amplifier la valeur perçue dans une configuration et l'éroder dans une autre.<br><br>Les trois dimensions de la valeur perçue du conseil à l’ère de l’IA, suivent la séquence R→P→C, avec une boucle de rétroaction proposée R ← P (proposition théorique originale de ce cadre, non directement ancrée dans la littérature). L'IA reconfigure chaque lien de manière contingente — en l'amplifiant ou en le déstabilisant — selon P2 et P3.<br><br>La co-destruction de valeur (Plé & Cáceres 2010 ; Lumivalo et al. 2024) constitue la condition limite lorsque P2 et P3 échouent simultanément."
+            title: "P1 — Reconfiguration multidimensionnelle de la valeur perçue",
+            text: `L'intégration de l'IA dans les missions de conseil reconfigure la valeur perçue par le client selon trois dimensions interdépendantes — relationnelle (R, confiance, légitimité et jugement politique, activement produits à travers les micro-activités de mise en valeur), processuelle (P, l'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles), et cognitive (C, les connaissances et capacités managériales nouvelles co-produites, dont la nature, la richesse et l'auteur perçu sont reconfigurés par l'IA).\n\nL'IA ne reconfigure pas la valeur perçue du conseil de manière uniforme.\n\nSon effet sur chaque dimension de la valeur perçue (relationnelle, processuelle, cognitive), dépend de la manière dont elle est introduite et de la façon dont le client l'interprète. Une même intégration de l'IA peut ainsi amplifier la valeur perçue dans une configuration et l'éroder dans une autre.\n\nLes trois dimensions de la valeur perçue du conseil à l’ère de l’IA, suivent la séquence R→P→C, avec une boucle de rétroaction proposée R ← P (proposition théorique originale de ce cadre, non directement ancrée dans la littérature).\n\nL'IA reconfigure chaque lien de manière contingente — en l'amplifiant ou en le déstabilisant — selon P2 et P3.`
           },
           {
             tone: "processual",
             badge: "P2",
-            title: "La transparence comme mécanisme médiateur",
-            text: "La transparence est le mécanisme médiateur de la valeur perçue du conseil à l’ère de l’IA. La transparence est entendue ici comme l'intelligibilité du système assisté par IA à travers ses effets observables (Ananny et Crawford, 2018).<br><br>Notre cadre analytique distingue la transparence performative (divulgation par le consultant de l'usage de l'IA), de la transparence substantive (médiation par le consultant des interactions et outputs de l'IA). La transparence substantive pèse davantage sur la valeur perçue parce qu'elle favorise l'appropriation par le client.<br><br>Selon l’acception retenue pour nos travaux, la transparence, dans un système sociotechnique, ne peut être réduite à un acte ponctuel de divulgation, car la seule divulgation ne rend pas les mécanismes du système intelligibles. Elle doit plutôt être appréciée à travers les effets observables qu'elle produit à l'échelle du système (« across »).<br><br>C'est pourquoi le cadre distingue la transparence performative — divulguer l'usage de l'IA dans la mission afin de signaler une forme d'ouverture et de nourrir la confiance — de la transparence substantive — médiation par le consultant, auprès du client, des interactions et résultats produits par l'IA, afin d'en proposer une interprétation contextuelle et d'en permettre la conversion en connaissance managériale.<br><br>Ainsi, notre proposition, qui reste à vérifier, est que la transparence substantive influe plus fortement sur la valeur perçue que la seule transparence performative, parce qu'elle favorise l'appropriation par le client des productions du conseil (Albu & Flyverbom 2019 ; Ciampi 2017). P2 traite donc la transparence substantive — plutôt que la simple divulgation — comme le mécanisme médiateur par lequel l'intégration de l'IA façonne la valeur perçue, fonction des conditions de P3."
+            title: "P2 — La transparence comme mécanisme médiateur",
+            text: `La transparence est le mécanisme médiateur de la valeur perçue du conseil à l’ère de l’IA. La transparence est entendue ici comme l'intelligibilité du système assisté par IA à travers ses effets observables (Ananny et Crawford, 2018).\n\nLa transparence performative (divulgation par le consultant de l'usage de l'IA) se distingue de la transparence substantive (médiation par le consultant des interactions et outputs de l'IA, pour en proposer une interprétation contextuelle et en permettre la conversion en connaissances managériales, appropriables et mobilisables par le client).\n\nP2 pose donc que la transparence substantive pèse davantage sur la valeur perçue du conseil à l’ère de l’IA, parce qu'elle favorise l'appropriation par le client et in-fine, la valeur perçue, fonction des conditions de P3.`
           },
           {
             tone: "cognitive",
             badge: "P3",
-            title: "Conditions de modération",
-            text: "Trois catégories de contingence déterminent si P2 produit une attribution correcte : au niveau relationnel (capital de confiance préalable), au niveau situationnel (phase de la mission et enjeux politiques) et au niveau acteur (littératie IA et aversion à l’algorithme).<br><br>Ces contingences ne se trouvent pas toutes, au sens strict, côté client : seules les conditions au niveau de l'acteur sont directement situées du côté du client, tandis que les contingences relationnelles et situationnelles excèdent le seul client. Les enjeux politiques sont donc intégrés comme contingence situationnelle, et non comme objet central de la recherche.<br><br>Dans une logique contingente, plusieurs niveaux de conditions peuvent ainsi modérer le mécanisme de transparence posé en P2. Cependant cette recherche retient empiriquement et prioritairement, les contingences au niveau de l’acteur, non parce qu’elles épuisent le phénomène, mais parce qu’elles constituent, à l’ère de l’IA, le foyer théoriquement le plus distinctif et le plus accessible dans un design qualitatif de cas exemplaire unique, tel que nous le prévoyons.<br><br>La littératie IA (variable de compétence, Long et al., 2020) et l'aversion à l’algorithme (variable attitudinale, Dietvorst et al. 2015) sont distinctes : un client peut être ‘AI-literate’ tout en manifestant de l'aversion à l’IA. La littératie IA détermine si le client peut suivre l'explicitation du consultant, distinguer la part de l'IA de celle du jugement du consultant, et comprendre les limites de ce qui a été produit. L’aversion à l’algorithme détermine si ces mêmes contributions, même lorsqu'elles sont comprises, sont acceptées comme des intrants légitimes du jugement managérial.<br><br>La transparence substantive peut donc échouer de deux manières : soit parce que l'explication n'est pas cognitivement appropriée, soit parce qu'elle est comprise mais normativement disqualifiée. Une attribution correcte requiert à la fois intelligibilité et acceptation minimale.<br><br>Dans ce cadre, l'attribution correcte est traitée comme une condition observable importante de l'appropriation par le client et, par cette appropriation, comme une voie par laquelle la transparence agit sur la valeur perçue."
-          },
-          {
-            tone: "managerial",
-            badge: "Séquencement d'observation",
-            title: "Situation initiale de co-création",
-            text: "La situation initiale de co-création S1, se situe ainsi sans IA (dyade classique consultant-client). Observée au prisme de notre proposition P1 (reconfiguration multi-dimensionnelle de la valeur perçue), lorsque la légitimité relationnelle du consultant n'est pas déjà disponible, des séquences qui commencent en S1 peuvent aider à la construire avant une intégration plus explicite de l'IA en S2/S3. Lorsque le capital de confiance préalable existe déjà — y compris à partir d'interactions antérieures ou de missions précédentes — d'autres points d'entrée restent possibles. Dans tous les cas, la transparence (P2) doit être calibrée au profil interprétatif du client (P3)."
+            title: "P3 — Conditions de modération",
+            text: `Trois catégories de contingence déterminent si P2 produit une attribution correcte : au niveau relationnel : capital de confiance préalable ; au niveau situationnel : phase de la mission et enjeux politiques ; et au niveau acteur :  littératie IA (Long & Magerko, 2020) et aversion à l’algorithme (De Jong et al., 2025; Dietvorst et al., 2014).\n\nCes contingences ne se trouvent pas toutes, au sens strict, côté client : seules les conditions au niveau de l'acteur sont directement situées du côté du client, tandis que les contingences relationnelles et situationnelles excèdent le seul client.\n\nLes enjeux politiques du conseil, bien que centraux dans la formation de la valeur perçue du conseil (Turner, 1982) sont intégrés comme contingence situationnelle, et non comme objet central de notre recherche.\n\nDans une logique contingente, plusieurs niveaux de conditions peuvent donc modérer le mécanisme de transparence posé en P2. Cependant notre recherche retient empiriquement et prioritairement, les contingences au niveau de l’acteur, non parce qu’elles épuisent le phénomène, mais parce qu’elles constituent, à l’ère de l’IA, le foyer théoriquement le plus distinctif et le plus accessible dans un design qualitatif de cas exemplaire unique, tel que nous le prévoyons.\n\nLa littératie IA (variable de compétence, Long et al., 2020) et l'aversion à l’algorithme (variable attitudinale, Dietvorst et al. 2015) sont distinctes : un client peut être ‘AI-literate’ tout en manifestant de l'aversion à l’IA. La littératie IA détermine si le client peut suivre l'explicitation du consultant, distinguer la part de l'IA de celle du jugement du consultant, et comprendre les limites de ce qui a été produit. L’aversion à l’algorithme détermine si ces mêmes contributions, même lorsqu'elles sont comprises, sont acceptées comme des intrants légitimes du jugement managérial.\n\nLa transparence substantive peut donc échouer de deux manières : soit parce que l'explication n'est pas cognitivement appropriée, soit parce qu'elle est comprise mais normativement disqualifiée. Une attribution correcte requiert à la fois intelligibilité et acceptation minimale. La co-destruction de valeur (Plé & Cáceres 2010 ; Lumivalo et al. 2024) constitue la condition limite lorsque P2 et P3 échouent simultanément.\n\nDans ce cadre, l'attribution correcte est traitée comme une condition observable importante de l'appropriation par le client et, par cette appropriation, comme une voie par laquelle la transparence agit sur la valeur perçue.`
           }
         ],
         observationalFramework: {
-          label: "LA NÉCESSITÉ D’UN CADRE D’OBSERVATION DE LA CO-CRÉATION DE VALEUR PERÇUE DU CONSEIL À L’ÈRE DE L’IA",
-          text: "Les propositions de recherche explorent les conditions pour que l'intégration de l'IA génère davantage de valeur perçue co-créée — à travers les dimensions relationnelles, processuelles et cognitives du conseil. Les travaux sur la valeur perçue montrent cependant à quel point elle est une notion multi-dimensionnelle et subjective, donc par définition difficile à évaluer. Elle est pour certains, la mesure avec laquelle un client se sent dans une meilleure situation ou dans une situation moins favorable, à travers des expériences liées à la consommation (Grönroos et Voima, 2013). Pour d’autres, des facteurs consensuels la caractérisent, tels que jugement comparatif, personnelle, dynamique, contextuelle (Rivière et Mencarelli, 2012). Dans le domaine du conseil, qui évolue par définition en contexte ambigu et incertain (Svensson, 2010), nous ne risquerons donc pas à établir une échelle de mesure, et préférons adopter l’approche pragmatiste, qui observe la valeur perçue à l’oeuvre, s’intéressant aux activités de mise en valeur, comme surcroit de justification du conseil (Bourgoin, 2014). Qu’en est-il de ces activités lorsque l’IA floute les contributions des acteurs ? Pour observer la reconfiguration de la valeur perçue du conseil à l’ère de l’IA, il nous semble ainsi nécessaire de reposer un cadre d’observation spécifique au conseil et à l’IA, permettant d’apprécier les effets de l’intégration de l’IA sur la co-création de valeur perçue en situation de conseil, au travers de nos propositions de recherche (P1, P2, P3). Notre cadre d’observation (S1/S2/S3) situe chaque interaction consultant-client dans une configuration de co-création, au sein de la sphère conjointe de co-création de valeur (Grönroos et Voima, 2013), rendant empiriquement observables les mécanismes théoriques de P1, P2 et P3.",
+          label: "STATUT DU CADRE D'OBSERVATION",
+          text: "Le diagramme des 3 sphères de co-création consultant-client-IA constitue le cadre d'observation à travers lequel nos propositions de recherche P1, P2, P3 sont examinées empiriquement. Il n’est donc pas une prescription managériale. Les 3 sphères représentent trois situations possibles de co-création S1, S2, S3 à l’ère de l’IA, seules ou en combinaison. Toutes trois se situent au sein de la sphère conjointe de co-création de valeur (Grönroos & Voima, 2013). Au sein de ce cadre, l'orchestration des situations de co-création n’est pas figée : elle est dynamique et temporelle, les trois situations pouvant se retrouver sur une même phase d’une mission de conseil. S1/S2/S3 est un cadre d’observation, pas une prescription managériale",
           chips: [
-            { tone: "s1", text: "S1 — Dyade humaine. IA absente. Base relationnelle." },
-            { tone: "s2", text: "S2 — IA en silo. Attribution et transparence latentes." },
-            { tone: "s3", text: "S3 — Co-création tripartite. Toutes les dimensions sont observables." }
+            { tone: "s1", text: "S1 — Sans IA" },
+            { tone: "s2", text: "S2 — IA en silo" },
+            { tone: "s3", text: "S3 — Co-création tripartite" }
           ]
         },
         practitionerPrompt: {
-          label: "STATUT DU CADRE D’OBSERVATION",
-          text: "S1/S2/S3 est un cadre d’observation empirique, pas une nouvelle proposition théorique.<br><br>Chaque situation rend certains mécanismes particulièrement observables : S1 la base relationnelle, S2 la transparence latente et l’attribution, S3 l’observabilité simultanée des trois dimensions."
+          label: "STATUT DU CADRE D'OBSERVATION",
+          text: "• `S1/S2/S3` est un cadre d’observation empirique, pas une nouvelle proposition théorique ;<br><br>• chaque situation rend certains mécanismes particulièrement observables : `S1` la base relationnelle, `S2` la transparence latente et l’attribution, `S3` l’observabilité simultanée des trois dimensions."
         }
       },
       spheres: {
-        kicker: "CADRE D'OBSERVATION",
+        kicker: "3. CADRE D'OBSERVATION S1, S2, S3",
         title: "Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA",
-        intro: "Le diagramme des 3 sphères de co-création consultant-client-IA constitue le cadre d'observation à travers lequel les propositions de recherche sur la co-création de valeur perçue sont examinées empiriquement, dans trois configurations consultant-client-IA. Par ailleurs, au sein de ce cadre, l'orchestration dynamique et temporelle des situations de co-création, peut par ailleurs constituer un levier managérial, sans être une prescription figée.",
+        intro: "Le diagramme des 3 sphères de co-création consultant-client-IA constitue le cadre d'observation à travers lequel nos propositions de recherche P1, P2, P3 sont examinées empiriquement. Il n’est donc pas une prescription managériale.\n\nLes 3 sphères représentent trois situations possibles de co-création S1, S2, S3 à l’ère de l’IA, seules ou en combinaison. Toutes trois se situent au sein de la sphère conjointe de co-création de valeur (Grönroos & Voima, 2013).\n\nAu sein de ce cadre, l'orchestration des situations de co-création n’est pas figée : elle est dynamique et temporelle, les trois situations pouvant se retrouver sur une même phase d’une mission de conseil. S1/S2/S3 est un cadre d’observation, pas une prescription managériale",
         cards: [
           {
             key: "s1",
             tone: "s1",
             title: "S1 — Sans IA",
-            text: "Le consultant et le client co-créent dans une dyade humaine. L'IA est totalement absente. Le consultant demeure le seul acteur, central, visible, du processus de co-création, en construisant sa légitimité relationnelle à travers des micro-activités de mise en valeur, i.e. singularisation, signalement d'autorité, démonstrations progressives de compétence (Bourgoin, 2014). Cet ancrage relationnel conditionne l'ouverture du client à l'intégration ultérieure de l'IA. Observable : formation de la confiance, jugement politique, construction de la légitimité."
+            text: "Le consultant et le client co-créent dans une dyade humaine.\n\nL'IA est totalement absente.\n\nLe consultant demeure l’acteur central du processus de co-création avec le client.\n\nObservable : base relationnelle (R) : formation de la confiance, construction de la légitimité, jugement politique du consultant.\n\nPar exemple, R peut évoluer de faible légitimité perçue à légitimité reconnue, de prudence relationnelle à confiance de travail, de simple prestataire à un acteur dont le jugement politique devient recherché."
           },
           {
             key: "s2",
             tone: "s2",
             title: "S2 — IA en silo",
-            text: "L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive. Le consultant tend néanmoins à conserver le rôle central visible, même lorsque l'IA contribue en arrière-plan. Le risque d'attribution floutée des contributions consultant / IA par le client est latent — la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes. Observable : modalités de transparence, schémas d'attribution, fragilité de la légitimité."
+            text: "L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive.\n\nLe consultant conserve le rôle central dans la relation avec le client, même lorsque l'IA contribue en arrière-plan.\n\nObservable :\n\nModalités de transparence (P2), schémas d'attribution (P3), fragilité de la légitimité (R).\n\nPar exemple, le risque d'attribution floutée des contributions consultant / IA par le client est latent ; la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes, fonction de la littératie IA du client et de son aversion à l’algorithme (P3)."
           },
           {
             key: "s3",
             tone: "s3",
             title: "S3 — Co-création tripartite",
-            text: "La co-création se déploie dans une triade explicite : consultant, client et IA. Le consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation. Observable : les trois propositions (P1, P2, P3) y sont simultanément observables. La dimension cognitive de la valeur perçue peut y être plus riche — mais l'auteur de la production devient contestable (Raisch & Krakowski 2020 ; Baird & Maruping 2021)."
+            text: "La co-création se déploie dans une triade explicite consultant, client et IA.\n\nLe consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation.\n\nObservable :\n\nLes trois propositions (P1, P2, P3) et dimensions de la valeur perçue (R-P-C) y sont simultanément observables.\n\nPar exemple, la dimension processuelle et cognitive et de la valeur perçue (P, C) peut y être plus riche, mais la légitimité du consultant (R) peut devenir contestable si le rôle médiateur du consultant dans la production n’est pas manifeste (P2), fonction de la littératie IA du client et de son aversion à l’algorithme (P3)."
           }
         ],
         diagramLabels: {
@@ -589,82 +564,67 @@ window.ARTEFACT_CONTENT = {
         }
       },
       illustration: {
-        kicker: "ILLUSTRATION",
-        title: "Scénario fictif d'une mission de conseil : audit de plateforme digitale",
-        subtitle: "Thomas (consultant) et Marie (cliente, société TechX)",
-        intro: "Ce scénario illustre, de manière fictive et purement indicative, la co-création de valeur perçue à l'oeuvre dans le conseil, à travers la séquence R→P→C, examinée au prisme des trois propositions de la recherche (P1, P2, P3) et du cadre d'observation S1/S2/S3, y compris leur capacité à être défendues politiquement dans l'organisation.",
-        legend: "Mission fictive de 10 semaines : audit de plateforme digitale. La mission est structurée en trois grandes étapes du conseil. Chaque sous-phase indique la configuration de co-création observée (S) et les propositions de recherche les plus directement examinées (P).",
+        kicker: "4. ILLUSTRATION",
+        title: "Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines",
+        subtitle: "Acteurs : Thomas (consultant) et Marie (cliente, société TechX)",
+        intro: "Ce scénario illustre, de manière fictive, la co-création de valeur perçue à l'œuvre dans le conseil, à travers la séquence R→P→C, examinée au prisme des trois propositions de la recherche (P1, P2, P3) et du cadre d'observation S1/S2/S3, y compris leur capacité à être défendues politiquement dans l'organisation.\n\nL’intérêt de cette simulation est de nous permettre de nous permettre de pré-tester en avance de phase, le terrain empirique d’observation grandeur nature, prévu pour l’étude (étude de cas exemplaire).\n\nLa mission fictive est structurée en trois grandes phases, caractéristiques des missions de conseil (cadrage, analyse, recommandations), auxquelles nous avons ajouté une quatrième phase post-mission, afin de permettre un regard rétrospectif supplémentaire sur la co-création de valeur perçue à l’issue de la mission.",
+        legend: "Chaque phase est scindée en sous-phase, dans laquelle se déroule l’observation : situation de co-création observée (S), propositions de recherche les plus directement examinées (P), dimensions de la valeur perçue observée (R, P, C).",
         detailLabels: {
-          situation: "Situation d'observation",
+          situation: "Situation observée",
           propositions: "Proposition(s) examinée(s)",
-          dimensions: "Dimension(s) de valeur principalement examinée(s) (R/P/C)"
+          dimensions: "Dimensions de la valeur perçue observées (R/P/C)"
         },
         glossary: {
           situations: {
-            "S1": "S1 : sans IA. Le consultant et le client co-créent dans une dyade humaine.",
-            "S2": "S2 : IA en silo. L'IA est utilisée séparément, sans orchestration partagée ni explicitation substantive.",
-            "S3": "S3 : co-création tripartite. Consultant, client et IA co-créent dans une triade explicite.",
-            "S2/S3": "S2/S3 : configuration hybride alternant usage d'IA en silo et co-création tripartite explicite.",
-            "Post": "Post : réévaluation rétrospective de la valeur perçue après la délivrance de la mission."
+            "S1": "S1 — Sans IA",
+            "S2": "S2 — IA en silo",
+            "S3": "S3 — Co-création tripartite",
+            "S2/S3": "S2/S3 — Alternance entre IA en silo et co-création tripartite explicite",
+            "Post": "Post — Évaluation rétrospective après la mission"
           },
           propositions: {
-            "P1": "P1 : ce qui est reconfiguré. L'IA ne reconfigure pas uniformément la valeur perçue dans ses dimensions relationnelle, processuelle et cognitive ; cette variation est conditionnée par P2 et P3.",
-            "P2": "P2 : le mécanisme médiateur. La transparence est entendue ici à travers ses effets observables dans le système sociotechnique. La distinction clé oppose transparence performative (divulguer l'usage de l'IA) et transparence substantive (médiation par le consultant des interactions et outputs de l'IA pour permettre une interprétation contextuelle et une appropriation comme connaissance managériale).",
-            "P3": "P3 : les conditions de modération. Les contingences sont examinées à trois niveaux : acteur (AI literacy et algorithm aversion), relationnel (capital de confiance préalable) et situationnel (phase de mission et enjeux politiques). Au niveau acteur, l'AI literacy joue sur l'intelligibilité, tandis que l'algorithm aversion joue sur l'acceptation. Cette recherche se concentre principalement sur les conditions au niveau de l'acteur, à la fois les plus originales théoriquement et les plus traitables dans un design qualitatif de cas unique. L'attribution correcte est traitée ici comme une condition observable importante de l'appropriation par le client et, par cette appropriation, de la valeur perçue."
+            "P1": "P1 — Reconfiguration multidimensionnelle de la valeur perçue.",
+            "P2": "P2 — La transparence comme mécanisme médiateur.",
+            "P3": "P3 — Conditions de modération."
           },
           dimensions: {
-            "R": "R : dimension relationnelle. Confiance, légitimité et jugement politique.",
-            "P": "P : dimension processuelle. L'expérience de co-création, sa lisibilité et la distribution des rôles.",
-            "C": "C : dimension cognitive. La capacité à interpréter, comprendre et évaluer ce qui a été co-produit, afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale."
+            "R": "R — Dimension relationnelle",
+            "P": "P — Dimension processuelle",
+            "C": "C — Dimension cognitive"
           }
         },
         chatbot: {
-          title: "Assistant IA de lecture",
+          title: "Assistant IA du cadre",
           iconLabel: "Assistant IA",
-          note: "Les réponses utilisent la page active comme contexte. Si vous interrogez le cadre de recherche, l'assistant reste strictement dans les sources ; si vous demandez des implications ou des idées, il peut proposer des extrapolations praticiennes prudentes.",
+          note: "Si vous interrogez précisément le cadre exploratoire, l’assistant répond strictement à partir de ce seul document source et le cite précisément par page. S’il va au-delà du cadre, il l’indique explicitement.",
           uploadLabel: "Ajouter des documents complémentaires",
-          uploadHint: "Formats pris en charge : .txt, .md, .csv, .json, .html, .xml, .yml. Ces documents sont traités comme un contexte complémentaire fourni par l'utilisateur et ne remplacent pas les sources du cadre.",
+          uploadHint: "Formats acceptés : .txt, .md, .csv, .json, .html, .xml, .yml. Ces documents sont traités comme un contexte utilisateur complémentaire et ne remplacent pas le cadre exploratoire.",
           uploadLoadedLabel: "Documents chargés",
           uploadButton: "Choisir des fichiers",
           uploadRemove: "Retirer",
           uploadStatusLoaded: "Document(s) complémentaire(s) chargé(s).",
           uploadStatusRemoved: "Document retiré.",
-          uploadStatusUnsupported: "Format non pris en charge. Merci de charger un document texte.",
+          uploadStatusUnsupported: "Format non pris en charge. Merci de charger un document textuel.",
           uploadStatusEmpty: "Le document sélectionné est vide ou illisible.",
-          uploadStatusTooMany: "La limite de documents pour ce contexte est atteinte.",
+          uploadStatusTooMany: "Limite de documents atteinte pour ce contexte.",
           uploadStatusTooLarge: "Le document sélectionné est trop long ; seul un extrait a été conservé.",
-          contextLabel: "Contexte actuel",
-          contextPage: "Page de lecture",
-          contextStage: "Étape",
+          contextLabel: "Contexte courant",
+          contextPage: "Page lue",
+          contextStage: "Phase",
           contextSubstep: "Sous-étape",
           contextSituation: "Situation",
           contextPropositions: "Propositions",
           contextDimensions: "Dimensions de valeur",
-          suggestionsLabel: "Essayer par exemple",
+          suggestionsLabel: "Questions possibles",
           inputLabel: "Interroger l'assistant IA du cadre",
-          placeholder: "Par exemple : que donnerait l'Exploration en S2, et comment cela pourrait-il affecter la valeur perçue sur la mission ?",
-          send: "Interroger",
-          thinking: "Réflexion en cours...",
-          emptyQuestion: "Posez une question sur la page active, le cadre ou une implication pratique.",
-          localMode: "Le chatbot nécessite un endpoint serveur pour appeler un modèle cloud GPT-5.4. Ouvrez l'artefact dans son environnement déployé plutôt qu'en mode fichier local.",
-          backendError: "L'assistant cloud est indisponible pour le moment. Vérifiez que l'endpoint serveur est bien déployé et que la clé API OpenAI est configurée.",
+          placeholder: "Par exemple : Dans le cadre exploratoire, que dit exactement P2 ?",
+          send: "Demander",
+          thinking: "Lecture du cadre exploratoire en cours...",
           suggestions: [
-            "Que donnerait cette étape en S2, et comment cela pourrait-il affecter la valeur perçue ?",
-            "Quelle proposition est la plus visible dans cette étape, et pourquoi ?",
-            "Comment les dimensions R, P et C apparaissent-elles dans cette étape ?"
-          ],
-          welcome: "Interrogez-moi sur la page, le cadre ou une implication pratique. Si vous demandez ce que dit le cadre, je reste strictement dans les sources ; si vous cherchez des idées, je distinguerai clairement l'extrapolation du cadre de recherche.",
-          sections: {
-            current: "Étape actuelle",
-            counterpart: "Contrepoint le plus proche dans l'illustration",
-            inference: "Inférence théorique bornée",
-            reading: "Lecture au prisme du cadre",
-            boundary: "Bornes de la réponse"
-          },
-          boundaryCurrent: "Cette réponse reste strictement dans le cadre de recherche et s'appuie uniquement sur l'étape active telle qu'elle est construite dans l'illustration.",
-          boundaryDirect: "Cette réponse reste strictement dans le cadre de recherche et s'appuie sur un contrepoint direct déjà présent dans l'illustration.",
-          boundaryInference: "Cette réponse reste strictement dans le cadre de recherche. Comme l'illustration ne fournit pas ici de contrepoint direct, la réponse constitue une inférence théorique bornée à partir de P1, P2, P3 et de S1/S2/S3.",
-          fallback: "Essayez par exemple une question sur S1/S2/S3, P1/P2/P3, R/P/C, la transparence, l'attribution, l'AI literacy, l'algorithm aversion, la valeur perçue ou une implication pratique pour la page active."
+            "Dans le cadre exploratoire, que dit exactement P2 ?",
+            "Sur cette page, quelle est l'idée principale à retenir ?",
+            "Si tu sors du cadre, quelle implication pratique proposerais-tu ?"
+          ]
         },
         stages: [
           {
@@ -690,7 +650,7 @@ window.ARTEFACT_CONTENT = {
           }
         ],
         postMission: {
-          label: "Rétrospective — Post",
+          label: "4. Rétrospective — Post",
           summary: "Évaluation rétrospective de la valeur perçue sur les trois dimensions."
         },
         phases: [
@@ -702,8 +662,8 @@ window.ARTEFACT_CONTENT = {
             title: "Exploration",
             propositions: ["P1"],
             dimensions: ["R"],
-            body: "Entretiens individuels en face-à-face avec les dirigeants de TechX. Thomas construit sa légitimité relationnelle par l'écoute active, le signalement d'autorité et des démonstrations progressives de compétence. Aucune IA mobilisée.",
-            observable: "Observable principal : R (base relationnelle) — ligne de base de P1 pour les configurations suivantes"
+            body: "Entretiens individuels en face-à-face avec les dirigeants de TechX. Thomas construit sa légitimité relationnelle par l’écoute active, le signalement d’autorité et des démonstrations progressives de compétence. Aucune IA mobilisée.",
+            observable: "Observable principal : R (base relationnelle), situation initiale de test P1 pour les phases suivantes de la mission"
           },
           {
             stage: "scoping",
@@ -713,8 +673,8 @@ window.ARTEFACT_CONTENT = {
             title: "Préparation",
             propositions: ["P2", "P3"],
             dimensions: ["R", "P"],
-            body: "Thomas utilise l'IA pour transcrire et structurer thématiquement les entretiens sans en informer Marie. Il présente une synthèse structurée attribuée à son propre jugement.",
-            observable: "Observable principal : P2 (transparence nulle) — P3 (mécanisme d'attribution latent) — risque de délégitimation rétrospective"
+            body: "Thomas utilise l’IA pour transcrire et structurer thématiquement les entretiens sans en informer Marie. Il présente une synthèse structurée attribuée à son propre jugement.",
+            observable: "Observable principal : P2 (transparence nulle) — P3 (mécanisme d’attribution latent) — risque de délégitimation rétrospective"
           },
           {
             stage: "analysis",
@@ -724,7 +684,7 @@ window.ARTEFACT_CONTENT = {
             title: "Analyse collaborative",
             propositions: ["P1", "P2", "P3"],
             dimensions: ["R", "P", "C"],
-            body: "Sessions tripartites hebdomadaires : Thomas mobilise l'IA de manière visible comme composante explicite de l'échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.",
+            body: "Sessions tripartites hebdomadaires : Thomas mobilise l’IA de manière visible comme composante explicite de l’échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.",
             observable: "Observable principal : P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (AI literacy et algorithm aversion)"
           },
           {
@@ -735,8 +695,8 @@ window.ARTEFACT_CONTENT = {
             title: "Affinement",
             propositions: ["P1", "P2"],
             dimensions: ["P", "C"],
-            body: "Thomas alterne entre usage d'IA en silo (structuration des scénarios) et co-création visible avec Marie (validation des options). La transparence est sélective et stratégique.",
-            observable: "Observable principal : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d'attribution"
+            body: "Thomas alterne entre usage d’IA en silo (structuration des scénarios) et co-création visible avec Marie (validation des options). La transparence est sélective et stratégique.",
+            observable: "Observable principal : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d’attribution"
           },
           {
             stage: "analysis",
@@ -746,8 +706,8 @@ window.ARTEFACT_CONTENT = {
             title: "Validation mutuelle",
             propositions: ["P1", "P3"],
             dimensions: ["C"],
-            body: "Thomas finalise les recommandations en utilisant l'IA pour les stress-tester. Marie relit les outputs mais ne peut pas évaluer pleinement la chaîne analytique assistée par IA.",
-            observable: "Observable principal : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d'absorption"
+            body: "Thomas finalise les recommandations en utilisant l’IA pour les stress-tester. Marie relit les outputs mais ne peut pas évaluer pleinement la chaîne analytique assistée par IA.",
+            observable: "Observable principal : P3 (AI literacy comme facteur limitant) — P1 (dimension cognitive) — capacité d’absorption"
           },
           {
             stage: "recommendations",

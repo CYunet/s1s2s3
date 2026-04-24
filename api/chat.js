@@ -1,10 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 
-var academicNoteCache = null;
-var artefactSourceCache = null;
-var regenaSourceCache = null;
-var chatbotConversationSourceCache = null;
+var exploratoryFrameworkCache = null;
 var CHATBOT_MAX_OUTPUT_TOKENS = 1600;
 var CHAT_DOCUMENT_LIMIT = 3;
 var CHAT_DOCUMENT_MAX_CHARS = 12000;
@@ -34,112 +31,31 @@ async function readJson(req) {
   return JSON.parse(raw);
 }
 
-function getAcademicNote() {
+function getExploratoryFrameworkSource() {
   var candidates = [
-    path.join(process.cwd(), "NOTE_ACADEMIQUE.md"),
-    path.join(__dirname, "..", "NOTE_ACADEMIQUE.md")
+    path.join(process.cwd(), "sources", "CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md"),
+    path.join(__dirname, "..", "sources", "CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md")
   ];
   var i;
 
-  if (academicNoteCache !== null) {
-    return academicNoteCache;
+  if (exploratoryFrameworkCache !== null) {
+    return exploratoryFrameworkCache;
   }
 
-  academicNoteCache = "";
+  exploratoryFrameworkCache = "";
 
   for (i = 0; i < candidates.length; i += 1) {
     try {
-      academicNoteCache = fs.readFileSync(candidates[i], "utf8").trim();
-      if (academicNoteCache) {
+      exploratoryFrameworkCache = fs.readFileSync(candidates[i], "utf8").trim();
+      if (exploratoryFrameworkCache) {
         break;
       }
     } catch (error) {
-      academicNoteCache = "";
+      exploratoryFrameworkCache = "";
     }
   }
 
-  return academicNoteCache;
-}
-
-function getArtefactSource() {
-  var candidates = [
-    path.join(process.cwd(), "content.js"),
-    path.join(__dirname, "..", "content.js")
-  ];
-  var i;
-
-  if (artefactSourceCache !== null) {
-    return artefactSourceCache;
-  }
-
-  artefactSourceCache = "";
-
-  for (i = 0; i < candidates.length; i += 1) {
-    try {
-      artefactSourceCache = fs.readFileSync(candidates[i], "utf8").trim();
-      if (artefactSourceCache) {
-        break;
-      }
-    } catch (error) {
-      artefactSourceCache = "";
-    }
-  }
-
-  return artefactSourceCache;
-}
-
-function getRegenaSource() {
-  var candidates = [
-    path.join(process.cwd(), "sources", "REGENA_ATELIER_DOCTORAL_2025.md"),
-    path.join(__dirname, "..", "sources", "REGENA_ATELIER_DOCTORAL_2025.md")
-  ];
-  var i;
-
-  if (regenaSourceCache !== null) {
-    return regenaSourceCache;
-  }
-
-  regenaSourceCache = "";
-
-  for (i = 0; i < candidates.length; i += 1) {
-    try {
-      regenaSourceCache = fs.readFileSync(candidates[i], "utf8").trim();
-      if (regenaSourceCache) {
-        break;
-      }
-    } catch (error) {
-      regenaSourceCache = "";
-    }
-  }
-
-  return regenaSourceCache;
-}
-
-function getChatbotConversationSource() {
-  var candidates = [
-    path.join(process.cwd(), "research", "CHATBOT_CONVERSATIONS_PRODUCTION.md"),
-    path.join(__dirname, "..", "research", "CHATBOT_CONVERSATIONS_PRODUCTION.md")
-  ];
-  var i;
-
-  if (chatbotConversationSourceCache !== null) {
-    return chatbotConversationSourceCache;
-  }
-
-  chatbotConversationSourceCache = "";
-
-  for (i = 0; i < candidates.length; i += 1) {
-    try {
-      chatbotConversationSourceCache = fs.readFileSync(candidates[i], "utf8").trim();
-      if (chatbotConversationSourceCache) {
-        break;
-      }
-    } catch (error) {
-      chatbotConversationSourceCache = "";
-    }
-  }
-
-  return chatbotConversationSourceCache;
+  return exploratoryFrameworkCache;
 }
 
 function normalizeText(text) {
@@ -156,71 +72,6 @@ function truncateText(text, maxChars) {
   return normalized.slice(0, maxChars) + " …[truncated]";
 }
 
-function buildArtefactSourceDigest(body, rawSource) {
-  var artefactBundle = body.context || {};
-  var current = artefactBundle.current || {};
-  var theory = artefactBundle.theory || {};
-
-  return {
-    sourceFile: "content.js",
-    sourceLoaded: Boolean(rawSource),
-    sourceSizeChars: rawSource ? rawSource.length : 0,
-    runtimeLanguage: artefactBundle.language || body.language || "",
-    activePage: artefactBundle.activePage || {},
-    currentLabels: {
-      stage: current.stage || "",
-      substep: current.substep || "",
-      week: current.week || "",
-      situation: current.situation || {},
-      propositions: current.propositions || [],
-      dimensions: current.dimensions || []
-    },
-    theoryDigest: {
-      intro: theory.intro || "",
-      propositions: (theory.propositions || []).map(function (item) {
-        return {
-          badge: item.badge,
-          title: item.title
-        };
-      }),
-      observationalFramework: theory.observationalFramework || {},
-      model: theory.model || {}
-    },
-    sourcePreview: truncateText(rawSource, 3000)
-  };
-}
-
-function buildInstructions(language) {
-  var targetLanguage = language === "fr" ? "French" : "English";
-
-  return [
-    "You are the AI reading assistant embedded in a doctoral artefact about perceived value co-creation in AI-era consulting.",
-    "Use four primary sources as the foundation: the academic note loaded by the server, the artefact content bundle provided in the user message, the server-loaded content.js artefact source, and the REGEN-A doctoral workshop source.",
-    "Use the academic note as the conceptual anchor for the research problem, propositions, observational framework and illustrative case.",
-    "Use the artefact content bundle as the displayed source of truth for the active page, active step, propositions, dimensions and observational situation shown to the user.",
-    "Use content.js as a wording and coherence source for the artefact's internal content, labels, glossary and section texts.",
-    "Use the REGEN-A source as a working-document source for research trajectory, background, methodology, practitioner relevance and earlier S1/S2/S3 reasoning; do not let it override the current academic note or artefact wording.",
-    "Use the chatbot conversation corpus only as a secondary source about prior user questions, tensions and clarifications. Because user conversations are not controlled theoretical material, do not use them to establish the framework and do not let them override the academic note, artefact wording, content.js or REGEN-A source. Treat them only as research material that can reveal interpretive issues or refinement needs.",
-    "If user-uploaded supplementary documents are provided, treat them as user-supplied secondary context. Use them when the user explicitly asks you to read, compare, interpret or reason from them, but do not let them override the primary research sources for claims about the framework itself.",
-    "Always take the activePage object as the user's current reading context. Use it silently by default, and mention the active page briefly and naturally only when it helps orient the answer.",
-    "If activePage.id is illustration, use the clicked mission sub-step as the operational context.",
-    "If activePage.id is why, theory, or spheres, prioritize that section's role and excerpts; do not assume the user is asking from a mission sub-step.",
-    "Apply two answer modes. Framework mode: if the user asks what the framework says, asks for definitions, asks about P1/P2/P3, R/P/C, S1/S2/S3, citations, the thesis logic, or asks to stay within the framework, answer strictly from the primary sources. Generative mode: if the user asks for practical implications, alternative scenarios, facilitation ideas, examples, or creative exploration, you may go beyond the supplied sources with cautious practical reasoning.",
-    "In generative mode, clearly separate what is anchored in the research framework from what is your practical extrapolation. Do not present extrapolations as findings of the thesis.",
-    "Do not add outside academic citations, named theories, or empirical claims unless they are present in the supplied material. Practical examples may be invented only as illustrative possibilities.",
-    "Treat P1, P2 and P3 as exploratory theoretical propositions; treat S1, S2 and S3 as an observational framework; treat R, P and C as perceived value dimensions.",
-    "If the supplied sources differ in level of detail, reconcile them conservatively: preserve the academic note for conceptual framing, the artefact bundle for the current-screen context, content.js for the artefact's exact internal wording, and the REGEN-A source as earlier working material.",
-    "If the user asks about a scenario not directly present in the illustration and the question is framework-bound, answer as a bounded theoretical inference and say so briefly. If the question is generative, present it as a practical extrapolation.",
-    "If the illustration contains a close counterpart, mention it only if useful; do not force a recurring 'closest counterpart' section.",
-    "Never claim empirical proof or certainty beyond the supplied exploratory framework.",
-    "Keep the answer concise, natural and useful. Prefer 2 to 4 short paragraphs or 3 to 5 bullets. Avoid heavy templates, repeated context recaps, and mandatory boundary sections.",
-    "Always finish with a complete sentence. If the answer would become too long, shorten it rather than starting a point that cannot be completed.",
-    "Use clear, practitioner-friendly wording while preserving academic precision.",
-    "Respond entirely in " + targetLanguage + ", matching the user's selected UI language.",
-    "Return plain text only."
-  ].join(" ");
-}
-
 function normalizeDocuments(documents) {
   return (documents || []).filter(function (item) {
     return item && item.name && item.text;
@@ -233,44 +84,54 @@ function normalizeDocuments(documents) {
   });
 }
 
+function buildInstructions(language) {
+  var targetLanguage = language === "fr" ? "French" : "English";
+
+  return [
+    "You are the AI assistant embedded in a doctoral artefact about perceived value co-creation in AI-era consulting.",
+    "The sole primary source is the exploratory framework document provided in the user message.",
+    "If the user explicitly asks about the framework, the document, the propositions, the model, the S1/S2/S3 observation framework, or asks you to stay within the framework, answer strictly from that primary source and cite it precisely with the page markers available in the source, for example '(Cadre exploratoire, p. 8)'.",
+    "In strict framework mode, do not introduce concepts, claims, distinctions or citations that are not present in the exploratory framework source.",
+    "The active page and the active illustration step are contextual reading cues only. They help you understand where the user is in the artefact, but they are not additional primary sources.",
+    "User-uploaded documents are supplementary user-provided context. Use them only when they help answer the user's question, and never let them override the exploratory framework on questions about the framework itself.",
+    "If the user asks for ideas, implications, scenarios, design options or practical exploration beyond the framework, you may reason more freely. In that case, clearly distinguish what comes from the exploratory framework and what is your extrapolation beyond it.",
+    "Whenever you go beyond the framework, say so explicitly in natural language, for example 'Beyond the exploratory framework, a practical implication would be...' or the French equivalent.",
+    "If the answer is framework-bound and the requested point is not stated in the exploratory framework, say so clearly rather than inventing it.",
+    "Treat P1, P2 and P3 as exploratory theoretical propositions; treat S1, S2 and S3 as an observational framework; treat R, P and C as dimensions of perceived value.",
+    "If the user is on the Illustration page, use the active step as the immediate reading context. Otherwise, use the current section as the reading context.",
+    "Mention the current reading context briefly and naturally only when it helps orient the answer.",
+    "Keep the answer readable and direct. Prefer short paragraphs or a few bullets rather than dense academic prose.",
+    "Always finish with a complete sentence.",
+    "Respond entirely in " + targetLanguage + ", matching the user's selected UI language.",
+    "Return plain text only."
+  ].join(" ");
+}
+
 function buildPrompt(body) {
-  var academicNote = getAcademicNote();
-  var artefactSource = getArtefactSource();
-  var regenaSource = getRegenaSource();
-  var chatbotConversationSource = getChatbotConversationSource();
+  var exploratoryFramework = getExploratoryFrameworkSource();
   var artefactBundle = body.context || {};
-  var artefactSourceDigest = buildArtefactSourceDigest(body, artefactSource);
   var documents = normalizeDocuments(body.documents);
 
   return [
     "User question:",
     body.question,
     "",
-    "Co-primary source 1 - Academic note (NOTE_ACADEMIQUE.md):",
-    truncateText(academicNote || "[Academic note unavailable]", 16000),
+    "Primary source - Exploratory framework document:",
+    exploratoryFramework || "[Exploratory framework source unavailable]",
     "",
-    "Co-primary source 2 - Artefact content bundle (current display context):",
-    JSON.stringify(artefactBundle, null, 2),
-    "",
-    "Co-primary source 3 - content.js artefact digest:",
-    JSON.stringify(artefactSourceDigest, null, 2),
-    "",
-    "Co-primary source 4 - REGEN-A doctoral workshop working source:",
-    truncateText(regenaSource || "[REGEN-A source unavailable]", 12000),
-    "",
-    "Secondary source - Chatbot conversation corpus:",
-    truncateText(chatbotConversationSource || "[Chatbot conversation corpus unavailable]", 12000),
-    "",
-    "User-uploaded supplementary documents:",
-    documents.length
-      ? JSON.stringify(documents, null, 2)
-      : "[No user-uploaded documents provided]",
-    "",
-    "Current active page shortcut:",
+    "Current active page context:",
     JSON.stringify(artefactBundle.activePage || {}, null, 2),
     "",
-    "Current active context shortcut:",
-    JSON.stringify(artefactBundle.current || {}, null, 2)
+    "Current active illustration context:",
+    JSON.stringify(artefactBundle.current || {}, null, 2),
+    "",
+    "Displayed illustration structure:",
+    JSON.stringify(artefactBundle.illustration || {}, null, 2),
+    "",
+    "Supplementary user-provided documents:",
+    documents.length
+      ? JSON.stringify(documents, null, 2)
+      : "[No supplementary documents provided]"
   ].join("\n");
 }
 
@@ -399,9 +260,9 @@ module.exports = async function handler(req, res) {
     return sendJson(res, 400, { error: "Invalid JSON body" });
   }
 
-    if (!body || !body.question || !body.context) {
-      return sendJson(res, 400, { error: "Missing question or context" });
-    }
+  if (!body || !body.question || !body.context) {
+    return sendJson(res, 400, { error: "Missing question or context" });
+  }
 
   messages = toResponsesMessages(body.history);
   messages.push({
