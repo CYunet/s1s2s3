@@ -628,6 +628,23 @@ button {
   line-height: 1.78;
 }
 
+.bibliography-card {
+  padding-top: 1.2rem;
+}
+
+.bibliography-list {
+  margin: 0;
+  padding-left: 1.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.bibliography-list__item {
+  color: var(--text);
+  line-height: 1.72;
+  text-align: left;
+}
+
 .block-pager {
   display: flex;
   align-items: center;

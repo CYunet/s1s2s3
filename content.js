@@ -1,3 +1,29 @@
+var PRIMARY_BIBLIOGRAPHY = [
+  "Aarikka-Stenroos, L., & Jaakkola, E. (2012). Value co-creation in knowledge intensive business services : A dyadic perspective on the joint problem solving process. Industrial Marketing Management, 41(1), 15‑26. https://doi.org/10.1016/j.indmarman.2011.11.008",
+  "Arslanagic-Kalajdzic, M., & Zabkar, V. (2017). Is perceived value more than value for money in professional business services? Industrial Marketing Management, 65, 47‑58. https://doi.org/10.1016/j.indmarman.2017.05.005",
+  "Baird, A., & Maruping, L. M. (2021). The Next Generation of Research on IS Use : A Theoretical Framework of Delegation to and from Agentic IS Artifacts. MIS Quarterly, 45(1), 315‑341. https://doi.org/10.25300/MISQ/2021/15882",
+  "Bourgoin, A. (2014). Le conseil en management à l’épreuve de sa mise en valeur : Une étude empirique [Ecole National Supérieure des Mines de Paris]. HAL. https://pastel.hal.science/pastel-00957543/document",
+  "Ciampi, F. (2017). Knowing Through Consulting in Action [Text]. (Florence). https://books.fupress.com/catalogue/knowing-through-consulting-in-action/3575",
+  "De Jong, S., Bos, M. W., Van Berkel, N., & Lamers, M. H. (2025). Algorithm appreciation or aversion : The effects of accuracy disclosure on users’ reliance on algorithmic suggestions. Behaviour & Information Technology, 1‑20. https://doi.org/10.1080/0144929X.2025.2535732",
+  "Dietvorst, B. J., Simmons, J. P., & Massey, C. (2014). Algorithm Aversion : People Erroneously Avoid Algorithms After Seeing Them Err. Journal of Experimental Psychology: General.",
+  "Glückler, J., & Armbrüster, T. (2003). Bridging Uncertainty in Management Consulting : The Mechanisms of Trust and Networked Reputation. Organization Studies.",
+  "Grönroos, C., & Voima, P. (2013). Critical Service Logic : Making Sense of Value Creation and Co-Creation. Journal of the Academy of Marketing Science, 41, 133‑150. https://doi.org/10.1007/s11747-012-0308-3",
+  "Harfouche, A., Quinio, B., Saba, M., & Saba, P. B. (2023). The Recursive Theory of Knowledge Augmentation : Integrating human intuition and knowledge in Artificial Intelligence to augment organizational knowledge. Information Systems Frontiers, 25(1), 55‑70. https://doi.org/10.1007/s10796-022-10352-8",
+  "Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, 1‑16. https://doi.org/10.1145/3313831.3376727",
+  "Masson, P., & Dautrif, S. (2026, janvier 27). Livre_Blanc_Conseil_Puissance_IA. HEC Alumni. https://conseil-puissance-ia.fr",
+  "Nikolova, N., & Devinney, T. (2012, mars 29). The Nature Of Client–Consultant Interaction : A Critical Review. https://doi.org/10.1093/oxfordhb/9780199235049.013.0019",
+  "Oesterle, S., Buchwald, A., & Urbach, N. (2019). To Measure Is to Know : Development of an Instrument for Measuring Consulting Service Value: Recent Findings and Practical Cases. In Contributions to Management Science (p. 79‑101). https://doi.org/10.1007/978-3-319-95999-3_4",
+  "Oesterle, S., Buchwald, A., & Urbach, N. (2020). Investigating the co-creation of IT consulting service value : Empirical findings of a matched pair analysis. Electronic Markets, 32(2), 571‑597. https://doi.org/10.1007/s12525-020-00426-3",
+  "Pakarinen, P., & Huising, R. (2023). Relational Expertise  What Machines Can t Know. Journal of Management Studies. https://doi.org/doi:10.1111/joms.12915",
+  "Pavlou, P. A., & El Sawy, O. A. (2006). From IT Leveraging Competence to Competitive Advantage in Turbulent Environments : The Case of New Product Development. Information Systems Research, 17(3), 198‑227. https://doi.org/10.1287/isre.1060.0094",
+  "Raisch, S., & Fomina, K. (2024). Combining Human and Artificial Intelligence : Hybrid Problem-Solving in Organizations. Academy of Management Review, amr.2021.0421. https://doi.org/10.5465/amr.2021.0421",
+  "Raisch, S., & Krakowski, S. (2020). [PDF] Artificial Intelligence and Management : The Automation–Augmentation Paradox | Semantic Scholar. Academy of Management Review. https://www.semanticscholar.org/paper/Artificial-Intelligence-and-Management%3A-The-Paradox-Raisch-Krakowski/9c145390e6073c96e89cf03d3df3b559f0bb0496",
+  "Rivière, A., & Mencarelli, R. (2012). Vers une clarification théorique de la notion de valeur perçue en marketing. Recherche et Applications en Marketing (French Edition), 27(3), 97‑123. https://doi.org/10.1177/076737011202700305",
+  "Svensson, P. (2010). Doing value : Exclusion and Inclusion in Management Consultant-Client Interactions. Lund University - Working Papers Series.",
+  "Turner, A. N. (1982, septembre 1). Consulting Is More Than Giving Advice. Harvard Business Review. https://hbr.org/1982/09/consulting-is-more-than-giving-advice",
+  "Vargo, Stephen & Lusch, Robert F. (2004). [PDF] Evolving to a New Dominant Logic for Marketing | Semantic Scholar. Journal of Marketing. https://www.semanticscholar.org/paper/Evolving-to-a-New-Dominant-Logic-for-Marketing-Vargo-Lusch/cecb5005ba86d21c66c45ac288a39deca3e0c27a"
+];
+
 window.ARTEFACT_CONTENT = {
   locales: {
     en: {
@@ -28,7 +54,8 @@ window.ARTEFACT_CONTENT = {
         { id: "why", label: "Why this research" },
         { id: "theory", label: "Theoretical framework" },
         { id: "spheres", label: "Observation framework" },
-        { id: "illustration", label: "Illustration" }
+        { id: "illustration", label: "Illustration" },
+        { id: "bibliography", label: "Bibliography" }
       ],
       whyResearch: {
         kicker: "1. RESEARCH POSITIONING",
@@ -365,6 +392,12 @@ window.ARTEFACT_CONTENT = {
             observable: "Main observable: Full P1 (R, P, C) across S1/S2/S3 — P2 and P3 as moderating conditions"
           }
         ]
+      },
+      bibliography: {
+        kicker: "5. BIBLIOGRAPHY",
+        title: "Bibliography",
+        intro: "References cited in the exploratory framework document. This section reproduces the bibliography appearing at the end of the source document.",
+        entries: PRIMARY_BIBLIOGRAPHY
       }
     },
     fr: {
@@ -395,7 +428,8 @@ window.ARTEFACT_CONTENT = {
         { id: "why", label: "Pourquoi cette recherche" },
         { id: "theory", label: "Cadre théorique" },
         { id: "spheres", label: "Cadre d'observation" },
-        { id: "illustration", label: "Illustration" }
+        { id: "illustration", label: "Illustration" },
+        { id: "bibliography", label: "Bibliographie" }
       ],
       whyResearch: {
         kicker: "1. POSITIONNEMENT DE LA RECHERCHE",
@@ -732,6 +766,12 @@ window.ARTEFACT_CONTENT = {
             observable: "Observable principal : P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices"
           }
         ]
+      },
+      bibliography: {
+        kicker: "5. BIBLIOGRAPHIE",
+        title: "Bibliographie",
+        intro: "Références citées dans le document du cadre exploratoire. Cette section reprend la bibliographie figurant en fin de document source.",
+        entries: PRIMARY_BIBLIOGRAPHY
       }
     }
   }

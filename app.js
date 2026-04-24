@@ -33,6 +33,7 @@
     sectionNav: document.getElementById("sectionNav"),
     heroSignature: document.getElementById("heroSignature"),
     why: document.getElementById("why"),
+    bibliography: document.getElementById("bibliography"),
     illustration: document.getElementById("illustration"),
     theory: document.getElementById("theory"),
     spheres: document.getElementById("spheres")
@@ -199,6 +200,29 @@
     );
   }
 
+  function buildPagedReferenceList(entries, key, pageSize) {
+    var pages = groupParagraphs(entries || [], pageSize);
+    var current = getBlockPageIndex(key, pages.length || 1);
+    var startIndex;
+
+    if (!pages.length) {
+      return "";
+    }
+
+    startIndex = current * pageSize + 1;
+
+    return (
+      '<div class="paged-copy">' +
+      '<ol class="bibliography-list" start="' + escapeHtml(String(startIndex)) + '">' +
+      pages[current].map(function (entry) {
+        return '<li class="bibliography-list__item">' + escapeHtml(entry) + "</li>";
+      }).join("") +
+      "</ol>" +
+      buildPager(key, pages.length, current) +
+      "</div>"
+    );
+  }
+
   function buildPanelLabel(label) {
     if (!label) {
       return "";
@@ -208,7 +232,7 @@
   }
 
   function getDocumentFilename() {
-    return state.lang === "fr" ? "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx" : "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+    return "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx";
   }
 
   function syncDownloadLink() {
@@ -585,6 +609,17 @@
             text: item.text
           };
         })
+      };
+    }
+
+    if (sectionId === "bibliography") {
+      return {
+        id: "bibliography",
+        label: getSectionLabel("bibliography"),
+        role: "bibliography and cited references",
+        title: (locale.bibliography || {}).title || "",
+        intro: (locale.bibliography || {}).intro || "",
+        entries: ((locale.bibliography || {}).entries || []).slice(0, 12)
       };
     }
 
@@ -1370,6 +1405,26 @@
       "</div>";
   }
 
+  function renderBibliography() {
+    var bibliography = getContent().bibliography || {};
+
+    if (!els.bibliography) {
+      return;
+    }
+
+    els.bibliography.innerHTML =
+      '<p class="section-kicker">' + escapeHtml(bibliography.kicker || "") + "</p>" +
+      '<div class="stack">' +
+      '<div class="timeline-head">' +
+      '<h2 class="section-title">' + escapeHtml(bibliography.title || "") + "</h2>" +
+      '<p class="section-subtitle">' + escapeHtml(bibliography.intro || "") + "</p>" +
+      "</div>" +
+      '<article class="callout bibliography-card">' +
+      buildPagedReferenceList(bibliography.entries || [], "bibliography:" + state.lang, 5) +
+      "</article>" +
+      "</div>";
+  }
+
   function setActiveNav(id) {
     Array.prototype.forEach.call(els.sectionNav.querySelectorAll(".nav-btn"), function (button) {
       var isActive = button.getAttribute("data-target") === id;
@@ -1563,6 +1618,7 @@
     renderTheory();
     renderSpheres();
     renderIllustration();
+    renderBibliography();
     renderChatbotHost();
     updateSectionVisibility();
   }
