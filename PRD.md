@@ -180,6 +180,7 @@ Requirement:
 - a header link must download the French Word document when the UI is in French
 - a header link must download the English Word document when the UI is in English
 - the link must point to manually maintained static `.docx` files
+- the French static `.docx` is the deposited source document that governs the current French app text
 - companion Word documents must remain language-specific and downloadable without changing the header design
 
 ## Chatbot product requirements

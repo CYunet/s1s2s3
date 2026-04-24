@@ -31,8 +31,8 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `api/chat.js`: server endpoint calling the OpenAI Responses API
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: complementary academic framing note for project documentation
-- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document containing the site texts organized by section
-- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`: Word-readable versions of the French companion document
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document aligned with the current app text
+- `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx`: Word-readable versions of the French companion document, with the `.docx` mirroring the current exploratory framework source document
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.md`: English human-readable companion document containing the site texts organized by section
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.doc` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx`: Word-readable versions of the English companion document
 - `docs/assets/spheres-fr.*` and `docs/assets/spheres-en.*`: generated diagram assets embedded in the companion Word documents
@@ -44,7 +44,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 
 ## Human-readable content companion
 
-`docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.*` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.*` are manually maintained companion documents.
+`docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.*` and `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.*` are manually maintained companion documents. The French `.docx` is the deposited source document used to refresh the app text; the English `.docx` is the static translated companion served by the app.
 
 The app exposes a language-aware download link in the header:
 
