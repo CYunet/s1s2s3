@@ -402,7 +402,7 @@ window.ARTEFACT_CONTENT = {
     },
     fr: {
       ui: {
-        pageTitle: "Vers une reconfiguration de la valeur perçue à l’ère de l’IA",
+        pageTitle: "Vers une reconfiguration de la valeur perçue du conseil à l’ère de l’IA",
         skipLink: "Aller au contenu",
         navAria: "Sections principales",
         themeToggleAria: "Basculer le thème visuel",
@@ -416,7 +416,7 @@ window.ARTEFACT_CONTENT = {
         pageNextAria: "Afficher la page suivante"
       },
       hero: {
-        title: "Vers une reconfiguration de la valeur perçue à l’ère de l’IA : repenser la co-création de connaissances managériales.",
+        title: "Vers une reconfiguration de la valeur perçue du conseil à l’ère de l’IA : repenser la co-création de connaissances managériales.",
         subtitle: "Cadre exploratoire",
         signature: "Yunes, Clément - Université de Bordeaux – Avril 2026"
       },
