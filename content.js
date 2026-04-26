@@ -130,28 +130,54 @@ window.ARTEFACT_CONTENT = {
             "text": "Yet the integration of AI into consulting practices disrupts, in both cases, the process at work within consultant-client co-creation interactions, and consequently the perception of value by the client.\n\nThe joint cognitive activities of problem resolution can now rely more heavily on AI and less on human judgment (for example, automation of the diagnostic clarification stage). The symmetry of the consultant-client interaction becomes subject to destabilisation, as a result of the blurring of human-AI contributions.\n\nThe same applies to justification practices, which are not only within reach of AI automation, but are also rendered opaque by the indivisibility of the human-AI system. These practices, whose logic seems to us all the more relevant in the AI era, are nonetheless destined to change in nature.\n\nFor consulting, it is not the purpose of the co-creation process that is called into question. It is still a matter of producing the managerial knowledge the client needs to perceive the value of consulting in relation to their own challenges. Simply, the nature of the process — in other words, the way of getting there — differs in the AI era. Co-creation, as the source of perceived value, is undergoing reconfiguration, in the sense of redeploying existing resources into new combinations of operational competences that enable better adaptation to the environment (Pavlou & El Sawy, 2006).\n\nThe issue seems to us sufficiently important: what is the reconfiguration dynamic at work for consulting perceived value in the AI era, and under what conditions does it strengthen rather than weaken?"
           }
         ],
-        "introHtml": "We formulate three research propositions to explore the way in which AI integration reconfigures perceived value in consulting.",
-        "gapLabel": "RESEARCH PROPOSITIONS",
-        "propositionsLabel": "THREE PROPOSITIONS, P1, P2, P3",
-        "modelLabel": "THE R → P → C MODEL",
+        "observationalFramework": {
+          "label": "OBSERVATIONAL STATUS OF S1, S2, S3",
+          "text": "The 3-spheres diagram of consultant-client-AI co-creation constitutes the observational framework through which our research propositions P1, P2 and P3 are examined empirically. It is therefore not a managerial prescription. The three spheres represent three possible situations of co-creation S1, S2, S3 in the AI era, alone or in combination. All three are situated within the joint sphere of value co-creation (Grönroos & Voima, 2013). Within this framework, the orchestration of co-creation situations is not fixed: it is dynamic and temporal, and the three situations may appear within the same phase of a consulting mission. S1/S2/S3 is an observational framework, not a managerial prescription.",
+          "chips": [
+            {
+              "tone": "s1",
+              "text": "S1 — No AI"
+            },
+            {
+              "tone": "s2",
+              "text": "S2 — AI in silo"
+            },
+            {
+              "tone": "s3",
+              "text": "S3 — Tripartite co-creation"
+            }
+          ]
+        },
+        "practitionerPrompt": {
+          "label": "STATUS OF THE OBSERVATIONAL FRAMEWORK",
+          "text": "• `S1/S2/S3` is an empirical observational framework, not a new theoretical proposition;<br><br>• each situation makes some mechanisms particularly observable: `S1` the relational baseline, `S2` latent transparency and attribution, `S3` the simultaneous observability of the three dimensions."
+        }
+      },
+      "propositions": {
+        "kicker": "3. PROPOSITIONAL FRAMEWORK",
+        "title": "Propositional framework",
+        "introHtml": "To explore the way in which AI integration reconfigures perceived value in consulting, we formulate an integrated propositional framework (Eisenhardt, 1989; Eisenhardt & Graebner, 2007), in which P1 is the ontological component, P2 the mechanistic component and P3 the contingent component.<br><br>This framework, derived from our literature review, forms an articulated and hierarchical system:<br>- P1 defines what to observe (the R, P, C dimensions),<br>- P2 identifies through which mechanism reconfiguration operates (substantive transparency),<br>- P3 specifies under what conditions this mechanism functions (AI literacy, algorithm aversion).",
+        "gapLabel": "ARTICULATED AND HIERARCHICAL SYSTEM",
         "researchGapParagraphs": [
-          "These propositions derived from our literature review are articulated in a sequential order (P1, P2, P3).",
-          "• P1 sets out the observable dimensions of consulting perceived value that are reconfigured in the AI era;",
-          "• P2 sets out the mediating mechanism of consulting perceived value in the AI era, namely transparency (understood as legibility).",
-          "• P3 sets out the conditions of reconfiguration, which allow P2 to function."
+          "This framework, derived from our literature review, forms an articulated and hierarchical system:",
+          "- P1 defines what to observe (the R, P, C dimensions),",
+          "- P2 identifies through which mechanism reconfiguration operates (substantive transparency),",
+          "- P3 specifies under what conditions this mechanism functions (AI literacy, algorithm aversion)."
         ],
+        "propositionsLabel": "P1, P2, P3",
+        "modelLabel": "THE R → P → C MODEL",
         "dimensionCards": [
           {
             "tone": "relational",
             "label": "Relational",
             "letter": "R",
-            "text": "Trust, legitimacy and political judgment - actively produced, and increasingly ambiguous in human-AI systems"
+            "text": "Trust, legitimacy and political judgment — actively produced, and increasingly ambiguous in human-AI systems"
           },
           {
             "tone": "processual",
             "label": "Processual",
             "letter": "P",
-            "text": "The co-creation experience itself - its nature, its legibility and the distribution of roles, reconfigured by AI as a third actor in the consultant-client-AI relationship"
+            "text": "The co-creation experience itself — its nature, its legibility and the distribution of roles, reconfigured by AI as a third actor in the consultant-client-AI relationship"
           },
           {
             "tone": "cognitive",
@@ -165,7 +191,7 @@ window.ARTEFACT_CONTENT = {
         "findingsNote": "",
         "rpcDiagram": {
           "title": "How AI contingently reconfigures the chain OF CONSULTING PERCEIVED VALUE R → P → C",
-          "intro": "The three dimensions of consulting perceived value in the AI era, set out in Proposition P1, follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature). Relational anchoring (R) enables processual engagement (P), and processual engagement supports cognitive appropriation (C). The causal architecture of the chain remains stable, that is, independent of the integration of AI into consulting practices. In that sense, it is a means of exploring the effects of AI on the dynamics of reconfiguring consulting perceived value. AI modifies, through the mediating mechanism (P2), the stability of each link - positively or negatively, depending on the contingencies (P3). The original contribution of our research lies, in our view, less in inventing the sequence R → P → C than in theorizing the way in which AI amplifies, destabilizes or reverses each relation contingently.",
+          "intro": "The three dimensions of consulting perceived value in the AI era, set out in Proposition P1, follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature). Relational anchoring (R) enables processual engagement (P), and processual engagement supports cognitive appropriation (C).\n\nThe causal architecture of the chain remains stable, that is, independent of the integration of AI into consulting practices. In that sense, it is a means of exploring the effects of AI on the dynamics of reconfiguring consulting perceived value.\n\nAI modifies, through the mediating mechanism (P2), the stability of each link — positively or negatively, depending on the contingencies (P3).\n\nThe original contribution of our research lies, in our view, less in inventing the sequence R → P → C than in theorizing the way in which AI amplifies, destabilizes or reverses each relation contingently.",
           "nodeLabels": {
             "relational": "Relational",
             "processual": "Processual",
@@ -202,47 +228,25 @@ window.ARTEFACT_CONTENT = {
           {
             "tone": "relational",
             "badge": "P1",
-            "title": "P1 - Multidimensional reconfiguration of perceived value",
-            "text": "The integration of AI into consulting missions reconfigures the value perceived by the client according to three interdependent dimensions - relational (R, trust, legitimacy and political judgment, actively produced through micro-activities of mise en valeur), processual (P, the co-creation experience itself - its nature, its legibility and the distribution of roles), and cognitive (C, newly co-produced managerial knowledge and capabilities, whose nature, richness and perceived author are reconfigured by AI).\n\nAI does not reconfigure the perceived value of consulting uniformly.\n\nIts effect on each dimension of perceived value (relational, processual, cognitive) depends on the way in which it is introduced and the way the client interprets it. The same AI integration can thus amplify perceived value in one configuration and erode it in another.\n\nThe three dimensions of consulting perceived value in the AI era follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature).\n\nAI reconfigures each link contingently - by amplifying it or destabilizing it - according to P2 and P3."
+            "title": "P1 — Multidimensional reconfiguration of perceived value",
+            "text": "The integration of AI into consulting missions reconfigures the value perceived by the client according to three interdependent dimensions — relational (R, trust, legitimacy and political judgment, actively produced through micro-activities of mise en valeur), processual (P, the co-creation experience itself — its nature, its legibility and the distribution of roles), and cognitive (C, newly co-produced managerial knowledge and capabilities, whose nature, richness and perceived author are reconfigured by AI).\n\nAI does not reconfigure the perceived value of consulting uniformly.\n\nIts effect on each dimension of perceived value (relational, processual, cognitive) depends on the way in which it is introduced and the way the client interprets it. The same AI integration can thus amplify perceived value in one configuration and erode it in another.\n\nThe three dimensions of consulting perceived value in the AI era follow the sequence R→P→C, with a proposed feedback loop R ← P (an original theoretical proposition of this framework, not directly anchored in the literature).\n\nAI reconfigures each link contingently — by amplifying it or destabilizing it — according to P2 and P3."
           },
           {
             "tone": "processual",
             "badge": "P2",
-            "title": "P2 - Transparency as the mediating mechanism",
+            "title": "P2 — Transparency as the mediating mechanism",
             "text": "Transparency is the mediating mechanism of consulting perceived value in the AI era. Transparency is understood here as the intelligibility of the AI-assisted system through its observable effects (Ananny & Crawford, 2018).\n\nPerformative transparency (disclosure by the consultant of the use of AI) is distinct from substantive transparency (mediation by the consultant of AI interactions and outputs, in order to provide a contextual interpretation of them and enable their conversion into managerial knowledge that can be appropriated and mobilized by the client).\n\nP2 therefore posits that substantive transparency weighs more heavily on the perceived value of consulting in the AI era because it favors appropriation by the client and, ultimately, perceived value, depending on the conditions of P3."
           },
           {
             "tone": "cognitive",
             "badge": "P3",
-            "title": "P3 - Moderation conditions",
+            "title": "P3 — Moderation conditions",
             "text": "Three categories of contingency determine whether P2 produces correct attribution: at the relational level, prior trust capital; at the situational level, mission phase and political stakes; and at the actor level, AI literacy (Long & Magerko, 2020) and algorithm aversion (De Jong et al., 2025; Dietvorst et al., 2014).\n\nThese contingencies are not all, strictly speaking, on the client side: only actor-level conditions are directly situated on the client side, whereas relational and situational contingencies exceed the client alone.\n\nThe political stakes of consulting, although central in the formation of consulting perceived value (Turner, 1982), are integrated as a situational contingency and not as the central object of our research.\n\nIn a contingent logic, several levels of conditions may therefore moderate the transparency mechanism posited in P2. However, our research empirically and primarily retains actor-level contingencies, not because they exhaust the phenomenon, but because they constitute, in the AI era, the most theoretically distinctive and the most accessible focus in a single exemplary case qualitative design, as we envisage it.\n\nAI literacy (a competence variable, Long et al., 2020) and algorithm aversion (an attitudinal variable, Dietvorst et al. 2014) are distinct: a client may be AI-literate while still displaying aversion to AI. AI literacy determines whether the client can follow the consultant's explicitation, distinguish the contribution of AI from that of the consultant's judgment, and understand the limits of what has been produced. Algorithm aversion determines whether these same contributions, even when they are understood, are accepted as legitimate inputs to managerial judgment.\n\nSubstantive transparency may therefore fail in two ways: either because the explanation is not cognitively appropriate, or because it is understood but normatively disqualified. Correct attribution requires both intelligibility and minimal acceptance. Value co-destruction (Plé & Cáceres 2010; Lumivalo et al. 2024) constitutes the boundary condition when P2 and P3 fail simultaneously.\n\nIn this framework, correct attribution is treated as an important observable condition of appropriation by the client and, through that appropriation, as a pathway by which transparency acts on perceived value."
           }
-        ],
-        "observationalFramework": {
-          "label": "OBSERVATIONAL STATUS OF S1, S2, S3",
-          "text": "The 3-spheres diagram of consultant-client-AI co-creation constitutes the observational framework through which our research propositions P1, P2 and P3 are examined empirically. It is therefore not a managerial prescription. The three spheres represent three possible situations of co-creation S1, S2, S3 in the AI era, alone or in combination. All three are situated within the joint sphere of value co-creation (Grönroos & Voima, 2013). Within this framework, the orchestration of co-creation situations is not fixed: it is dynamic and temporal, and the three situations may appear within the same phase of a consulting mission. S1/S2/S3 is an observational framework, not a managerial prescription.",
-          "chips": [
-            {
-              "tone": "s1",
-              "text": "S1 — No AI"
-            },
-            {
-              "tone": "s2",
-              "text": "S2 — AI in silo"
-            },
-            {
-              "tone": "s3",
-              "text": "S3 — Tripartite co-creation"
-            }
-          ]
-        },
-        "practitionerPrompt": {
-          "label": "STATUS OF THE OBSERVATIONAL FRAMEWORK",
-          "text": "• `S1/S2/S3` is an empirical observational framework, not a new theoretical proposition;<br><br>• each situation makes some mechanisms particularly observable: `S1` the relational baseline, `S2` latent transparency and attribution, `S3` the simultaneous observability of the three dimensions."
-        }
+        ]
       },
       "spheres": {
-        "kicker": "3. OBSERVATIONAL FRAMEWORK S1, S2, S3",
+        "kicker": "4. OBSERVATIONAL FRAMEWORK S1, S2, S3",
         "title": "The 3 spheres of perceived value co-creation in consulting in the AI era",
         "intro": "The diagram of the 3 spheres of consultant-client-AI co-creation constitutes the observational framework through which our research propositions P1, P2 and P3 are examined empirically. It is therefore not a managerial prescription.\n\nThe 3 spheres represent three possible situations of co-creation S1, S2 and S3 in the AI era, alone or in combination. All three are situated within the joint sphere of value co-creation (Grönroos & Voima, 2013).\n\nWithin this framework, the orchestration of co-creation situations is not fixed: it is dynamic and temporal, and the three situations may appear within the same phase of a consulting mission. S1/S2/S3 is an observational framework, not a managerial prescription.",
         "cards": [
@@ -276,7 +280,7 @@ window.ARTEFACT_CONTENT = {
         }
       },
       "illustration": {
-        "kicker": "4. ILLUSTRATION",
+        "kicker": "5. ILLUSTRATION",
         "title": "Fictional consulting scenario: 10-week digital platform audit",
         "subtitle": "Actors: Thomas (consultant) and Marie (client, TechX company)",
         "intro": "This scenario illustrates, in a fictional way, the co-creation of perceived value at work in consulting, through the sequence R→P→C, examined through the prism of the three research propositions (P1, P2, P3) and the observational framework S1/S2/S3, including their ability to be defended politically within the organization.\n\nThe point of this simulation is to allow us to pre-test, ahead of the empirical phase, the full-scale observational field planned for the study (single exemplary case study).\n\nThe fictional mission is structured into three major phases characteristic of consulting missions (scoping, analysis, recommendations), to which we have added a fourth post-mission phase in order to allow an additional retrospective perspective on the co-creation of perceived value at the end of the mission.\n\nNote: we designed a simulator to test and question the effects of our model on this fictional scenario. This simulator represents the fictional consulting mission graphically and interactively and thus makes it possible to question, via an AI assistant exposed to our analytical framework, situations and observables through the lens of that analytical framework: https://s1s2s3.vercel.app (\"Illustration\" menu).",
