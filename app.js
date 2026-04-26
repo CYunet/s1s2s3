@@ -309,15 +309,15 @@
       '<h2 class="section-title">' + escapeHtml(why.titleLines[0]) + '<br>' + escapeHtml(why.titleLines[1]) + "</h2>" +
       '<div class="callout question-callout">' +
       buildPanelLabel(why.questionLabel) +
-      buildPagedHtmlBody(why.questionHtml, "why-question:" + state.lang, 2) +
+      buildPagedHtmlBody(why.questionHtml, "why-question:" + state.lang, 3) +
       "</div>" +
       '<div class="callout">' +
       buildPanelLabel(why.whyLabel) +
-      buildPagedHtmlBody(why.whyHtml, "why-why:" + state.lang, 2) +
+      buildPagedHtmlBody(why.whyHtml, "why-why:" + state.lang, 3) +
       "</div>" +
       '<div class="callout gap-callout">' +
       buildPanelLabel(why.gapLabel) +
-      buildPagedHtmlBody(why.gapHtml, "why-gap:" + state.lang, 2) +
+      buildPagedHtmlBody(why.gapHtml, "why-gap:" + state.lang, 3) +
       "</div>" +
       "</div>";
   }
@@ -1168,7 +1168,7 @@
     return (
       '<article class="theory-block gap-block">' +
       buildPanelLabel(theory.gapLabel) +
-      '<div class="gap-block__text">' + buildPagedTextBody((theory.researchGapParagraphs || []).join("\n\n"), "propositions-gap:" + state.lang, 2) + "</div>" +
+      '<div class="gap-block__text">' + buildPagedTextBody((theory.researchGapParagraphs || []).join("\n\n"), "propositions-gap:" + state.lang, 4) + "</div>" +
       "</article>"
     );
   }
@@ -1260,7 +1260,7 @@
           '<article class="theory-block">' +
           '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
           '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-          '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "propositions-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
+          '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "propositions-detail:" + state.lang + ":" + item.badge, 3) + "</div>" +
           "</article>"
         );
       }).join("") +
@@ -1326,7 +1326,7 @@
         return (
           '<article class="callout">' +
           buildPanelLabel(block.label) +
-          buildPagedTextBody(block.text, "theory-overview:" + state.lang + ":" + String(index), 2) +
+          buildPagedTextBody(block.text, "theory-overview:" + state.lang + ":" + String(index), 3) +
           "</article>"
         );
       }).join("") +
@@ -1344,7 +1344,7 @@
       '<p class="section-kicker">' + escapeHtml(theory.kicker) + "</p>" +
       '<div class="stack">' +
       (theory.title ? '<h2 class="section-title">' + escapeHtml(theory.title) + "</h2>" : "") +
-      (theory.introHtml ? '<article class="callout">' + buildPagedHtmlBody(theory.introHtml, "propositions-intro:" + state.lang, 2) + "</article>" : "") +
+      (theory.introHtml ? '<article class="callout">' + buildPagedHtmlBody(theory.introHtml, "propositions-intro:" + state.lang, 3) + "</article>" : "") +
       buildGapBlock() +
       '<div class="theory-section">' +
       '<p class="panel-label">' + escapeHtml(theory.propositionsLabel) + "</p>" +
@@ -1433,7 +1433,7 @@
       '<div class="timeline-head">' +
       '<h2 class="section-title">' + escapeHtml(spheres.title) + "</h2>" +
       "</div>" +
-      '<article class="callout">' + buildPagedTextBody(spheres.intro, "spheres-intro:" + state.lang, 2) + "</article>" +
+      '<article class="callout">' + buildPagedTextBody(spheres.intro, "spheres-intro:" + state.lang, 3) + "</article>" +
       '<div class="sphere-shell">' +
       buildSphereModel() +
       '<div class="sphere-cards">' +
@@ -1441,7 +1441,7 @@
         return (
           '<article class="sphere-card sphere-card--' + escapeHtml(item.key) + '" id="sphere-' + escapeHtml(item.key) + '">' +
           '<h2 class="sphere-card__title">' + escapeHtml(item.title) + "</h2>" +
-          buildPagedTextBody(item.text, "sphere-card:" + state.lang + ":" + item.key, 2) +
+          buildPagedTextBody(item.text, "sphere-card:" + state.lang + ":" + item.key, 3) +
           "</article>"
         );
       }).join("") +

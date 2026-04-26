@@ -256,13 +256,13 @@ window.ARTEFACT_CONTENT = {
             "key": "s2",
             "tone": "s2",
             "title": "S2 — AI in silo",
-            "text": "AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation.\n\nThe consultant retains the central role in the relationship with the client, even when AI contributes in the background.\n\nObservable:\n\nModalities of transparency (P2), attribution patterns (P3), fragility of legitimacy (R).\n\nFor example, the risk of blurred attribution of consultant / AI contributions by the client is latent; relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered, depending on the client's AI literacy and algorithm aversion (P3)."
+            "text": "AI is used separately by the consultant and/or the client, without shared orchestration or substantive explicitation.\n\nThe consultant retains the central role in the relationship with the client, even when AI contributes in the background.\n\nObservable: Modalities of transparency (P2), attribution patterns (P3), fragility of legitimacy (R).\n\nFor example, the risk of blurred attribution of consultant / AI contributions by the client is latent; relational legitimacy may be retrospectively weakened if hidden AI contributions are discovered, depending on the client's AI literacy and algorithm aversion (P3)."
           },
           {
             "key": "s3",
             "tone": "s3",
             "title": "S3 — Tripartite co-creation",
-            "text": "Co-creation unfolds in an explicit triad of consultant, client and AI.\n\nThe consultant no longer monopolizes the central role there; orchestration, attribution and legitimacy become more distributed and more open to negotiation.\n\nObservable:\n\nThe three propositions (P1, P2, P3) and the dimensions of perceived value (R-P-C) are simultaneously observable there.\n\nFor example, the processual and cognitive dimensions of perceived value (P, C) may be richer there, but the consultant's legitimacy (R) may become contestable if the consultant's mediating role in production is not manifest (P2), depending on the client's AI literacy and algorithm aversion (P3)."
+            "text": "Co-creation unfolds in an explicit triad of consultant, client and AI.\n\nThe consultant no longer monopolizes the central role there; orchestration, attribution and legitimacy become more distributed and more open to negotiation.\n\nObservable: The three propositions (P1, P2, P3) and the dimensions of perceived value (R-P-C) are simultaneously observable there.\n\nFor example, the processual and cognitive dimensions of perceived value (P, C) may be richer there, but the consultant's legitimacy (R) may become contestable if the consultant's mediating role in production is not manifest (P2), depending on the client's AI literacy and algorithm aversion (P3)."
           }
         ],
         "diagramLabels": {
@@ -705,13 +705,13 @@ window.ARTEFACT_CONTENT = {
             "key": "s2",
             "tone": "s2",
             "title": "S2 — IA en silo",
-            "text": "L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive.\n\nLe consultant conserve le rôle central dans la relation avec le client, même lorsque l'IA contribue en arrière-plan.\n\nObservable :\n\nModalités de transparence (P2), schémas d'attribution (P3), fragilité de la légitimité (R).\n\nPar exemple, le risque d'attribution floutée des contributions consultant / IA par le client est latent ; la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes, fonction de la littératie IA du client et de son aversion à l'algorithme (P3)."
+            "text": "L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive.\n\nLe consultant conserve le rôle central dans la relation avec le client, même lorsque l'IA contribue en arrière-plan.\n\nObservable : Modalités de transparence (P2), schémas d'attribution (P3), fragilité de la légitimité (R).\n\nPar exemple, le risque d'attribution floutée des contributions consultant / IA par le client est latent ; la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes, fonction de la littératie IA du client et de son aversion à l'algorithme (P3)."
           },
           {
             "key": "s3",
             "tone": "s3",
             "title": "S3 — Co-création tripartite",
-            "text": "La co-création se déploie dans une triade explicite consultant, client et IA.\n\nLe consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation.\n\nObservable :\n\nLes trois propositions (P1, P2, P3) et dimensions de la valeur perçue (R-P-C) y sont simultanément observables.\n\nPar exemple, la dimension processuelle et cognitive et de la valeur perçue (P, C) peut y être plus riche, mais la légitimité du consultant (R) peut devenir contestable si le rôle médiateur du consultant dans la production n'est pas manifeste (P2), fonction de la littératie IA du client et de son aversion à l'algorithme (P3)."
+            "text": "La co-création se déploie dans une triade explicite consultant, client et IA.\n\nLe consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation.\n\nObservable : Les trois propositions (P1, P2, P3) et dimensions de la valeur perçue (R-P-C) y sont simultanément observables.\n\nPar exemple, la dimension processuelle et cognitive et de la valeur perçue (P, C) peut y être plus riche, mais la légitimité du consultant (R) peut devenir contestable si le rôle médiateur du consultant dans la production n'est pas manifeste (P2), fonction de la littératie IA du client et de son aversion à l'algorithme (P3)."
           }
         ],
         "diagramLabels": {
@@ -993,7 +993,7 @@ window.ARTEFACT_CONTENT = {
       "propositions": {
         "kicker": "3. CADRE PROPOSITIONNEL",
         "title": "Cadre propositionnel",
-        "introHtml": "Pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil, nous formulons un cadre propositionnel intégré (Eisenhardt, 1989; Eisenhardt & Graebner, 2007), où P1 est la composante ontologique, P2 la composante mécanistique et P3 la composante contingente.<br><br>Ce cadre, dérivé de la revue de la littérature, forme un système articulé et hiérarchisé :<br><br>- P1 définit quoi observer (les dimensions R, P, C),<br><br>- P2 identifie par quel mécanisme la reconfiguration opère (la transparence substantive),<br><br>- P3 spécifie sous quelles conditions ce mécanisme fonctionne (littératie IA, aversion à l'algorithme).",
+        "introHtml": "Pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil, nous formulons un cadre propositionnel intégré (Eisenhardt, 1989; Eisenhardt & Graebner, 2007), où P1 est la composante ontologique, P2 la composante mécanistique et P3 la composante contingente.<br><br>Ce cadre, dérivé de la revue de la littérature, forme un système articulé et hiérarchisé :<br>- P1 définit quoi observer (les dimensions R, P, C),<br>- P2 identifie par quel mécanisme la reconfiguration opère (la transparence substantive),<br>- P3 spécifie sous quelles conditions ce mécanisme fonctionne (littératie IA, aversion à l'algorithme).",
         "gapLabel": "SYSTÈME ARTICULÉ ET HIÉRARCHISÉ",
         "researchGapParagraphs": [
           "Ce cadre, dérivé de la revue de la littérature, forme un système articulé et hiérarchisé :",
