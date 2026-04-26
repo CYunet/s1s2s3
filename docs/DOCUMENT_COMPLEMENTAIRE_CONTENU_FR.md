@@ -58,9 +58,9 @@ Note : ce texte est disponible également en ligne sous forme interactive, c'es
 
 ## Comprendre les effets de l'IA sur la valeur perçue du conseil 
 
-Le conseil augmenté par l'IA est souvent présenté par les acteurs du conseil eux-mêmes, comme le futur du conseil, pensé comme une opportunité d'accroitre la valeur, tout en générant des défis en matière de sécurité, d'éthique, de gouvernance des données, qui appellent des solutions (de Man et al., 2016; Masson & Dautrif, 2026; Mohan, 2024; Tavoletti et al., 2021; Tiwari, 2025).
+Le conseil augmenté par l'IA est souvent présenté par les acteurs du conseil eux-mêmes, comme le futur du conseil. Il constitue une opportunité d'accroitre la valeur, tout en générant des défis en matière de sécurité, d'éthique, de gouvernance des données, qui appellent des solutions (Mohan, 2024; Tiwari, 2025).
 
-L'intégration de l'IA dans les pratiques du conseil constitue une proposition de valeur séduisante pour le client : l'IA pour sa puissance d'analyse (Huang & Rust, 2021), le consultant humain pour son sens relationnel et son discernement. Le conseil peut ainsi produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, répondre aux nouvelles attentes des clients.
+L'intégration de l'IA dans les pratiques du conseil constitue une proposition de valeur séduisante pour le client : l'IA pour sa puissance d'analyse (Huang & Rust, 2021), le consultant humain pour son sens relationnel et son discernement. Le conseil peut ainsi produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016; Masson & Dautrif, 2026).
 
 Or, la valeur perçue est créée par le client, à l'usage (Vargo, Stephen & Lusch, Robert F., 2004). Dit autrement, la transformation d'une proposition en valeur perçue n'a rien d'automatique. Sur ce point, l'IA ne change rien.
 
@@ -446,6 +446,8 @@ Becker, S. V., Aromaa, E., & Eriksson, P. (2015). Client-consultant interaction�
 Bourgoin, A. (2014). *Le conseil en management à l'épreuve de sa mise en valeur : Une étude empirique* \[Ecole National Supérieure des Mines de Paris\]. HAL. https://pastel.hal.science/pastel-00957543/document
 
 Bowman, C., & Ambrosini, V. (2000). Value Creation Versus Value Capture : Towards a Coherent Definition of Value in Strategy. *British Journal of Management*, *11*(1), 1‑15. https://doi.org/10.1111/1467-8551.00147
+
+Candy, M., Dolph, B., Lin, S., & Dencik, J. (2024). On the cusp of convergence. *IBM Institute for Business Value*.
 
 Ciampi, F. (2017). *Knowing Through Consulting in Action* \[Text\]. (Florence). https://books.fupress.com/catalogue/knowing-through-consulting-in-action/3575
 
