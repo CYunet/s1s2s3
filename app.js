@@ -2,7 +2,7 @@
   var content = window.ARTEFACT_CONTENT;
   var state = {
     lang: document.documentElement.getAttribute("lang") || "en",
-    theme: document.documentElement.getAttribute("data-theme") || "dark",
+    theme: document.documentElement.getAttribute("data-theme") || "light",
     activePhase: 0,
     activeSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",
     chatSourceSection: content.locales.en.nav && content.locales.en.nav.length ? content.locales.en.nav[0].id : "why",

@@ -8,75 +8,83 @@ Note : ce texte est disponible également en ligne sous forme interactive, c'est
 
 [1. POSITIONNEMENT DE LA RECHERCHE [3](#positionnement-de-la-recherche)](#positionnement-de-la-recherche)
 
-[Comprendre les effets de l'IA sur la valeur perçue du conseil [3](#comprendre-les-effets-de-lia-sur-la-valeur-perçue-du-conseil)](#comprendre-les-effets-de-lia-sur-la-valeur-perçue-du-conseil)
+[La valeur perçue du conseil au prisme de l'IA [3](#la-valeur-perçue-du-conseil-au-prisme-de-lia)](#la-valeur-perçue-du-conseil-au-prisme-de-lia)
 
-[En quoi est-ce un questionnement nécessaire ? [4](#en-quoi-est-ce-un-questionnement-nécessaire)](#en-quoi-est-ce-un-questionnement-nécessaire)
+[Gap théorique [3](#gap-théorique)](#gap-théorique)
 
-[Implications théoriques et praxéologiques [5](#implications-théoriques-et-praxéologiques)](#implications-théoriques-et-praxéologiques)
+[En quoi est-ce un questionnement nécessaire ? [5](#en-quoi-est-ce-un-questionnement-nécessaire)](#en-quoi-est-ce-un-questionnement-nécessaire)
 
-[2. CADRE THEORIQUE [6](#cadre-theorique)](#cadre-theorique)
+[Implications de la recherche [5](#implications-de-la-recherche)](#implications-de-la-recherche)
 
-[La valeur perçue du conseil, des mécanismes qui restent à explorer [6](#la-valeur-perçue-du-conseil-des-mécanismes-qui-restent-à-explorer)](#la-valeur-perçue-du-conseil-des-mécanismes-qui-restent-à-explorer)
+[2. CADRE THEORIQUE [7](#cadre-theorique)](#cadre-theorique)
 
-[La valeur perçue du conseil est avant tout un accomplissement social [7](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)
+[La valeur perçue du conseil, des mécanismes qui restent à explorer [7](#la-valeur-perçue-du-conseil-des-mécanismes-qui-restent-à-explorer)](#la-valeur-perçue-du-conseil-des-mécanismes-qui-restent-à-explorer)
 
-[L'IA, élément perturbateur de l'accomplissement social [8](#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
+[La valeur perçue du conseil est avant tout un accomplissement social [8](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)
 
-[3. CADRE PROPOSITIONNEL [9](#cadre-propositionnel)](#cadre-propositionnel)
+[L'IA, élément perturbateur de l'accomplissement social [9](#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
 
-[P1 --- Reconfiguration multidimensionnelle de la valeur perçue [9](#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)](#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)
+[3. CADRE PROPOSITIONNEL [10](#cadre-propositionnel)](#cadre-propositionnel)
 
-[Les dimensions de la valeur perçue du conseil à l'ère de l'IA : le modèle R → P → C [10](#les-dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-modèle-r-p-c)](#les-dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-modèle-r-p-c)
+[P1 --- Reconfiguration multidimensionnelle de la valeur perçue [10](#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)](#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)
 
-[P2 --- La transparence comme mécanisme médiateur [12](#p2-la-transparence-comme-mécanisme-médiateur)](#p2-la-transparence-comme-mécanisme-médiateur)
+[Les dimensions de la valeur perçue du conseil à l'ère de l'IA : le modèle R → P → C [11](#les-dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-modèle-r-p-c)](#les-dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-modèle-r-p-c)
 
-[P3 --- Les trois conditions de modération [12](#p3-les-trois-conditions-de-modération)](#p3-les-trois-conditions-de-modération)
+[P2 --- La transparence comme mécanisme médiateur [13](#p2-la-transparence-comme-mécanisme-médiateur)](#p2-la-transparence-comme-mécanisme-médiateur)
 
-[4. CADRE D'OBSERVATION [14](#cadre-dobservation)](#cadre-dobservation)
+[P3 --- Les trois conditions de modération [13](#p3-les-trois-conditions-de-modération)](#p3-les-trois-conditions-de-modération)
 
-[Les 3 sphères de co-création de valeur perçue du conseil à l'ère de l'IA : S1, S2, S3 [14](#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)](#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)
+[4. CADRE D'OBSERVATION [15](#cadre-dobservation)](#cadre-dobservation)
 
-[Situations et observables [15](#situations-et-observables)](#situations-et-observables)
+[Les 3 sphères de co-création de valeur perçue du conseil à l'ère de l'IA : S1, S2, S3 [15](#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)](#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)
 
-[S1 --- Sans IA [15](#s1-sans-ia)](#s1-sans-ia)
+[Situations et observables [16](#situations-et-observables)](#situations-et-observables)
 
-[S2 --- IA en silo [15](#s2-ia-en-silo)](#s2-ia-en-silo)
+[S1 --- Sans IA [16](#s1-sans-ia)](#s1-sans-ia)
 
-[S3 --- Co-création tripartite [15](#s3-co-création-tripartite)](#s3-co-création-tripartite)
+[S2 --- IA en silo [16](#s2-ia-en-silo)](#s2-ia-en-silo)
 
-[5. ILLUSTRATION [17](#illustration)](#illustration)
+[S3 --- Co-création tripartite [16](#s3-co-création-tripartite)](#s3-co-création-tripartite)
 
-[Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines [17](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)
+[5. ILLUSTRATION [18](#illustration)](#illustration)
 
-[Phases du scenario de la mission fictive de conseil [17](#phases-du-scenario-de-la-mission-fictive-de-conseil)](#phases-du-scenario-de-la-mission-fictive-de-conseil)
+[Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines [18](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)
 
-[1. Cadrage -- Sem. 1-3 [18](#cadrage-sem.-1-3)](#cadrage-sem.-1-3)
+[Phases du scenario de la mission fictive de conseil [18](#phases-du-scenario-de-la-mission-fictive-de-conseil)](#phases-du-scenario-de-la-mission-fictive-de-conseil)
 
-[2. Analyse -- Sem. 4-9 [19](#analyse-sem.-4-9)](#analyse-sem.-4-9)
+[1. Cadrage -- Sem. 1-3 [19](#cadrage-sem.-1-3)](#cadrage-sem.-1-3)
 
-[3. Recommandations --- Sem. 10 [20](#recommandations-sem.-10)](#recommandations-sem.-10)
+[2. Analyse -- Sem. 4-9 [20](#analyse-sem.-4-9)](#analyse-sem.-4-9)
 
-[4. Rétrospective --- Post [20](#rétrospective-post)](#rétrospective-post)
+[3. Recommandations --- Sem. 10 [21](#recommandations-sem.-10)](#recommandations-sem.-10)
 
-[BIBLIOGRAPHIE [21](#bibliographie)](#bibliographie)
+[4. Rétrospective --- Post [21](#rétrospective-post)](#rétrospective-post)
+
+[BIBLIOGRAPHIE [22](#bibliographie)](#bibliographie)
 
 ##
 
 # 1. POSITIONNEMENT DE LA RECHERCHE
 
-## Comprendre les effets de l'IA sur la valeur perçue du conseil
+## La valeur perçue du conseil au prisme de l'IA
 
 Le conseil augmenté par l'IA est souvent présenté par les acteurs du conseil eux-mêmes, comme le futur du conseil. L'IA constitue une opportunité d'accroitre la valeur, tout en générant des défis en matière de sécurité, d'éthique, de gouvernance des données, qui appellent des solutions (Mohan, 2024; Tiwari, 2025).
 
-L'intégration de l'IA dans les pratiques du conseil constitue une proposition de valeur séduisante pour le client : l'IA pour sa puissance d'analyse (Huang & Rust, 2021), le consultant humain pour son sens relationnel et son discernement. Le conseil peut ainsi produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016; Masson & Dautrif, 2026).
+L'intégration de l'IA dans les pratiques du conseil constitue une proposition de valeur séduisante pour le client : l'IA pour sa puissance d'analyse, le consultant humain pour son sens relationnel et son discernement (Huang & Rust, 2021). Le conseil peut ainsi produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016; Masson & Dautrif, 2026).
 
 Or, la valeur perçue est créée par le client, à l'usage (Vargo, Stephen & Lusch, Robert F., 2004). Dit autrement, la transformation d'une proposition de valeur, en valeur perçue n'a rien d'automatique. Sur ce point, l'IA ne change rien.
+
+## Gap théorique
+
+Le lien entre IA, conseil et valeur perçue, est un champ de recherche émergent mais dynamique, en lien avec l'avènement de l'IA générative en 2022.
+
+A titre d'indication, l'association des mots-clés « AI consulting perceived value » génère environ 26 500 résultats entre 2022 et avril 2026 sur Google Scholar. Néanmoins, lorsqu'on y regarde de plus près, les travaux se concentrent surtout sur la valeur perçue comme facteur d'adoption de l'IA dans les services à forte intensité de connaissance (« AI consulting perceived value adoption » donne 26900 résultats), non sur la co-création effective de valeur perçue du service (« AI consulting perceived value co-creation » donne 8330 résultats). Et sur cette thématique, peu d'études se focalisent exclusivement sur le conseil. Pour celles-ci, la question de la création de la valeur y tient une place centrale (Becker et al., 2015; Bourgoin, 2014; Elmholdt et al., 2025; Nikolova & Devinney, 2012; Oesterle et al., 2020; Sturdy, 2009; Turner, 1982;). Parmi ces travaux, peu à notre connaissance, intègrent l'IA dans l'équation.
+
+Or nous pensons que l'introduction de l'IA dans les pratiques du conseil, reconfigure justement, et de façon ambivalente, la valeur perçue du conseil. Elle peut fragiliser ou renforcer cette valeur. Nous proposons donc un cadre pour explorer et tenter de mieux comprendre le phénomène.
 
 Dans une relation commerciale, la valeur perçue est le fruit d'une co-création, au sein d'une sphère conjointe dans laquelle client et prestataire combinent leurs ressources, interagissent (Grönroos & Voima, 2013). Au sein de cette sphère, comment se créée la valeur perçue du conseil ?
 
 Dans le conseil, la valeur perçue se construit typiquement à l'intersection de la compétence du consultant (technique, sociale, d'innovation) et de la capacité d'absorption du client (Oesterle et al., 2020). Ainsi, la qualité de la relation, l'expérience de la mission, l'appropriation par le client des connaissances managériales produites, explicites (« know what ») ou plus précieuses encore, tacites (know how »), sont autant de facteurs déterminants de la valeur perçue du conseil. Ce sont ces connaissances managériales qui permettent la résolution du problème spécifique à traiter dans le cadre de la mission, et in-fine, renforcent le client dans sa capacité à adresser les futurs problèmes (Ciampi, 2017).
-
-Nous pensons que l'introduction de l'IA dans les pratiques du conseil, reconfigure la valeur perçue du conseil.
 
 En contexte conseil, l'IA seule est insuffisante : l'expertise n'est pas une possession individuelle d'un savoir technique transférable, mais un processus interactif et contextuel, situé, construit dans l'accomplissement du travail *in situ* (Elmholdt et al., 2025; Pakarinen & Huising, 2023).
 
@@ -88,7 +96,7 @@ Ensuite, l'IA floute l'attribution aux acteurs, personne ne détient plus le con
 
 Enfin, la nature particulière de l'IA, capable d'autonomie de décision et d'action en contexte ambigu et incertain, typique de l'activité de conseil, impose de penser de nouveaux cadres de délégation des rôles et responsabilités entre les acteurs, humains et IA (Baird & Maruping, 2021; Raisch & Fomina, 2024).
 
-Autrement dit, l'hypothèse d'une création naturelle de valeur perçue par le biais du conseil augmenté, demande largement à être questionnée.
+Autrement dit, l'hypothèse d'une création naturelle de valeur perçue par le biais du conseil augmenté, demande encore largement à être questionnée.
 
 ## En quoi est-ce un questionnement nécessaire ?
 
@@ -102,11 +110,9 @@ Aspects techniques et politiques du conseil ne peuvent aller l'un sans l'autre. 
 
 Dès lors, quelles peuvent être les mécanismes protecteurs de la co-création de valeur perçue du conseil à l'ère de l'IA ?
 
-## Implications théoriques et praxéologiques
+## Implications de la recherche
 
-Le lien entre IA, conseil et valeur perçue, est un champ de recherche émergent mais dynamique, en lien avec l'avènement de l'IA générative en 2022. A titre d'indication, l'association des mots-clés « AI consulting perceived value » génère environ 26 500 résultats entre 2022 et avril 2026 sur Google Scholar. Néanmoins, lorsqu'on y regarde de plus près, les travaux se concentrent surtout sur la valeur perçue comme facteur d'adoption de l'IA dans les services à forte intensité de connaissance (« AI consulting perceived value adoption » donne 26900 résultats), non sur la co-création effective de valeur perçue du service (« AI consulting perceived value co-creation » donne 8330 résultats). Sur cette thématique, peu d'études se focalisent exclusivement sur le conseil.
-
-Au plan théorique, le manque de travaux sur cette question de la reconfiguration de la valeur perçue du conseil à l'ère de l'IA, nous semble d'autant nécessaire à combler, que les acteurs du conseil se sont largement engagés sur la voie du conseil augmenté par l'IA. La question des effets de l'IA sur la valeur perçue du conseil reste pleine et entière et appelle un éclaircissement. Notre proposition d'un cadre structuré original pour l'explorer constitue un pas dans cette direction.
+Au plan théorique, le manque de travaux sur la question de la reconfiguration de la valeur perçue du conseil à l'ère de l'IA, nous semble d'autant nécessaire à combler, que les acteurs du conseil se sont largement engagés sur la voie du conseil augmenté par l'IA. La question des effets de l'IA sur la valeur perçue du conseil reste pleine et entière et appelle un éclaircissement. Notre travail propose un cadre structuré original, appuyé sur la littérature, qui constitue un pas dans cette direction.
 
 Au plan praxéologique, nous observons que les acteurs du conseil portent clairement un discours qui focalise sur la dimension politique du conseil comme source différenciatrice de valeur à l'ère de l'IA. Notre travail d'observation des situations dans lesquelles l'IA renforce ou déstabilise la co-création de valeur perçue du conseil, invite à approfondir la manière de faire un conseil 'utile' à l'ère de l'IA.
 
