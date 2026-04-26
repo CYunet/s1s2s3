@@ -36,11 +36,17 @@
     bibliography: document.getElementById("bibliography"),
     illustration: document.getElementById("illustration"),
     theory: document.getElementById("theory"),
+    propositions: document.getElementById("propositions"),
     spheres: document.getElementById("spheres")
   };
 
   function getContent() {
     return content.locales[state.lang] || content.locales.en;
+  }
+
+  function getPropositionContent() {
+    var locale = getContent();
+    return locale.propositions || locale.theory || {};
   }
 
   function getSectionLabel(sectionId) {
@@ -558,6 +564,7 @@
     var locale = getContent();
     var why = locale.whyResearch || {};
     var theory = locale.theory || {};
+    var propositions = locale.propositions || theory;
     var spheres = locale.spheres || {};
     var illustration = locale.illustration || {};
 
@@ -580,18 +587,35 @@
         id: "theory",
         label: getSectionLabel("theory"),
         role: "theoretical framework",
+        title: theory.title || "",
         excerpts: {
-          intro: stripHtml(theory.introHtml || ""),
-          researchGap: (theory.researchGapParagraphs || []).join(" "),
-          propositions: (theory.propositionDetails || []).map(function (item) {
+          overview: (theory.overviewBlocks || []).map(function (item) {
+            return {
+              label: item.label,
+              text: item.text
+            };
+          })
+        }
+      };
+    }
+
+    if (sectionId === "propositions") {
+      return {
+        id: "propositions",
+        label: getSectionLabel("propositions"),
+        role: "propositional framework",
+        title: propositions.title || "",
+        excerpts: {
+          intro: stripHtml(propositions.introHtml || ""),
+          researchGap: (propositions.researchGapParagraphs || []).join(" "),
+          propositions: (propositions.propositionDetails || []).map(function (item) {
             return {
               badge: item.badge,
               title: item.title,
               text: item.text
             };
           }),
-          model: (theory.rpcDiagram || {}).intro || "",
-          observationalFramework: (theory.observationalFramework || {}).text || ""
+          model: (propositions.rpcDiagram || {}).intro || ""
         }
       };
     }
@@ -634,6 +658,7 @@
 
   function buildChatbotFrameworkBundle(data, active, activeStage, activeStageLabel) {
     var theory = getContent().theory;
+    var propositions = getPropositionContent();
     var glossary = data.glossary || {};
     var sourceSectionId = getChatContextSectionId();
     var currentContext = null;
@@ -711,7 +736,13 @@
       },
       theory: {
         intro: stripHtml(theory.introHtml),
-        propositions: (theory.propositionDetails || []).map(function (item) {
+        overview: (theory.overviewBlocks || []).map(function (item) {
+          return {
+            label: item.label,
+            text: item.text
+          };
+        }),
+        propositions: (propositions.propositionDetails || []).map(function (item) {
           return {
             badge: item.badge,
             title: item.title,
@@ -725,8 +756,8 @@
           })
         },
         model: {
-          intro: (theory.rpcDiagram || {}).intro || "",
-          links: ((theory.rpcDiagram || {}).links || []).map(function (item) {
+          intro: (propositions.rpcDiagram || {}).intro || "",
+          links: ((propositions.rpcDiagram || {}).links || []).map(function (item) {
             return {
               label: item.label,
               positive: item.positive,
@@ -1132,18 +1163,18 @@
   }
 
   function buildGapBlock() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
 
     return (
       '<article class="theory-block gap-block">' +
       buildPanelLabel(theory.gapLabel) +
-      '<div class="gap-block__text">' + buildPagedTextBody((theory.researchGapParagraphs || []).join("\n\n"), "theory-gap:" + state.lang, 2) + "</div>" +
+      '<div class="gap-block__text">' + buildPagedTextBody((theory.researchGapParagraphs || []).join("\n\n"), "propositions-gap:" + state.lang, 2) + "</div>" +
       "</article>"
     );
   }
 
   function buildDimensionCards() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
 
     return (
       '<div class="dimension-grid">' +
@@ -1161,7 +1192,7 @@
   }
 
   function buildMiniCards() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
 
     return (
       '<div class="proposition-grid">' +
@@ -1178,7 +1209,7 @@
   }
 
   function buildRpcDiagram() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
     var data = theory.rpcDiagram;
 
     return (
@@ -1218,7 +1249,7 @@
   }
 
   function buildDetailCards() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
 
     return (
       '<div class="detail-stack">' +
@@ -1229,7 +1260,7 @@
           '<article class="theory-block">' +
           '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
           '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-          '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "theory-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
+          '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "propositions-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
           "</article>"
         );
       }).join("") +
@@ -1238,7 +1269,7 @@
   }
 
   function buildManagerialCard() {
-    var theory = getContent().theory;
+    var theory = getPropositionContent();
     var item = theory.propositionDetails.find(function (detail) {
       return detail.tone === "managerial";
     });
@@ -1251,7 +1282,7 @@
       '<article class="theory-block managerial-block">' +
       '<span class="proposition-card__badge tone-' + escapeHtml(item.tone) + '">' + escapeHtml(item.badge) + "</span>" +
       '<h3 class="sphere-card__title">' + escapeHtml(item.title) + "</h3>" +
-      '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "theory-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
+      '<div class="proposition-detail__body">' + buildPagedTextBody(item.text, "propositions-detail:" + state.lang + ":" + item.badge, 2) + "</div>" +
       "</article>"
     );
   }
@@ -1299,7 +1330,21 @@
           "</article>"
         );
       }).join("") +
-      '<p class="lede">' + theory.introHtml + "</p>" +
+      "</div>";
+  }
+
+  function renderPropositions() {
+    var theory = getPropositionContent();
+
+    if (!els.propositions) {
+      return;
+    }
+
+    els.propositions.innerHTML =
+      '<p class="section-kicker">' + escapeHtml(theory.kicker) + "</p>" +
+      '<div class="stack">' +
+      (theory.title ? '<h2 class="section-title">' + escapeHtml(theory.title) + "</h2>" : "") +
+      (theory.introHtml ? '<article class="callout">' + buildPagedHtmlBody(theory.introHtml, "propositions-intro:" + state.lang, 2) + "</article>" : "") +
       buildGapBlock() +
       '<div class="theory-section">' +
       '<p class="panel-label">' + escapeHtml(theory.propositionsLabel) + "</p>" +
@@ -1387,8 +1432,8 @@
       '<div class="stack">' +
       '<div class="timeline-head">' +
       '<h2 class="section-title">' + escapeHtml(spheres.title) + "</h2>" +
-      '<p class="section-subtitle">' + escapeHtml(spheres.intro) + "</p>" +
       "</div>" +
+      '<article class="callout">' + buildPagedTextBody(spheres.intro, "spheres-intro:" + state.lang, 2) + "</article>" +
       '<div class="sphere-shell">' +
       buildSphereModel() +
       '<div class="sphere-cards">' +
@@ -1616,6 +1661,7 @@
     renderNav();
     renderWhyResearch();
     renderTheory();
+    renderPropositions();
     renderSpheres();
     renderIllustration();
     renderBibliography();
