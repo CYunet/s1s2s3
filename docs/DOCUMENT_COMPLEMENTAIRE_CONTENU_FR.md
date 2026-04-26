@@ -58,7 +58,7 @@ Note : ce texte est disponible également en ligne sous forme interactive, c'es
 
 ## Comprendre les effets de l'IA sur la valeur perçue du conseil 
 
-Le conseil augmenté par l'IA est souvent présenté par les acteurs du conseil eux-mêmes, comme le futur du conseil. Il constitue une opportunité d'accroitre la valeur, tout en générant des défis en matière de sécurité, d'éthique, de gouvernance des données, qui appellent des solutions (Mohan, 2024; Tiwari, 2025).
+Le conseil augmenté par l'IA est souvent présenté par les acteurs du conseil eux-mêmes, comme le futur du conseil. L'IA constitue une opportunité d'accroitre la valeur, tout en générant des défis en matière de sécurité, d'éthique, de gouvernance des données, qui appellent des solutions (Mohan, 2024; Tiwari, 2025).
 
 L'intégration de l'IA dans les pratiques du conseil constitue une proposition de valeur séduisante pour le client : l'IA pour sa puissance d'analyse (Huang & Rust, 2021), le consultant humain pour son sens relationnel et son discernement. Le conseil peut ainsi produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016; Masson & Dautrif, 2026).
 
