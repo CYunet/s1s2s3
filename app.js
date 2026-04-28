@@ -35,6 +35,7 @@
     why: document.getElementById("why"),
     bibliography: document.getElementById("bibliography"),
     illustration: document.getElementById("illustration"),
+    posture: document.getElementById("posture"),
     theory: document.getElementById("theory"),
     propositions: document.getElementById("propositions"),
     spheres: document.getElementById("spheres")
@@ -1450,6 +1451,29 @@
       "</div>";
   }
 
+  function renderPosture() {
+    var posture = getContent().posture || {};
+    var blocks = posture.blocks || [];
+
+    if (!els.posture) {
+      return;
+    }
+
+    els.posture.innerHTML =
+      '<p class="section-kicker">' + escapeHtml(posture.kicker || "") + "</p>" +
+      '<div class="stack">' +
+      (posture.title ? '<h2 class="section-title">' + escapeHtml(posture.title) + "</h2>" : "") +
+      blocks.map(function (block, index) {
+        return (
+          '<article class="callout">' +
+          buildPanelLabel(block.label) +
+          buildPagedTextBody(block.text, "posture-block:" + state.lang + ":" + String(index), 3) +
+          "</article>"
+        );
+      }).join("") +
+      "</div>";
+  }
+
   function renderBibliography() {
     var bibliography = getContent().bibliography || {};
 
@@ -1480,6 +1504,11 @@
   }
 
   function updateSectionVisibility() {
+    Array.prototype.forEach.call(document.querySelectorAll(".content-section"), function (section) {
+      section.hidden = true;
+      section.setAttribute("aria-hidden", "true");
+    });
+
     getContent().nav.forEach(function (item) {
       var section = document.getElementById(item.id);
       var isActive = item.id === state.activeSection;
@@ -1657,12 +1686,17 @@
   }
 
   function renderApp() {
+    if (!getContent().nav.some(function (item) { return item.id === state.activeSection; })) {
+      state.activeSection = getContent().nav[0] ? getContent().nav[0].id : "why";
+    }
+
     renderHero();
     renderNav();
     renderWhyResearch();
     renderTheory();
     renderPropositions();
     renderSpheres();
+    renderPosture();
     renderIllustration();
     renderBibliography();
     renderChatbotHost();
