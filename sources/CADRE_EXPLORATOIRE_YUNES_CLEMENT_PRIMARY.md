@@ -35,7 +35,7 @@ La valeur perçue du conseil à l’ère de l’IA, des mécanismes qui restent 
 
 La valeur perçue du conseil est avant tout un accomplissement social [8 (#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)
 
-L’IA, élément perturbateur de l’accomplissement social [8 (#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
+L’IA, élément perturbateur de l’accomplissement social [9 (#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
 
 3. CADRE PROPOSITIONNEL [9 (#cadre-propositionnel)](#cadre-propositionnel)
 
@@ -45,11 +45,11 @@ Dimensions de la valeur perçue du conseil à l’ère de l’IA : le triangle R
 
 R — Relationnelle [10 (#r-relationnelle)](#r-relationnelle)
 
-P — Processuelle [10 (#p-processuelle)](#p-processuelle)
+P — Processuelle [11 (#p-processuelle)](#p-processuelle)
 
-C — Cognitive [10 (#c-cognitive)](#c-cognitive)
+C — Cognitive [11 (#c-cognitive)](#c-cognitive)
 
-Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à vérifier) [11 (#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)](#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)
+Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement) [11 (#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)](#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)
 
 P2 — La transparence comme mécanisme médiateur [12 (#p2-la-transparence-comme-mécanisme-médiateur)](#p2-la-transparence-comme-mécanisme-médiateur)
 
@@ -67,29 +67,29 @@ S2 — IA en silo [15 (#s2-ia-en-silo)](#s2-ia-en-silo)
 
 S3 — Co-création tripartite [15 (#s3-co-création-tripartite)](#s3-co-création-tripartite)
 
-5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE [16 (#posture-du-chercheur-et-design-de-la-recherche)](#posture-du-chercheur-et-design-de-la-recherche)
+5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE [17 (#posture-du-chercheur-et-design-de-la-recherche)](#posture-du-chercheur-et-design-de-la-recherche)
 
-Un design d'étude de cas exemplaire en grandeur réelle [16 (#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)](#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)
+Un design d'étude de cas exemplaire en grandeur réelle [17 (#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)](#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)
 
-Une posture de praticien-chercheur explicitement assumée [16 (#une-posture-de-praticien-chercheur-explicitement-assumée)](#une-posture-de-praticien-chercheur-explicitement-assumée)
+Une posture de praticien-chercheur explicitement assumée [17 (#une-posture-de-praticien-chercheur-explicitement-assumée)](#une-posture-de-praticien-chercheur-explicitement-assumée)
 
-Un dispositif de réflexivité renforcé pour répondre au risque de biais [16 (#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)](#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)
+Un dispositif de réflexivité renforcé pour répondre au risque de biais [17 (#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)](#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)
 
-6. ILLUSTRATION [17 (#illustration)](#illustration)
+6. ILLUSTRATION [18 (#illustration)](#illustration)
 
-Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines [17 (#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)
+Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines [18 (#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)
 
-Phases du scenario de la mission fictive de conseil [17 (#phases-du-scenario-de-la-mission-fictive-de-conseil)](#phases-du-scenario-de-la-mission-fictive-de-conseil)
+Phases du scenario de la mission fictive de conseil [18 (#phases-du-scenario-de-la-mission-fictive-de-conseil)](#phases-du-scenario-de-la-mission-fictive-de-conseil)
 
-1. Cadrage – Sem. 1-3 [17 (#cadrage-sem.-1-3)](#cadrage-sem.-1-3)
+1. Cadrage – Sem. 1-3 [18 (#cadrage-sem.-1-3)](#cadrage-sem.-1-3)
 
-2. Analyse – Sem. 4-9 [18 (#analyse-sem.-4-9)](#analyse-sem.-4-9)
+2. Analyse – Sem. 4-9 [19 (#analyse-sem.-4-9)](#analyse-sem.-4-9)
 
-3. Recommandations — Sem. 10 [19 (#recommandations-sem.-10)](#recommandations-sem.-10)
+3. Recommandations — Sem. 10 [20 (#recommandations-sem.-10)](#recommandations-sem.-10)
 
-4. Rétrospective — Post [19 (#rétrospective-post)](#rétrospective-post)
+4. Rétrospective — Post [20 (#rétrospective-post)](#rétrospective-post)
 
-BIBLIOGRAPHIE [21 (#bibliographie)](#bibliographie)
+BIBLIOGRAPHIE [22 (#bibliographie)](#bibliographie)
 
 ##  
 
@@ -157,11 +157,17 @@ La valeur perçue devient ainsi un concept au centre des réflexions stratégiqu
 
 Dans le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017). Les facteurs de la valeur perçue, peuvent ainsi être associés à la compétence du consultant et à la capacité associée d’absorption du client (Oesterle et al., 2020) ; à l’expérience de co-création (Becker et al., 2015) ; à la qualité de la relation (Fu et al., 2023; Nikolova & Devinney, 2012; Sturdy, 2009).
 
-La dimension fonctionnelle de la valeur perçue du conseil (ce qui fait que le conseil « marche »), repose sur deux axes : un axe technique (le respect du cahier des charges) et un axe politique, moins tangible, lié au fait de construire le consensus et l’engagement autour des actions correctives, pour assoir les résultats de la mission (Laffite, 2024; Turner, 1982).
+La dimension fonctionnelle de la valeur perçue du conseil (ce qui fait que le conseil « marche »), repose sur deux axes : un axe technique (le respect du cahier des charges, par l’expertise, les livrables, la gestion de projet) et un axe politique, moins tangible (le fait de construire le consensus et l’engagement autour des actions correctives, pour assoir les résultats de la mission) (Laffite, 2024; Turner, 1982).
 
-La dimension politique du conseil, reste inaccessible à l’IA (Pakarinen & Huising, 2023 ; Raisch & Fomina, 2024 ; Raisch & Krakowski, 2020). Or, axe technique et politique du conseil ne peuvent aller l’un sans l’autre. Il existe une relation d’interdépendance entre les deux axes, permettant de produire les résultats du conseil. Par exemple, le manque de légitimité technique peut affaiblir la capacité politique à faire consensus, et vice-versa. Par conséquent, si l’aspect technique est toujours plus délégué à l’IA, et que l’attribution des contributions devient floue, et leur appropriation par le client interroge, le fondement de l’aspect politique du conseil se fragilise également.
+La dimension politique du conseil, reste inaccessible à l’IA (Pakarinen & Huising, 2023 ; Raisch & Fomina, 2024 ; Raisch & Krakowski, 2020).
 
-Dit autrement, la valeur perçue du conseil devient contestable. Dans ces conditions, quels peuvent être les mécanismes protecteurs de la co-création de valeur perçue du conseil à l’ère de l’IA ?
+Or, axe technique et politique du conseil ne peuvent aller l’un sans l’autre. Il existe une relation d’interdépendance entre les deux axes, permettant de produire les résultats du conseil. Par exemple, le manque de légitimité technique peut affaiblir la capacité politique à faire consensus, et vice-versa. Par conséquent, si l’aspect technique est toujours plus délégué à l’IA, et que l’attribution des contributions devient floue, le fondement de l’aspect politique du conseil se fragilise également. Dit autrement, le conseil « marche moins bien », et la valeur perçue du conseil se fragilise.
+
+La dimension émotionnelle de la valeur perçue relève de l’expérience (Arslanagic-Kalajdzic & Zabkar, 2017).
+
+Couplée à la qualité de la relation, l’expérience impacte directement la valeur émotionnelle perçue par le client. Les besoins socio-émotionnels permettent de construire l'engagement et la confiance nécessaires à la réussite politique et humaine de la mission. En premier lieu, le client évalue les ressources liées à la tâche (dimension fonctionnelle, le socle), puis les ressources socio-émotionnelles (la dimension humaine de l'interaction, i.e. l'empathie, l'écoute, le soutien, le développement d'une relation de confiance, la gestion du stress du client). Or, la valeur perçue par le client n'est pas statique : elle fluctue fortement en fonction du contexte et des contraintes de la situation. Lorsque le client fait face à de fortes contraintes de temps (urgence) ou de budget, la valeur accordée aux ressources socio-émotionnelles chute brutalement. Dans le cadre d'une relation à long terme, la valeur perçue des ressources socio-émotionnelles augmente considérablement par rapport à une relation à court terme. Pour qu'une mission longue réussisse, le client a besoin que le consultant s'investisse émotionnellement et relationnellement (Plenge et al., 2008).
+
+Si le résultat de la tâche est perçu comme illisible ou suspect du fait de l’IA, tout l'édifice socio-émotionnel risque l'écroulement.
 
 [p. 5]
 
@@ -171,7 +177,7 @@ Au plan théorique, le manque de travaux intégrés sur la question de l’évol
 
 Notre travail propose un cadre d’analyse intégré original, appuyé sur la littérature, qui constitue un pas dans cette direction.
 
-Au plan praxéologique, nous observons que les acteurs du conseil portent un discours qui focalise sur la dimension politique du conseil comme source différenciatrice de valeur à l’ère de l’IA. En interrogeant les effets de l’IA sur la valeur perçue du conseil, nous visons à éclairer la manière de faire du conseil dont la valeur est perçue à sa juste valeur, à l’ère de l’IA.
+Au plan praxéologique, nous observons que les acteurs du conseil portent un discours qui focalise sur la dimension politique du conseil comme source différenciatrice de valeur à l’ère de l’IA. Notre recherche interroge la validité du principe de ‘vase communiquant’ : déléguer la technique à l’IA sans se préoccuper des effets profonds de l’IA (floutage des contributions, appropriation) peut influencer la dimension sociale et émotionnelle, et au final, la valeur perçue.
 
 [p. 6]
 
