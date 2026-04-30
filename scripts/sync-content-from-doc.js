@@ -18,6 +18,7 @@ function stripInline(value) {
     .replace(/\[(.*?)\]\{\.underline\}/g, "$1")
     .replace(/\[(.*?)\]\{\.mark\}/g, "$1")
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1")
+    .replace(/<img\b[^>]*>/gi, "")
     .replace(/!\[[^\]]*\]\([^)]+\)\{[^}]+\}/g, "")
     .replace(/!\[[^\]]*\]\([^)]+\)/g, "")
     .replace(/\[\^(\d+)\]/g, "")
@@ -137,6 +138,7 @@ function bibliographyEntries() {
 function fullCleanMarkdown() {
   var body = markdown
     .replace(/\r\n/g, "\n")
+    .replace(/<img\b[^>]*>/gi, "")
     .replace(/!\[[^\]]*\]\([^)]+\)\{[^}]+\}/g, "")
     .replace(/\[(.*?)\]\{\.underline\}/g, "$1")
     .replace(/\[(.*?)\]\{\.mark\}/g, "$1")
