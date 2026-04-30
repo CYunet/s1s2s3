@@ -30,7 +30,7 @@ La valeur perçue du conseil à l’ère de l’IA, des mécanismes qui restent 
 
 La valeur perçue du conseil est avant tout un accomplissement social [8 (#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)
 
-L’IA, élément perturbateur de l’accomplissement social [9 (#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
+L’IA, élément perturbateur de l’accomplissement social [8 (#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
 
 3. CADRE PROPOSITIONNEL [9 (#cadre-propositionnel)](#cadre-propositionnel)
 
@@ -40,7 +40,7 @@ Dimensions de la valeur perçue du conseil à l’ère de l’IA : le triangle R
 
 R — Relationnelle [10 (#r-relationnelle)](#r-relationnelle)
 
-P — Processuelle [11 (#p-processuelle)](#p-processuelle)
+P — Processuelle [10 (#p-processuelle)](#p-processuelle)
 
 C — Cognitive [11 (#c-cognitive)](#c-cognitive)
 
@@ -186,9 +186,9 @@ Par exemple, si le client s'attend à une empathie humaine mais reçoit une rép
 
 Les auteurs soulignent ainsi, que l'un des enjeux éthiques majeurs est la « responsabilité et transparence concernant l'utilisation de l'IA dans les écosystèmes de service » (p. 299). Sans la distinction opérant/opérande, il devient difficile pour le client de savoir quelle partie de la recommandation émane du jugement humain expert (opérant traditionnel) et quelle partie est générée/proposée par l'IA. Cette opacité génère de la méfiance, qui est une forme de valeur négative perçue. Kaartemo et Helkkula consacrent une section entière à ce qu'ils appellent le « dark side of AI » qui « ouvre des pistes de recherche intrigantes » (p. 301).
 
-<span class="mark">Lorsque les frontières humain-IA deviennent floues, les institutions juridiques et éthiques existantes (conçues pour des acteurs distincts) ne peuvent plus opérer efficacement. Dans le conseil, cela peut se manifester, par exemple, par une impossibilité de recours : si la recommandation enchevêtrée humain-IA cause un préjudice,</span> qui est responsable ? Le consultant (qui a "interprété" l'IA) ? L'éditeur du logiciel ? Le client lui-même (qui a accepté l'interaction enchevêtrée) ? Cette indétermination est une externalité transactionnelle qui réduit la valeur perçue du service, surtout dans des contextes à haut risque.
+<span class="mark">Lorsque les frontières humain-IA deviennent floues, les institutions juridiques et éthiques existantes (conçues pour des acteurs distincts) ne peuvent plus opérer efficacement. Dans le conseil, cela peut se manifester, par exemple, par une impossibilité de recours : si la recommandation enchevêtrée humain-IA cause un préjudice,</span> qui est responsable ? Le consultant (qui a "interprété" l'IA) ? L'éditeur du logiciel ? Le client lui-même (qui a accepté l'interaction enchevêtrée) ? Cette indétermination est une externalité transactionnelle qui fragilise la valeur perçue du service, surtout dans des contextes à haut risque.
 
-Plé et Cáceres notent ainsi que la co-destruction peut créer des effets différenciés, où un système voit sa valeur détruite tandis que l'autre en crée. Dans le conseil IA-augmenté, le consultant peut gagner en efficacité (plus de clients traités, recommandations plus rapides) tandis que le client perd en qualité perçue (moins d'empathie, recommandations inadaptées à son contexte spécifique). L'enchevêtrement masque ce déséquilibre en présentant une façade d' «expertise combinée ». La perspective enchevêtrée de Kaartemo et Helkkula, bien qu'elle offre une vision plus réaliste de la cocréation sociotechnique, expose le conseil augmenté à des formes subtiles mais profondes de valeur négative : non pas des échecs catastrophiques visibles (que la distinction opérant/opérande aurait attribués à une "défaillance de l'outil"), mais des frictions dans le tissu relationnel lui-même.
+Plé & Cáceres (2010) notent ainsi que la co-destruction peut créer des effets différenciés, où un système voit sa valeur détruite tandis que l'autre en crée. Dans le conseil IA-augmenté, le consultant peut gagner en efficacité (plus de clients traités, recommandations plus rapides) tandis que le client perd en qualité perçue (moins d'empathie, recommandations inadaptées à son contexte spécifique). L'enchevêtrement masque ce déséquilibre en présentant une façade d' «expertise combinée ». La perspective enchevêtrée de Kaartemo et Helkkula, bien qu'elle offre une vision plus réaliste de la cocréation sociotechnique, expose le conseil augmenté à des formes subtiles mais profondes de valeur négative : non pas des échecs catastrophiques visibles (que la distinction opérant/opérande aurait attribués à une "défaillance de l'outil"), mais des frictions dans le tissu relationnel lui-même.
 
 L'interaction ne produit donc pas seulement de la valeur positive, où le conflit (Becker et al., 2015), les pratiques (Echeverri & Skålén, 2011), ou le mésusage accidentel ou intentionnel de ressources (Lumivalo et al., 2024; Plé & Cáceres, 2010), peuvent aussi se traduire par de la co-destruction de valeur.
 
@@ -200,33 +200,25 @@ Notre fondement théorique central est celui de la co-création de valeur perçu
 
 ## La valeur perçue du conseil est avant tout un accomplissement social
 
-Ainsi, dans le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017).
+Nous l’avons vu, dans le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017).
 
 La littérature suggère empiriquement deux liens constitutifs entre les dimensions de la valeur perçue du conseil : la confiance relationnelle comme précondition de l'engagement processuel (Glückler & Armbrüster, 2003; Nikolova & Devinney, 2012; Sturdy, 2009), et l'expérience de co-création comme condition de l'appropriation cognitive par le client (Ciampi, 2017; Oesterle et al., 2019).
 
 Sur ce point, certains auteurs ont suggéré que la posture même du consultant, coincé par son identité professionnelle (le consultant est l’analyste rationnel et logique, plutôt qu’exploratoire et audacieux), participait de son inhibition à challenger le client, alors même que celui-ci est en demande. Ce faisant, l’apprentissage du client n’est pas favorisé (Handley et al., 2005). De ce point de vue, l’IA présente en effet une opportunité, stimulant la recherche de solutions plus innovantes. Cependant, l’adaptation au contexte du client reste dépendante du cadre d’interaction avec l’IA (Raisch & Fomina, 2024).
 
-Dans le conseil, la relation est donc première, et l’expertise, seconde, condition pas toujours nécessaire et jamais suffisante pour initier l’interaction (in Bourgoin, 2014). La valeur perçue est donc un accomplissement social qui se produit et est réalisé au cours des interactions récurrentes entre consultant et client.
-
-Le prestataire, pour initier puis concrétiser la fonction de co-création de valeur perçue, doit avant tout chercher à pénétrer la sphère conjointe, vue comme la plateforme de co-création de valeur par l’interaction (Grönroos & Voima, 2013). C’est au sein de cette sphère que nous installons la focale d’observation du cadre exploratoire de notre recherche.
-
-Premièrement, l’interaction permet avant tout la réalisation des activités cognitives conjointes de résolution du problème, sous pilotage du consultant, comme la clarification du besoin, la définition de la solution, l’organisation de la mission (Aarikka-Stenroos & Jaakkola, 2012; Svensson, 2010).
-
-La co-création de valeur perçue *pré-suppose* donc une symétrie des rôles et responsabilités du consultant et du client : le premier cadre, analyse, préconise ; le second fournit l’information, revoit, valide. Le premier pilote, le second supporte.
-
-Cette approche est d’autant plus pertinente que le contexte du conseil se nourrit d’ambiguïté, et donc réclame des mythes et discours particuliers, dont la fonction est de persuader la clientèle de la valeur du service fourni.
-
-Clarifions donc ce point dès à présent : pour Bourgoin, le consultant, associé au client, est bien source de valeur perçue (et non un « professionnel de la persuasion », position défendue par l’école critique, à laquelle nous ne souscrivons pas, car trop simpliste, voir sur ce point l’analyse de Nikolova & Devinney, 2012). Mais celle-ci nécessite un « surcroit de justification » pour être effectivement perçue.
+Dans le conseil, la relation est première, et l’expertise, seconde, condition pas toujours nécessaire et jamais suffisante pour initier l’interaction (in Bourgoin, 2014). La valeur perçue est un accomplissement social qui se produit et est réalisé au cours des interactions récurrentes entre consultant et client. Le consultant, pour initier puis concrétiser la fonction de co-création de valeur perçue, doit avant tout chercher à pénétrer la sphère conjointe, vue comme la plateforme de co-création de valeur par l’interaction (Grönroos & Voima, 2013). C’est au sein de cette sphère que nous installons la focale d’observation du cadre exploratoire de notre recherche.
 
 ## L’IA, élément perturbateur de l’accomplissement social 
 
+Premièrement, l’interaction permet de satisfaire la dimension fonctionnelle du conseil. Deuxième, l’interaction apporte le surcroit de justification nécessaire, pour que le client perçoive la valeur du conseil.
+
 Or, l’intégration de l’IA dans les pratiques du conseil, vient perturber dans les deux cas, le processus à l’œuvre dans les interactions de co-création entre consultant et client, et par voie de conséquence, la perception de la valeur par le client.
 
-La réalisation des activités cognitives conjointes de résolution du problème peut désormais s’appuyer sur l’IA et moins sur le jugement humain (par exemple, automatisation de l’étape de clarification du diagnostic). La symétrie de l’interaction consultant-client devient sujette à déstabilisation, par le fait du floutage des contributions humain-IA.
+La réalisation des activités cognitives conjointes de résolution du problème peut désormais s’appuyer sur l’IA et moins sur le jugement humain (par exemple, automatisation de l’étape de clarification du diagnostic). Or, la symétrie de l’interaction consultant-client devient sujette à déstabilisation, par le fait du floutage des contributions humain-IA.
 
-Il en est de même pour les pratiques de justification, non seulement à la portée d’une automatisation par l’IA, mais aussi rendues floues par l’insécabilité du système humain-IA. Ces pratiques, dont la logique nous semble d’autant plus pertinente avec l’IA, sont néanmoins vouées à changer de nature.
+Les pratiques de justification (formulation commerciale du service, la présentation graphique du diagnostic, le signalement de l’activité, la montée en compétence du consultant et la production de son autorité), dont la logique nous semble d’autant plus pertinente du fait du floutage de l’attribution, doivent être revues au prisme de l’IA : premièrement, certaines sont automatisables (par exemple, l’IA dispense d’une formulation commerciale du service, des compétences de présentation graphique du diagnostic, ou accélère la montée en compétence (Cahier & Quesson, 2025)). Deuxièmement, certaines perdent de leur intérêt (par exemple, quelle est la signification d’un signalement de l’activité, pour une analyse entièrement réalisée par l’IA ?). Troisièmement, certaines dépendent de la capacité même d’interagir avec l’IA (par exemple, quelle peut être l’autorité d’un consultant qui ne peut expliciter une analyse menée par l’IA ?).
 
-Pour le conseil, ce n’est pas la finalité du processus de co-création qui est remis en cause. Il s’agit bien toujours, de produire les connaissances managériales nécessaires au client, pour lui permettre de percevoir la valeur du conseil vis-à-vis de ses propres problématiques. Simplement, la nature du processus, autrement dit, la manière d’y arriver, diffère à l’ère de l’IA. La co-création, source de la valeur perçue, est en voie de reconfiguration.
+Pour le conseil, ce n’est pas la finalité du processus de co-création qui est remis en cause. Il s’agit bien toujours, de produire les connaissances managériales nécessaires au client, pour lui permettre de percevoir la valeur du conseil vis-à-vis de ses propres problématiques. Simplement, la nature du processus de production diffère fondamentalement à l’ère de l’IA. Il faut repenser la co-création des connaissances managériales, à l’ère de l’IA.
 
 L’enjeu nous semble suffisamment d’importance : quelle est la dynamique de reconfiguration à l’œuvre, pour la valeur perçue du conseil à l’ère de l’IA, et sous quelles conditions se renforce-t-elle plutôt qu’elle ne se fragilise ?
 
