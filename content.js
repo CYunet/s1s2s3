@@ -70,7 +70,7 @@ window.ARTEFACT_CONTENT = {
   "locales": {
     "en": {
       "ui": {
-        "pageTitle": "Toward a Reconfiguration of Perceived Value in the AI Era",
+        "pageTitle": "Toward a Reconfiguration of the Perceived Value of Consulting in the AI Era",
         "skipLink": "Skip to content",
         "navAria": "Primary sections",
         "themeToggleAria": "Toggle color theme",
@@ -84,7 +84,7 @@ window.ARTEFACT_CONTENT = {
         "pageNextAria": "Show next page"
       },
       "hero": {
-        "title": "Toward a Reconfiguration of Perceived Value in the AI Era: rethinking the co-creation of managerial knowledge.",
+        "title": "Toward a Reconfiguration of the Perceived Value of Consulting in the AI Era: Rethinking the Co-creation of Managerial Knowledge.",
         "subtitle": "Exploratory framework",
         "signature": "Yunes, Clément - Université de Bordeaux – April 2026"
       },
