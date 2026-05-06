@@ -198,7 +198,7 @@ Requirement:
 - allow removal of loaded documents before or after a question is sent
 - preserve short conversation history per active page, active step and language
 - support a manually maintained research corpus of selected production conversations with contextual metadata
-- call a server endpoint rather than OpenAI directly from the browser
+- call a server endpoint rather than Gemini directly from the browser
 - paginate long textual blocks in the reading UI so denser source-driven copy remains readable without shrinking the type
 
 ### Theoretical guardrails
@@ -225,8 +225,8 @@ The chatbot must:
 
 ### Technical requirements
 
-- model class: cloud LLM compatible with `gpt-5.4`
-- API style: server-side OpenAI Responses API call
+- model class: cloud Gemini model, defaulting to `gemini-flash-latest`
+- API style: server-side Gemini `generateContent` API call
 - secret handling: API key server-side only
 - uploaded documents must be read client-side, truncated, and sent server-side only as supplementary prompt material
 
@@ -295,8 +295,8 @@ That means:
 
 ### Environment variables
 
-- `OPENAI_API_KEY` required
-- `OPENAI_MODEL` optional, default `gpt-5.4`
+- `GEMINI_API_KEY` or `GOOGLE_API_KEY` required
+- `GEMINI_MODEL` optional, default `gemini-flash-latest`
 
 ## Success criteria
 

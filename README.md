@@ -28,7 +28,7 @@ It also includes a cloud chatbot, accessible through a floating AI assistant but
 - `styles.css`: design tokens, theming, layout, responsive behavior
 - `content.js`: bilingual content, theoretical copy, timeline data, chatbot labels
 - `app.js`: rendering logic, navigation, interactions, chatbot frontend
-- `api/chat.js`: server endpoint calling the OpenAI Responses API
+- `api/chat.js`: server endpoint calling the Gemini API
 - `S1-S2-S3_Artefact.html`: synchronized standalone HTML copy
 - `NOTE_ACADEMIQUE.md`: complementary academic framing note for project documentation
 - `docs/DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.md`: French human-readable companion document aligned with the current app text
@@ -104,7 +104,7 @@ To use the cloud chatbot, the artefact must be served from an environment that:
 
 - serves the static frontend files
 - exposes the server endpoint `/api/chat`
-- provides `OPENAI_API_KEY`
+- provides `GEMINI_API_KEY` or `GOOGLE_API_KEY`
 
 The current repository structure is compatible with deployments that support static assets plus server-side API routes.
 
@@ -136,13 +136,13 @@ It must answer:
 - without introducing outside academic citations or presenting extrapolations as thesis findings
 - with concise signalling when the answer is a bounded inference or a practical extrapolation
 
-The frontend never calls OpenAI directly.
+The frontend never calls Gemini directly.
 
 Instead:
 
 1. `app.js` sends a request to `/api/chat`
 2. `api/chat.js` builds a constrained prompt
-3. the server calls the OpenAI Responses API
+3. the server calls the Gemini API
 4. the answer is returned to the UI
 
 ### Supplementary chatbot documents
@@ -174,15 +174,15 @@ These documents are treated as supplementary user context. They can help the ass
 
 Required:
 
-- `OPENAI_API_KEY`
+- `GEMINI_API_KEY` or `GOOGLE_API_KEY`
 
 Optional:
 
-- `OPENAI_MODEL`
+- `GEMINI_MODEL`
 
 Default model if unspecified:
 
-- `gpt-5.4`
+- `gemini-flash-latest`
 
 ## Deployment note
 
@@ -220,7 +220,7 @@ Implemented:
 - floating contextual cloud-chatbot UI
 - page-aware chatbot context
 - supplementary document upload for the chatbot
-- server endpoint for OpenAI Responses API
+- server endpoint for Gemini API
 - Vercel Web Analytics via `/_vercel/insights/script.js`
 - Simple Analytics privacy-first tracking via `https://scripts.simpleanalyticscdn.com/latest.js`
 - language-aware Word document download from the app header
@@ -236,6 +236,6 @@ Not yet included:
 Before public deployment:
 
 - choose the target hosting platform for `/api/chat`
-- configure `OPENAI_API_KEY`
+- configure `GEMINI_API_KEY` or `GOOGLE_API_KEY`
 - run an end-to-end visual and conversational validation
 - verify that framework answers remain grounded in `sources/CADRE_EXPLORATOIRE_YUNES_CLEMENT_PRIMARY.md`, with page citations when needed, and that practical extrapolations are clearly labelled in both languages

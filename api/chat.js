@@ -7,6 +7,7 @@ var CHAT_DOCUMENT_LIMIT = 3;
 var CHAT_DOCUMENT_MAX_CHARS = 12000;
 var CHAT_SOURCE_CHUNK_MAX_CHARS = 3200;
 var CHAT_SOURCE_CHUNK_LIMIT = 6;
+var DEFAULT_GEMINI_MODEL = "gemini-flash-latest";
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -285,63 +286,61 @@ function buildPrompt(body) {
   ].join("\n");
 }
 
-function toResponsesMessages(history) {
-  return (history || []).filter(function (item) {
+function normalizeGeminiModelName(model) {
+  return String(model || DEFAULT_GEMINI_MODEL).replace(/^models\//, "");
+}
+
+function toGeminiContents(history, prompt) {
+  var contents = (history || []).filter(function (item) {
     return item && (item.role === "user" || item.role === "assistant") && item.text;
   }).slice(-6).map(function (item) {
-    var contentType = item.role === "assistant" ? "output_text" : "input_text";
-
     return {
-      role: item.role,
-      content: [
+      role: item.role === "assistant" ? "model" : "user",
+      parts: [
         {
-          type: contentType,
           text: String(item.text)
         }
       ]
     };
   });
+
+  contents.push({
+    role: "user",
+    parts: [
+      {
+        text: prompt
+      }
+    ]
+  });
+
+  return contents;
 }
 
-function extractOutputText(payload) {
-  var text = payload && payload.output_text;
-  var output = payload && payload.output;
-  var i;
-  var j;
-  var item;
-  var content;
+function extractGeminiOutputText(payload) {
+  var candidates = payload && payload.candidates;
+  var parts;
 
-  if (typeof text === "string" && text.trim()) {
-    return text.trim();
-  }
-
-  if (!Array.isArray(output)) {
+  if (!Array.isArray(candidates) || !candidates[0] || !candidates[0].content) {
     return "";
   }
 
-  for (i = 0; i < output.length; i += 1) {
-    item = output[i];
-    if (!item || !Array.isArray(item.content)) {
-      continue;
-    }
+  parts = candidates[0].content.parts || [];
 
-    for (j = 0; j < item.content.length; j += 1) {
-      content = item.content[j];
-      if (content && typeof content.text === "string" && content.text.trim()) {
-        return content.text.trim();
-      }
-    }
-  }
-
-  return "";
+  return parts.map(function (part) {
+    return part && typeof part.text === "string" ? part.text : "";
+  }).join("").trim();
 }
 
 function responseWasTruncated(payload) {
   return Boolean(
-    payload &&
-    payload.status === "incomplete" &&
-    payload.incomplete_details &&
-    payload.incomplete_details.reason === "max_output_tokens"
+    (payload &&
+      payload.status === "incomplete" &&
+      payload.incomplete_details &&
+      payload.incomplete_details.reason === "max_output_tokens") ||
+    (payload &&
+      Array.isArray(payload.candidates) &&
+      payload.candidates[0] &&
+      payload.candidates[0].finishReason === "MAX_TOKENS")
   );
 }
 
@@ -411,13 +410,13 @@ function buildFallbackAnswer(body, reason) {
 }
 
 module.exports = async function handler(req, res) {
-  var apiKey = process.env.OPENAI_API_KEY;
-  var model = process.env.OPENAI_MODEL || "gpt-5.4";
+  var apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+  var model = normalizeGeminiModelName(process.env.GEMINI_MODEL || DEFAULT_GEMINI_MODEL);
   var body;
   var response;
   var payload;
   var answer;
-  var messages;
+  var contents;
 
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -438,31 +437,27 @@ module.exports = async function handler(req, res) {
     return sendJson(res, 200, { answer: buildFallbackAnswer(body, "configuration absente") });
   }
 
-  messages = toResponsesMessages(body.history);
-  messages.push({
-    role: "user",
-    content: [
-      {
-        type: "input_text",
-        text: buildPrompt(body)
-      }
-    ]
-  });
+  contents = toGeminiContents(body.history, buildPrompt(body));
 
   try {
-    response = await fetch("https://api.openai.com/v1/responses", {
+    response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + apiKey
+        "x-goog-api-key": apiKey
       },
       body: JSON.stringify({
-        model: model,
-        instructions: buildInstructions(body.language),
-        input: messages,
-        max_output_tokens: CHATBOT_MAX_OUTPUT_TOKENS,
-        reasoning: {
-          effort: "low"
+        systemInstruction: {
+          parts: [
+            {
+              text: buildInstructions(body.language)
+            }
+          ]
+        },
+        contents: contents,
+        generationConfig: {
+          maxOutputTokens: CHATBOT_MAX_OUTPUT_TOKENS,
+          temperature: 0.35
         }
       })
     });
@@ -482,7 +477,7 @@ module.exports = async function handler(req, res) {
     });
   }
 
-  answer = finalizeAnswer(extractOutputText(payload), payload, body.language);
+  answer = finalizeAnswer(extractGeminiOutputText(payload), payload, body.language);
 
   if (!answer) {
     return sendJson(res, 200, { answer: buildFallbackAnswer(body, "réponse IA vide") });
