@@ -330,8 +330,13 @@ def update_french_content(content, markdown)
   }
 
   fr["illustration"]["kicker"] = "6. ILLUSTRATION"
-  fr["illustration"]["intro"] = section(markdown, "## Scénario fictif d'une mission de conseil", "## Phases du scenario de la mission fictive de conseil")
-  fr["illustration"]["legend"] = "Chaque phase est scindée en sous-phase, dans laquelle se déroule l’observation : situation de co-création observée (S), propositions de recherche les plus directement examinées (P), dimensions de la valeur perçue observée (R, P, C)."
+  fr["illustration"]["intro"] = [
+    "Ce scénario illustre, de manière fictive, la co-création de valeur perçue à l'œuvre dans le conseil, à travers la séquence R→P→C, examinée au prisme des trois propositions de recherche (P1, P2, P3) et du cadre d'observation S1/S2/S3, y compris leur capacité à être défendues politiquement dans l'organisation.",
+    "L'objectif de cette simulation est de pré-tester, en amont de la phase empirique, le terrain d'observation grandeur nature prévu pour l'étude (étude de cas exemplaire unique).",
+    "La mission fictive est structurée en trois grandes phases caractéristiques des missions de conseil (cadrage, analyse, recommandations), auxquelles une quatrième phase post-mission est ajoutée afin de permettre une lecture rétrospective de la co-création de valeur perçue en fin de mission.",
+    "Note : un simulateur a été conçu pour tester et interroger les effets du modèle sur ce scénario fictif. Il représente graphiquement et interactivement la mission de conseil et permet de questionner, via l'assistant IA exposé au cadre analytique, les situations et observables au prisme de ce cadre."
+  ].join("\n\n")
+  fr["illustration"]["legend"] = "Chaque phase est divisée en sous-phases dans lesquelles se déroule l'observation : situation de co-création observée (S), propositions de recherche les plus directement examinées (P), dimensions observées de la valeur perçue (R, P, C)."
   fr["bibliography"]["entries"] = bibliography_entries(markdown)
 end
 

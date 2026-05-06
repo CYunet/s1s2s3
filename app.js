@@ -18,6 +18,7 @@
   var CHAT_DOCUMENT_MAX_CHARS = 12000;
   var CHAT_DOCUMENT_TOTAL_MAX_CHARS = 24000;
   var CHAT_DOCUMENT_ACCEPT = ".txt,.md,.markdown,.csv,.json,.html,.htm,.xml,.yml,.yaml";
+  var CHAT_REQUEST_TIMEOUT_MS = 45000;
 
   var els = {
     html: document.documentElement,
@@ -1004,11 +1005,19 @@
       return;
     }
 
+    var controller = window.AbortController ? new AbortController() : null;
+    var timeoutId = window.setTimeout(function () {
+      if (controller) {
+        controller.abort();
+      }
+    }, CHAT_REQUEST_TIMEOUT_MS);
+
     fetch("/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
+      signal: controller ? controller.signal : undefined,
       body: JSON.stringify({
         language: state.lang,
         question: trimmed,
@@ -1041,6 +1050,7 @@
         { role: "assistant", text: chat.backendError || "" }
       ]);
     }).finally(function () {
+      window.clearTimeout(timeoutId);
       state.chatPending[key] = false;
       renderChatbotHost();
       focusChatInput();
@@ -1073,8 +1083,7 @@
       '<div class="timeline-head">' +
       '<h2 class="section-title">' + escapeHtml(data.title) + "</h2>" +
       '<p class="timeline-label">' + escapeHtml(data.subtitle) + "</p>" +
-      '<p class="timeline-intro">' + escapeHtml(data.intro) + "</p>" +
-      '<p class="timeline-legend">' + escapeHtml(data.legend) + "</p>" +
+      '<div class="timeline-copy">' + buildPagedTextBody([data.intro, data.legend].filter(Boolean).join("\n\n"), "illustration-intro:" + state.lang, 2) + "</div>" +
       "</div>" +
       '<div class="mission-process" aria-hidden="true">' +
       (data.stages || []).map(function (stage) {

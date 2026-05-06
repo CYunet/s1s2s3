@@ -5,6 +5,8 @@ var exploratoryFrameworkCache = null;
 var CHATBOT_MAX_OUTPUT_TOKENS = 1600;
 var CHAT_DOCUMENT_LIMIT = 3;
 var CHAT_DOCUMENT_MAX_CHARS = 12000;
+var CHAT_SOURCE_CHUNK_MAX_CHARS = 3200;
+var CHAT_SOURCE_CHUNK_LIMIT = 6;
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -84,6 +86,135 @@ function normalizeDocuments(documents) {
   });
 }
 
+function sourceTitleForLine(line) {
+  return String(line || "").replace(/^#{1,6}\s+/, "").trim();
+}
+
+function splitSourceIntoChunks(source) {
+  var lines = String(source || "").replace(/\r\n/g, "\n").split("\n");
+  var chunks = [];
+  var current = [];
+  var currentTitle = "Document source";
+  var currentPage = "";
+
+  function pushCurrent() {
+    var text = current.join("\n").trim();
+
+    if (!text) {
+      return;
+    }
+
+    chunks.push({
+      title: currentTitle,
+      page: currentPage,
+      text: text
+    });
+    current = [];
+  }
+
+  lines.forEach(function (line) {
+    var clean = line.trim();
+
+    if (/^\[p\.\s*\d+\]/.test(clean)) {
+      currentPage = clean;
+    }
+
+    if (/^#{1,3}\s+/.test(clean) && current.join("\n").length > 900) {
+      pushCurrent();
+      currentTitle = sourceTitleForLine(clean);
+    } else if (/^#{1,3}\s+/.test(clean)) {
+      currentTitle = sourceTitleForLine(clean);
+    }
+
+    current.push(line);
+
+    if (current.join("\n").length >= CHAT_SOURCE_CHUNK_MAX_CHARS) {
+      pushCurrent();
+    }
+  });
+
+  pushCurrent();
+  return chunks;
+}
+
+function tokenizeForSearch(value) {
+  var stopwords = {
+    "avec": true, "dans": true, "pour": true, "des": true, "les": true, "une": true, "que": true, "qui": true, "the": true, "and": true, "for": true, "with": true, "that": true, "this": true, "from": true, "what": true, "comment": true, "quoi": true, "quel": true, "quelle": true, "quels": true, "quelles": true
+  };
+
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .split(/[^a-z0-9]+/)
+    .filter(function (token) {
+      return token.length > 2 && !stopwords[token];
+    });
+}
+
+function selectSourceForQuestion(source, body) {
+  var context = body.context || {};
+  var activePage = context.activePage || {};
+  var current = context.current || {};
+  var query = [
+    body.question,
+    activePage.label,
+    activePage.title,
+    current.title,
+    current.stage,
+    (current.propositions || []).join(" "),
+    (current.dimensions || []).join(" ")
+  ].join(" ");
+  var tokens = tokenizeForSearch(query);
+  var chunks = splitSourceIntoChunks(source);
+  var selected;
+  var intro = String(source || "").slice(0, 2600);
+
+  selected = chunks.map(function (chunk, index) {
+    var haystack = tokenizeForSearch([chunk.title, chunk.page, chunk.text].join(" "));
+    var score = 0;
+
+    tokens.forEach(function (token) {
+      if (haystack.indexOf(token) !== -1) {
+        score += token.length > 4 ? 2 : 1;
+      }
+    });
+
+    if (/P1|P2|P3|R\b|P\b|C\b|S1|S2|S3/i.test(query) && /P1|P2|P3|R\b|P\b|C\b|S1|S2|S3/.test(chunk.text)) {
+      score += 4;
+    }
+
+    if (String(activePage.id || "") === "illustration" && /ILLUSTRATION|Scénario|scenario|mission/i.test(chunk.title + " " + chunk.text)) {
+      score += 3;
+    }
+
+    return {
+      index: index,
+      score: score,
+      chunk: chunk
+    };
+  }).sort(function (a, b) {
+    return b.score - a.score || a.index - b.index;
+  }).slice(0, CHAT_SOURCE_CHUNK_LIMIT).map(function (item) {
+    return item.chunk;
+  });
+
+  return [
+    "Document scope and opening metadata:",
+    truncateText(intro, 2600),
+    "",
+    "Relevant primary-source excerpts selected from the complete document:",
+    selected.map(function (chunk) {
+      return [
+        "---",
+        "Section: " + chunk.title,
+        "Page marker: " + (chunk.page || "[page marker unavailable]"),
+        truncateText(chunk.text, CHAT_SOURCE_CHUNK_MAX_CHARS)
+      ].join("\n");
+    }).join("\n\n")
+  ].join("\n");
+}
+
 function buildInstructions(language) {
   var targetLanguage = language === "fr" ? "French" : "English";
 
@@ -109,6 +240,7 @@ function buildInstructions(language) {
 
 function buildPrompt(body) {
   var exploratoryFramework = getExploratoryFrameworkSource();
+  var selectedFramework = selectSourceForQuestion(exploratoryFramework, body);
   var artefactBundle = body.context || {};
   var documents = normalizeDocuments(body.documents);
 
@@ -116,8 +248,8 @@ function buildPrompt(body) {
     "User question:",
     body.question,
     "",
-    "Primary source - Exploratory framework document:",
-    exploratoryFramework || "[Exploratory framework source unavailable]",
+    "Primary source - complete exploratory framework document, retrieved excerpts:",
+    selectedFramework || "[Exploratory framework source unavailable]",
     "",
     "Current active page context:",
     JSON.stringify(artefactBundle.activePage || {}, null, 2),
