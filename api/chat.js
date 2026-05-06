@@ -391,6 +391,12 @@ function buildFallbackAnswer(body, reason) {
   var fallbackReason = body.language === "fr" ? reason : "AI service unavailable";
 
   if (body.language === "fr") {
+    excerpt = excerpt
+      .replace("Relevant primary-source excerpts selected from the complete document:", "Extraits pertinents sélectionnés dans le document source complet :")
+      .replace(/--- Section:/g, "\nSection :")
+      .replace(/Page marker:/g, "Repère page :")
+      .trim();
+
     return [
       "Le service IA est temporairement indisponible (" + fallbackReason + "). Mode de secours : voici les passages les plus pertinents extraits du cadre exploratoire complet.",
       "",
@@ -434,7 +440,7 @@ module.exports = async function handler(req, res) {
   }
 
   if (!apiKey) {
-    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "configuration absente") });
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "configuration Gemini absente") });
   }
 
   contents = toGeminiContents(body.history, buildPrompt(body));
@@ -462,7 +468,7 @@ module.exports = async function handler(req, res) {
       })
     });
   } catch (error) {
-    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "requête IA impossible") });
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "requête Gemini impossible") });
   }
 
   try {
@@ -473,14 +479,14 @@ module.exports = async function handler(req, res) {
 
   if (!response.ok) {
     return sendJson(res, 200, {
-      answer: buildFallbackAnswer(body, "service IA indisponible")
+      answer: buildFallbackAnswer(body, "service Gemini indisponible")
     });
   }
 
   answer = finalizeAnswer(extractGeminiOutputText(payload), payload, body.language);
 
   if (!answer) {
-    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "réponse IA vide") });
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "réponse Gemini vide") });
   }
 
   return sendJson(res, 200, { answer: answer });
