@@ -239,6 +239,10 @@
   }
 
   function getDocumentFilename() {
+    if (state.lang === "en") {
+      return "DOCUMENT_COMPLEMENTAIRE_CONTENU_EN.docx";
+    }
+
     return "DOCUMENT_COMPLEMENTAIRE_CONTENU_FR.docx";
   }
 

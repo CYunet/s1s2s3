@@ -1,369 +1,388 @@
 # Cadre exploratoire - source primaire
 
-Document source : Cadre_Exploratoire_YUNES Clément.docx
+Document source : Cadre_Exploratoire_YUNES_V1.0.docx
 Version synchronisée avec l'application interactive.
+Périmètre conservé : sommaire du cadre exploratoire uniquement (sections 1 à 6 et bibliographie).
 
-**Vers une reconfiguration de la valeur perçue du conseil à l’ère de l’IA : repenser la co-création de connaissances managériales.**
-
-**Cadre exploratoire**
-
-Yunes, Clément - Université de Bordeaux – Avril 2026
-
-<u>Note préliminaire :</u>
-
-Ce document pose le cadre exploratoire pour notre recherche sur la reconfiguration de la valeur perçue du conseil à l’ère de l’IA, à des fins de pré-test avant la collecte terrain, qui s'inscrit dans une démarche de recherche-intervention en sciences de gestion (David, 2000), explicitée en section 5.L
-
-Ce cadre exploratoire articule le corpus théorique central mobilisé pour les travaux, sans pour autant constituer une revue de la littérature. En ce sens, le cadre a plutôt vocation à compléter le premier chapitre de la thèse en cours d’écriture.
-
-Ce document est également en ligne sous forme interactive, au travers d’un artefact de recherche (https://s1s2s3.vercel.app/) mobilisant l’IA, conçu pour soutenir et matérialiser la démarche exploratoire. La pertinence de notre travail préliminaire peut ainsi être « pré-testée » de façon dynamique, en environnement de laboratoire : l’artefact est composé d’un assistant IA qui se fonde sur le cadre exploratoire pour formuler ses réponses. Aussi, l’artefact nous semble particulièrement utile pour ajuster notre cadre propositionnel et d’observation avant d’entrer sur le terrain, dans le contexte du scenario fictif d’une mission de conseil défini dans le document (audit de plateforme digitale, menu ‘illustration’ de l’artefact).
-
-**Table des matières**
-
-1. POSITIONNEMENT DE LA RECHERCHE [3 (#positionnement-de-la-recherche)](#positionnement-de-la-recherche)
-
-La valeur perçue du conseil au prisme de l’IA [3 (#la-valeur-perçue-du-conseil-au-prisme-de-lia)](#la-valeur-perçue-du-conseil-au-prisme-de-lia)
-
-Gap théorique [5 (#gap-théorique)](#gap-théorique)
-
-En quoi est-ce un questionnement nécessaire ? [5 (#en-quoi-est-ce-un-questionnement-nécessaire)](#en-quoi-est-ce-un-questionnement-nécessaire)
-
-Implications de la recherche [6 (#implications-de-la-recherche)](#implications-de-la-recherche)
-
-2. CADRE THEORIQUE [6 (#cadre-theorique)](#cadre-theorique)
-
-La valeur perçue du conseil à l’ère de l’IA, des mécanismes qui restent à explorer [6 (#la-valeur-perçue-du-conseil-à-lère-de-lia-des-mécanismes-qui-restent-à-explorer)](#la-valeur-perçue-du-conseil-à-lère-de-lia-des-mécanismes-qui-restent-à-explorer)
-
-La valeur perçue du conseil est avant tout un accomplissement social [8 (#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)](#la-valeur-perçue-du-conseil-est-avant-tout-un-accomplissement-social)
-
-L’IA, élément perturbateur de l’accomplissement social [8 (#lia-élément-perturbateur-de-laccomplissement-social)](#lia-élément-perturbateur-de-laccomplissement-social)
-
-3. CADRE PROPOSITIONNEL [9 (#cadre-propositionnel)](#cadre-propositionnel)
-
-P1 — Reconfiguration multidimensionnelle de la valeur perçue [9 (#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)](#p1-reconfiguration-multidimensionnelle-de-la-valeur-perçue)
-
-Dimensions de la valeur perçue du conseil à l’ère de l’IA : le triangle R – P – C (à vérifier) [10 (#dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-triangle-r-p-c-à-vérifier)](#dimensions-de-la-valeur-perçue-du-conseil-à-lère-de-lia-le-triangle-r-p-c-à-vérifier)
-
-R — Relationnelle [10 (#r-relationnelle)](#r-relationnelle)
-
-P — Processuelle [10 (#p-processuelle)](#p-processuelle)
-
-C — Cognitive [11 (#c-cognitive)](#c-cognitive)
-
-Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement) [11 (#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)](#comment-lia-reconfigure-les-trois-interdépendances-du-triangle-r---p-c-à-tester-empiriquement)
-
-P2 — La transparence comme mécanisme médiateur [12 (#p2-la-transparence-comme-mécanisme-médiateur)](#p2-la-transparence-comme-mécanisme-médiateur)
-
-P3 — Les trois conditions de modération [12 (#p3-les-trois-conditions-de-modération)](#p3-les-trois-conditions-de-modération)
-
-4. CADRE D'OBSERVATION [14 (#cadre-dobservation)](#cadre-dobservation)
-
-Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA : S1, S2, S3 [14 (#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)](#les-3-sphères-de-co-création-de-valeur-perçue-du-conseil-à-lère-de-lia-s1-s2-s3)
-
-Situations et observables [15 (#situations-et-observables)](#situations-et-observables)
-
-S1 — Sans IA [15 (#s1-sans-ia)](#s1-sans-ia)
-
-S2 — IA en silo [15 (#s2-ia-en-silo)](#s2-ia-en-silo)
-
-S3 — Co-création tripartite [15 (#s3-co-création-tripartite)](#s3-co-création-tripartite)
-
-5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE [17 (#posture-du-chercheur-et-design-de-la-recherche)](#posture-du-chercheur-et-design-de-la-recherche)
-
-Un design d'étude de cas exemplaire en grandeur réelle [17 (#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)](#un-design-détude-de-cas-exemplaire-en-grandeur-réelle)
-
-Une posture de praticien-chercheur explicitement assumée [17 (#une-posture-de-praticien-chercheur-explicitement-assumée)](#une-posture-de-praticien-chercheur-explicitement-assumée)
-
-Un dispositif de réflexivité renforcé pour répondre au risque de biais [17 (#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)](#un-dispositif-de-réflexivité-renforcé-pour-répondre-au-risque-de-biais)
-
-6. ILLUSTRATION [18 (#illustration)](#illustration)
-
-Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines [18 (#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)](#scénario-fictif-dune-mission-de-conseil-audit-de-plateforme-digitale-sur-10-semaines)
-
-Phases du scenario de la mission fictive de conseil [18 (#phases-du-scenario-de-la-mission-fictive-de-conseil)](#phases-du-scenario-de-la-mission-fictive-de-conseil)
-
-1. Cadrage – Sem. 1-3 [18 (#cadrage-sem.-1-3)](#cadrage-sem.-1-3)
-
-2. Analyse – Sem. 4-9 [19 (#analyse-sem.-4-9)](#analyse-sem.-4-9)
-
-3. Recommandations — Sem. 10 [20 (#recommandations-sem.-10)](#recommandations-sem.-10)
-
-4. Rétrospective — Post [20 (#rétrospective-post)](#rétrospective-post)
-
-BIBLIOGRAPHIE [22 (#bibliographie)](#bibliographie)
-
-##  
-
-[p. 3]
+[p. 16]
 
 # 1. POSITIONNEMENT DE LA RECHERCHE
 
-## La valeur perçue du conseil au prisme de l’IA
+## Problématisation
 
-Le conseil, cette industrie à plusieurs centaines de milliards de dollars, représente l’incarnation du savoir, appliqué à la résolution des problématiques managériales (Turner, 1982). Ainsi, la finalité du conseil est la création de connaissances managériales, qu’il s’agit de rendre appropriables et mobilisables, pour renforcer le client dans sa capacité de résolution de problèmes (Ciampi, 2017). Le conseil constitue en cela, un moteur structurant de l'innovation et de la transformation des organisations (Tavoletti et al., 2021). Or, l’avènement de l’IA générative, capable à la fois d’augmenter et d’automatiser la production des connaissances managériales, vient poser la question de la propre réinvention du secteur conseil.
+La finalité du conseil, contribuer à la création de nouvelles connaissances managériales
 
-L’IA, par ses capacités à agir en contexte ambigu et incertain (Baird & Maruping, 2021), typique de l’activité conseil (Elmholdt et al., 2025; Svensson, 2010), peut automatiser de plus en plus de tâches de management. Mais elle ne peut seule, résoudre les problèmes de management, en lien avec la complexité, la diversité et la dimension relationnelle des tâches managériales (Pakarinen & Huising, 2023; Raisch & Fomina, 2024; Raisch & Krakowski, 2020). D’autant que, l’expertise n’est pas une possession individuelle, un savoir technique transférable, mais un processus interactif et contextuel, situé, construit dans l’accomplissement du travail *in situ,* inaccessible à l’IA (Elmholdt et al., 2025; Pakarinen & Huising, 2023). C’est donc la perspective de l’augmentation par l’IA qui est privilégiée par les acteurs du conseil eux-mêmes.
+Le conseil, cette industrie à plusieurs centaines de milliards de dollars, représente l’incarnation de la connaissance, appliqué à la résolution des problématiques managériales (Turner, 1982). Le conseil constitue en cela, un moteur structurant de l'innovation et de la transformation des organisations (Tavoletti et al., 2021).
 
-Dans un livre blanc collectif publié par les anciens élèves du Club Consulting et Coaching d’HEC alumni (Masson & Dautrif, 2026), les auteurs pour la plupart praticiens du conseil, suggèrent ainsi, que l’introduction de l’IA dans les pratiques du conseil, augmente la valeur du conseil, lorsque celui-ci est mené en collaboration avec le consultant humain. Intégré, le dispositif permet de produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, de répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016). D’autant que l’IA génère de nouveaux défis en matière de sécurité, d’éthique, de gouvernance des données, qui appellent des solutions nouvelles (Mohan, 2024; Tiwari, 2025).
+Notre travail adopte ainsi l’approche fonctionnaliste du conseil, au sens d’une activité qui marche vraiment, par contraste avec l’approche critique, liée à l’ambiguïté même de ce qu’est la connaissance dans le conseil, au sens du consultant comme « professionnel de la persuasion ». (Alvesson, 2011; Svensson, 2010).
 
-Autrement dit, l’IA augmente la valeur du conseil.
+Dans ce cadre, l’activité de conseil, peut se définir comme « une activité de service réalisée par des personnes extérieures et indépendantes du client, disposant de compétences et de savoir-faire scientifiques et professionnels appropriés, consistant à formuler des avis afin de permettre au client d’identifier et de résoudre des problèmes de gestion impliquant les fonctions de la direction générale, en adoptant une démarche corrective, progressive et/ou créative, contribuant ainsi à la création de nouvelles connaissances managériales. » (Ciampi, 2017). Autrement dit, la finalité du conseil est la création de connaissances, explicites, mais surtout tacites, que les parties (i.e. client et consultant) peuvent exploiter par la suite pour la résolution de problèmes managériaux. Pour que la connaissance explicite (know what) donne naissance à de la connaissance tacite (know how), et génère de la valeur, elle doit donc être appropriée par le client.
 
-Or, au prisme de la logique de dominance du service, qui sous-tend notre recherche, le conseil augmenté reste une proposition de valeur. La transformation valeur effective est du ressort du client. C’est ce dernier, qui matérialise la valeur par l’usage (« value-in-use ») dans son propre environnement, à partir des ressources et processus de la relation commerciale. Le client est donc fondamentalement le créateur de valeur perçue. C’est par l’usage que se créé, et se perçoit la valeur du service (Vargo & Lusch, 2004).
+C’est au travers des interactions sociales entre les individus, que la connaissance est créée, « lorsque l’information est convertie pour résoudre des problèmes » (Harfouche et al., 2023).
 
-Grönroos & Voima (2013) font évoluer le paradigme, dans un sens très adapté au secteur conseil : la co-création de valeur ne survient que lors des interactions directes entre le prestataire et le client, qui se déroulent dans la sphère conjointe. Les interactions directes sont le mécanisme par lequel les ressources du client et celles du prestataire (personnel, systèmes, environnement de service) se combinent, à travers un processus dialogique, actif, continu et coordonné (au sens d’une « influence réciproque »).
+L’intégration de l’IA dans les pratiques, interroge la valeur perçue du conseil
 
+Or l’avènement de l’IA générative, questionne la définition-même de l’activité conseil: l’IA ne permet-elle pas tout autant, de contribuer puissamment à la création de connaissances managériales, par l’automatisation (substitution de l’humain par l’IA) et/ou l’augmentation (collaboration Humain + IA)?
 
+L’IA vient aussi indirectement, poser la question de la valeur de l’activité de conseil: si l’IA contribue à la création de nouvelles connaissances managériales, quelle est sa part de contribution, et que reste-t-il au conseil? Et partant, en quoi l’intégration de l’IA dans les pratiques du conseil, peut-elle influencer la perception du client, de la valeur de l’activité de conseil, à l’ère de l’IA? Sous quelles conditions en sort-elle renforcée ou fragilisée?
 
-Figure 1: Positionnement de la recherche : en quoi l’IA influence-t-elle la co-création de valeur perçue du conseil, au sein de la sphère conjointe ?
+L’IA désigne les « machines effectuant des fonctions cognitives généralement associées à l'esprit humain, telles que l'apprentissage, l'interaction et la résolution de problèmes (Nilsson, 1971). Définie plus finement, l’IA est « l’aptitude d’un système à interpréter les données externes, d’apprendre de ces données, et d’utiliser la connaissance acquise pour atteindre des résultats et réaliser des tâches spécifiques, par une adaptation flexible (Haenlein & Kaplan, 2019).
 
-Dans le conseil, les interactions permettent avant tout, la réalisation des activités cognitives combinées de résolution du problème, comme la clarification du besoin, l’organisation de la mission, la définition de la solution, voire sa mise en oeuvre (Aarikka-Stenroos & Jaakkola, 2012; Svensson, 2010).
+Par ses capacités à agir en contexte ambigu et incertain (Baird & Maruping, 2021), typique de l’activité conseil (Svensson, 2010), l’IA peut ainsi automatiser de plus en plus de tâches de management (Huang & Rust, 2021).
 
-La réussite des interactions suppose une clarté des rôles et responsabilités : le consultant facilite la participation active du client, et ce faisant, joue le rôle moteur dans la relation (Becker et al., 2015; Nikolova & Devinney, 2012). La clarté est nécessaire, mais pas suffisante : mal gérées, les interactions du conseil peuvent aussi être source de co-destruction de valeur perçue (Echeverri & Skålén, 2011; Lumivalo et al., 2024; Plé & Cáceres, 2010).
+Mais elle ne peut seule, résoudre tous les problèmes de management, en lien avec la complexité, la diversité et la dimension relationnelle des tâches managériales (Pakarinen & Huising, 2023; Raisch & Fomina, 2024; Raisch & Krakowski, 2020). D’autant que, l’expertise n’est pas une possession individuelle, un savoir technique transférable, mais un processus interactif et contextuel, situé, construit dans l’accomplissement du travail in situ, inaccessible à l’IA (Elmholdt et al., 2025; Pakarinen & Huising, 2023). La littérature montre, que l’IA, en interaction avec l’humain, crée bien de nouvelles connaissances managériales, selon un processus de boucle récursive d’augmentation de la connaissance organisationnelle (Harfouche et al., 2023).
 
-L’enjeu de l’interaction dans la valeur perçue du conseil, est donc aussi plus subtil : pour que le client puisse percevoir la valeur du conseil, celle-ci doit être activement produite, à travers des micro-activités délibérées de mise en valeur, par lesquelles le consultant construit sa légitimité tout au long de la mission, classées en cinq catégories de pratique (Bourgoin, 2014; Elmholdt et al., 2025) : la formulation commerciale du service, la présentation graphique du diagnostic, le signalement de l’activité, la montée en compétence du consultant et la production de son autorité.
+C’est donc la perspective de l’augmentation par l’IA qui est naturellement privilégiée par les acteurs du conseil eux-mêmes.
 
-La co-création de valeur perçue du conseil, implique donc une lisibilité des contributions des parties. Au fond, le client ne peut valoriser que ce qu’il perçoit (Bowman & Ambrosini, 2000).
+Dans un livre blanc collectif publié par les anciens élèves du Club Consulting et Coaching d’HEC alumni (Masson & Dautrif, 2026), les auteurs pour la plupart praticiens du conseil, suggèrent ainsi, que l’introduction de l’IA dans les pratiques du conseil, augmente la valeur du conseil, lorsque celui-ci est mené en collaboration avec le consultant humain. Intégré, le dispositif permet de produire plus vite, mieux, plus fort, moins cher, plus sûr et par conséquent, de répondre aux nouvelles attentes des clients (Candy et al., 2024; de Man et al., 2016). D’autant que l’IA n’est pas infaillible (hallucinations), et génère de nouveaux défis en matière de sécurité, d’éthique, de gouvernance des données, qui appellent des solutions nouvelles (Mohan, 2024; Tiwari, 2025).
 
-Or, l’IA floute l’attribution aux acteurs.
+Autrement dit, pour les acteurs du conseil, l’IA augmente la valeur du conseil.
+
+Or, au prisme du paradigme de dominance du service, qui sous-tend notre recherche, le conseil augmenté reste une proposition de valeur.
+
+La transformation en valeur effective est du ressort du client. C’est ce dernier, qui matérialise la valeur par l’usage (« value-in-use ») dans son propre environnement, à partir des ressources et processus de la relation commerciale. Le client est donc fondamentalement le créateur de valeur perçue. C’est par l’usage que se créé, et se perçoit la valeur du service (S. Vargo & Lusch, 2004).
+
+Grönroos & Voima (2013) font évoluer le paradigme de la dominance du service, dans un sens très adapté au secteur conseil: la co-création de valeur ne survient que lors des interactions directes entre le prestataire et le client, qui se déroulent exclusivement dans la sphère conjointe. S’il veut influencer favorablement la co-création, l’enjeu pour le prestataire, est ainsi de convaincre le client, de le laisser pénétrer la sphère conjointe et de s’y maintenir. La crédibilité du prestataire est donc une condition nécessaire, mais pas suffisante, de la réussite du processus, qui se traduit in fine par l’émergence de la valeur perçue.
+
+Les interactions directes sont le mécanisme par lequel les ressources du client et celles du prestataire (personnel, systèmes, environnement de service) se combinent, à travers un processus dialogique, actif, continu et coordonné (au sens d’une « influence réciproque »).
+
+Dans le conseil, les interactions permettent avant tout, la réalisation des activités cognitives combinées de résolution du problème, comme la clarification du besoin, l’organisation de la mission, la gestion des conflits, la définition de la solution, sa mise en oeuvre (Aarikka-Stenroos & Jaakkola, 2012). C'est également au travers de ce processus interactif et discursif que les acteurs négocient le périmètre de la connaissance pertinente, accomplissant ainsi socialement la valeur de la prestation (Elmholdt et al., 2025).
+
+La réussite des interactions suppose au-delà de la crédibilité, clarté des rôles et responsabilités: le consultant facilite la participation active du client, et ce faisant, joue le rôle moteur dans la relation (Nikolova & Devinney, 2012). Mal gérées, les interactions du conseil peuvent aussi être source de co-destruction de valeur perçue (Becker et al., 2015; voir aussi les travaux fondateurs sur la co-destruction: Echeverri & Skålén, 2011; Lumivalo et al., 2024; Plé & Cáceres, 2010). Autrement dit, la lisibilité de la dynamique de coopération est essentielle pour la co-création de valeur perçue.
+
+L’enjeu de l’interaction dans la valeur perçue du conseil, est donc aussi plus subtil: pour que le client puisse percevoir la valeur du conseil, celle-ci doit être activement produite, à travers des micro-activités délibérées de mise en valeur, par lesquelles le consultant construit sa légitimité tout au long de la mission, classées en cinq catégories de pratique (Bourgoin, 2014; Elmholdt et al., 2025): la formulation commerciale du service, la présentation graphique du diagnostic, le signalement de l’activité, la montée en compétence du consultant et la production de son autorité.
+
+La co-création de valeur perçue du conseil, implique donc une lisibilité des contributions des parties. Au fond, le client ne peut valoriser que ce qu’il perçoit (Bowman & Ambrosini, 2000). Or sur ce plan, l’IA floute l’attribution aux acteurs.
 
 Il est presque impossible de faire la différence entre une interaction avec un humain et avec une IA. L’un et l’autre sont désormais, inextricablement liés dans le processus de co-création de valeur (Kaartemo & Helkkula, 2025). Les praticiens du conseil ont eux-mêmes du mal à percevoir les effets de l’IA sur leurs propres pratiques (Cahier & Quesson, 2025).
 
-La relation au sein de l’interaction humain-IA devient asymétrique et bi-directionnelle. Les rôles de superviseur et de subordonné deviennent fluides et peuvent s'inverser au cours d'une même interaction. Non seulement les humains peuvent déléguer des tâches de plus en plus complexes (et même des préférences de résultats) à l'outil, mais l'artefact peut désormais déléguer lui-même des tâches aux humains (Baird & Maruping, 2021).
+La relation au sein de l’interaction humain-IA devient asymétrique et bi-directionnelle. Les rôles de superviseur et de subordonné deviennent fluides et peuvent s'inverser au cours d'une même interaction. Non seulement les humains peuvent déléguer des tâches de plus en plus complexes (et même des préférences de résultats) à l'outil, mais l'artefact peut désormais déléguer lui-même des tâches aux humains (Baird & Maruping, 2021). Désormais, personne ne détient plus le contrôle total du résultat (Raisch & Krakowski, 2020).
 
-L’algorithme est une boite noire, par définition non accessible. Chercher à l’ouvrir ne peut aider à saisir l’origine d’une production, à fortiori lorsque l’IA agit au sein d’un système sociotechnique distribué. Désormais, personne ne détient plus le contrôle total du résultat (Raisch & Krakowski, 2020). L’IA n’est plus observable que par ses effets au sein du système dans lequel elle interagit (Ananny & Crawford, 2018).
+Cette complexité est encore décuplée par le fait que le client, en tant que co-créateur de valeur, a lui aussi accès à ces technologies. Si l'IA augmente le consultant, elle augmente tout autant le client. Ce dernier peut désormais pré-analyser ses problèmes, générer des ébauches de solutions ou challenger l'expertise externe avec une puissance cognitive inédite. L'asymétrie de connaissances, fondement historique de la légitimité du conseil, s'en trouve profondément bouleversée.
 
-La combinaison humain-IA a pour effet, d’augmenter la création de connaissances managériales (Harfouche et al., 2023). Mais l’association révèle des effets plus profonds sur les compétences nécessaires à cette création.
+Comment dans ce contexte, le client peut-il attribuer la valeur perçue du conseil?
 
-Certaines études montrent que l’IA combinée à l’humain, alimente une dynamique duale (Krakowski et al., 2023). D’un côté, l’IA accélère l'obsolescence des compétences expertes traditionnelles, car les algorithmes, facilement réplicables et sans barrière à l'imitation, banalisent les compétences métier historiques (la « substitution »). De l'autre côté, elle crée de nouvelles sources d'avantage compétitif, à l'intersection entre l'humain et la machine (la « complémentarité »). Ce nouvel avantage compétitif est robuste car il repose sur des ressources hétérogènes et ambiguës sur le plan causal : il est difficile pour des concurrents, de comprendre et d'imiter exactement comment un humain interagit de façon optimale avec son IA. Autrement dit, savoir travailler avec l’IA est un atout déterminant, mais insaisissable.
+Or, l’algorithme est une boite noire, par définition non accessible. Chercher à l’ouvrir ne peut aider à saisir le processus menant à un résultat, à fortiori lorsque l’IA agit au sein d’un système sociotechnique distribué. L’IA ne peut ainsi être véritablement observée que par ses effets au sein du système dans lequel elle interagit (Ananny & Crawford, 2018).
 
-Si le défaut d’attribution aux acteurs, perturbe les conditions de la co-création de valeur perçue dans le conseil augmenté à l’IA, la clarté de l’attribution est aussi source de perturbation.
+Ainsi, en combinaison avec l’humain, l’IA révèle des effets susceptibles d’affecter la valeur perçue du conseil.
 
-Le courant de littérature sur la perception de l’algorithme, montre que la valeur perçue est aussi fonction de facteurs exogènes à l’algorithme lui-même : le degré d’aversion ou d’appréciation de l’algorithme (De Jong et al., 2025; Dietvorst et al., 2014; Logg et al., 2019). Comme pour le consultant humain, la perception de la crédibilité de l’IA affecte l’expérience de co-création (Khan & Mishra, 2024) et par voie de conséquence, l’appropriation des connaissances managériales et in-fine, la valeur perçue.
+Nous pensons que ces effets constituent des signaux faibles d’une reconfiguration de la valeur perçue à l’oeuvre, qui touchent aux conditions de la création, de la perception et de l’appropriation des connaissances managériales.
 
-Lorsqu’elle prend part à la co-création des connaissances managériales, l’IA vient donc perturber (au sens d’une modification de l’équilibre), les interactions du conseil, et par là même, la valeur perçue du conseil. Notre travail cherche à explorer le phénomène : sous quelles conditions, l’intégration de l’IA dans les pratiques du conseil, renforce ou fragilise, la valeur perçue du conseil ?
+L’IA affecte les compétences requises pour la création des connaissances managériales. Certaines études suggèrent en effet, que l’IA combinée à l’humain, alimente une dynamique duale (Krakowski et al., 2023). D’un côté, l’IA accélère l'obsolescence des compétences expertes traditionnelles (voir également Dell’Acqua et al., 2023), car les algorithmes, facilement réplicables et sans barrière à l'imitation, banalisent les compétences métier historiques (la « substitution »). De l'autre côté, elle crée de nouvelles sources d'avantage compétitif, à l'intersection entre l'humain et la machine (la « complémentarité »). Les auteurs s’appuient sur la théorie fondée sur les ressources pour étudier les résultats des tournois d’échecs en mode ‘centaure’ (humain + IA), et conclure que la victoire n’est pas corrélée à la compétence du joueur aux échecs (voire négativement corrélée). Le nouvel avantage compétitif favorise la compétence qui sait faire fonctionner le binôme humain – IA (paramétrage du système, etc.). Or, ajoutent-ils, cet avantage est robuste car il repose sur des ressources hétérogènes et ambiguës sur le plan causal: il est difficile pour des concurrents, de comprendre et d'imiter exactement comment un humain interagit de façon optimale avec son IA. Autrement dit, adopter l’IA et savoir interagir avec elle est un atout décisif, mais insaisissable.
 
-## Gap théorique
+La perception de la valeur ne dépend toutefois pas uniquement de l'interaction, mais également des caractéristiques du dispositif.
 
-Dans la littérature du conseil, la valeur perçue est un objet d’étude central (Becker et al., 2015; Elmholdt et al., 2025; Laffitte, 2022; Nikolova & Devinney, 2012; Oesterle et al., 2020; Sturdy, 2009; Svensson, 2010; Turner, 1982). Cependant, alors que l’IA bouleverse les pratiques du secteur, les travaux se concentrent, sur l’apport de l’IA sur les pratiques du conseil (Duncan et al., 2025; Pattanayak, 2023) ou les risques associés (Mohan, 2024; Pattanayak, 2021; Tiwari, 2025). Pas sur les effets de l’IA sur la valeur perçue du conseil.
+La crédibilité de l’IA, condition nécessaire pour son adoption (Khan & Mishra, 2024), dépend d’une part des caractéristiques intrinsèques des algorithmes (performance, sécurité), d’autre part de la perception qu’en ont les utilisateurs. Autrement dit, poser un cadre pour assoir la crédibilité de l’IA est nécessaire pour son adoption.
 
-A notre connaissance, peu de travaux sur le conseil, proposent ainsi un cadre d’analyse intégré de ces effets dans l’équation de la valeur perçue. Notre recherche vise à combler ce manque.
+Le courant de littérature sur la perception de l’algorithme, observe que la valeur perçue de l’IA, est aussi fonction de facteurs exogènes à l’algorithme: le degré d’aversion ou d’appréciation à l’algorithme (De Jong et al., 2025; Dietvorst et al., 2014; Logg et al. 2019). Ainsi, les individus perçoivent les conseils générés par des algorithmes de façon différenciée, selon qu’ils sont novices ou experts. Un paradoxe est à l’œuvre dans l'appropriation des connaissances: les professionnels expérimentés (qui utilisent les prévisions pour leurs décisions) ont tendance à moins s'appuyer sur l'algorithme que les novices, pénalisant ainsi leur performance (Dell’Acqua et al., 2023; Lebovitz et al., 2022; Logg et al., 2019). Leibovitz et al (2022) notamment, montrent que l'opacité (boîte noire) empêche l'appropriation (« engaged augmentation ») si l'expert (le radiologue), ne crée pas de nouvelles pratiques d'interrogation. La perception du rôle de l'outil mène ainsi à différentes postures d'appropriation de la connaissance, allant de la "dépendance instrumentale" jusqu'à "l'abstention épistémique" ou le "déplacement d'autorité" (Yang & Ma, 2025).
 
-[p. 4]
+Par conséquent, dans l’activité de conseil, la co-création de connaissances managériales dépend intimement de la manière dont l'algorithme est cadré, compris et perçu. Cette perception détermine l'acceptation par les professionnels (consultants comme clients) de déléguer, de partager ou de co-construire leur savoir managérial. Or, l'opacité inhérente à l’IA rend la traçabilité des contributions individuelles particulièrement complexe: "qui" produit la valeur devient une question difficile à trancher.
 
-## En quoi est-ce un questionnement nécessaire ?
+En s'insérant comme un acteur à part entière dans la génération de ces connaissances, l’IA vient perturber l'équilibre historique des interactions entre le client et le consultant. En s'enchevêtrant dans le processus cognitif, l'algorithme floute l'attribution des responsabilités et brouille les frontières de l'expertise: il devient particulièrement ardu d'isoler ce qui relève de l'apport du consultant, de la participation du client ou de la machine.
 
-La valeur représente dans la littérature, la source ultime d’avantage concurrentiel (Woodruff, 1997). Toute stratégie de création de valeur et tout avantage concurrentiel découlent d'abord de la capacité de l'entreprise à générer une valeur d’usage ("Use value") perçue comme supérieure dans l'esprit du client, ce qui permet ensuite à l'entreprise de capturer de la valeur financière (Bowman & Ambrosini, 2000).
+Cette dynamique sociotechnique inédite fait peser, selon nous, une incertitude sur le modèle traditionnel de co-création de valeur du conseil. Lorsque la lisibilité des contributions s'efface, le risque de voir la relation glisser vers une co-destruction de la valeur s'accroît.
 
-La valeur perçue devient ainsi un concept au centre des réflexions stratégiques des managers. Comprendre comment le client perçoit la valeur permet de définir le positionnement de l'offre et constitue la clé de voûte pour construire et maintenir une stratégie concurrentielle efficace (Rivière & Mencarelli, 2012). La stratégie basée sur la valeur perçue, conduit inévitablement à la fidélité, à la rétention client, à des parts de marché plus élevées et, in fine, à une position concurrentielle beaucoup plus forte (Morar, 2013).
+Ainsi, notre recherche ambitionne d'explorer ce phénomène de transition. Elle vise à répondre à la question suivante: sous quelles conditions l’intégration de l’IA générative dans les pratiques de conseil favorise-t-elle la co-création, ou à l'inverse la co-destruction, de la valeur perçue par le client? »
 
-Dans le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017). Les facteurs de la valeur perçue, peuvent ainsi être associés à la compétence du consultant et à la capacité associée d’absorption du client (Oesterle et al., 2020) ; à l’expérience de co-création (Becker et al., 2015) ; à la qualité de la relation (Fu et al., 2023; Nikolova & Devinney, 2012; Sturdy, 2009).
+## Intérêt de la recherche
 
-La dimension fonctionnelle de la valeur perçue du conseil (ce qui fait que le conseil « marche »), repose sur deux axes : un axe technique (le respect du cahier des charges, par l’expertise, les livrables, la gestion de projet) et un axe politique, moins tangible (le fait de construire le consensus et l’engagement autour des actions correctives, pour assoir les résultats de la mission) (Laffite, 2024; Turner, 1982).
+L’IA, une composante exclue de l’équation de la valeur perçue du conseil
 
-La dimension politique du conseil, reste inaccessible à l’IA (Pakarinen & Huising, 2023 ; Raisch & Fomina, 2024 ; Raisch & Krakowski, 2020).
+Notre recherche mobilise un triple corpus:
 
-Or, axe technique et politique du conseil ne peuvent aller l’un sans l’autre. Il existe une relation d’interdépendance entre les deux axes, permettant de produire les résultats du conseil. Par exemple, le manque de légitimité technique peut affaiblir la capacité politique à faire consensus, et vice-versa. Par conséquent, si l’aspect technique est toujours plus délégué à l’IA, et que l’attribution des contributions devient floue, le fondement de l’aspect politique du conseil se fragilise également. Dit autrement, le conseil « marche moins bien », et la valeur perçue du conseil se fragilise.
+- La littérature du marketing des services (valeur perçue, sphère de co-création)
+- La littérature sur la valeur du conseil (définition, buts, attributs, rôle de la connaissance),
+- La littérature des systèmes d’information (interactions humains-IA, création de connaissance, effets socio-techniques).
 
-La dimension émotionnelle de la valeur perçue relève de l’expérience (Arslanagic-Kalajdzic & Zabkar, 2017).
+Au carrefour de ces littératures, la valeur perçue du conseil s'impose comme un objet d'étude central.
 
-Couplée à la qualité de la relation, l’expérience impacte directement la valeur émotionnelle perçue par le client. Les besoins socio-émotionnels permettent de construire l'engagement et la confiance nécessaires à la réussite politique et humaine de la mission. En premier lieu, le client évalue les ressources liées à la tâche (dimension fonctionnelle, le socle), puis les ressources socio-émotionnelles (la dimension humaine de l'interaction, i.e. l'empathie, l'écoute, le soutien, le développement d'une relation de confiance, la gestion du stress du client). Or, la valeur perçue par le client n'est pas statique : elle fluctue fortement en fonction du contexte et des contraintes de la situation. Lorsque le client fait face à de fortes contraintes de temps (urgence) ou de budget, la valeur accordée aux ressources socio-émotionnelles chute brutalement. Dans le cadre d'une relation à long terme, la valeur perçue des ressources socio-émotionnelles augmente considérablement par rapport à une relation à court terme. Pour qu'une mission longue réussisse, le client a besoin que le consultant s'investisse émotionnellement et relationnellement (Plenge et al., 2008).
+Certains ont tenté de la mesurer (Oesterle et al., 2019). Toutefois, en raison de l'intangibilité de la prestation (Svensson, 2010), cette valeur demeure une construction complexe, hautement subjective et située, et par conséquent difficilement mesurable de manière objective (Bourgoin, 2014; Elmholdt et al., 2025). C’est cette ambiguïté structurelle qui alimente la tension classique entre le courant fonctionnaliste (le conseil comme activité de résolution de problèmes efficace) et le courant critique (le consultant comme professionnel de la persuasion (Alvesson, 2011; Svensson, 2010).
 
-Si le résultat de la tâche est perçu comme illisible ou suspect du fait de l’IA, tout l'édifice socio-émotionnel risque l'écroulement.
+Au-delà de ce débat, un consensus fort émerge aujourd'hui: la valeur du conseil naît avant tout de la dynamique relationnelle. Si certains auteurs mobilisent la sociologie de la traduction (Théorie de l'Acteur-Réseau) pour analyser finement les jeux d'alliances entre acteurs humains et dispositifs techniques dans cette relation (Seccia, 2019), notre approche privilégie le prisme de la Service-Dominant Logic, qui permet d'appréhender la dimension subjective, phénoménologique et évaluative de la prestation par le client. Dans ce cadre, la valeur n'est pas un livrable transféré, mais le résultat d'un processus continu de co-création (et potentiellement de co-destruction) au fil des interactions entre le consultant et son client (Arslanagic-Kalajdzic & Zabkar, 2017; Becker et al., 2015; Elmholdt et al., 2025; Nikolova & Devinney, 2012).
 
-[p. 5]
+Cependant, l’irruption de l’IA générative vient bouleverser ce fragile équilibre de co-création de connaissances.
 
-## Implications de la recherche
+L'IA redéfinit les pratiques du secteur (Duncan et al., 2025; Pattanayak, 2021), les frontières de la performance cognitive (Brynjolfsson et al., 2023; Dell’Acqua et al., 2023), ainsi que les risques qui y sont associés (Mohan, 2024; Tiwari, 2025). Plus fondamentalement, l'IA ne s'insère plus comme un simple outil passif, mais génère un véritable "enchevêtrement" (entanglement) des ressources Humain-IA au sein de l'écosystème de service (Kaartemo & Helkkula, 2025).
 
-Au plan théorique, le manque de travaux intégrés sur la question de l’évolution de la valeur perçue du conseil à l’ère de l’IA, nous semble d’autant nécessaire à combler, que les acteurs du conseil se sont largement engagés sur la voie du conseil augmenté par l’IA.
+Or, à notre connaissance, il n’existe pas de travaux analysant les effets de cette intégration de l’IA sur la valeur perçue du conseil.
 
-Notre travail propose un cadre d’analyse intégré original, appuyé sur la littérature, qui constitue un pas dans cette direction.
+Implication théorique
 
-Au plan praxéologique, nous observons que les acteurs du conseil portent un discours qui focalise sur la dimension politique du conseil comme source différenciatrice de valeur à l’ère de l’IA. Notre recherche interroge la validité du principe de ‘vase communiquant’ : déléguer la technique à l’IA sans se préoccuper des effets profonds de l’IA (floutage des contributions, appropriation) peut influencer la dimension sociale et émotionnelle, et au final, la valeur perçue.
+Au plan théorique, la littérature manque d'un cadre d’analyse capable d'incorporer ces nouvelles interactions sociotechniques dans l’équation de la valeur perçue par le client, à l’ère de l’IA.
 
-[p. 6]
+Notre recherche vise précisément à combler cette lacune.
 
-# 2. CADRE THEORIQUE
+En proposant de nouvelles dimensions de la valeur perçue, plus adaptées à l’intégration de l’IA dans les pratiques du conseil (le triptyque R-P-C), articulées à un cadre propositionnel (P1, P2, P3) et d’observation (configurations d'interaction S1, S2, S3) spécifiques, nous définissons une plateforme conceptuelle qui permet de mieux comprendre ce qui fait la valeur perçue du conseil à l'ère de l'IA.
 
-## La valeur perçue du conseil à l’ère de l’IA, des mécanismes qui restent à explorer
+Implication praxéologique
 
-Notre recherche mobilise la littérature du marketing (Logique de Dominance du Service, valeur perçue), la littérature sur le conseil (définition, buts, valeur), la littérature des systèmes d’information (lien entre IA et connaissances, effets de l’IA sur les systèmes socio-techniques).
+Au plan praxéologique, nous observons que les acteurs du conseil se sont largement engagés sur la voie du conseil augmenté, avec un discours qui focalise sur la dimension politique et relationnelle comme source différenciatrice de valeur à l’ère de l’IA.
 
-La valeur perçue reste une notion floue, à fortiori dans le domaine du conseil, qui évolue par définition, dans un contexte ambigu et incertain (Svensson, 2010). La valeur perçue présente néanmoins des facteurs consensuels : elle est issue d’un jugement comparatif, personnelle, dynamique et contextuelle (Rivière & Mencarelli, 2012). Notamment dans le conseil, la littérature diverge plutôt sur les mécanismes de sa formation.
+Notre recherche interroge la validité de ce principe de "vases communicants".
 
-Pour tenir compte de l’apport des systèmes d’information modernes sur la création de valeur, la perspective de la Logique Dominante du Service qui sous-tend notre recherche, a été étendue de « l’innovation de service », (Lusch & Nambisan, 2015). La valeur perçue reste le fruit d’une co-création, par la mise en commun des compétences spécialisées et disparates (physiques, numériques, humaines) d’un réseau d’acteurs (prestataire, client, partenaires) au sein d’une plateforme de services (le lieu de l’innovation). En revanche, les technologies numériques quittent leur rôle d’outil passif sur lequel agir (ressource *operande,* par exemple dans le champ des systèmes d’information, l’infrastructure ou les données), pour devenir acteur dynamique à part entière, capable de co-crééer de la valeur (ressource *operant*). Cette perspective préfigure l’IA contemporaine, mais reste attachée à l’idée d’une dichotomie entre systèmes humains et non humains.
+Déléguer la technique à l’IA sans se préoccuper de ses effets profonds sur la dynamique de co-création avec le client (floutage des contributions, opacité du raisonnement, freins à l'appropriation de la connaissance) risque au contraire d'éroder la légitimité du consultant. L'ambition pratique de notre recherche est donc de doter la profession d'une meilleure compréhension des conditions sous lesquelles l'enchevêtrement avec l'IA conduit à la co-création ou, inversement, à la co-destruction de la valeur perçue.
 
-Or, nous disent Kaartemo & Helkkula (2025), l’IA implique une dissolution radicale de la dichotomie operande / operant, au profit de l'enchevêtrement : humains et IA deviennent des « ressources de cocréation de valeur enchevêtrées » indissociables dans des « écosystèmes de services intrinsèquement sociotechniques ». L'intentionnalité humaine s'exerce « à travers » l'IA via quatre relations : arrière-plan (opération discrète), incarnation (intégration corporelle), herméneutique (interprétation de données), et altérité (robots comme quasi-autres). La distinction humain-IA elle-même devient ainsi obsolète face à la réalité sociotechnique où humains et IA sont ontologiquement enchevêtrés dans des modalités relationnelles multiples et fluides.
+[p. 21]
 
-Autrement dit, la clarté s’efface au sein même de la sphère conjointe, ouvrant la voie à une redéfinition de la manière dont nous devons concevoir la responsabilité, la transparence et l'équilibre des attentes dans les interactions de service. L’enchevêtrement humain-IA, révèle ainsi plusieurs risques d'externalités négatives et de co-destruction de valeur, décrits par des auteurs comme Lumivalo et al., (2024); Plé & Cáceres (2010).
+# 2. CADRE THEORIQUE MOBILISÉ
 
-Par exemple, si le client s'attend à une empathie humaine mais reçoit une réponse algorithmique inadéquate, cela génère un risque de valeur négative perçue (Echeverri & Skålén, 2011). Si l'IA fournit une analyse que le consultant adopte sans la comprendre pleinement (par exemple, un algorithme générant une recommandation contre-intuitive), cela crée une externalité négative pour le client, ce que Lumivalo et al. (2024) nomment un mésusage de la ressource, ici "expertise combinée humain-IA ». Si le consultant enchevêtré avec l'IA (relations cyborg ou composite), perd sa capacité d'exercer un jugement indépendant, cela crée une externalité négative pour le client sous forme d'« expertise dégradée » — le consultant ne maîtrise plus les ressources qu'il mobilise (Kaartemo & Helkkula, 2025). A l’ère de l’IA, l’opacité fait courir un risque à la co-création de valeur perçue.
+Marketing des services (Service-dominant Logic): valeur perçue et sphère de co-création
 
-Les auteurs soulignent ainsi, que l'un des enjeux éthiques majeurs est la « responsabilité et transparence concernant l'utilisation de l'IA dans les écosystèmes de service » (p. 299). Sans la distinction opérant/opérande, il devient difficile pour le client de savoir quelle partie de la recommandation émane du jugement humain expert (opérant traditionnel) et quelle partie est générée/proposée par l'IA. Cette opacité génère de la méfiance, qui est une forme de valeur négative perçue. Kaartemo et Helkkula consacrent une section entière à ce qu'ils appellent le « dark side of AI » qui « ouvre des pistes de recherche intrigantes » (p. 301).
+La valeur représente dans la littérature du management, la source ultime d’avantage concurrentiel (Woodruff, 1997). Toute stratégie de création de valeur et tout avantage concurrentiel découlent d'abord de la capacité de l'entreprise à générer une valeur d’usage ("Use value"), perçue comme supérieure dans l'esprit du client, ce qui permet ensuite à l'entreprise de capturer de la valeur financière (Bowman & Ambrosini, 2000).
 
-<span class="mark">Lorsque les frontières humain-IA deviennent floues, les institutions juridiques et éthiques existantes (conçues pour des acteurs distincts) ne peuvent plus opérer efficacement. Dans le conseil, cela peut se manifester, par exemple, par une impossibilité de recours : si la recommandation enchevêtrée humain-IA cause un préjudice,</span> qui est responsable ? Le consultant (qui a "interprété" l'IA) ? L'éditeur du logiciel ? Le client lui-même (qui a accepté l'interaction enchevêtrée) ? Cette indétermination est une externalité transactionnelle qui fragilise la valeur perçue du service, surtout dans des contextes à haut risque.
+La valeur perçue devient ainsi un concept au centre des réflexions stratégiques des managers.
 
-Plé & Cáceres (2010) notent ainsi que la co-destruction peut créer des effets différenciés, où un système voit sa valeur détruite tandis que l'autre en crée. Dans le conseil IA-augmenté, le consultant peut gagner en efficacité (plus de clients traités, recommandations plus rapides) tandis que le client perd en qualité perçue (moins d'empathie, recommandations inadaptées à son contexte spécifique). L'enchevêtrement masque ce déséquilibre en présentant une façade d' «expertise combinée ». La perspective enchevêtrée de Kaartemo et Helkkula, bien qu'elle offre une vision plus réaliste de la cocréation sociotechnique, expose le conseil augmenté à des formes subtiles mais profondes de valeur négative : non pas des échecs catastrophiques visibles (que la distinction opérant/opérande aurait attribués à une "défaillance de l'outil"), mais des frictions dans le tissu relationnel lui-même.
+Comprendre comment le client perçoit la valeur permet de définir le positionnement de l'offre et constitue la clé de voûte pour construire et maintenir une stratégie concurrentielle efficace (Rivière & Mencarelli, 2012). La stratégie basée sur la valeur perçue, conduit inévitablement à la satisfaction et la fidélité du client, par conséquent à des parts de marché plus élevées et, in fine, à une position concurrentielle plus forte (Morar, 2013).
 
-L'interaction ne produit donc pas seulement de la valeur positive, où le conflit (Becker et al., 2015), les pratiques (Echeverri & Skålén, 2011), ou le mésusage accidentel ou intentionnel de ressources (Lumivalo et al., 2024; Plé & Cáceres, 2010), peuvent aussi se traduire par de la co-destruction de valeur.
+Le concept de valeur perçue prend sa source dans la littérature du marketing B2C des biens de grande consommation, qui cherchait à établir le rapport entre qualité, prix et valeur, pour déterminer comment le consommateur choisit une offre plutôt qu’une autre (valeur d’achat): la valeur perçue est alors un concept, établi avant l’achat, qui répond d’une logique purement rationnelle. Elle est alors définie comme « l’évaluation globale par le consommateur, du rapport entre bénéfices et sacrifices » (Zeithaml, 1988).
 
-Enfin, une autre perspective intéresse notre propos sur les mécanismes de formation de la valeur perçue du conseil, qui analyse la manière dont la valeur est accomplie et perçue par le discours et le contexte. Par exemple, la notion de « propositions de valeur réciproques », suggère que lorsque la proposition de valeur du prestataire est désalignée avec la valeur recherchée par le client, cela crée une "disparité" qui bloque l'intégration de ressources, mène à l'insatisfaction et à un échec de la co-création (Baumann et al., 2017).
+Le concept s’enrichit par la suite, pour prendre en compte l’expérience (valeur de consommation). La valeur perçue dépasse alors la vision réductrice précédente et devient multi-dimensionnelle: la littérature s’attache à en déterminer les sources multiples, sans pour autant s’interroger sur leur intégration au sein d’un jugement global. D’où l’avènement d’approches hybrides, cherchant à rapprocher valeur d’achat et de consommation (voir par exemple, l'echelle de Sweeney & Soutar, 2001).
 
-Dans le conseil, la valeur perçue est aussi dépendante du contexte : par exemple, Plenge et al. (2008), montrent que sous la contrainte de budget ou de temps, les ressources liées à la tâche pure (la dimension technique) ont bien plus de valeur perçue que les ressources socio-émotionnelles (la dimension relationnelle).
+Toutefois, la conceptualisation de la valeur perçue relève encore du domaine B2C. Rivière & Mencarelli (2012) établissent une synthèse des facteurs consensuels de la valeur perçue, applicables également au domaine B2B, plus proche des réalités du conseil: la valeur perçue est issue d’un jugement comparatif (intra ou inter-produits), elle est personnelle (perçue différemment selon les acheteurs), contextuelle et dynamique.
 
-Notre fondement théorique central est celui de la co-création de valeur perçue, pas celui-de la co-destruction. On comprend néanmoins que la frontière est ténue et ne peut donc être ignorée.
+Nous le verrons plus bas, la conceptualisation sur la valeur perçue s’est précisée pour déterminer plus finement encore, les dimensions de la valeur perçue du conseil. De cette synthèse, nous retenons néanmoins un élément supplémentaire: les auteurs invitent à approfondir les mécanismes de la formation de la valeur perçue, « en fonction d’un certain nombre de critères tels que l’intensité de participation du consommateur, les motivations initiales des individus à s’engager dans une activité de co-création, les caractéristiques de la tâche à effectuer, ou bien encore les modalités de mise en œuvre du processus de co-création » (Rivière & Mencarelli, 2012, p. 23)
 
-[p. 7]
+Ainsi, dans le cadre de notre travail, nous nous intéressons au processus de co-création, appliqué au domaine du conseil.
 
-## La valeur perçue du conseil est avant tout un accomplissement social
+Pour cela, l’approche de Grönroos & Voima (2013), référence fondatrice en marketing des services (Service Dominant Logic, SDL), nous parait particulièrement fondée. Par extension à l’article séminal de Vargo & Lusch (2004), qui attribue la création de valeur du côté du client, les auteurs ont précisément cherché à clarifier "qui fait quoi" dans la création de valeur perçue, pour sortir du flou ambiant de la SDL (qui impliquait au final, une simplification à outrance, autour de "tout est co-créé").
 
-Nous l’avons vu, dans le conseil, la valeur perçue relève de trois dimensions : fonctionnelle, émotionnelle et sociale (Arslanagic-Kalajdzic & Zabkar, 2017).
+Grönroos et Voima, séparent le processus de création de valeur en trois sphères distinctes: celle du prestataire, celle du client, et la sphère conjointe qui réunit les deux. C'est uniquement dans cette sphère conjointe que la véritable "co-création" de valeur peut se produire, par le biais des interactions directes. La sphère conjointe donne au prestataire, l'opportunité de s'immiscer dans le processus de création de valeur du client et de l'influencer directement.
 
-La littérature suggère empiriquement deux liens constitutifs entre les dimensions de la valeur perçue du conseil : la confiance relationnelle comme précondition de l'engagement processuel (Glückler & Armbrüster, 2003; Nikolova & Devinney, 2012; Sturdy, 2009), et l'expérience de co-création comme condition de l'appropriation cognitive par le client (Ciampi, 2017; Oesterle et al., 2019).
+Selon nous, la sphère conjointe est très adaptée pour modéliser la co-création de valeur du secteur conseil:
 
-Sur ce point, certains auteurs ont suggéré que la posture même du consultant, coincé par son identité professionnelle (le consultant est l’analyste rationnel et logique, plutôt qu’exploratoire et audacieux), participait de son inhibition à challenger le client, alors même que celui-ci est en demande. Ce faisant, l’apprentissage du client n’est pas favorisé (Handley et al., 2005). De ce point de vue, l’IA présente en effet une opportunité, stimulant la recherche de solutions plus innovantes. Cependant, l’adaptation au contexte du client reste dépendante du cadre d’interaction avec l’IA (Raisch & Fomina, 2024).
+- La sphère du prestataire (provider sphere), est le lieu où le consultant travaille seul, en back-office (par exemple, il y prépare des analyses). Il est ainsi un "facilitateur de valeur" potentielle (value facilitator), au sens de Grönroos et Voima.
+- La sphère du client (customer sphere): le client utilise seul les recommandations dans son entreprise. C'est ainsi qu’il crée effectivement la "valeur d'usage" (value-in-use), qui se traduit en valeur perçue.
+- La sphère conjointe (joint sphere): c'est le moment d'interaction directe (la réunion, l'atelier, la présentation). L’interaction du conseil saisit, tout au long de la mission, le caractère dynamique de la valeur perçue (laquelle peut donc évoluer, selon les dimensions de la valeur perçue du conseil, voir plus bas).
 
-Dans le conseil, la relation est première, et l’expertise, seconde, condition pas toujours nécessaire et jamais suffisante pour initier l’interaction (in Bourgoin, 2014). La valeur perçue est un accomplissement social qui se produit et est réalisé au cours des interactions récurrentes entre consultant et client. Le consultant, pour initier puis concrétiser la fonction de co-création de valeur perçue, doit avant tout chercher à pénétrer la sphère conjointe, vue comme la plateforme de co-création de valeur par l’interaction (Grönroos & Voima, 2013). C’est au sein de cette sphère que nous installons la focale d’observation du cadre exploratoire de notre recherche.
+C’est donc naturellement au sein de cette sphère conjointe, que nous installons la focale d’observation de notre recherche.
 
-[p. 8]
+Pour tenir compte de l’apport des systèmes d’information modernes sur la création de valeur, la perspective du marketing des services, a été étendue de « l’innovation de service », (Lusch & Nambisan, 2015), qui préfigure l’IA comme acteur du système socio-technique de création de la valeur. La valeur perçue reste bien le fruit d’une co-création, par la mise en commun des compétences spécialisées et disparates (physiques, numériques, humaines) d’un réseau d’acteurs (prestataire, client, partenaires) au sein d’une plateforme de services (le lieu de l’innovation). Néanmoins, les technologies numériques quittent leur rôle d’outil passif sur lequel agir pour crééer de la valeur (ressource operande dans la perspective du marketing des services, par exemple dans le domaine des systèmes d’information, l’infrastructure ou les données), pour devenir acteur dynamique à part entière, capable de contribuer de façon active à la co-création de la valeur (ressource operant, par exemple par l’apport des connaissances requises pour résoudre un problème managérial).
 
-## L’IA, élément perturbateur de l’accomplissement social 
+La perspective du marketing étendue de l’innovation de service, reste cependant attachée à l’idée d’une dichotomie entre systèmes humains et non humains. Ce point nous semble déterminant pour la perception de la valeur du conseil.
 
-Premièrement, l’interaction permet de satisfaire la dimension fonctionnelle du conseil. Deuxième, l’interaction apporte le surcroit de justification nécessaire, pour que le client perçoive la valeur du conseil.
+La valeur perçue du conseil, un accomplissement social
 
-Or, l’intégration de l’IA dans les pratiques du conseil, vient perturber dans les deux cas, le processus à l’œuvre dans les interactions de co-création entre consultant et client, et par voie de conséquence, la perception de la valeur par le client.
+Dans le domaine des services B2B (applicable, donc au conseil), la valeur perçue n'est donc pas une donnée objective contenue dans le livrable, mais un jugement comparatif, subjectif, multidimensionnel et dynamique porté par le client. Sur cette base, le client évalue la balance entre les bénéfices reçus et les sacrifices consentis, au plan fonctionnels, émotionnels, sociaux (Arslanagic-Kalajdzic & Zabkar, 2017).
 
-La réalisation des activités cognitives conjointes de résolution du problème peut désormais s’appuyer sur l’IA et moins sur le jugement humain (par exemple, automatisation de l’étape de clarification du diagnostic). Or, la symétrie de l’interaction consultant-client devient sujette à déstabilisation, par le fait du floutage des contributions humain-IA.
+La dimension fonctionnelle (functional value) est la dimension la plus classique et la plus étudiée, étendue aux deux autres par la suite pour tenir compte de l’aspect humain des décisions dans les organisations (Arslanagic-Kalajdzic & Zabkar, 2017). La dimension fonctionnelle correspond à l'utilité économique et pratique de la prestation de conseil (i.e. en avoir pour son argent, value for money), dérivée de la qualité perçue du service, de la réduction espérée des coûts (à court ou long terme) et de la performance attendue de l'intervention. Au plan fonctionnel, les facteurs de la valeur perçue peuvent ainsi être associés à la compétence du consultant (Fincham et al., 2008) et à la capacité d’absorption du client (Oesterle et al., 2020). D’un point de vue de l’évaluation de la valeur perçue selon la dimension fonctionnelle, le client détermine si le consultant a bien résolu le problème, si la méthode était efficace, si le diagnostic était précis, et si le retour sur investissement justifie au fond, les honoraires payés.
 
-Les pratiques de justification (formulation commerciale du service, la présentation graphique du diagnostic, le signalement de l’activité, la montée en compétence du consultant et la production de son autorité), dont la logique nous semble d’autant plus pertinente du fait du floutage de l’attribution, doivent être revues au prisme de l’IA : premièrement, certaines sont automatisables (par exemple, l’IA dispense d’une formulation commerciale du service, des compétences de présentation graphique du diagnostic, ou accélère la montée en compétence (Cahier & Quesson, 2025)). Deuxièmement, certaines perdent de leur intérêt (par exemple, quelle est la signification d’un signalement de l’activité, pour une analyse entièrement réalisée par l’IA ?). Troisièmement, certaines dépendent de la capacité même d’interagir avec l’IA (par exemple, quelle peut être l’autorité d’un consultant qui ne peut expliciter une analyse menée par l’IA ?).
+La dimension émotionnelle (emotional value) de la valeur perçue relève de l’expérience (Arslanagic-Kalajdzic & Zabkar, 2017). Cet angle tient compte du fait que dans le domaine B2B, les décisions ne sont pas prises de façon purement rationnelle: ce sont des humains qui évaluent le service. La dimension émotionnelle relève ainsi des sentiments (feelings) ou des états affectifs générés par le processus du service, chez les décideurs ou l'équipe du client. Ainsi dans le conseil, la valeur perçue du service augmente si le client s'est senti rassuré, en confiance, écouté, s'il a pris du plaisir à collaborer avec l'équipe de consultants, ou si le processus a réduit son anxiété managériale (sur ce point, voir également Almquist et al., 2018).
 
-Pour le conseil, ce n’est pas la finalité du processus de co-création qui est remis en cause. Il s’agit bien toujours, de produire les connaissances managériales nécessaires au client, pour lui permettre de percevoir la valeur du conseil vis-à-vis de ses propres problématiques. Simplement, la nature du processus de production diffère fondamentalement à l’ère de l’IA. Il faut repenser la co-création des connaissances managériales, à l’ère de l’IA.
+La dimension sociale de la valeur perçue (social value), relève de l’approbation sociale, c’est-à-dire la légitimation perçue auprès des parties prenantes, à utiliser le service (Arslanagic-Kalajdzic & Zabkar, 2017). Les auteurs la définissent comme « l'utilité dérivée de l'acceptation, de l'impression positive et de l'approbation sociale que l'offre de service et le processus ont généré pour l'entreprise cliente et ses produits/services ». Le recours au conseil n'est jamais un acte neutre au sein d'une organisation ou sur un marché. Autrement dit, le client utilise la marque ou l'expertise du consultant pour légitimer ses propres décisions face à son conseil d'administration, ses employés ou ses actionnaires.
 
-L’enjeu nous semble suffisamment d’importance : quelle est la dynamique de reconfiguration à l’œuvre, pour la valeur perçue du conseil à l’ère de l’IA, et sous quelles conditions se renforce-t-elle plutôt qu’elle ne se fragilise ?
+Comment s’articule le lien entre ces trois dimensions, pour établir la valeur perçue du conseil?
 
-[p. 9]
+La littérature montre que ces dimensions ne sont pas isolées, mais structurellement imbriquées. En premier lieu, le client évalue les ressources liées à la tâche (la dimension fonctionnelle), qui constituent le socle incontournable de l'intervention (effet sur la satisfaction client). C'est sur cette base que viennent s'arrimer les dimensions émotionnelles (les sentiments, l’état affectif) et sociales (l'approbation, la légitimation), perçu au sein de la relation (effet sur la fidélité). (Arslanagic-Kalajdzic & Zabkar, 2017; Plenge et al., 2008).
+
+Pour clarifier cette dynamique dans la pratique du conseil, valeur perçue repose fondamentalement, sur deux axes interdépendants: un axe technique (la dimension fonctionnelle, autrement dit, le respect du cahier des charges) et un axe politique (les dimensions socio-émotionnelles, c'est-à-dire la capacité à construire le consensus et l'engagement autour des recommandations pour asseoir les résultats de la mission). Dans le conseil, l'axe technique et l'axe politique du conseil ne peuvent aller l'un sans l'autre (Turner, 1982). La légitimité technique (expertise) fonde la crédibilité et l’autorité nécessaire pour agir politiquement, ce qui influence directement et positivement toutes les facettes de la valeur perçue par le client (Arslanagic-Kalajdzic & Zabkar, 2017, p. 53). Réciproquement, l'action politique est indispensable pour faire accepter la technique et orchestrer le changement. Loin d'être une simple posture rhétorique ou un jeu de persuasion, cette valeur s'accomplit concrètement et socialement in situ: le consultant navigue en permanence entre ces deux axes pour répondre aux épreuves de légitimité – tests de compétences et de loyauté – que le client lui soumet tout au long de la mission (Bourgoin, 2014; Elmholdt et al., 2025).
+
+Or selon nous, l’introduction de l’IA dans les pratiques du conseil, fragilise potentiellement cette relation d'interdépendance.
+
+D’une part, l 'IA vient brouiller la lisibilité des contributions sur l'axe technique. L'opacité de l'algorithme et la difficulté à attribuer la paternité du travail (qui a analysé? l'humain ou la machine?) floutent la perception de l'expertise fonctionnelle du consultant. D’autre part, le consultant ne peut se décharger de la technique sur l'IA, pour ne conserver que le rôle politique. Si l'assise technique (fonctionnelle) est perçue comme illisible, déléguée à une boîte noire ou suspecte, la légitimité politique (socio-émotionnelle) permettant de faire consensus s'effrite mécaniquement. Dit autrement, l'intégration de l'IA dans les pratiques du conseil, risque de faire "moins bien marcher" le conseil, et donc faire évoluer la valeur perçue associée.
+
+Enfin, une perspective originale, inspirée du courant pragmatiste de la valeur (l’expérience et l’action comme source de la construction de la valeur, au sens de mise en valeur, non au sens critique du conseil), soutient notre propos sur la valeur perçue du conseil comme accomplissement social et situé.
+
+Par exemple, l’approche discursive articule la notion de « propositions de valeur réciproques », et suggère que lorsque la proposition de valeur du prestataire est désalignée avec la valeur recherchée par le client, cela crée une "disparité" qui bloque l'intégration de ressources, mène à l'insatisfaction et à un échec de la co-création (Baumann et al., 2017). L’approche contextuelle, montre que sous la contrainte de budget ou de temps, les ressources liées à la tâche pure (la dimension technique) génèrent plus de valeur perçue que les ressources socio-émotionnelles (Plenge et al., 2008). Ainsi, la valeur perçue du conseil est un accomplissement social et situé, qui se joue en permanence, dans les interactions quotidiennes du consultant et du client (Elmholdt et al., 2025).
+
+Or, l’intégration de l’IA dans les pratiques du conseil, vient perturber cet accomplissement.
+
+Premièrement, la réalisation des activités cognitives conjointes de résolution du problème (par exemple, clarification du besoin, l’organisation de la mission, la définition de la solution), peut être déléguée à l’IA et ainsi faire moins appel au jugement humain. Ce faisant, la symétrie de l’interaction consultant-client (clarté des rôles et des responsabilités) devient sujette à perturbation, par le fait du floutage de l’attribution des contributions humain-IA dans le résultat.
+
+Deuxièmement, les pratiques de justification (formulation commerciale du service, la présentation graphique du diagnostic, le signalement de l’activité, la montée en compétence du consultant et la production de son autorité), doivent être revues au prisme de l’IA: certaines pratiques de justification, prises en charge par l’IA, perdent tout simplement de leur signification (par exemple, l’IA dispense le consultant de compétences de présentation graphique du diagnostic). D’autres voient leur perception brouillée (l’IA accélère la montée en capacité du consultant sur le poste, ce qui est différent de la montée en compétence (Cahier & Quesson, 2025)). D’autres deviennent d’autant plus nécessaires du fait du floutage des attributions, mais doivent se réinventer (par exemple, comment le consultant signale-t-il son activité, sur les activités automatisées par l’IA?). Certaines enfin, dépendent probablement de la compétence nouvelle attendue du consultant, à orchestrer l’IA (Krakowski et al., 2023) (par exemple, quelle peut être l’autorité d’un consultant qui n’a su mobiliser l’IA à son avantage, ou expliciter une analyse menée par l’IA?).
+
+Pour le conseil, ce n’est pas la finalité du processus de co-création qui est remis en cause. Il s’agit bien toujours, de produire les connaissances managériales nécessaires au client, pour lui permettre de percevoir la valeur du conseil. Simplement, l’IA perturbe l’équilibre du processus de co-création. C’est en ce sens que notre recherche interroge les pratiques de la co-création des connaissances managériales, à l’ère de l’IA.
+
+Par conséquent, l’enjeu nous semble suffisamment d’importance pour les acteurs du conseil, tant consultant que client: quelle est la dynamique de reconfiguration à l’œuvre, pour la valeur perçue du conseil à l’ère de l’IA? Sous quelles conditions la valeur perçue du conseil se renforce-t-elle plutôt qu’elle ne se fragilise?
+
+L’IA perturbateur de l’accomplissement social: la perspective de l’enchevêtrement (‘entanglement’).
+
+En fragilisant l'articulation entre l'axe technique et l'axe politique, c’est l'équilibre de l’accomplissement social qui se produit par le biais des interactions directes, au sein de la sphère conjointe, qui s'en trouve perturbé (crédibilité, clarté des rôles et responsabilités, brouillage des pratiques de mise en valeur du conseil).
+
+Kaartemo & Helkkula (2025), ont théorisé pour les écosystèmes de service, la perturbation qui se produit à l’ère de l’IA, au sein de la sphère conjointe.
+
+Selon eux, l’IA implique une dissolution radicale de la dichotomie operande / operant (SDL), au profit de l'enchevêtrement (« entanglement »): humains et IA deviennent des « ressources de cocréation de valeur enchevêtrées » indissociables, dans des « écosystèmes de services intrinsèquement sociotechniques ». L'intentionnalité humaine s'exerce « à travers » l'IA via quatre relations: arrière-plan (opération discrète), incarnation (intégration corporelle), herméneutique (interprétation de données), et altérité (robots comme quasi-autres).
+
+Ainsi, la distinction humain-IA elle-même devient obsolète face à la réalité sociotechnique où humains et IA sont ontologiquement enchevêtrés dans des modalités relationnelles multiples et fluides.
+
+Sans la distinction opérant/opérande, il devient difficile pour le client de savoir quelle partie de la recommandation émane du jugement humain expert (opérant traditionnel) et quelle partie est générée/proposée par l'IA. Les auteurs ne font pas de lien entre enchevêtrement et valeur perçue. Ils soulignent simplement, que la force sombre de l’IA (« dark side of AI »), « ouvre des pistes de recherche intrigantes » (p. 301). Notre recherche peut ainsi être vue, d’une certaine manière, comme une forme d’exploration empirique de la réalité du phénomène de l’enchevêtrement dans le conseil et ses effets in fine, sur la valeur perçue.
+
+Dans le conseil, le conflit (Becker et al., 2015), les pratiques (Echeverri & Skålén, 2011), ou le mésusage (misuse) accidentel ou intentionnel de ressources (Lumivalo et al., 2024; Plé & Cáceres, 2010), sont sources de co-destruction de valeur perçue. Or, l’enchevêtrement humain-IA, révèle plusieurs risques de valeur co-destruction.
+
+Par exemple, si le client s'attend à une empathie humaine mais reçoit une réponse algorithmique inadéquate, cela génère un risque de valeur négative perçue (Echeverri & Skålén, 2011). Si l'IA fournit une analyse que le consultant adopte sans la comprendre pleinement (par exemple, un algorithme générant une recommandation contre-intuitive), cela crée une externalité négative pour le client, ce que Lumivalo et al. (2024) nomment un mésusage de la ressource (misuse), ici "expertise combinée humain-IA ». Si le consultant enchevêtré avec l'IA (relations cyborg ou composite), perd sa capacité d'exercer un jugement indépendant, cela crée une externalité négative pour le client sous forme d'« expertise dégradée » — le consultant ne maîtrise plus les ressources qu'il mobilise, défavorisant ainsi le client sans compenser le dommage (Kaartemo & Helkkula, 2025).
+
+Kaartemo & Helkulla soulignent, que l'un des enjeux éthiques majeurs est la « responsabilité et transparence concernant l'utilisation de l'IA dans les écosystèmes de service » (p. 299).
+
+Lorsque les frontières humain-IA deviennent floues au sein de la sphère de co-création, les institutions juridiques et éthiques existantes (conçues pour des acteurs distincts, consultant et client), peuvent ne plus opérer efficacement. Dans le conseil, cela peut se manifester, par exemple, par une impossibilité de recours: si la recommandation enchevêtrée humain-IA cause un préjudice, qui est responsable? Le consultant (qui a "interprété" l'IA)? L'éditeur du logiciel IA? Le client lui-même (qui a accepté l'interaction enchevêtrée)? Cette indétermination engendre une zone de vulnérabilité, qui échappe au cadre contractuel classique, et transfère un risque non compensé vers le client. Si celui-ci perçoit un risque supplémentaire, la valeur d’usage est impactée (notamment sur les missions à fort enjeu), dans le sens d’une co-destruction.
+
+Autre exemple: la co-destruction (Plé & Cáceres, 2010), peut créer des effets différenciés, où un système voit sa valeur détruite tandis que l'autre en crée. Dans le conseil IA-augmenté, le consultant peut ainsi gagner en efficacité (plus de clients traités, recommandations plus rapides) tandis que le client perd en qualité perçue (moins d'empathie, recommandations inadaptées à son contexte spécifique). L'enchevêtrement masque ce déséquilibre en présentant une façade de compétence « combinée »: le client a l'impression de recevoir un livrable hyper-expert, alors qu'il reçoit un produit industrialisé et vidé de l'empathie et du sur-mesure qui font la valeur du conseil (Ciampi, 2017).
+
+Selon nous, la perspective enchevêtrée de Kaartemo et Helkkula, offre ainsi une vision réaliste de la cocréation sociotechnique à l’ère de l’IA, qui expose le conseil augmenté à des formes de valeur perçue négative, liées à des frictions dans le tissu relationnel.
+
+[p. 27]
 
 # 3. CADRE PROPOSITIONNEL
 
-Pour explorer la manière dont l'intégration de l'IA reconfigure la valeur perçue dans le conseil, nous formulons un cadre propositionnel intégré (Eisenhardt, 1989; Eisenhardt & Graebner, 2007), où P1 est la composante ontologique, P2 la composante mécanistique et P3 la composante contingente.
+De l'accomplissement social au triangle R-P-C: justification d'un nouveau prisme d'analyse
 
-Ce cadre, dérivé de la revue de la littérature, forme un système articulé et hiérarchisé :
+Dans la littérature marketing classique, la valeur perçue du service est étudiée au travers d’une évaluation de dimensions multiples (valeurs fonctionnelle, sociale et émotionnelle). Or, notre recherche s'inscrit dans le double paradigme de la Logique Dominante du Service (SDL) et du pragmatisme: la valeur n'est pas un résultat livré, mais un accomplissement social continu, co-créé par l'interaction et l'intégration de ressources (Aarikka-Stenroos & Jaakkola, 2012; Grönroos & Voima, 2013; S. Vargo & Lusch, 2004).
+
+L'irruption de l'IA générative comme entité cognitive vient percuter la dynamique de co-création. Elle opacifie l'interaction, automatise la génération de ressources (le livrable) et floute les contributions respectives. Pour comprendre comment cet enchevêtrement sociotechnique reconfigure, détruit ou amplifie la valeur, la typologie classique du rapport entre bénéfices et sacrifices, est insuffisante.
+
+C'est ce qui justifie notre focale analytique structurée autour d’un triptyque R-P-C, conçu dans le cadre de ce travail pour explorer l’accomplissement social du conseil à l’ère de l’IA. Le triptyque R-P-C traduit les postulats de la SDL en trois registres d'interaction mis sous tension par l'IA, à travers lesquels le client évalue désormais l'accomplissement de la prestation:
+
+- La dimension Relationnelle (R): l'évaluation de la légitimité du conseil.
+
+Dans une perspective pragmatiste de l'accomplissement du conseil, l'autorité et l'expertise ne sont jamais des prérequis garantis: elles sont continuellement évaluées par le client au travers d'épreuves (tests) en situation (Bourgoin, 2014; Elmholdt et al., 2025). L'IA vient intensifier et complexifier ces épreuves. En opacifiant le processus algorithmique et en floutant les contributions intellectuelles (qui a produit l'idée? la machine ou l'humain?), l'IA fragilise la légitimité statutaire traditionnelle du consultant (modèle de l'expert, (Nikolova & Devinney, 2012)). La dimension Relationnelle capture ainsi cet enjeu critique: le maintien actif de la confiance et la reconquête in situ de l'autorité du consultant face à la machine
+
+- La dimension Processuelle (P): L'expérience de la co-création du conseil (orchestration, lisibilité, distribution des rôles).
+
+L'expérience dialogique de la co-création est le cœur de la SDL (Grönroos & Voima, 2013), la valeur émergeant dans le conseil, de la qualité de la résolution conjointe du problème (Aarikka-Stenroos & Jaakkola, 2012). Cependant, dès lors que l'IA génère l'output de manière autonome, la valeur s'ancre prioritairement dans la conduite de ce processus. La lisibilité des interactions, la transparence des mécanismes d'usage de l'IA (P2) et la juste distribution des rôles (Consultant-Client-IA) constituent désormais le moteur dynamique de la prestation.
+
+- La dimension Cognitive (C): L'évaluation de l'appropriation du conseil (C₁) et de la création de connaissances managériales (C₂).
+
+La finalité des services intellectuels est la production de savoirs actionnables (Ciampi, 2017). A l’ère de l’IA, la création de connaissances explicites (know-what) est banalisée (output algorithmique massif et instantané). Le conseil doit opérer un l'effort de traduction opéré par le consultant pour permettre au client de s'approprier ces résultats formalisés (C₁) et de cocréer, par le dialogue, de véritables savoirs managériaux tacites et situés (C₂), ou know-how). Comme le souligne la littérature sur la co-destruction de valeur, un échec dans cette intégration des ressources conduit à une perte de valeur perçue. Ainsi, un livrable généré par l'IA peut fournir une connaissance explicite irréprochable et rassurer politiquement sur le moment, mais risque de se révéler destructeur de valeur s'il reste une "boîte noire" échouant à générer cet apprentissage tacite chez le client.
+
+C'est sur le fondement de ce triangle R-P-C que nous formulons un cadre conceptuel d’analyse (Miles & Huberman, 1994), structuré par des propositions théoriques préalables destinées à guider notre étude de cas (Yin, 2003), où P1 constitue la composante ontologique, P2 la composante mécanistique et P3 la composante contingente.
+
+Ce cadre forme un système articulé et hiérarchisé:
 
 - P1 définit quoi observer (les dimensions R, P, C),
-
-- P2 identifie par quel mécanisme la reconfiguration opère (la transparence substantive, i.e. sensemaking),
-
+- P2 identifie par quel mécanisme la reconfiguration opère (la transparence substantive),
 - P3 spécifie sous quelles conditions ce mécanisme fonctionne (littératie IA, aversion à l'algorithme).
+
+[p. 28]
 
 ## P1 — Reconfiguration multidimensionnelle de la valeur perçue
 
-L'intégration de l'IA dans les missions de conseil reconfigure la valeur perçue par le client selon trois dimensions interdépendantes — **relationnelle** (R, confiance et légitimité, activement produits à travers les micro-activités de mise en valeur), **processuelle** (P, l'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles), et **cognitive** (C, déclinée en C₁ appropriation cognitive et C₂ création de connaissances managériales nouvelles).
-
-La dimension politique des missions de conseil n'est pas vue comme une quatrième dimension de la valeur perçue, mais comme contexte dans lequel la lisibilité, l'attribution et l'appropriation des connaissances managériales co-créées affectent la capacité à faire consensus.
+L'intégration de l'IA dans les missions de conseil reconfigure la valeur perçue par le client selon trois dimensions interdépendantes — relationnelle (R, l'évaluation de la légitimité (maintien de l'autorité et de la confiance), processuelle (P, l'orchestration de la co-création), et cognitive (C, déclinée en C₁ appropriation cognitive et C₂ création de connaissances managériales nouvelles).
 
 L'IA ne reconfigure pas la valeur perçue du conseil de manière uniforme. Son effet sur chaque dimension dépend de la manière dont elle est introduite et de la façon dont le client l'interprète. Une même intégration de l'IA peut ainsi amplifier la valeur perçue dans une configuration et l'éroder dans une autre. L'IA reconfigure chaque lien de manière contingente — en l'amplifiant ou en le déstabilisant — selon P2 et P3.
 
-## Dimensions de la valeur perçue du conseil à l’ère de l’IA : le triangle R – P – C (à vérifier)
+Dimensions de la valeur perçue du conseil à l’ère de l’IA: le triangle R – P – C
 
-Notre cadre s'inscrit dans une approche processuelle intégrée, en cohérence avec la perspective de l'enchevêtrement humain-IA (Kaartemo & Helkkula, 2025) et avec la Logique de Dominance du Service (Vargo & Lusch, 2016) : la valeur émerge en marche, dans des interdépendances dynamiques entre R, P et C.
+Notre cadre s'inscrit dans une approche processuelle intégrée, en cohérence avec la perspective de l'enchevêtrement humain-IA (Kaartemo & Helkkula, 2025) et avec la Logique de Dominance du Service (Grönroos & Voima, 2013; S. L. Vargo & Lusch, 2016): la valeur émerge en marche, dans des interdépendances dynamiques entre R, P et C.
 
-Ce parti pris ouvre un espace que les approches séquentielles de type SEM, telles celle de Oesterle et al. (2020), ne cherchent pas à investir. D'où notre choix d'un design qualitatif, articulé autour du triangle R - P - C.
+Ce parti pris ouvre un espace que les approches quantitative de type SEM (modélisation par équation structurelle), telles celle de Oesterle et al. (2020), ne cherchent pas à investir. D'où notre choix d'un design qualitatif, articulé autour du triangle R - P - C.
 
+[p. 29]
 
+### R — Relationnelle
 
-Figure 2 : le triangle R - P - C : la valeur perçue émerge des interdépendances dynamiques entre les 3 dimensions
+Légitimité de la prestation de conseil — activement produite par l'interaction, et mise à l'épreuve par l'opacité des systèmes humain-IA.
 
-[p. 10]
+### P — Processuelle
 
-### **R — Relationnelle**
+L'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles, reconfigurées par l'IA comme troisième acteur enchevêtré, dans la relation consultant-client-IA
 
-Confiance et légitimité — activement produits, et de plus en plus ambigus dans les systèmes humain-IA
+### C — Cognitive
 
-### **P — Processuelle**
+C₁ — appropriation cognitive: La capacité à interpréter, comprendre et évaluer ce qui a été co-produit par le conseil, afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale.
 
-L'expérience même de co-création — sa nature, sa lisibilité et la distribution des rôles, reconfigurées par l'IA comme troisième acteur de la relation consultant-client-IA <span class="mark">[Quid de l’enchevêtrement ?]</span>
+C₂ — création de connaissances managériales: explicites (know-what) et surtout tacites (know-how), au sens de Ciampi (2017) et Harfouche et al. (2023).
 
-### **C — Cognitive**
+Trois liens sont empiriquement démontrés dans la littérature, à des degrés divers:
 
-C₁ — appropriation cognitive : La capacité à interpréter, comprendre et évaluer ce qui a été co-produit par le conseil, afin que les productions de la mission deviennent intelligibles, évaluables, appropriables et mobilisables comme connaissance managériale.
+R ↔ P: la légitimité (R) et l'expérience de co-création (P) sont mutuellement constitutives. La légitimité renforce la co-création et vice-versa (Nikolova & Devinney, 2012).
 
-C₂ — création de connaissances managériales : explicites (know-what) et surtout tacites (know-how), au sens de Ciampi (2017) et Harfouche et al. (2023).
+P ↔ C: l'expérience processuelle de co-création (P) — diagnostic conjoint, conception, production de solutions — conditionne l'appropriation cognitive (C₁) et la création de connaissances managériales nouvelles (C₂); Réciproquement, l'engagement cognitif du client nourrit la dynamique processuelle et par conséquent, la création des connaissances managériales (Aarikka-Stenroos & Jaakkola, 2012; Ciampi, 2017).
 
-Trois liens sont empiriquement **démontrés** dans la littérature, à des degrés divers :
+R ↔ C: la légitimité renforce la capacité d’appropriation (C₁). La création de connaissances managériales nouvelles (C₂) peut reconfigurer rétroactivement la légitimité reconnue au conseil — « il m'a fait progresser ». Ce lien constitue une contribution théorique originale que notre recherche se propose d'explorer empiriquement, particulièrement dans la phase rétrospective de la mission.
 
-**R ↔ P :** la confiance et la légitimité (R) et l'expérience de co-création (P) sont mutuellement constitutives. La confiance renforce la co-création et vice-versa (Nikolova & Devinney, 2012).
+La contribution originale de notre recherche, réside dans la théorisation la dynamique de reconfiguration de la valeur perçue, c’est-à-dire la manière dont l'IA amplifie, déstabilise ou inverse chacune de ces interdépendances de façon contingente, sous l'effet de la transparence substantive (P2) et des conditions de modération (P3).
 
-**P ↔ C :** l'expérience processuelle de co-création (P) — diagnostic conjoint, conception, production de solutions — conditionne l'appropriation cognitive (C₁) et la création de connaissances managériales nouvelles (C₂) ; Réciproquement, l'engagement cognitif du client nourrit la dynamique processuelle et par conséquent, la création des connaissances managériales (Aarikka-Stenroos & Jaakkola, 2012; Ciampi, 2017).
+[p. 30]
 
-**R ↔ C :** la confiance renforce la capacité d’appropriation (C₁). La création de connaissances managériales nouvelles (C₂) peut reconfigurer rétroactivement la légitimité reconnue au consultant — « il m'a fait progresser ». Ce lien constitue une contribution théorique originale que notre recherche se propose d'explorer empiriquement, particulièrement dans la phase rétrospective de la mission.
+## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement)
 
-<span class="mark">La contribution originale de notre recherche, réside dans la théorisation de la manière dont l'IA amplifie, déstabilise ou inverse chacune de ces interdépendances de façon contingente, sous l'effet de la transparence substantive (P2) et des conditions de modération (P3).</span>
+Relation
 
-L'IA modifie, à travers le mécanisme médiateur de la transparence (P2) et selon les conditions de modération (P3), la stabilité et la nature de chacune de ces interdépendances — en les amplifiant, en les déstabilisant ou en les reconfigurant. La contribution originale de notre recherche réside dans la théorisation de cette dynamique de reconfiguration.
+Reconfiguration positive
 
-[p. 11]
+Reconfiguration négative
 
-### Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement)
+Contingences
 
-| Relation  | Reconfiguration positive                                                                                                                                                                                                                                                               | Reconfiguration négative                                                                                                                                                                                                                     | Contingences                                                                                                                                   |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| **R ↔ P** | Une orchestration visible et une construction crédible de la légitimité approfondissent l'engagement processuel ; réciproquement, une co-création fluide renforce la légitimité du consultant.                                                                                         | Un usage masqué de l'IA peut fragiliser la légitimité et délégitimer rétrospectivement le processus ; à l'inverse, une expérience de co-création où l'IA produit des outputs spectaculaires peut déplacer le crédit du consultant vers l'IA. | Protégé par P2, modulé par la lisibilité, la littératie IA et l'aversion à l'algorithme (P3).                                                  |
-| **P ↔ C** | Une co-création visible avec l'IA enrichit la diversité et la nouveauté des insights (C₁ appropriation, C₂ création) lorsque le client est cognitivement engagé. Réciproquement, l'appropriation et la création de connaissances nourrissent l'engagement dans la suite de la mission. | L'IA peut découpler la connaissance de la co-production : le client reçoit des outputs sans participer à leur génération, ce qui inhibe l'appropriation (C₁) et empêche la création de connaissances tacites (C₂).                           | Dépend de l'explicitation substantive du consultant (P2) et, via P3, de l'intelligibilité, de l'acceptation et des conditions situationnelles. |
-| **R ↔ C** | La création de connaissances managériales nouvelles (C₂) renforce rétroactivement la légitimité du consultant : *« il m'a fait progresser »*.                                                                                                                                          | À l'inverse, l'absence de C₂ — perception que la mission n'a produit que de l'output sans transformation managériale — érode la légitimité a posteriori.                                                                                     | Lien à explorer empiriquement, particulièrement révélateur en phase rétrospective (Post).                                                      |
+R ↔ P
 
-Tableau 1 : comment l'IA reconfigure la chaine des dimensions de la valeur perçue du conseil à l'ère de l'IA, R-P-C (à tester empiriquement)
+Une orchestration visible et une construction crédible de la légitimité approfondissent l'engagement processuel; réciproquement, une co-création fluide renforce la légitimité du conseil.
 
-[p. 12]
+Un usage masqué de l'IA (ou inversement, une sur-attribution de valeur à l'outil) peut déplacer le crédit vers l'algorithme, réduisant la prestation de conseil à une simple fourniture d'outputs et fragilisant la légitimité globale de l'intervention.
+
+Protégé par P2, modulé par la lisibilité, la littératie IA et l'aversion à l'algorithme (P3).
+
+P ↔ C
+
+Une co-création visible avec l'IA enrichit la diversité et la nouveauté des insights (C₁ appropriation, C₂ création) lorsque le client est cognitivement engagé. Réciproquement, l'appropriation et la création de connaissances nourrissent l'engagement dans la suite de la mission.
+
+L'IA peut découpler la connaissance de la co-production: le client reçoit des outputs sans participer à leur génération, ce qui inhibe l'appropriation (C₁) et empêche la création de connaissances tacites (C₂).
+
+Dépend de l'explicitation substantive du conseil (P2), modulé par la littératie IA et l'aversion à l'algorithme (P3).
+
+R ↔ C
+
+La création de connaissances managériales nouvelles (C₂) renforce rétroactivement la légitimité du conseil: « il m'a fait progresser ».
+
+À l'inverse, l'absence de C₂ — perception que la mission n'a produit que de l'output sans transformation managériale — érode la légitimité a posteriori.
+
+Lien à explorer empiriquement, particulièrement révélateur en phase rétrospective (Post).
+
+Tableau 1: comment l'IA reconfigure la chaine des dimensions de la valeur perçue du conseil à l'ère de l'IA, R-P-C (à tester empiriquement)
+
+[p. 30]
 
 ## P2 — La transparence comme mécanisme médiateur
 
-La transparence est le mécanisme médiateur de la valeur perçue du conseil à l’ère de l’IA. La transparence est entendue ici comme l'intelligibilité du système assisté par IA à travers ses effets observables (Ananny et Crawford, 2018)[^1].
+La transparence est le mécanisme médiateur de la valeur perçue du conseil à l’ère de l’IA. La transparence est entendue ici comme l'intelligibilité du système assisté par IA à travers ses effets observables (Ananny et Crawford, 2018).
 
-La **transparence performative** (divulgation par le consultant de l'usage de l'IA) se distingue de la **transparence substantive** (au sens d’une traduction de sens : l'enjeu pour le consultant n'est pas de rendre l'IA transparente (boite noire), mais de justifier politiquement et techniquement pourquoi le résultat de l'IA est valide pour ce client, et donc permettre la conversion en connaissances managériales, appropriables et mobilisables par le client).
+Dans le prolongement d'Ananny et Crawford (2018) qui soulignent les limites de la transparence algorithmique pure, nous proposons de distinguer la transparence performative de la transparence substantive.
 
-P2 pose donc que la transparence substantive pèse davantage sur la valeur perçue du conseil à l’ère de l’IA, parce qu'elle favorise l'appropriation par le client et in-fine, la valeur perçue, fonction des conditions de P3.
+La transparence performative (divulgation par le consultant de l'usage de l'IA) se distingue de la transparence substantive (au sens d’une traduction de sens): l'enjeu pour le conseil n'est pas de rendre l'IA transparente (boite noire), mais de justifier politiquement et techniquement pourquoi le résultat de l'IA est valide pour ce client, et donc permettre la conversion en connaissances managériales, appropriables et mobilisables par le client.
 
-## P3 — Les trois conditions de modération
+P2 pose donc que la transparence substantive pèse davantage sur la valeur perçue du conseil à l’ère de l’IA, parce qu'elle favorise l'appropriation par le client et in fine, la valeur perçue, fonction des conditions de P3.
 
-Trois catégories de contingence déterminent si P2 produit une attribution correcte : au niveau relationnel : capital de confiance préalable, crédibilité (Khan & Mishra, 2024) ; au niveau situationnel : phase de la mission et enjeux politiques (Plenge et al., 2008); et au niveau acteur : littératie IA (Long & Magerko, 2020) et aversion à l’algorithme (De Jong et al., 2025; Dietvorst et al., 2014; Logg et al., 2019).
+[p. 31]
 
-Ces contingences ne se trouvent pas toutes, au sens strict, côté client : seules les conditions au niveau de l'acteur sont directement situées du côté du client, tandis que les contingences relationnelles et situationnelles excèdent le seul client.
+## P3 — Les contingences acteur de la transparence substantive: littératie IA et aversion à l’algorithme
 
-Les enjeux politiques du conseil, bien que centraux dans la formation de la valeur perçue du conseil (Turner, 1982) sont intégrés comme contingence situationnelle, et non comme objet central de notre recherche.
+Trois catégories de contingence déterminent si P2 produit ou non, l’attribution, l’appropriation et la création de connaissances managériales:
 
-Dans une logique contingente, plusieurs niveaux de conditions peuvent donc modérer le mécanisme de transparence posé en P2. Cependant notre recherche retient empiriquement et prioritairement, les contingences **au niveau de l’acteur**, non parce qu’elles épuisent le phénomène, mais parce qu’elles constituent, à l’ère de l’IA, le foyer théoriquement le plus distinctif et le plus accessible dans un design qualitatif de cas exemplaire unique, tel que nous le prévoyons.
+- Au niveau relationnel: réputation préalable (Arslanagic-Kalajdzic & Zabkar, 2017), crédibilité perçue de l’algorithme (Khan & Mishra, 2024);
+- Au niveau situationnel: phase de la mission et enjeux politiques (Plenge et al., 2008);
+- Au niveau acteur: littératie IA (Long & Magerko, 2020) et aversion à l’algorithme (De Jong et al., 2025; Dietvorst et al., 2014; Logg et al., 2019).
 
-La littératie IA (variable de compétence) et l'aversion à l’algorithme (variable attitudinale) sont distinctes : un client peut être ‘AI-literate’ tout en manifestant de l'aversion à l’IA. La littératie IA détermine si le client peut suivre l'explicitation du consultant, distinguer la part de l'IA de celle du jugement du consultant, et comprendre les limites de ce qui a été produit. L’aversion à l’algorithme détermine si ces mêmes contributions, même lorsqu'elles sont comprises, sont acceptées comme des intrants légitimes du jugement managérial. Le risque n'est d’ailleurs pas seulement l'aversion, mais parfois l'excès de confiance dans l'IA au détriment de l'expertise du consultant (ce qui déplacerait le crédit du consultant vers l'IA).
+Les conditions relationnelles et situationnelles ne sont pas spécifiques à l’IA: elles appartiennent plus largement au fonctionnement ordinaire des missions de conseil (construction de la crédibilité).
 
-La transparence substantive peut donc échouer de deux manières : soit parce que l'explication n'est pas cognitivement appropriée, soit parce qu'elle est comprise mais normativement disqualifiée. Une attribution correcte requiert à la fois intelligibilité et acceptation minimale. La co-destruction de valeur (Plé & Cáceres 2010 ; Lumivalo et al. 2024) constitue la condition limite lorsque P2 et P3 échouent simultanément.
+En revanche, les contingences de niveau acteur (littératie IA et aversion à l’algorithme) sont directement liées au phénomène nouveau que nous cherchons à isoler: la capacité du client à comprendre et à accepter une production issue d’un système humain–IA, pour in-fine, influencer la valeur perçue du conseil. C’est donc la contingence de niveau acteur qui constitue notre point d’observation focal du mécanisme central, théoriquement le plus distinctif et le plus accessible dans un design qualitatif de cas exemplaire unique. Les contingences de niveau relationnel et situationnel sont traitées comme conditions contextuelles d’interprétation des données empiriques, plutôt que comme variables de P3.
 
-Dans ce cadre, l'attribution correcte est traitée comme une condition observable importante de l'appropriation par le client et, par cette appropriation, comme une voie par laquelle la transparence agit sur la valeur perçue.
+La littératie IA (variable de compétence) et l'aversion à l’algorithme (variable attitudinale) sont distinctes: un client peut être ‘AI-literate’ tout en manifestant de l'aversion à l’IA. La littératie IA détermine si le client peut suivre l'explicitation du conseil, distinguer la part de l'IA, et comprendre les limites de ce qui a été produit (Long & Magerko, 2020). L’aversion à l’algorithme détermine si ces mêmes contributions, même lorsqu'elles sont comprises, sont acceptées comme des intrants légitimes du jugement managérial. Le risque n'est d’ailleurs pas seulement l'aversion, mais parfois l'excès de confiance dans l'IA, au détriment de l'expertise du conseil (ce qui déplacerait le crédit du conseil vers l'IA).
 
-[p. 14]
+La transparence substantive peut donc échouer de deux manières. Elle peut d’abord échouer sur le plan cognitif lorsque l’explication fournie ne permet pas au client de comprendre la chaîne de production du résultat, quand bien même le livrable du conseil serait un artefact IA vivant (par exemple une application IA connectée au SI du client): données mobilisées, rôle de l’IA, arbitrages humains, validation, contextualisation et traduction managériale. Elle peut ensuite échouer sur le plan normatif lorsque cette chaîne est comprise, mais que la valeur de la prestation est attribuée de manière déséquilibrée: soit parce que l’usage de l’IA est disqualifié comme illégitime, soit, inversement, parce que l’IA est perçue comme la source principale de la valeur, reléguant le conseil à une simple mise à disposition d’outputs algorithmiques.
+
+La co-destruction de valeur (Plé & Cáceres 2010; Lumivalo et al. 2024) constitue la condition limite lorsque P2 et P3 échouent simultanément. Dans ce cadre, l'attribution correcte est traitée comme une condition observable importante de l'appropriation par le client et, par cette appropriation, comme une voie par laquelle la transparence substantive agit sur la valeur perçue.
+
+[p. 32]
 
 # 4. CADRE D'OBSERVATION
 
-## Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA : S1, S2, S3
+Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA: S1, S2, S3
 
-Le diagramme des 3 sphères de co-création consultant-client-IA constitue notre cadre d'observation : c’est à travers lui que notre cadre propositionnel (P1, P2, P3 ; R, P, C) est examiné empiriquement. Le cadre d’observation n’est donc ni un résultat de recherche, ni une prescription managériale.
+Le diagramme des 3 sphères de co-création consultant-client-IA constitue notre cadre d'observation: c’est à travers lui que notre cadre propositionnel (P1, P2, P3; R, P, C) est examiné empiriquement. Le cadre d’observation n’est donc ni un résultat de recherche, ni une prescription managériale.
 
 S1, S2 et S3 sont des "configurations de mise en visibilité" (ou des postures d'interaction), et non des réalités ontologiques strictes. Bien que notre recherche reconnaisse, au plan théorique, l'enchevêtrement ontologique entre l'humain et l'IA (Kaartemo & Helkkula, 2025), notre cadre d'observation (S1, S2, S3) adopte une approche phénoménologique et interactionnelle. Il ne s'agit pas de nier l'enchevêtrement, mais d'observer comment celui-ci est mis en scène et assumé dans la relation avec le client.
 
-En S1, L’IA est absente, le consultant opère seul. S2 représente un enchevêtrement confiné au back-office (opacité), tandis que S3 représente un enchevêtrement exposé sur le front-stage (triade assumée). Ce parti pris de simplicité méthodologique est assumé comme un dispositif heuristique nécessaire pour rendre l'observation opérationnalisable in situ.
+En S1, L’IA est absente, le consultant opère seul. S2 représente un enchevêtrement confiné au back-office (opacité), tandis que S3 représente un enchevêtrement exposé sur le front-office (triade consultant-client-IA assumée). Ce parti pris de simplicité méthodologique est assumé comme un dispositif heuristique nécessaire pour rendre l'observation opérationnalisable in situ.
 
-Les 3 sphères de co-création représentent trois situations possibles de co-création de valeur perçue du conseil à l’ère de l’IA (S1, S2, S3), seules ou en combinaison. Toutes trois se situent au sein de la sphère conjointe de co-création de valeur (Grönroos & Voima, 2013).
+## Les 3 sphères de co-création représentent trois situations possibles de co-création de valeur perçue du conseil à l’ère de l’IA (S1, S2, S3), seules ou en combinaison. Toutes trois se situent au sein de la sphère conjointe de co-création de valeur (Grönroos & Voima, 2013).
 
-Au sein de ce cadre, l'orchestration des situations de co-création n’est pas figée : elle est dynamique et temporelle, les trois situations pouvant se retrouver sur une même phase d’une mission de conseil. S1/S2/S3 est un cadre d’observation, pas une prescription managériale
+Au sein de ce cadre, l'orchestration des situations de co-création n’est pas figée: elle est dynamique et temporelle, les trois situations pouvant se retrouver sur une même phase d’une mission de conseil. S1/S2/S3 est un cadre d’observation, pas une prescription managériale.
 
-Les 3 sphères de la co-création consultant-client-IA
-
-
-
-Figure 3 : Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA
+## Les 3 sphères de la co-création consultant-client-IA
 
 S1constitue le point d’ancrage interprétatif du dispositif d’observation, permettant de détecter les signes d’une reconfiguration par l’IA.
 
 Les manifestations de R, P et C en S2 et S3 (avec IA) sont appréhendées par contraste avec celles observées en S1 (sans IA), au sein d’une même mission. L’analyse se concentre sur des variations intra-phase (moments où la situation S1, S2, S3 évolue à phase constante). Ces variations intra-phase sont considérées comme les unités d’analyse les plus discriminantes dans notre cadre d’observation.
 
-[p. 15]
+[p. 33]
 
 ## Situations et observables
 
@@ -371,65 +390,103 @@ Les manifestations de R, P et C en S2 et S3 (avec IA) sont appréhendées par co
 
 Le consultant et le client co-créent dans une dyade humaine.
 
-L'IA est totalement absente.
+L'IA est absente.
 
 Le consultant demeure l’acteur central du processus de co-création avec le client.
 
-<u>Observable</u> : base relationnelle (R) : formation de la confiance, construction de la légitimité.
+Observable: base relationnelle (R): construction de la légitimité.
 
 Par exemple, R peut évoluer de faible légitimité perçue à légitimité reconnue, de prudence relationnelle à confiance de travail, autrement dit de simple prestataire à un acteur dont le jugement politique devient recherché.
 
 ### S2 — IA en silo
 
-L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée ni explicitation substantive.
+L'IA est utilisée séparément par le consultant et/ou le client, sans orchestration partagée.
 
 Le consultant conserve le rôle central dans la relation avec le client, même lorsque l'IA contribue en arrière-plan.
 
-<u>Observable</u> : Modalités de transparence (P2), schémas d'attribution (P3), fragilité de la légitimité (R).
+Observable: Modalités de transparence (P2), schémas d'attribution (P3), fragilité de la légitimité (R).
 
-Par exemple, le risque d'attribution floutée des contributions consultant / IA par le client est latent ; la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes, fonction de la littératie IA du client et de son aversion à l’algorithme (P3).
+Par exemple, le risque d'attribution floutée des contributions consultant / IA par le client est latent; la légitimité relationnelle peut être rétrospectivement fragilisée si des contributions cachées de l'IA sont découvertes, fonction de la littératie IA du client et de son aversion à l’algorithme (P3).
 
 ### S3 — Co-création tripartite
 
 La co-création se déploie dans une triade explicite consultant, client et IA.
 
-Le consultant n'y monopolise plus le rôle central ; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation.
+Le consultant n'y monopolise plus le rôle central; l'orchestration, l'attribution et la légitimité y deviennent plus distribuées et davantage sujettes à négociation.
 
-<u>Observable :</u> Les trois propositions (P1, P2, P3) et dimensions de la valeur perçue (R-P-C) y sont simultanément observables.
+Observable: Les trois propositions (P1, P2, P3) et dimensions de la valeur perçue (R-P-C) y sont simultanément observables.
 
-Par exemple, la dimension processuelle et cognitive et de la valeur perçue (P, C) peut y être plus riche, mais la légitimité du consultant (R) peut devenir contestable si le rôle médiateur du consultant dans la production n’est pas manifeste (P2), fonction de la littératie IA du client et de son aversion à l’algorithme (P3).
+Par exemple, la dimension processuelle et cognitive et de la valeur perçue (P, C) peut y être plus riche, mais la légitimité du conseil (R) peut devenir contestable si le rôle médiateur du conseil dans la production n’est pas manifeste (P2), fonction de la littératie IA du client et de son aversion / appréciation à l’algorithme (P3).
 
-[p. 16]
+[p. 35]
 
 # 5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE
 
-## Un design d'étude de cas exemplaire en grandeur réelle
+## Une démarche qualitative exploratoire en deux temps
 
-Notre recherche s'inscrit dans une démarche qualitative exploratoire en deux temps, dont seul le second est traité ici. Le premier terrain, conduit en laboratoire (Erdos Research Labs), a permis d'ajuster le modèle conceptuel et les propositions sur la dynamique des interactions humain-IA dans un contexte d'augmentation. Le second terrain — objet du présent cadre — vise à confronter le cadre propositionnel (P1, P2, P3) à une situation conseil en grandeur réelle, par une étude de cas exemplaire unique au sens de (Yin, 2003)
+Notre recherche s'inscrit dans une démarche qualitative exploratoire en deux temps, dont seul le second vise à vérifier le cadre propositionnel décrit dans le présent document, en terrain grandeur nature.
 
-L'étude de cas est pertinente lorsque les frontières entre le phénomène et son contexte ne sont pas clairement définies, ce qui est précisément le cas de la valeur perçue du conseil — phénomène intangible, situé, et dépendant des configurations interactionnelles dans lesquelles il prend forme. Le caractère exemplaire du cas tient à ce que la mission observée combine, sur une durée significative, les trois situations de co-création S1, S2, S3, et permet ainsi d'observer en interne les variations intra-phase qui constituent les unités d'analyse les plus discriminantes du dispositif.
+Le premier terrain exploratoire, conduit en laboratoire a permis d’affiner la problématique, de poser un premier modèle conceptuel (dynamique des interactions humain-IA dans un contexte d'augmentation, co-création de connaissances, perception de la valeur).
 
-## Une posture de praticien-chercheur explicitement assumée 
+Le second terrain (objet du cadre propositionnel et d’observation) vise à confronter le cadre propositionnel (P1, P2, P3; R-P-C) à une situation conseil en grandeur réelle, par une étude de cas exemplaire unique au sens de Yin (2003).
 
-Le cas étudié est une mission de conseil dans laquelle le chercheur est lui-même engagé comme consultant. Cette position de **praticien-chercheur** (David, 2000; Hatchuel & Molet, 1986) constitue selon nous, à l'ère de l'IA, une condition d'accès privilégiée à des observables — micro-décisions de transparence, gestes d'orchestration de l'IA, ajustements relationnels in situ — qu'un observateur externe ne pourrait saisir avec la même finesse, tant ces gestes se déploient dans des temporalités courtes et des espaces relationnels dyadiques.
+L’étape préliminaire a mobilisé un panel de 13 experts de domaines sénior, en phase d’apprentissage de l’IA au sein d’un organisme privé au royaume uni (laboratoire Erdos Research Labs, animé par le professeur d’Oxford Ajit Jaokar).
 
-Cette posture inscrit notre recherche dans la tradition de la **recherche-intervention** en sciences de gestion (David, 2000) : le chercheur produit de la connaissance *avec* et *à partir* de l'action, sans prétendre à une extériorité illusoire. Le cadre théorique de (Kaartemo & Helkkula, 2025), sur l'enchevêtrement humain-IA, que nous mobilisons, suggère d'ailleurs que cette position d'enchevêtrement est elle-même cohérente avec la nature sociotechnique du phénomène étudié.
+Le niveau de positionnement technico-fonctionnel ou managérial des membres du panel, au sein leurs organisations respectives, les apparente à des acteurs du conseil.
 
-## Un dispositif de réflexivité renforcé pour répondre au risque de biais 
+L’étude exploratoire s’est déroulée sur 3 mois (entre Juin et Septembre 2025), selon une méthodologie qualitative d’entretiens semi-directifs, d’une durée entre 60 et 90 minutes, articulés autour de 5 thématiques qui touchent à notre objet de recherche: dynamique d’interaction, co-création, connaissance, valeur perçue, perspectives sur l’IA.
 
-La double posture consultant-chercheur expose à un risque de biais d'interprétation que nous traitons par un dispositif de réflexivité explicite, articulé en trois éléments :
+Les entretiens visaient essentiellement à explorer comment les participants, co-développeurs avec l’IA, d’une application de type prototype sur la thématique de leur choix (par exemple application d’optimisation de la consommation énergétique d’un foyer), perçoivent la valeur co-créée, et en quoi ils observent un glissement de la valeur perçue lorsque l’IA participe activement au résultat.
 
-D'abord, un journal réflexif tenu en double colonne (faits observés / interprétations du chercheur), distinguant systématiquement ce qui relève du registre descriptif et ce qui relève de la mise en sens. Ensuite, une triangulation des sources par entretiens semi-directifs post-mission avec les acteurs (client, dirigeants concernés), permettant de confronter l'interprétation du chercheur aux perceptions des participants. Enfin, des débriefings réguliers avec les directeurs de thèse, qui constituent un tiers analytique distancié des situations observées.
+Les entretiens ont donné lieu à environ 600 pages de transcription.
 
-Ce dispositif s'inspire des principes de l'autoethnographie analytique (Anderson, 2006), qui se distingue de l'autoethnographie évocative par son exigence de mise en relation systématique des données expérientielles avec le cadre théorique mobilisé. Il vise à transformer la double posture, d'angle mort méthodologique potentiel, en ressource analytique assumée.
+L’outillage utilisé pour le codage, s’appuie sur une plateforme utilisant l’IA: Skimle
 
-[p. 17]
+Les transcriptions de l’étape préliminaire sont en cours d’analyse, selon la méthodologie de codage Gioia et al. (2013).
+
+## Un design d'étude de cas exemplaire en grandeur réelle (Yin)
+
+L'étude de cas est pertinente lorsque les frontières entre le phénomène et son contexte ne sont pas clairement définies (Yin, 2003), ce qui est précisément le cas de la valeur perçue du conseil — phénomène intangible, situé, et dépendant des configurations interactionnelles dans lesquelles il prend forme.
+
+Le caractère exemplaire du cas tient à ce que la mission observée combine, sur une durée significative, les trois situations de co-création S1, S2, S3, et permet ainsi d'observer en interne les variations intra-phase qui constituent les unités d'analyse les plus discriminantes du dispositif.
+
+## Une posture assumée de praticien réflexif: l'autoethnographie analytique (Schön et Anderson)
+
+Le cas étudié est une mission de conseil dans laquelle le chercheur est lui-même engagé comme consultant à part entière.
+
+Cette position de « membre intégral » (complete member researcher) s'inscrit dans la tradition de la pratique réflexive (Schön, 1983) et de l'autoethnographie analytique (Anderson, 2006). Comme le souligne Schön (1983, p. 68): "Lorsque quelqu'un réfléchit dans l'action, il devient chercheur dans le contexte de la pratique. Il ne dépend pas des catégories de la théorie et de la technique établies, mais construit une nouvelle théorie du cas unique."
+
+Notre démarche assume ainsi une implication active dans l'action managériale. Dans cette posture, notre cadre conceptuel (les configurations S1, S2, S3) ne fonctionne pas comme une théorie rigide à vérifier, mais comme un dispositif heuristique que le chercheur mobilise consciemment pour guider et structurer sa pratique in situ (reflection-in-action, Schön, 1983) face au client.
+
+En retour, les effets inattendus de cette orchestration de l'IA sur la valeur perçue (R-P-C) et les mécanismes d'appropriation (P1, P2, P3) constituent le matériau de son analyse réflexive a posteriori (reflection-on-action).
+
+L'autoethnographie analytique exige en effet de relier systématiquement cette expérience vécue au cadre théorique, afin de construire l'intelligibilité du cas (Anderson, 2006). À l'ère de l'IA, cette posture embarquée constitue une condition d'accès privilégiée à des observables: les micro-décisions de transparence (P2), les gestes d'orchestration de l'outil, et les ajustements relationnels subtils au sein des sphères conjointes de co-création. Ces dynamiques se déploient dans des temporalités très courtes et des espaces de confiance dyadiques qu'un observateur distancié ne pourrait saisir avec la même finesse.
+
+## Un dispositif de réflexivité renforcé face au risque de biais
+
+Puisque le chercheur agit en mobilisant activement son propre cadre conceptuel d'analyse au sein de la mission, il s'expose structurellement au risque de biais d'interprétation et de prophétie auto-réalisatrice (mon cadre marche parce que j'ai tout fait pour qu'il marche).
+
+Pour neutraliser ce biais méthodologique, nous mettons en place un dispositif de réflexivité explicite articulé autour de trois éléments, dont le but n'est pas d'évaluer la "performance" du consultant, mais d'objectiver systématiquement les réactions du client (R, P, C) face aux situations orchestrées (S1, S2, S3):
+
+- Un journal réflexif asynchrone (reflection-on-action) tenu en double colonne. Ce dispositif permet de dissocier de manière stricte le registre descriptif (faits bruts observés, livrables produits, discours verbatim du client) et le registre analytique (interprétations du chercheur au prisme des propositions P1, P2 et P3).
+
+- Une triangulation des sources par entretiens semi-directifs post-mission (ou post-phase) avec les acteurs concernés (client, autres dirigeants). Cette triangulation est essentielle: elle permet de confronter l'interprétation que le chercheur se fait de l'accomplissement de la valeur, aux perceptions réelles du client, validant ou invalidant ainsi les logiques d'attribution pressenties.
+
+- Des débriefings réguliers avec le comité de direction de thèse, qui constitue un « tiers analytique » distancié. Ces échanges garantissent le maintien d'une distance critique vis-à-vis des situations observées sur le terrain.
+
+L'ensemble de ce dispositif vise à transformer la double posture de praticien réflexif — qui pourrait apparaître comme un angle mort méthodologique — en une véritable ressource analytique assumée et contrôlée.
+
+D’autre part, l’étude de cas exemplaire est choisie sur un compte historique du cabinet, caractérisé par un haut niveau de confiance interpersonnelle préalable (dimension R initiale forte). Dès la phase de cadrage, la mission fait l'objet d'une double contractualisation, commerciale et académique. Le client accepte explicitement le statut de "terrain d'expérimentation" sur l'intégration de l'IA. Lors des entretiens semi-directifs d'évaluation menés en post-mission (ou post-phase), le chercheur procède à un dédoublement explicite de sa posture (suspension temporaire de la relation commerciale). Cette transparence sur les objectifs de la recherche, adossée à une sécurité psychologique forte, permet au client de verbaliser ses doutes, son éventuelle aversion à l'algorithme (P3), ou son sentiment d'opacité (boîte noire) sans crainte de dégrader la relation commerciale.
+
+Enfin, parce que la valeur perçue — et particulièrement la création de connaissances managériales tacites (C₂) — ne se limite pas au discours déclaratif du client lors d'un entretien, la recherche s'appuie sur des "preuves matérielles" d'appropriation. Le dispositif intègre l'analyse systématique des traces d'usage des artefacts IA produits (modification autonome des scénarios dans un simulateur, réemploi du vocabulaire issu des analyses algorithmiques dans les emails internes du client, aisance lors de la présentation des livrables IA-augmentés au Comité Exécutif). Ces observables indirects permettent d'objectiver le passage de la simple valeur fonctionnelle livrée (l'outil marche) à la véritable appropriation cognitive (C₁), indépendamment de ce que le client déclare formellement au chercheur.
+
+[p. 38]
 
 # 6. ILLUSTRATION
 
-## Scénario fictif d'une mission de conseil : audit de plateforme digitale sur 10 semaines
+## Scénario fictif d'une mission de conseil: audit de plateforme digitale sur 10 semaines
 
-Acteurs : Thomas (consultant) et Marie (cliente, société TechX)
+Acteurs: Thomas (consultant) et Marie (cliente, société TechX)
 
 Ce scénario illustre, de manière fictive, la co-création de valeur perçue à l'œuvre dans le conseil, les interdépendances du triangle R-P-C, examinées au prisme des trois propositions de la recherche (P1, P2, P3) et du cadre d'observation S1/S2/S3, y compris leur défense en contexte politique.
 
@@ -437,236 +494,240 @@ L’intérêt de cette simulation est de nous permettre de pré-tester en avance
 
 La mission fictive est structurée en trois grandes phases, caractéristiques des missions de conseil (cadrage, analyse, recommandations), auxquelles nous avons ajouté une quatrième phase post-mission, afin de permettre un regard rétrospectif supplémentaire sur la co-création de valeur perçue à l’issue de la mission.
 
-Chaque phase est scindée en sous-phase, dans laquelle se déroule l’observation : situation de co-création observée (S), propositions de recherche les plus directement examinées (P), dimensions de la valeur perçue observée (R, P, C).
+Chaque phase est scindée en sous-phase, dans laquelle se déroule l’observation: situation de co-création observée (S), propositions de recherche les plus directement examinées (P), dimensions de la valeur perçue observée (R, P, C).
 
-<u>Note :</u> pour tester le modèle sur le scenario fictif de façon interactive, voir l’artefact de recherche (https://s1s2s3.vercel.app/) (menu « Illustration »).
+Note: pour tester le modèle sur le scenario fictif de façon interactive, voir l’artefact de recherche (menu « Illustration »).
 
 ## Phases du scenario de la mission fictive de conseil
 
+### 1. Cadrage – Sem. 1-3
 
+Ancrage relationnel et cadrage initial de la mission.
 
-Figure 4 : phases du scenario fictif
+### Exploration — Sem. 1-2
 
-### **1. Cadrage – Sem. 1-3**
-
-A**ncrage relationnel et cadrage initial de la mission.**
-
-#### Exploration — Sem. 1-2
-
-**Situation observée :** S1
+Situation observée: S1
 
 Entretiens individuels en face-à-face avec les dirigeants de TechX. Thomas construit sa légitimité relationnelle par l’écoute active, le signalement d’autorité et des démonstrations progressives de compétence. Aucune IA mobilisée.
 
-**Propositions examinées :** P1
+Propositions examinées: P1
 
-**Dimensions de la valeur perçue observées :** R
+Dimensions de la valeur perçue observées: R
 
-**Observable principal : R** (base relationnelle), situation initiale de test P1 pour les phases suivantes de la mission
+Observable principal: R (base relationnelle), situation initiale de test P1 pour les phases suivantes de la mission
 
-#### Préparation — Sem. 3
+### Préparation — Sem. 3
 
-**Situation :** S2
+Situation: S2
 
 Thomas utilise l’IA pour transcrire et structurer thématiquement les entretiens sans en informer Marie. Il présente une synthèse structurée attribuée à son propre jugement.
 
-**Propositions examinées :** P2, P3
+Propositions examinées: P2, P3
 
-**Dimensions de la valeur perçue observées :** R, P
+Dimensions de la valeur perçue observées: R, P
 
-**Observable principal :** P2 (transparence nulle) — P3 (mécanisme d’attribution latent) — risque de délégitimation rétrospective
+Observable principal: P2 (transparence nulle) — P3 (mécanisme d’attribution latent) — risque de délégitimation rétrospective
 
-[p. 18]
+### 2. Analyse – Sem. 4-9
 
-### **2. Analyse – Sem. 4-9**
+Enquête conjointe, affinement et validation progressive des interprétations.
 
-**Enquête conjointe, affinement et validation progressive des interprétations.**
+### Analyse collaborative — Sem. 4-6
 
-#### Analyse collaborative — Sem. 4-6
+Situation: S3
 
-**Situation :** S3
+Sessions tripartites hebdomadaires: Thomas mobilise l’IA de manière visible comme composante explicite de l’échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.
 
-Sessions tripartites hebdomadaires : Thomas mobilise l’IA de manière visible comme composante explicite de l’échange, Marie challenge les outputs, et les insights sont co-construits dans une triade explicite. Les trois propositions y sont simultanément observables.
+Propositions examinées: P1, P2, P3
 
-**Propositions examinées :** P1, P2, P3
+Dimensions de la valeur perçue observées: R, P, C
 
-**Dimensions de la valeur perçue observées :** R, P, C
+Observable principal: P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (littératie IA et aversion à l’algorithme)
 
-**Observable principal :** P1 (toutes les dimensions R, P, C) — P2 (substantive vs performative) — P3 (littératie IA et aversion à l’algorithme)
+### Affinement — Sem. 7-8
 
-#### Affinement — Sem. 7-8
-
-**Situation :** S2/S3
+Situation: S2/S3
 
 Thomas alterne entre usage d’IA en silo (structuration des scénarios) et co-création visible avec Marie (validation des options). La transparence est sélective et stratégique.
 
-**Propositions examinées :** P1, P2
+Propositions examinées: P1, P2
 
-**Dimensions de la valeur perçue observées :** P, C
+Dimensions de la valeur perçue observées: P, C
 
-**Observable principal** : P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d’attribution
+Observable principal: P2 (performative vs substantive) — P1 (reconfiguration processuelle) — ambiguïté d’attribution
 
-#### Validation mutuelle — Sem. 9
+### Validation mutuelle — Sem. 9
 
-**Situation :** S2
+Situation: S2
 
 Thomas finalise les recommandations en utilisant l’IA pour les stress-tester. Marie relit les outputs mais ne peut pas évaluer pleinement la chaîne analytique assistée par IA.
 
-**Propositions examinées :** P1, P3
+Propositions examinées: P1, P3
 
-**Dimensions de la valeur perçue observées :** C
+Dimensions de la valeur perçue observées: C
 
-**Observable principal :** P3 (littératie IA comme facteur limitant) — P1 (dimension cognitive) — capacité d’absorption
+Observable principal: P3 (littératie IA comme facteur limitant) — P1 (dimension cognitive) — capacité d’absorption
 
-[p. 19]
-
-### **3. Recommandations — Sem. 10**
+### 3. Recommandations — Sem. 10
 
 Formalisation et présentation des recommandations
 
-#### Présentation au COMEX — Sem. 10
+### Présentation au COMEX — Sem. 10
 
-**Situation :** S1
+Situation: S1
 
-Thomas présente au comité exécutif sans IA visible. La construction narrative et l'autorité restent pleinement humains en surface. Pourtant, l'acceptation des recommandations dépend encore du caractère lisible et appropriable du travail assisté par IA si la chaîne analytique est questionnée ou dévoilée. Marie défend les recommandations.
+Thomas présente au comité exécutif sans IA visible. La construction narrative et l'autorité, restent pleinement humains en surface. Pourtant, l'acceptation des recommandations dépend encore du caractère lisible et appropriable du travail assisté par IA si la chaîne analytique est questionnée ou dévoilée. Marie défend les recommandations.
 
-**Propositions examinées :** P3
+Propositions examinées: P3
 
-**Dimensions de la valeur perçue :** R, C
+Dimensions de la valeur perçue: R, C
 
-**Observable principal :** R (confiance et légitimité) + C (évaluation de la chaîne analytique) — P3 (littératie IA du COMEX (comité exécutif du client) et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)
+Observable principal: R (légitimité) + C (évaluation de la chaîne analytique) — P3 (littératie IA du COMEX (comité exécutif du client) et disposition à l'égard d'une analyse assistée par IA comme modérateur contextuel)
 
-### **4. Rétrospective — Post**
+### 4. Rétrospective — Post
 
-#### Évaluation rétrospective de la valeur perçue sur les trois dimensions.
+Évaluation rétrospective de la valeur perçue sur les trois dimensions.
 
-- **Situation :** Post
+- Situation: Post
 
-Évaluation rétrospective de la valeur perçue sur les trois dimensions. Quelle configuration a généré la plus forte valeur perçue dans ses dimensions relationnelle, processuelle et cognitive — et sous quelles conditions ? Y-a-t-il eu création de connaissances managériales nouvelles ?
+Évaluation rétrospective de la valeur perçue sur les trois dimensions. Quelle configuration a généré la plus forte valeur perçue dans ses dimensions relationnelle, processuelle et cognitive — et sous quelles conditions? Y-a-t-il eu création de connaissances managériales nouvelles (C₂)?
 
-- **Propositions examinées :** P1, P2, P3
+- Propositions examinées: P1, P2, P3
 
-**Dimensions de la valeur perçue observées :** R, P, C
+Dimensions de la valeur perçue observées: R, P, C
 
-**Observable principal :** P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices
+Observable principal: P1 complet (R, P, C) à travers S1/S2/S3 — P2 et P3 comme conditions modératrices
 
-[p. 21]
+[p. 42]
 
 # BIBLIOGRAPHIE
 
-Aarikka-Stenroos, L., & Jaakkola, E. (2012). Value co-creation in knowledge intensive business services : A dyadic perspective on the joint problem solving process. *Industrial Marketing Management*, *41*(1), 15‑26. https://doi.org/10.1016/j.indmarman.2011.11.008
+Aarikka-Stenroos, L., & Jaakkola, E. (2012). Value co-creation in knowledge intensive business services : A dyadic perspective on the joint problem solving process. Industrial Marketing Management, 41(1), 15‑26. https://doi.org/10.1016/j.indmarman.2011.11.008
 
-Ananny, M., & Crawford, K. (2018). Seeing without knowing : Limitations of the transparency ideal and its application to algorithmic accountability. *New Media & Society*, *20*(3), 973‑989. https://doi.org/10.1177/1461444816676645
+Almquist, E., Cleghorn, J., & Sherer, L. (2018, mars). The B2B Elements of Value. Harvard Business Review. https://hbr.org/2018/03/the-b2b-elements-of-value
 
-Anderson, L. (2006). Analytic Autoethnography. *Journal of Contemporary Ethnography*, *35*(4), 373‑395. https://doi.org/10.1177/0891241605280449
+Alvesson, M. (2011). De‐Essentializing the Knowledge Intensive Firm : Reflections on Sceptical Research Going against the Mainstream. Journal of Management Studies, 48(7), 1640‑1661. https://doi.org/10.1111/j.1467-6486.2011.01025.x
 
-Arslanagic-Kalajdzic, M., & Zabkar, V. (2017). Is perceived value more than value for money in professional business services? *Industrial Marketing Management*, *65*, 47‑58. https://doi.org/10.1016/j.indmarman.2017.05.005
+Ananny, M., & Crawford, K. (2018). Seeing without knowing : Limitations of the transparency ideal and its application to algorithmic accountability. New Media & Society, 20(3), 973‑989. https://doi.org/10.1177/1461444816676645
 
-Baird, A., & Maruping, L. M. (2021). The Next Generation of Research on IS Use : A Theoretical Framework of Delegation to and from Agentic IS Artifacts. *MIS Quarterly*, *45*(1), 315‑341. https://doi.org/10.25300/MISQ/2021/15882
+Anderson, L. (2006). Analytic Autoethnography. Journal of Contemporary Ethnography, 35(4), 373‑395. https://doi.org/10.1177/0891241605280449
 
-Baumann, J., Le Meunier-FitzHugh, K., & Wilson, H. N. (2017). The challenge of communicating reciprocal value promises : Buyer-seller value proposition disparity in professional services. *Industrial Marketing Management*, *64*, 107‑121. https://doi.org/10.1016/j.indmarman.2017.02.002
+Arslanagic-Kalajdzic, M., & Zabkar, V. (2017). Is perceived value more than value for money in professional business services? Industrial Marketing Management, 65, 47‑58. https://doi.org/10.1016/j.indmarman.2017.05.005
 
-Becker, S. V., Aromaa, E., & Eriksson, P. (2015). Client-consultant interaction : The dynamics of and conflicts in value co-creation and co-destruction. *International Journal of Services Technology and Management*, *21*(1‑3), 40‑54. https://doi.org/10.1504/IJSTM.2015.071103
+Baird, A., & Maruping, L. M. (2021). The Next Generation of Research on IS Use : A Theoretical Framework of Delegation to and from Agentic IS Artifacts. MIS Quarterly, 45(1), 315‑341. https://doi.org/10.25300/MISQ/2021/15882
 
-Bourgoin, A. (2014). *Le conseil en management à l’épreuve de sa mise en valeur : Une étude empirique* [Ecole National Supérieure des Mines de Paris]. HAL. https://pastel.hal.science/pastel-00957543/document
+Baumann, J., Le Meunier-FitzHugh, K., & Wilson, H. N. (2017). The challenge of communicating reciprocal value promises : Buyer-seller value proposition disparity in professional services. Industrial Marketing Management, 64, 107‑121. https://doi.org/10.1016/j.indmarman.2017.02.002
 
-Bowman, C., & Ambrosini, V. (2000). Value Creation Versus Value Capture : Towards a Coherent Definition of Value in Strategy. *British Journal of Management*, *11*(1), 1‑15. https://doi.org/10.1111/1467-8551.00147
+Becker, S. V., Aromaa, E., & Eriksson, P. (2015). Client-consultant interaction : The dynamics of and conflicts in value co-creation and co-destruction. International Journal of Services Technology and Management, 21(1‑3), 40‑54. https://doi.org/10.1504/IJSTM.2015.071103
 
-Cahier, M.-L., & Quesson, P. (2025). Travailler avec les IA génératives. *Chaire Futurs de l’Industrie et du Travail (FIT)*.
+Bourgoin, A. (2014). Le conseil en management à l’épreuve de sa mise en valeur : Une étude empirique [Ecole National Supérieure des Mines de Paris]. HAL. https://pastel.hal.science/pastel-00957543/document
 
-Candy, M., Dolph, B., Lin, S., & Dencik, J. (2024). On the cusp of convergence. *IBM Institute for Business Value*.
+Bowman, C., & Ambrosini, V. (2000). Value Creation Versus Value Capture : Towards a Coherent Definition of Value in Strategy. British Journal of Management, 11(1), 1‑15. https://doi.org/10.1111/1467-8551.00147
 
-Ciampi, F. (2017). *Knowing Through Consulting in Action* [Text]. (Florence). https://books.fupress.com/catalogue/knowing-through-consulting-in-action/3575
+Brynjolfsson, E., Li, D., & Raymond, L. (2023). Generative AI at Work. w31161. https://doi.org/10.3386/w31161
 
-David, A. (2000). La recherche intervention, un cadre général pour les sciences de gestion ? *AIMS*.
+Cahier, M.-L., & Quesson, P. (2025). Travailler avec les IA génératives. Chaire Futurs de l’Industrie et du Travail (FIT).
 
-De Jong, S., Bos, M. W., Van Berkel, N., & Lamers, M. H. (2025). Algorithm appreciation or aversion : The effects of accuracy disclosure on users’ reliance on algorithmic suggestions. *Behaviour & Information Technology*, 1‑20. https://doi.org/10.1080/0144929X.2025.2535732
+Candy, M., Dolph, B., Lin, S., & Dencik, J. (2024). On the cusp of convergence. IBM Institute for Business Value.
 
-de Man, A.-P., de Man, M., & Stoppelenburg, A. (2016). The Characteristics of New Business Models in Consulting : An Analysis of Practice. *Academy of Management Proceedings*, *2016*, 16812. https://doi.org/10.5465/AMBPP.2016.16812abstract
+Ciampi, F. (2017). Knowing Through Consulting in Action [Text]. (Florence). https://books.fupress.com/catalogue/knowing-through-consulting-in-action/3575
 
-Dietvorst, B. J., Simmons, J. P., & Massey, C. (2014). Algorithm Aversion : People Erroneously Avoid Algorithms After Seeing Them Err. *Journal of Experimental Psychology: General*.
+De Jong, S., Bos, M. W., Van Berkel, N., & Lamers, M. H. (2025). Algorithm appreciation or aversion : The effects of accuracy disclosure on users’ reliance on algorithmic suggestions. Behaviour & Information Technology, 1‑20. https://doi.org/10.1080/0144929X.2025.2535732
 
-Duncan, D. S., Anderson, T., & Saviano, J. (2025). AI Is Changing the Structure of Consulting Firms. *Harvard Business Review*. https://hbr.org/2025/09/ai-is-changing-the-structure-of-consulting-firms?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=linkedin, https://hbr.org/2025/09/ai-is-changing-the-structure-of-consulting-firms?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=linkedin
+Dell’Acqua, F., McFowland, E., Mollick, E. R., Lifshitz-Assaf, H., Kellogg, K., Rajendran, S., Krayer, L., Candelon, F., & Lakhani, K. R. (2023). Navigating the Jagged Technological Frontier : Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality (SSRN Scholarly Paper No 4573321). https://doi.org/10.2139/ssrn.4573321
 
-Echeverri, P., & Skålén, P. (2011). Co-creation and Co-destruction : A practice Theory Based Study of Interactive Value Formation. *Marketing Theory*, *11*, 351‑373. https://doi.org/10.1177/1470593111408181
+de Man, A.-P., de Man, M., & Stoppelenburg, A. (2016). The Characteristics of New Business Models in Consulting : An Analysis of Practice. Academy of Management Proceedings, 2016, 16812. https://doi.org/10.5465/AMBPP.2016.16812abstract
 
-Eisenhardt, K. M. (1989). Building Theories from Case Study Research. *The Academy of Management Review*, *14*(4), 532‑550. https://doi.org/10.2307/258557
+Dietvorst, B. J., Simmons, J. P., & Massey, C. (2014). Algorithm Aversion : People Erroneously Avoid Algorithms After Seeing Them Err. Journal of Experimental Psychology: General.
 
-Eisenhardt, K. M., & Graebner, M. E. (2007, février). *Theory Building from Cases : Opportunities and Challenges*. Academy of Management.
+Duncan, D. S., Anderson, T., & Saviano, J. (2025). AI Is Changing the Structure of Consulting Firms. Harvard Business Review. https://hbr.org/2025/09/ai-is-changing-the-structure-of-consulting-firms?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=linkedin, https://hbr.org/2025/09/ai-is-changing-the-structure-of-consulting-firms?tpcc=orgsocial_edit&utm_campaign=hbr&utm_medium=social&utm_source=linkedin
 
-Elmholdt, K. T., Bourgoin, A., & Leynadier, J.-C. (2025). EXPERTISE PUT TO THE TEST: HOW CLIENTS CONTINUALLY ASSESS THE WORTH OF MANAGEMENT CONSULTANTS. *Research in the Sociology of Organizations*.
+Echeverri, P., & Skålén, P. (2011). Co-creation and Co-destruction : A practice Theory Based Study of Interactive Value Formation. Marketing Theory, 11, 351‑373. https://doi.org/10.1177/1470593111408181
 
-Fu, N., Flood, P. C., Rousseau, D. M., Morris, T., & Johnstone, M. (2023). When are clients helpful? Capitalising on client involvement in professional service delivery. *PLOS ONE*, *18*(2), e0280738. https://doi.org/10.1371/journal.pone.0280738
+Elmholdt, K. T., Bourgoin, A., & Leynadier, J.-C. (2025). EXPERTISE PUT TO THE TEST: HOW CLIENTS CONTINUALLY ASSESS THE WORTH OF MANAGEMENT CONSULTANTS. Research in the Sociology of Organizations.
 
-Glückler, J., & Armbrüster, T. (2003). Bridging Uncertainty in Management Consulting : The Mechanisms of Trust and Networked Reputation. *Organization Studies*.
+Fincham, R., Clark, T., Handley, K., & Sturdy, A. (2008). Configuring expert knowledge : The consultant as sector specialist. Journal of Organizational Behavior, 29(8), 1145‑1160. https://doi.org/10.1002/job.559
 
-Grönroos, C., & Voima, P. (2013). Critical Service Logic : Making Sense of Value Creation and Co-Creation. *Journal of the Academy of Marketing Science*, *41*, 133‑150. https://doi.org/10.1007/s11747-012-0308-3
+Gioia, D. A., Corley, K. G., & Hamilton, A. L. (2013). Seeking Qualitative Rigor in Inductive Research : Notes on the Gioia Methodology. Organizational Research Methods, 16(1), 15‑31. https://doi.org/10.1177/1094428112452151
 
-Handley, K., Sturdy, A., Clark, T., & Fincham, R. (2005). *Client-consultant relations and the role of challenge*.
+Grönroos, C., & Voima, P. (2013). Critical Service Logic : Making Sense of Value Creation and Co-Creation. Journal of the Academy of Marketing Science, 41, 133‑150. https://doi.org/10.1007/s11747-012-0308-3
 
-Harfouche, A., Quinio, B., Saba, M., & Saba, P. B. (2023). The Recursive Theory of Knowledge Augmentation : Integrating human intuition and knowledge in Artificial Intelligence to augment organizational knowledge. *Information Systems Frontiers*, *25*(1), 55‑70. https://doi.org/10.1007/s10796-022-10352-8
+Haenlein, M., & Kaplan, A. (2019). A Brief History of Artificial Intelligence : On the Past, Present, and Future of Artificial Intelligence. California Management Review, 61, 000812561986492. https://doi.org/10.1177/0008125619864925
 
-Hatchuel, A., & Molet, H. (1986). Rational modelling in understanding and aiding human decision-making : About two case studies. *European Journal of Operational Research, OR and Microcomputers Miscellaneous OR Applications*, *24*(1), 178‑186. https://doi.org/10.1016/0377-2217(86)90024-X
+Harfouche, A., Quinio, B., Saba, M., & Saba, P. B. (2023). The Recursive Theory of Knowledge Augmentation : Integrating human intuition and knowledge in Artificial Intelligence to augment organizational knowledge. Information Systems Frontiers, 25(1), 55‑70. https://doi.org/10.1007/s10796-022-10352-8
 
-Kaartemo, V., & Helkkula, A. (2025). Human–AI resource relations in value cocreation in service ecosystems. *Journal of Service Management*, *36*(2), 291‑306. https://doi.org/10.1108/JOSM-03-2023-0104
+Huang, M.-H., & Rust, R. T. (2021). Engaged to a Robot? The Role of AI in Service. Journal of Service Research, 24(1), 30‑41. https://doi.org/10.1177/1094670520902266
 
-Khan, A. W., & Mishra, A. (2024). AI credibility and consumer-AI experiences : A conceptual framework. *Journal of Service Theory and Practice*, *34*(1), 66‑97. https://doi.org/10.1108/JSTP-03-2023-0108
+Kaartemo, V., & Helkkula, A. (2025). Human–AI resource relations in value cocreation in service ecosystems. Journal of Service Management, 36(2), 291‑306. https://doi.org/10.1108/JOSM-03-2023-0104
 
-Krakowski, S., Luger, J., & Raisch, S. (2023). Artificial intelligence and the changing sources of competitive advantage. *Strategic Management Journal*, *44*(6), 1425‑1452. https://doi.org/10.1002/smj.3387
+Khan, A. W., & Mishra, A. (2024). AI credibility and consumer-AI experiences : A conceptual framework. Journal of Service Theory and Practice, 34(1), 66‑97. https://doi.org/10.1108/JSTP-03-2023-0108
 
-Laffite, H. (2024). *Is Consulting Being Disrupted? Navigating New Paradigms*. https://consultingquest.com/podcasts_smcs/is-consulting-being-disrupted/
+Krakowski, S., Luger, J., & Raisch, S. (2023). Artificial intelligence and the changing sources of competitive advantage. Strategic Management Journal, 44(6), 1425‑1452. https://doi.org/10.1002/smj.3387
 
-Laffitte, H. (2022). *Global Management Consulting Industry*. https://consultingquest.com/insights/global-management-consulting-industry/
+Lebovitz, S., Lifshitz-Assaf, H., & Levina, N. (2022). To Engage or Not to Engage with AI for Critical Judgments : How Professionals Deal with Opacity When Using AI for Medical Diagnosis. Organization Science, 33. https://doi.org/10.1287/orsc.2021.1549
 
-Logg, J. M., Minson, J. A., & Moore, D. A. (2019). Algorithm appreciation : People prefer algorithmic to human judgment. *Organizational Behavior and Human Decision Processes*, *151*, 90‑103. https://doi.org/10.1016/j.obhdp.2018.12.005
+Logg, J. M., Minson, J. A., & Moore, D. A. (2019). Algorithm appreciation : People prefer algorithmic to human judgment. Organizational Behavior and Human Decision Processes, 151, 90‑103. https://doi.org/10.1016/j.obhdp.2018.12.005
 
-Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. *Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems*, 1‑16. https://doi.org/10.1145/3313831.3376727
+Long, D., & Magerko, B. (2020). What is AI Literacy? Competencies and Design Considerations. Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, 1‑16. https://doi.org/10.1145/3313831.3376727
 
-Lumivalo, J., Tuunanen, T., & Salo, M. (2024). Value Co-Destruction : A Conceptual Review and Future Research Agenda. *Journal of Service Research*, *27*(2), 159‑176. https://doi.org/10.1177/10946705231177504
+Lumivalo, J., Tuunanen, T., & Salo, M. (2024). Value Co-Destruction : A Conceptual Review and Future Research Agenda. Journal of Service Research, 27(2), 159‑176. https://doi.org/10.1177/10946705231177504
 
-Lusch, R., & Nambisan, S. (2015). Service Innovation : A Service-Dominant Logic Perspective. *MIS Quarterly*, *39*, 155‑175. https://doi.org/10.25300/MISQ/2015/39.1.07
+Lusch, R., & Nambisan, S. (2015). Service Innovation : A Service-Dominant Logic Perspective. MIS Quarterly, 39, 155‑175. https://doi.org/10.25300/MISQ/2015/39.1.07
 
-Masson, P., & Dautrif, S. (2026, janvier 27). *Livre_Blanc_Conseil_Puissance_IA*. HEC Alumni. https://conseil-puissance-ia.fr
+Masson, P., & Dautrif, S. (2026, janvier 27). Livre_Blanc_Conseil_Puissance_IA. HEC Alumni. https://conseil-puissance-ia.fr
 
-Mohan, S. K. (2024). Management Consulting in the Artificial Intelligence – LLM Era. *Management Consulting Journal*, *7*(1), 9‑24. https://doi.org/10.2478/mcj-2024-0002
+Miles, M. B., & Huberman, A. M. (1994). Qualitative Data Analysis (Second Edition). SAGE Publications Ltd. https://vivauniversity.wordpress.com/wp-content/uploads/2013/11/milesandhuberman1994.pdf
 
-Morar, D. (2013). *An overview of the consumer value literature – perceived value, desired value*.
+Mohan, S. K. (2024). Management Consulting in the Artificial Intelligence – LLM Era. Management Consulting Journal, 7(1), 9‑24. https://doi.org/10.2478/mcj-2024-0002
 
-Nikolova, N., & Devinney, T. (2012, mars 29). *The Nature Of Client–Consultant Interaction : A Critical Review*. https://doi.org/10.1093/oxfordhb/9780199235049.013.0019
+Morar, D. (2013). An overview of the consumer value literature – perceived value, desired value.
 
-Oesterle, S., Buchwald, A., & Urbach, N. (2019). To Measure Is to Know : Development of an Instrument for Measuring Consulting Service Value: Recent Findings and Practical Cases. In *Contributions to Management Science* (p. 79‑101). https://doi.org/10.1007/978-3-319-95999-3_4
+Nikolova, N., & Devinney, T. (2012, mars 29). The Nature Of Client–Consultant Interaction : A Critical Review. https://doi.org/10.1093/oxfordhb/9780199235049.013.0019
 
-Oesterle, S., Buchwald, A., & Urbach, N. (2020). Investigating the co-creation of IT consulting service value : Empirical findings of a matched pair analysis. *Electronic Markets*, *32*(2), 571‑597. https://doi.org/10.1007/s12525-020-00426-3
+Nilsson, N. (1971, juin 1). Problem-solving methods in artificial intelligence. McGraw-Hill computer science series. https://www.semanticscholar.org/paper/Problem-solving-methods-in-artificial-intelligence-Nilsson/e4017121b9b49251c1c01891c1bfb15c6decc5ee
 
-Pakarinen, P., & Huising, R. (2023). Relational Expertise What Machines Can t Know. *Journal of Management Studies*. https://doi.org/doi:10.1111/joms.12915
+Nonaka, I. (1994). A Dynamic Theory of Organizational Knowledge Creation. Organization Science, 5(1), 14‑37.
 
-Pattanayak, S. (2021). Navigating Ethical Challenges in Business Consulting with Generative AI : Balancing Innovation and Responsibility. *International Journal of Enhanced Research in Management & Computer Applications*, *10*(2), 24‑32.
+Oesterle, S., Buchwald, A., & Urbach, N. (2019). To Measure Is to Know : Development of an Instrument for Measuring Consulting Service Value: Recent Findings and Practical Cases. In Contributions to Management Science (p. 79‑101). https://doi.org/10.1007/978-3-319-95999-3_4
 
-Pattanayak, S. (2023). The Impact of Generative AI on Business Consulting Engagements : A New Paradigm for Client Interaction and Value Creation. *International Journal of All Research Education and Scientific Methods*, *11*(6), 1378‑1389.
+Oesterle, S., Buchwald, A., & Urbach, N. (2020). Investigating the co-creation of IT consulting service value : Empirical findings of a matched pair analysis. Electronic Markets, 32(2), 571‑597. https://doi.org/10.1007/s12525-020-00426-3
 
-Plé, L., & Cáceres, R. (2010). Not always co-creation : Introducing interactional co-destruction of value in Service-Dominant Logic. Keywords. *Journal of Services Marketing*, *24*, 430‑437. https://doi.org/10.1108/08876041011072546
+Pakarinen, P., & Huising, R. (2023). Relational Expertise What Machines Can t Know. Journal of Management Studies. https://doi.org/doi:10.1111/joms.12915
 
-Plenge, N., Erickson, R., & Roloff, M. (2008). The influence of situational constraints on the perceived value of consulting services. *International Journal of Organizational Analysis*, *15*, 136‑151. https://doi.org/10.1108/19348830710868284
+Pattanayak, S. (2021). Navigating Ethical Challenges in Business Consulting with Generative AI : Balancing Innovation and Responsibility. International Journal of Enhanced Research in Management & Computer Applications, 10(2), 24‑32.
 
-Raisch, S., & Fomina, K. (2024). Combining Human and Artificial Intelligence : Hybrid Problem-Solving in Organizations. *Academy of Management Review*, amr.2021.0421. https://doi.org/10.5465/amr.2021.0421
+Plé, L., & Cáceres, R. (2010). Not always co-creation : Introducing interactional co-destruction of value in Service-Dominant Logic. Keywords. Journal of Services Marketing, 24, 430‑437. https://doi.org/10.1108/08876041011072546
 
-Raisch, S., & Krakowski, S. (2020). [PDF] Artificial Intelligence and Management : The Automation–Augmentation Paradox | Semantic Scholar. *Academy of Management Review*. https://www.semanticscholar.org/paper/Artificial-Intelligence-and-Management%3A-The-Paradox-Raisch-Krakowski/9c145390e6073c96e89cf03d3df3b559f0bb0496
+Plenge, N., Erickson, R., & Roloff, M. (2008). The influence of situational constraints on the perceived value of consulting services. International Journal of Organizational Analysis, 15, 136‑151. https://doi.org/10.1108/19348830710868284
 
-Rivière, A., & Mencarelli, R. (2012). Vers une clarification théorique de la notion de valeur perçue en marketing. *Recherche et Applications en Marketing (French Edition)*, *27*(3), 97‑123. https://doi.org/10.1177/076737011202700305
+Raisch, S., & Fomina, K. (2024). Combining Human and Artificial Intelligence : Hybrid Problem-Solving in Organizations. Academy of Management Review, amr.2021.0421. https://doi.org/10.5465/amr.2021.0421
 
-Sturdy, A. (2009). Unpacking the client(s) : Constructions, positions and client–consultant dynamics. *Scandinavian Journal of Management*. https://www.academia.edu/22841489/Unpacking_the_clients_Constructions_positions_and_client_consultant_dynamics
+Raisch, S., & Krakowski, S. (2020). [PDF] Artificial Intelligence and Management : The Automation–Augmentation Paradox | Semantic Scholar. Academy of Management Review. https://www.semanticscholar.org/paper/Artificial-Intelligence-and-Management%3A-The-Paradox-Raisch-Krakowski/9c145390e6073c96e89cf03d3df3b559f0bb0496
 
-Svensson, P. (2010). Doing value : Exclusion and Inclusion in Management Consultant-Client Interactions. *Lund University - Working Papers Series*.
+Rivière, A., & Mencarelli, R. (2012). Vers une clarification théorique de la notion de valeur perçue en marketing. Recherche et Applications en Marketing (French Edition), 27(3), 97‑123. https://doi.org/10.1177/076737011202700305
 
-Tavoletti, E., Kazemargi, N., Cerruti, C., Grieco, C., & Appolloni, A. (2021). Business model innovation and digital transformation in global management consulting firms. *European Journal of Innovation Management*, *25*(6), 612‑636. https://doi.org/10.1108/EJIM-11-2020-0443
+Schön, D. A. (1983). The reflective practitioner : How professionals think in action. Basic Books.
 
-Tiwari, S. P. (2025). The implications of artificial intelligence in management consulting : A risk and barrier assessment. *Multidisciplinary Reviews*, *8*(8), 2025244‑2025244. https://doi.org/10.31893/multirev.2025244
+Seccia, M. (2019). Relation de conseil à l’entreprise : Attributs clés et typologie : Analyse de la relation client-consultant sous l’angle de la sociologie de la traduction.
 
-Turner, A. N. (1982, septembre 1). Consulting Is More Than Giving Advice. *Harvard Business Review*. https://hbr.org/1982/09/consulting-is-more-than-giving-advice
+Svensson, P. (2010). Doing value : Exclusion and Inclusion in Management Consultant-Client Interactions. Lund University - Working Papers Series.
 
-Vargo, S., & Lusch, R. F. (2004). [PDF] Evolving to a New Dominant Logic for Marketing | Semantic Scholar. *Journal of Marketing*. https://www.semanticscholar.org/paper/Evolving-to-a-New-Dominant-Logic-for-Marketing-Vargo-Lusch/cecb5005ba86d21c66c45ac288a39deca3e0c27a
+Sweeney, J. C., & Soutar, G. N. (2001). Consumer perceived value : The development of a multiple item scale. Journal of Retailing, 77(2), 203‑220. https://doi.org/10.1016/S0022-4359(01)00041-0
 
-Woodruff, R. B. (1997). Customer value : The next source for competitive advantage. *Journal of the Academy of Marketing Science*, *25*(2), 139‑153. https://doi.org/10.1007/BF02894350
+Tavoletti, E., Kazemargi, N., Cerruti, C., Grieco, C., & Appolloni, A. (2021). Business model innovation and digital transformation in global management consulting firms. European Journal of Innovation Management, 25(6), 612‑636. https://doi.org/10.1108/EJIM-11-2020-0443
 
-Yin, R. K. (2003). *Robert_k-_yin_case_study_research_design_and_mebookfi-org*. https://iwansuharyanto.wordpress.com/wp-content/uploads/2013/04/robert_k-_yin_case_study_research_design_and_mebookfi-org.pdf
+Tiwari, S. P. (2025). The implications of artificial intelligence in management consulting : A risk and barrier assessment. Multidisciplinary Reviews, 8(8), 2025244‑2025244. https://doi.org/10.31893/multirev.2025244
 
-[^1]: Selon l’acception retenue pour nos travaux, la transparence, dans un système sociotechnique, ne peut être réduite à un acte ponctuel de divulgation, car la seule divulgation ne rend pas les mécanismes du système intelligibles. Elle doit être appréciée à travers ses effets observables à l'échelle du système (« across »).
+Turner, A. N. (1982, septembre 1). Consulting Is More Than Giving Advice. Harvard Business Review. https://hbr.org/1982/09/consulting-is-more-than-giving-advice
+
+Vargo, S. L., & Lusch, R. F. (2016). Institutions and axioms : An extension and update of service-dominant logic. Journal of the Academy of Marketing Science, 44(1), 5‑23. https://doi.org/10.1007/s11747-015-0456-3
+
+Vargo, S., & Lusch, R. F. (2004). [PDF] Evolving to a New Dominant Logic for Marketing | Semantic Scholar. Journal of Marketing. https://www.semanticscholar.org/paper/Evolving-to-a-New-Dominant-Logic-for-Marketing-Vargo-Lusch/cecb5005ba86d21c66c45ac288a39deca3e0c27a
+
+Woodruff, R. B. (1997). Customer value : The next source for competitive advantage. Journal of the Academy of Marketing Science, 25(2), 139‑153. https://doi.org/10.1007/BF02894350
+
+Yang, S., & Ma, R. (2025). Classifying Epistemic Relationships in Human-AI Interaction : An Exploratory Approach (arXiv:2508.03673). arXiv. https://doi.org/10.48550/arXiv.2508.03673
+
+Yin, R. K. (2003). Case Study Research (Third Edition). SAGE Publications Ltd. https://iwansuharyanto.wordpress.com/wp-content/uploads/2013/04/robert_k-_yin_case_study_research_design_and_mebookfi-org.pdf
+
+Zeithaml, V. A. (1988). Consumer Perceptions of Price, Quality, and Value : A Means-End Model and Synthesis of Evidence. Journal of Marketing, 52(3), 2‑22. https://doi.org/10.2307/1251446
