@@ -368,6 +368,30 @@ function finalizeAnswer(answer, payload, language) {
   return trimToCompleteBoundary(clean) + "\n\n" + notice;
 }
 
+function buildFallbackAnswer(body, reason) {
+  var source = selectSourceForQuestion(getExploratoryFrameworkSource(), body);
+  var excerpt = truncateText(source, 2600);
+  var fallbackReason = body.language === "fr" ? reason : "AI service unavailable";
+
+  if (body.language === "fr") {
+    return [
+      "Le service IA est temporairement indisponible (" + fallbackReason + "). Mode de secours : voici les passages les plus pertinents extraits du cadre exploratoire complet.",
+      "",
+      excerpt,
+      "",
+      "Reformulez la question lorsque le service IA sera rétabli pour obtenir une synthèse interprétée."
+    ].join("\n");
+  }
+
+  return [
+    "The AI service is temporarily unavailable (" + fallbackReason + "). Fallback mode: here are the most relevant passages retrieved from the complete exploratory framework.",
+    "",
+    excerpt,
+    "",
+    "Ask again when the AI service is restored to receive an interpreted synthesis."
+  ].join("\n");
+}
+
 module.exports = async function handler(req, res) {
   var apiKey = process.env.OPENAI_API_KEY;
   var model = process.env.OPENAI_MODEL || "gpt-5.4";
@@ -382,10 +406,6 @@ module.exports = async function handler(req, res) {
     return sendJson(res, 405, { error: "Method not allowed" });
   }
 
-  if (!apiKey) {
-    return sendJson(res, 500, { error: "Missing OPENAI_API_KEY" });
-  }
-
   try {
     body = await readJson(req);
   } catch (error) {
@@ -394,6 +414,10 @@ module.exports = async function handler(req, res) {
 
   if (!body || !body.question || !body.context) {
     return sendJson(res, 400, { error: "Missing question or context" });
+  }
+
+  if (!apiKey) {
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "configuration absente") });
   }
 
   messages = toResponsesMessages(body.history);
@@ -425,7 +449,7 @@ module.exports = async function handler(req, res) {
       })
     });
   } catch (error) {
-    return sendJson(res, 502, { error: "OpenAI request failed" });
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "requête IA impossible") });
   }
 
   try {
@@ -435,15 +459,15 @@ module.exports = async function handler(req, res) {
   }
 
   if (!response.ok) {
-    return sendJson(res, response.status, {
-      error: (payload && payload.error && payload.error.message) || "OpenAI API error"
+    return sendJson(res, 200, {
+      answer: buildFallbackAnswer(body, "service IA indisponible")
     });
   }
 
   answer = finalizeAnswer(extractOutputText(payload), payload, body.language);
 
   if (!answer) {
-    return sendJson(res, 502, { error: "Empty model response" });
+    return sendJson(res, 200, { answer: buildFallbackAnswer(body, "réponse IA vide") });
   }
 
   return sendJson(res, 200, { answer: answer });
