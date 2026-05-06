@@ -90,6 +90,10 @@ function sourceTitleForLine(line) {
   return String(line || "").replace(/^#{1,6}\s+/, "").trim();
 }
 
+function isSourceHeading(line) {
+  return /^#{1,3}\s+/.test(line) || /^(?:Chapitre\s+\d+|[0-9]+(?:\.[0-9]+)*\.)\s+/.test(line);
+}
+
 function splitSourceIntoChunks(source) {
   var lines = String(source || "").replace(/\r\n/g, "\n").split("\n");
   var chunks = [];
@@ -119,10 +123,10 @@ function splitSourceIntoChunks(source) {
       currentPage = clean;
     }
 
-    if (/^#{1,3}\s+/.test(clean) && current.join("\n").length > 900) {
+    if (isSourceHeading(clean) && current.join("\n").length > 900) {
       pushCurrent();
       currentTitle = sourceTitleForLine(clean);
-    } else if (/^#{1,3}\s+/.test(clean)) {
+    } else if (isSourceHeading(clean)) {
       currentTitle = sourceTitleForLine(clean);
     }
 
@@ -170,6 +174,7 @@ function selectSourceForQuestion(source, body, options) {
   var chunks = splitSourceIntoChunks(source);
   var selected;
   var intro = String(source || "").slice(0, 2600);
+  var requestedCodes = (query.match(/\b(?:P[123]|S[123]|R|C)\b/g) || []);
 
   selected = chunks.map(function (chunk, index) {
     var haystack = tokenizeForSearch([chunk.title, chunk.page, chunk.text].join(" "));
@@ -187,6 +192,18 @@ function selectSourceForQuestion(source, body, options) {
 
     if (String(activePage.id || "") === "illustration" && /ILLUSTRATION|Scénario|scenario|mission/i.test(chunk.title + " " + chunk.text)) {
       score += 3;
+    }
+
+    requestedCodes.forEach(function (code) {
+      if (new RegExp("\\b" + code + "\\b").test(chunk.title)) {
+        score += 18;
+      } else if (new RegExp("^\\s*(?:#{1,6}\\s+)?(?:[0-9.]+\\s*)?" + code + "\\b", "m").test(chunk.text)) {
+        score += 12;
+      }
+    });
+
+    if (/Sommaire|BIBLIOGRAPHIE\s+\d+|Plan prévisionnel/i.test(chunk.text.slice(0, 700))) {
+      score -= 6;
     }
 
     return {
