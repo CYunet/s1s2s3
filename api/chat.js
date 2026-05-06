@@ -152,10 +152,11 @@ function tokenizeForSearch(value) {
     });
 }
 
-function selectSourceForQuestion(source, body) {
+function selectSourceForQuestion(source, body, options) {
   var context = body.context || {};
   var activePage = context.activePage || {};
   var current = context.current || {};
+  var includeIntro = !options || options.includeIntro !== false;
   var query = [
     body.question,
     activePage.label,
@@ -200,9 +201,9 @@ function selectSourceForQuestion(source, body) {
   });
 
   return [
-    "Document scope and opening metadata:",
-    truncateText(intro, 2600),
-    "",
+    includeIntro ? "Document scope and opening metadata:" : "",
+    includeIntro ? truncateText(intro, 2600) : "",
+    includeIntro ? "" : "",
     "Relevant primary-source excerpts selected from the complete document:",
     selected.map(function (chunk) {
       return [
@@ -212,7 +213,7 @@ function selectSourceForQuestion(source, body) {
         truncateText(chunk.text, CHAT_SOURCE_CHUNK_MAX_CHARS)
       ].join("\n");
     }).join("\n\n")
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 }
 
 function buildInstructions(language) {
@@ -369,8 +370,8 @@ function finalizeAnswer(answer, payload, language) {
 }
 
 function buildFallbackAnswer(body, reason) {
-  var source = selectSourceForQuestion(getExploratoryFrameworkSource(), body);
-  var excerpt = truncateText(source, 2600);
+  var source = selectSourceForQuestion(getExploratoryFrameworkSource(), body, { includeIntro: false });
+  var excerpt = truncateText(source, 4200);
   var fallbackReason = body.language === "fr" ? reason : "AI service unavailable";
 
   if (body.language === "fr") {
