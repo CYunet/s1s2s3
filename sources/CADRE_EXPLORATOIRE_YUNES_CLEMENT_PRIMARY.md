@@ -1,8 +1,491 @@
 # Cadre exploratoire - source primaire
 
-Document source : Cadre_Exploratoire_YUNES_V1.0.docx
+Document source : Cadre_Exploratoire_YUNES_V0.docx
 Version synchronisée avec l'application interactive.
-Périmètre conservé : sommaire du cadre exploratoire uniquement (sections 1 à 6 et bibliographie).
+Périmètre chatbot : document complet, incluant note préliminaire, plan prévisionnel détaillé de la thèse, cadre exploratoire et bibliographie.
+Périmètre UX de l'application : cadre exploratoire uniquement, afin de ne pas alourdir la navigation.
+
+# Cadre exploratoire et conception du design de recherche
+
+Vers une reconfiguration de la valeur perçue du conseil à l’ère de l’IA: repenser la co-création de connaissances managériales.
+
+Yunes, Clément - Université de Bordeaux – Avril 2026 – 2e année de doctorat
+
+Sous la direction de Nathalie Gardes (Université de Bordeaux) et Eric Milliot (Nantes Université)
+
+## Note préliminaire: 3
+
+Plan prévisionnel détaillé de la thèse 4
+
+Sommaire du cadre exploratoire 14
+
+### 1. POSITIONNEMENT DE LA RECHERCHE 16
+
+### 2. CADRE THEORIQUE MOBILISÉ 21
+
+### 3. CADRE PROPOSITIONNEL 27
+
+### 4. CADRE D'OBSERVATION 32
+
+5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE 35
+
+6. ILLUSTRATION 38
+
+BIBLIOGRAPHIE 42
+
+[p. 3]
+
+## Note préliminaire:
+
+Ce document présente un double objectif: valider la version zéro (V0) de l’architecture générale de la thèse (plan détaillé de la thèse), et le cadre exploratoire de notre travail de recherche sur la valeur perçue du conseil à l’ère de l’IA, préalablement à la collecte terrain. Il s’agit donc ici de donner une vision d’ensemble des travaux, en vue d’obtenir les remarques permettant de guider notre travail, d’en renforcer la solidité et la pertinence.
+
+Le plan général de la thèse, comprend le chapitrage et les amorces pour l’argumentation.
+
+Le cadre exploratoire, comprend une amorce de revue de littérature ciblée, mobilisée pour soutenir notre réflexion et parvenir au cadre conceptuel d’analyse et d’observation décrits. Le cadre exploratoire ne constitue donc pas une revue de littérature exhaustive. S’agissant d’une démarche qualitative itérative, l'enrichissement de la revue de littérature se poursuivra en parallèle de la collecte de données, au gré des remontées du terrain.
+
+Enfin, ce document est complété par un artefact de recherche mobilisant l’IA, sous forme d’un assistant IA spécialisé, conçu comme un partenaire de réflexion pour interroger la pertinence du cadre conceptuel défini, dans le contexte d’un scenario fictif d’une mission de conseil (voir §6. Illustration). L’artefact de recherche s’appuie sur le présent document pour formuler ses réponses et permettre à l’utilisateur de se projeter sur la pertinence de notre recherche, au plus proche d’une situation de conseil grandeur réelle. Et ainsi de mieux la challenger.
+
+[p. 4]
+
+# Plan prévisionnel détaillé de la thèse
+
+Introduction Générale
+
+0.1. L’IA et la transformation du travail intellectuel
+
+L’IA transforme les activités intellectuelles en automatisant ou en augmentant une partie de la production d’analyses, d’options et de recommandations. Dans le conseil, cette évolution est particulièrement sensible: la prestation repose historiquement sur la capacité à produire des connaissances utiles à la résolution de problèmes managériaux. L’intégration de l’IA dans ces activités invite ainsi à réexaminer la manière dont la valeur du conseil est produite, reconnue et appropriée par le client.
+
+0.2. Le conseil comme activité de création de connaissances managériales
+
+Le conseil peut être appréhendé comme une activité de service visant à aider le client à identifier, formuler et résoudre des problèmes de gestion (Ciampi, 2017). Sa valeur tient donc à sa capacité à produire des connaissances managériales utiles, explicites mais aussi tacites, que le client pourra mobiliser dans son propre contexte d’action.
+
+0.3. De la production de valeur à la valeur perçue par le client
+
+Dans la perspective de la Service-Dominant Logic, la valeur n’est pas contenue dans l’offre ni transférée mécaniquement du prestataire vers le client. Elle est créée par le client dans l’usage, et peut être co-créée dans les interactions directes entre prestataire et client. Appliquée au conseil, cette perspective conduit à situer l’analyse dans la sphère conjointe: c’est dans l’échange, la clarification du problème, la discussion des interprétations et l’appropriation progressive des recommandations que la valeur perçue du conseil prend forme.
+
+0.4. L’IA comme source de brouillage de la contribution du conseil
+
+Or, lorsque l’IA participe à la production d’analyses, d’options ou de recommandations, la contribution propre de l’activité de conseil devient plus difficile à attribuer. Le client peut ne plus distinguer clairement ce qui relève du travail du consultant, de la génération algorithmique, de sa propre participation ou de leur combinaison. D’autant que le client est lui-même augmenté par l’IA. Cette situation affecte les conditions de perception de la valeur du conseil: la contribution produite doit pouvoir être attribuée, le processus doit rester intelligible, et les connaissances générées doivent pouvoir être appropriées.
+
+0.5. Problématique et question de recherche
+
+L’intégration de l’IA générative dans les pratiques de conseil conduit à interroger les conditions de perception de la valeur par le client. Si la valeur du conseil repose sur la co-création de connaissances managériales, alors l’arrivée d’une ressource cognitive algorithmique accessible tant par le prestataire que par le client, modifie la manière dont la contribution du conseil est évaluée. La recherche examine ainsi la manière dont l’IA affecte l’attribution des contributions, la lisibilité du processus de conseil et l’appropriation des connaissances produites.
+
+La question de recherche peut être formulée ainsi: comment l’adoption de l’IA reconfigure-t-elle l’accomplissement de la valeur perçue du conseil par le client?
+
+Cette question générale peut être déclinée en trois sous-questions:
+
+- Comment l’IA affecte-t-elle la légitimité, la confiance et l’autorité qui soutiennent la perception de valeur du conseil?
+- Comment l’IA transforme-t-elle l’expérience de co-création et la lisibilité des rôles?
+- Comment l’IA influence-t-elle l’appropriation et la création de connaissances managériales par le client?
+
+Ces sous-questions annoncent le cadre conceptuel R-P-C qui sera développé dans le chapitre 2.
+
+0.6. Positionnement théorique de la recherche
+
+La recherche se situe au croisement de trois corpus. Le premier concerne la valeur perçue et la Service-Dominant Logic, qui permettent de penser la valeur comme créée par le client dans l’usage et co-créée dans l’interaction. Le deuxième, porte sur le conseil, la création de connaissances managériales et l’interaction client-consultant. Le troisième relève des travaux sur l’IA, les interactions humain-machine et l’enchevêtrement sociotechnique. L’articulation de ces corpus permet d’aborder l’IA non comme une simple variable technologique, mais comme un élément perturbateur qui reconfigure les conditions interactionnelles de perception de la valeur.
+
+0.7. Cadre conceptuel proposé: vers le triptyque relationnel, processuel et cognitif
+
+Pour analyser cette reconfiguration, notre travail revisite les dimensions de la valeur perçue du conseil (fonctionnel, émotionnel, social), pour explorer la manière dont l’IA en transforme les ressorts, et comprendre où et comment cette valeur se reconfigure.
+
+0.8. Design de recherche
+
+La recherche adopte une démarche qualitative exploratoire en deux temps. Une première phase exploratoire préliminaire a permis de stabiliser l’objet d’étude, et de poser un premier modèle conceptuel, que notre revue de littérature a permis d’ajuster. Le terrain principal repose ensuite sur une étude de cas exemplaire en grandeur réelle (cabinet de conseil intégrant l’IA dans ses pratiques), dans laquelle la valeur perçue du conseil est observée à travers différentes configurations de mise en visibilité de l’IA: S1 sans IA, S2 avec IA en silo, et S3 en co-création tripartite.
+
+La valeur perçue du conseil est un phénomène situé, dynamique et interactionnel; elle ne peut être pleinement comprise en dehors du contexte dans lequel elle se forme. L’étude de cas permet d’observer finement les variations de la relation client-consultant selon que l’IA est absente, utilisée en arrière-plan ou rendue visible dans l’interaction.
+
+0.9. Contributions attendues
+
+La thèse vise trois contributions. Sur le plan théorique, elle propose de compléter les approches classiques de la valeur perçue du conseil par un cadre relationnel, processuel et cognitif adapté à un contexte où l’IA intègre les pratiques du conseil. Sur le plan méthodologique, elle montre comment observer empiriquement l’enchevêtrement humain-IA à partir de configurations de mise en visibilité. Sur le plan praxéologique, elle fournit aux acteurs du conseil des repères pour comprendre sous quelles conditions l’usage de l’IA renforce, fragilise ou simplement influence la valeur perçue par le client.
+
+0.10. Annonce du plan
+
+La thèse est structurée en cinq chapitres. Le premier chapitre propose une revue de littérature sur la valeur perçue du conseil à l’épreuve de l’IA. Il montre que la valeur du conseil peut être comprise comme un accomplissement social situé, mais que l’IA générative met à l’épreuve cet accomplissement en brouillant l’attribution, la lisibilité et l’appropriation de la connaissance produite.
+
+Le deuxième chapitre construit le modèle conceptuel et le cadre propositionnel. Il présente le triptyque relationnel, processuel et cognitif, puis formule les propositions relatives à la reconfiguration de la valeur perçue, au rôle de la transparence substantive et aux conditions de modération liées notamment à la littératie IA et à l’aversion à l’algorithme.
+
+Le troisième chapitre expose le design méthodologique. Il justifie le recours à une démarche qualitative exploratoire, à une étude de cas exemplaire et à un cadre d’observation fondé sur les configurations S1, S2 et S3. Il précise également les dispositifs de réflexivité et de triangulation destinés à garantir la rigueur de l’analyse.
+
+Le quatrième chapitre présentera les résultats de l’étude de cas. Il analysera les variations de la valeur perçue selon les configurations d’usage et de visibilité de l’IA, puis examinera transversalement les reconfigurations des liens entre dimensions relationnelle, processuelle et cognitive.
+
+Le cinquième chapitre discutera les contributions de la recherche. Il reviendra sur les apports théoriques à la compréhension de la valeur perçue du conseil, les implications méthodologiques liées à l’étude de l’IA en situation, les implications pratiques pour les consultants et les clients, ainsi que les limites et voies de recherche futures.
+
+Chapitre 1: Revue de littérature - La valeur perçue du conseil à l'épreuve de l'IA: de l’expertise accomplie à l’enchevêtrement sociotechnique
+
+1.1. Le conseil comme activité de création de connaissances: entre expertise, interaction et mise en valeur
+
+1.1.1. La promesse fonctionnaliste: produire des connaissances utiles à la résolution de problèmes
+
+Le conseil peut d’abord être appréhendé comme une activité de résolution de problèmes et de création de connaissances managériales. Sa promesse de valeur repose sur l’utilité de l’intervention: aider le client à diagnostiquer une situation, décider, agir et apprendre, afin de renforcer sa propre capacité de résolution (Ciampi, 2017).
+
+1.1.2. La critique de l’expertise: ambiguïté, persuasion et légitimation
+
+Cette promesse fonctionnaliste ne suffit toutefois pas à saisir la spécificité du conseil. Parce qu’il s’agit d’une prestation intangible, située et difficile à évaluer, la valeur du conseil ne se réduit pas à la qualité objective d’un livrable. Les approches critiques rappellent que le consultant doit aussi convaincre, légitimer son intervention et produire les conditions de reconnaissance de son expertise (Alvesson, 2011; Svensson, 2010).
+
+1.1.3. L’interaction client-consultant: expertise, réflexivité et persuasion comme modèles partiels
+
+La littérature sur l’interaction client-consultant distingue classiquement trois modèles: le modèle de l’expert, celui du praticien réflexif et le modèle critique du consultant comme acteur de persuasion. Chacun éclaire une dimension de la relation, mais aucun ne suffit seul à expliquer comment la valeur se construit concrètement dans l’interaction (Nikolova & Devinney, 2012).
+
+1.2. La valeur perçue du conseil: des dimensions classiques à la co-création interactionnelle
+
+1.2.1. De la valeur livrée à la valeur d'usage co-créée par le client
+
+Dans la perspective de la Service-Dominant Logic, la valeur n’est pas contenue dans l’offre ni transférée par le prestataire; elle est créée par le client dans l’usage (S. Vargo & Lusch, 2004). Appliquée au conseil, cette perspective signifie que le diagnostic, la recommandation ou le livrable ne valent que s’ils sont interprétés, mobilisés et appropriés dans le contexte du client.
+
+1.2.2. Les dimensions de la valeur perçue du conseil: fonctionnelle, émotionnelle et sociale
+
+Les travaux sur la valeur perçue dans les services professionnels permettent de distinguer trois registres d’évaluation: la valeur fonctionnelle, liée à l’utilité de la prestation, à la qualité de la solution et au retour attendu; la valeur émotionnelle, liée à l’expérience relationnelle, à la confiance et à la réduction de l’incertitude; et la valeur sociale, liée à la légitimation organisationnelle de la décision ou de l’action soutenue par le conseil (Arslanagic-Kalajdzic & Zabkar, 2017). Dans le conseil, ces dimensions ne se présentent pas comme des registres séparés. Elles se recomposent autour d’une double exigence: une exigence technique, liée à la qualité du diagnostic, de la méthode et de la solution proposée, et une exigence politique, liée à la confiance, à la légitimation et à l’acceptation organisationnelle de cette solution (Turner, 1982). La valeur perçue du conseil dépend ainsi autant de ce qui est produit que de la manière dont cette production devient reconnaissable, crédible et mobilisable par le client.
+
+1.2.3. La sphère conjointe: lieu critique de la co-création
+
+La sphère conjointe, qui réunit prestataire et client, constitue le lieu spécifique où la co-création de valeur peut se produire par des interactions directes (Grönroos & Voima, 2013). Dans le conseil, ces interactions permettent de clarifier le problème, d’ajuster les attentes, de négocier les rôles et de donner sens aux solutions proposées (Aarikka-Stenroos & Jaakkola, 2012). Elles sont donc le lieu où l’exigence technique et l’exigence politique se rencontrent: la solution y est discutée, éprouvée, légitimée et progressivement rendue appropriable par le client.
+
+1.2.4. De la co-création à la co-destruction: lorsque l’interaction gènère une valeur négative.
+
+Les interactions de conseil ne produisent pas mécaniquement de la valeur. Lorsqu’elles deviennent conflictuelles, opaques ou mal cadrées, elles peuvent au contraire dégrader l’expérience du client et produire de la co-destruction de valeur. Ce point est déterminant pour la suite: si la valeur dépend de la qualité, de la lisibilité et de l’appropriation de l’interaction, alors toute perturbation de ces conditions peut affecter la valeur perçue (Echeverri & Skålén, 2011; Lumivalo et al., 2024; Plé & Cáceres, 2010).
+
+1.3. De l’accomplissement pragmatiste de la valeur à son enchevêtrement sociotechnique
+
+1.3.1. L’accomplissement pragmatiste de la valeur: rendre l’expertise visible, crédible et appropriable
+
+L’approche pragmatiste permet de dépasser l’opposition entre expertise, réflexivité et persuasion. La valeur du conseil n’est ni simplement contenue dans l’expertise, ni seulement produite par la rhétorique du consultant: elle s’accomplit dans l’action, par des pratiques situées de justification, de mise en forme, de signalement et de production de l’autorité. Cette lecture est particulièrement utile pour comprendre comment la valeur devient visible, crédible et appropriable dans la relation client-consultant (Bourgoin, 2014; Elmholdt et al., 2025).
+
+1.3.2. L’enchevêtrement humain-IA: une production de connaissances distribuée et opaque
+
+L’IA ne s’ajoute pas comme un outil extérieur au conseil, mais s’insère dans la production même des analyses, des options et des recommandations. Les contributions humaines et algorithmiques deviennent interdépendantes, parfois difficilement séparables, ce qui transforme la production de connaissances managériales en un processus sociotechnique distribué et partiellement opaque. L’action, le raisonnement et contribution ne peuvent alors plus être attribués simplement à un acteur unique. (Baird & Maruping, 2021; Kaartemo & Helkkula, 2025; Raisch & Krakowski, 2020).
+
+1.3.3. Quand l’enchevêtrement met à l’épreuve l’accomplissement social de la valeur
+
+Si, dans une perspective pragmatiste, la valeur du conseil s’accomplit par des pratiques visibles de justification, de mise en forme et de production de l’autorité, l’enchevêtrement humain-IA rend cet accomplissement plus incertain. Il devient plus difficile pour le client d’attribuer les contributions, d’identifier l’expertise du consultant, de comprendre le raisonnement suivi et de s’approprier les connaissances générées. L’enjeu est donc d’analyser comment la co-création de connaissances managériales à l’ère de l’IA reconfigure les conditions d’accomplissement social de la valeur perçue du conseil.
+
+Cette mise à l’épreuve justifie le passage à un nouveau cadre conceptuel. Les dimensions classiques de la valeur perçue du conseil — fonctionnelle, émotionnelle et sociale — permettent d’identifier les registres de bénéfices évalués par le client. Elles ne visent cependant pas à saisir les mécanismes interactionnels par lesquels l’IA brouille l’attribution des contributions, la lisibilité de l’expertise et l’appropriation des connaissances produites. C’est pourquoi le chapitre suivant propose d’orienter l’analyse vers le triptyque relationnel, processuel et cognitif: la légitimité et la confiance, l’expérience de co-création, ainsi que la création et l’appropriation des connaissances managériales.
+
+Chapitre 2 — Modèle conceptuel et cadre propositionnel
+
+2.1. Des dimensions classiques au triptyque R-P-C: justifier un nouveau prisme d’analyse
+
+Cette section explique pourquoi l’évaluation de la valeur perçue par les dimensions fonctionnelle, émotionnelle et sociale, doit être selon nous retraduite dans un cadre qui nous parait plus adapté à l’IA. Le point central est que l’IA brouille les mécanismes par lesquels le client perçoit la valeur du conseil. L’évaluation bénéfices/sacrifices du conseil est d’autant plus difficile à mener si l’attribution, la lisibilité et l’appropriation des contributions est rendue floue par le phénomène de l’enchevêtrement humain-IA. D’où la nécessité d’un cadre centré sur les conditions relationnelles (R), processuelles (P) et cognitives(C) de la valeur perçue.
+
+2.1.1. Les limites analytiques des dimensions fonctionnelle, émotionnelle et sociale face à l’IA
+
+Cette sous-partie précise que les dimensions classiques restent pertinentes, mais qu’elles ne saisissent pas les mécanismes d’attribution, de lisibilité et d’appropriation. L’objet de la thèse n’est pas de mesurer la valeur perçue, mais de comprendre comment elle se forme dans un système consultant-client-IA.
+
+2.1.2. La valeur perçue comme dynamique d’interdépendance
+
+Au même titre que l’axe technique et l’axe politique du conseil s’auto-alimentent, les dimensions relationnelle, processuelle et cognitive s’influencent mutuellement: la légitimité affecte la co-création, l’expérience de co-création affecte l’appropriation, et la création de connaissances peut rétroagir sur la légitimité du consultant.
+
+2.2. Le triptyque R-P-C: trois dimensions de la valeur perçue du conseil à l’ère de l’IA
+
+Cette section définit les trois dimensions du modèle, qui guideront l’observation empirique.
+
+2.2.1. R — La dimension relationnelle: légitimité
+
+La dimension relationnelle renvoie à la manière dont le client évalue la légitimité du conseil dans un contexte où l’IA peut contribuer au résultat. Elle permet d’observer si l’usage de l’IA renforce la légitimité du conseil (parce qu’il est compris et maîtrisé) ou la fragilise (parce qu’il donne l’impression que le conseil délègue son expertise à une boîte noire).
+
+2.2.2. P — La dimension processuelle: expérience de co-création, lisibilité et distribution des rôles
+
+La dimension processuelle porte sur la manière dont le client perçoit le processus de co-création au sein de la sphère conjointe: qui participe, qui décide, qui interprète, qui arbitre? Elle est centrale à l’ère de l’IA, car la valeur perçue du conseil ne dépend pas du résultat produit, mais de la manière dont le client perçoit le rôle et la contribution des parties, dans le processus.
+
+2.2.3. C — La dimension cognitive: appropriation et création de connaissances managériales
+
+La dimension cognitive observe si le client parvient à comprendre, évaluer, s’approprier et mobiliser les connaissances produites. Elle distingue l’appropriation cognitive des résultats et la création de connaissances managériales nouvelles: l’appropriation est la condition de possibilité de la création de connaissances managériales (par exemple, un livrable assisté par IA peut être impressionnant sans pour autant produire un véritable apprentissage managérial chez le client).
+
+2.3. Le cadre propositionnel: P1, P2, P3
+
+Cette section formule le cadre des propositions qui guideront l’étude empirique. Elle constitue un cadre exploratoire, et non un modèle causal fermé.
+
+2.3.1. P1 — La reconfiguration multidimensionnelle de la valeur perçue
+
+P1 pose que l’IA reconfigure la valeur perçue selon trois dimensions interdépendantes, R, P et C. Selon les configurations, l’intégration de l’IA dans les pratiques du conseil, peut renforcer la valeur, la fragiliser ou produire des effets contradictoires entre les dimensions.
+
+2.3.2. P2 — La transparence substantive comme mécanisme médiateur
+
+P2 distingue la simple divulgation de l’usage de l’IA, d’une transparence plus substantielle: expliquer pourquoi et comment le résultat assisté par IA est pertinent, valide et appropriable pour ce client. Cette proposition répond directement au problème d’opacité: l’enjeu n’est pas d’ouvrir la boîte noire algorithmique, mais de rendre ses effets intelligibles dans la relation de conseil.
+
+2.3.3. P3 — Les conditions de modération: littératie IA et aversion à l’algorithme
+
+P3 précise que la transparence substantive ne produit pas de valeur perçue. Son effet dépend des caractéristiques de la relation, de la situation et du client. La littératie IA et l’aversion à l’algorithme sont particulièrement importantes: un client peut comprendre l’usage de l’IA sans l’accepter, ou au contraire lui accorder trop de crédit au détriment du consultant.
+
+2.4. Synthèse du modèle conceptuel: une chaîne d’analyse de la valeur perçue à l’ère de l’IA
+
+Cette section clôture le chapitre en montrant comment les éléments s’articulent. R-P-C définit ce qui est observé; P2 explique par quel mécanisme l’IA peut devenir intelligible et appropriable; P3 précise sous quelles conditions ce mécanisme réussit ou échoue. La section prépare le chapitre 3, qui transforme ce cadre conceptuel en dispositif d’observation empirique.
+
+Chapitre 3 — Design méthodologique de la recherche
+
+3.1. Posture épistémologique et logique générale du design
+
+Cette section présente la démarche qualitative exploratoire et justifie le recours à un cas exemplaire. Le phénomène étudié — la valeur perçue du conseil à l’ère de l’IA — ne peut pas être isolé de son contexte interactionnel (Yin, 2003); il doit être observé dans le cours même d’une mission.
+
+3.1.1. Une recherche qualitative exploratoire en deux temps
+
+Cette sous-partie distingue la phase exploratoire préliminaire et l’étude de cas principale. La première sert à stabiliser le phénomène et à ajuster le cadre; la seconde vise à confronter le cadre propositionnel à une situation de conseil en grandeur réelle.
+
+3.1.2. Le cas exemplaire comme stratégie d’observation
+
+Cette sous-partie justifie l’étude de cas au sens de Yin: elle est pertinente lorsque les frontières entre phénomène et contexte sont difficiles à tracer. Ici, la valeur perçue dépend précisément des configurations interactionnelles dans lesquelles elle se forme.
+
+3.2. La phase exploratoire préliminaire: stabiliser le phénomène
+
+Cette section présente le premier terrain exploratoire (laboratoire Erdos): un panel d’experts engagés dans l’apprentissage de l’IA et la co-construction de prototypes. Sa fonction n’est pas de produire les résultats principaux, mais de valider la pertinence du questionnement et de soutenir l’élaboration du modèle exploratoire.
+
+3.2.1. Terrain, participants et collecte
+
+Cette sous-partie décrit le panel, les entretiens semi-directifs, les thématiques abordées et le volume de données. Elle montre en quoi le premier terrain a permis d’explorer les perceptions de la valeur lorsque l’IA participe activement au résultat.
+
+3.2.2. Analyse préliminaire et contribution au modèle
+
+Cette sous-partie explique comment les données exploratoires ont contribué à stabiliser les dimensions du modèle, notamment autour des livrables, de la connaissance, de la co-création, de la valeur perçue et des perspectives sur l’IA.
+
+3.3. L’étude de cas principale: une mission de conseil en grandeur réelle
+
+Cette section présente le terrain principal: un cabinet de conseil dans lequel le chercheur est engagé comme consultant, selon un modèle inspiré du Praticien Réflexif (Schön, 1983). Ce terrain permet d’explorer le cadre conceptuel de la recherche, par l’observation des variations intra-phase entre S1, S2 et S3, qui constituent les unités d’analyse les plus discriminantes du dispositif.
+
+3.3.1. Sélection et justification du cas
+
+Cette sous-partie précise pourquoi le cas est exemplaire: il permet d’observer, dans une même mission et sur une durée significative, des situations sans IA, avec IA en silo et avec IA rendue visible dans l’interaction.
+
+3.3.2. Unités d’analyse: les variations intra-phase
+
+Cette sous-partie explique que l’analyse ne compare pas seulement des phases de mission, mais des moments où les configurations S1, S2 et S3 varient à phase constante. Cela permet de mieux saisir les effets de la mise en visibilité de l’IA sur R, P et C.
+
+3.4. Le cadre d’observation: S1, S2, S3 comme configurations de mise en visibilité
+
+Cette section opérationnalise l’enchevêtrement humain-IA. S1, S2 et S3 ne sont pas des réalités ontologiques, mais des configurations phénoménologiques et interactionnelles permettant d’observer comment l’IA est absente, confinée ou exposée dans la relation avec le client.
+
+3.4.1. S1 — Sans IA: la dyade humaine comme point d’ancrage
+
+S1 sert de point de comparaison. Il permet d’observer les formes classiques de construction de la valeur perçue dans une interaction client-consultant sans IA (dimensions fonctionnelles, émotionnelles, sociales)
+
+3.4.2. S2 — IA en silo: l’enchevêtrement confiné
+
+S2 permet d’observer les effets d’un usage de l’IA non explicitement partagé avec le client. C’est la configuration la plus directement liée au risque d’attribution floutée, de transparence insuffisante et de fragilisation rétrospective de la légitimité.
+
+3.4.3. S3 — Co-création tripartite: l’enchevêtrement exposé
+
+S3 permet d’observer ce qui se passe lorsque l’IA devient visible dans l’interaction. Elle peut enrichir l’expérience processuelle et cognitive, mais elle peut aussi rendre la légitimité du consultant plus négociable si son rôle médiateur n’est pas manifeste.
+
+3.5. Collecte, analyse et rigueur méthodologique
+
+Cette section montre comment est contrôlé le risque de biais lié à la double posture chercheur / praticien. Il est important de distinguer deux usages de la réflexivité: elle n’est plus ici un modèle théorique de la valeur du conseil (Schön, 1983), mais une exigence méthodologique de contrôle et d’explicitation.
+
+3.5.1. Journal réflexif en double colonne
+
+Le journal permet de séparer les faits observés, les verbatims et les livrables d’un côté, et les interprétations analytiques de l’autre. Il sert à éviter que le cadre théorique ne soit projeté trop rapidement sur le terrain.
+
+3.5.2. Entretiens post-mission et triangulation des perceptions
+
+Les entretiens post-mission ou post-phase permettent de confronter l’interprétation du chercheur aux perceptions réelles du client. Ils sont essentiels parce que l’objet de la thèse n’est pas la performance du consultant, mais la valeur perçue par le client.
+
+3.5.3. Débriefings avec le comité de thèse
+
+Les débriefings constituent un tiers analytique distancié. Ils permettent de maintenir une distance critique vis-à-vis des situations observées et de limiter le risque de prophétie auto-réalisatrice.
+
+Chapitre 4 — Résultats de l’étude de cas
+
+IA et reconfiguration de la valeur perçue: en quoi S1, S2 et S3 affectent R, P et C? Comment P2 et P3 expliquent les variations observées? L’enjeu est de produire des résultats sur les mécanismes de reconfiguration de la valeur perçue.
+
+4.1. S1 — L’accomplissement social classique de la valeur dans la dyade client-consultant
+
+Cette section analyse les moments sans IA. Elle sert de base comparative: comment se construisent la confiance, la légitimité, l’écoute, l’autorité et l’appropriation dans une interaction classique, à l’ère de l’IA? Elle permet d’identifier les pratiques d’accomplissement social de la valeur avant leur mise à l’épreuve par l’IA.
+
+4.1.1. Construction initiale de la légitimité relationnelle
+
+Cette sous-partie analyse les premiers moments traditionnels de la mission, notamment les interactions de cadrage, où le consultant construit sa légitimité (par l’écoute, la compréhension du problème et les premières démonstrations de compétence).
+
+4.1.2. Clarification du problème et stabilisation des attentes
+
+Cette sous-partie observe comment le client et le conseil construisent une compréhension partagée du problème, condition nécessaire à la perception d’une valeur fonctionnelle, émotionnelle et sociale.
+
+4.2. S2 — L’IA en silo: opacité, attribution latente et risque de fragilisation
+
+Cette section analyse les moments où l’IA est utilisée en back-office, tant par le conseil que par le client. Elle est centrale pour observer la perception de la valeur du conseil: le client reçoit une production structurée, mais peine à identifier la contribution des parties, ou de leur combinaison.
+
+4.2.1. Production assistée et invisibilité du travail algorithmique
+
+Cette sous-partie décrit les usages confinés de l’IA: transcription, structuration, stress-test, préparation de scénarios ou de recommandations. Elle analyse comment ces usages affectent la perception de l’expertise lorsque la chaîne de production n’est pas rendue visible.
+
+4.2.2. Attribution floutée et légitimité rétrospective
+
+Cette sous-partie examine ce qui se passe lorsque le client découvre ou soupçonne une contribution de l’IA. Le point empirique clé est de savoir si, et en quoi, cette découverte fragilise la légitimité du conseil (attribution du crédit à l’IA) ou reste sans effet notable sur la valeur perçue.
+
+4.3. S3 — L’IA rendue visible: co-création tripartite et négociation de la valeur
+
+Cette section analyse les moments où l’IA est explicitement intégrée à l’interaction. Elle permet d’observer si la mise en visibilité de l’IA enrichit la co-création, favorise l’appropriation et renforce la perception de valeur, ou au contraire si elle rend le rôle du conseil plus contestable.
+
+4.3.1. Transparence performative et transparence substantive
+
+Cette sous-partie teste empiriquement la distinction entre “dire que l’on utilise l’IA” et “rendre intelligible la contribution de l’IA”. Elle permet d’évaluer si la transparence substantive favorise l’appropriation et la valeur perçue.
+
+4.3.2. Engagement cognitif du client et création de connaissances
+
+Cette sous-partie observe si la participation visible du client dans l’analyse assistée par IA favorise une meilleure appropriation, une compréhension plus fine des résultats et la création de connaissances managériales nouvelles.
+
+4.4. Analyse transversale: reconfiguration des liens R-P-C
+
+Cette section dépasse la stricte chronologie des configurations (S1, S2, S3) pour proposer une analyse transversale des mécanismes de création et de co-destruction de la valeur perçue du conseil à l’ère de l’IA. Elle éprouve empiriquement le cadre propositionnel (P1, P2, P3) en observant comment l'irruption de l'IA générative met sous tension, déstabilise ou amplifie les trois liens constitutifs du triptyque de la valeur perçue (R, P, C).
+
+4.4.1. R ↔ P: légitimité du conseil et lisibilité de l'expérience de co-création
+
+Cette sous-partie analyse en quoi l’usage visible ou invisible de l’IA affecte la relation entre légitimité et expérience processuelle (risque de « boite noire »). En quoi une co-création plus transparente renforce la légitimité ou au contraire, déplace le crédit du conseil vers la machine.
+
+4.4.2. P ↔ C: expérience de co-création et appropriation cognitive
+
+Cette sous-partie observe en quoi le client s’approprie mieux les connaissances lorsqu’il participe au processus de production assistée par IA et sous quelles conditions.
+
+4.4.3. R ↔ C: création de connaissances et légitimité rétrospective
+
+Cette sous-partie analyse en quoi la création de connaissances nouvelles renforce la légitimité du consultant a posteriori.
+
+4.5. Synthèse des résultats: conditions de co-création et de co-destruction de valeur perçue à l’ère de l’IA
+
+Cette section clôt le chapitre en distinguant les configurations dans lesquelles l’IA renforce la valeur perçue, celles où elle la fragilise, et celles où ses effets sont ambivalents. Elle prépare la discussion théorique du chapitre 5.
+
+Chapitre 5 — Discussion et implications
+
+Repenser l’accomplissement de la valeur perçue du conseil à l’ère de l’IA, par la co-création de connaissances managériales.
+
+Que devient la valeur perçue du conseil lorsque la production de connaissances devient distribuée, assistée par IA et partiellement opaque?
+
+5.1. Discussion théorique: de l’accomplissement social à l’accomplissement sociotechnique de la valeur perçue
+
+Cette section discute en quoi l’IA ne rend pas obsolète l’approche pragmatiste, mais oblige à la prolonger: la valeur du conseil continue de s’accomplir dans l’interaction, mais cette interaction est désormais traversée par des contributions algorithmiques qui modifient l’attribution, la lisibilité et l’appropriation.
+
+5.1.1. Contribution à la littérature sur la valeur perçue du conseil
+
+Cette sous-partie discute en quoi le modèle R-P-C complète les dimensions fonctionnelles, émotionnelles et sociales. Il ne les remplace pas, mais il permet d’analyser les mécanismes interactionnels par lesquels la valeur devient perceptible dans un contexte IA-augmenté.
+
+5.1.2. Contribution à la Service-Dominant Logic
+
+Cette sous-partie discute la sphère conjointe à l’ère de l’IA. L’enjeu est de discuter en quoi l’IA modifie la manière dont les ressources sont intégrées, rendues visibles et appropriées dans l’interaction de service, au sein de la sphère conjointe.
+
+5.1.3. Contribution à la littérature sur les interactions humain-IA
+
+Cette sous-partie discute les effets de l’enchevêtrement sur la perception de valeur dans une relation professionnelle de conseil.
+
+5.2. Implications praxéologiques pour les consultants et les clients
+
+Cette section traduit les résultats pour la pratique du conseil. Sous quelles conditions l’IA peut soutenir ou fragiliser la valeur perçue?
+
+5.2.1. Ne pas confondre usage de l’IA et valeur perçue
+
+Cette sous-partie discute en quoi l’IA le mode de production IA-augmenté ne devient valeur que si le client peut l’attribuer, la comprendre et se l’approprier.
+
+5.2.2. Organiser la transparence substantive
+
+Cette sous-partie explicite les implications de P2. Le consultant ne doit pas seulement divulguer l’usage de l’IA; il doit expliquer ce que l’IA a fait, ce que lui-même a arbitré, quelles limites affectent le résultat et pourquoi celui-ci est pertinent pour le client.
+
+5.2.3. Adapter l’usage de l’IA aux caractéristiques du client
+
+Cette sous-partie développe les implications de P3: littératie IA, aversion à l’algorithme, confiance préalable et enjeux politiques doivent guider la manière dont l’IA est rendue visible ou non dans la relation.
+
+5.3. Implications méthodologiques: étudier l’IA depuis la pratique
+
+Cette section valorise votre choix méthodologique. Elle montre que l’autoethnographie analytique, contrôlée par un dispositif de réflexivité renforcé, permet d’accéder à des micro-décisions et micro-ajustements difficiles à observer de l’extérieur. 1
+
+5.4. Limites de la recherche
+
+Cette section doit être franche. Les principales limites probables sont: cas unique, implication du chercheur, contexte spécifique de mission, difficulté à généraliser, évolution rapide des outils IA, et difficulté à isoler strictement les effets de l’IA de ceux de la relation client-consultant.
+
+5.5. Voies de recherche futures
+
+Cette section ouvre vers des recherches comparatives: plusieurs missions, plusieurs types de conseil, différents niveaux de littératie IA, comparaison entre IA en silo et IA exposée, ou encore étude du point de vue des clients sur l’attribution de la valeur dans les prestations assistées par IA.
+
+[p. 14]
+
+# Sommaire du cadre exploratoire
+
+## Note préliminaire: 3
+
+Plan prévisionnel détaillé de la thèse 4
+
+Sommaire du cadre exploratoire 14
+
+### 1. POSITIONNEMENT DE LA RECHERCHE 16
+
+## Problématisation 16
+
+La finalité du conseil, contribuer à la création de nouvelles connaissances managériales 16
+
+L’intégration de l’IA dans les pratiques, interroge la valeur perçue du conseil 16
+
+## Intérêt de la recherche 19
+
+L’IA, une composante exclue de l’équation de la valeur perçue du conseil 19
+
+Implication théorique 20
+
+Implication praxéologique 20
+
+### 2. CADRE THEORIQUE MOBILISÉ 21
+
+Marketing des services (Service-dominant Logic): valeur perçue et sphère de co-création 21
+
+La valeur perçue du conseil, un accomplissement social 23
+
+L’IA perturbateur de l’accomplissement social: la perspective de l’enchevêtrement (‘entanglement’). 25
+
+### 3. CADRE PROPOSITIONNEL 27
+
+De l'accomplissement social au triangle R-P-C: justification d'un nouveau prisme d'analyse 27
+
+## P1 — Reconfiguration multidimensionnelle de la valeur perçue 28
+
+Dimensions de la valeur perçue du conseil à l’ère de l’IA: le triangle R – P – C 28
+
+### R — Relationnelle 29
+
+Légitimité de la prestation de conseil — activement produite par l'interaction, et mise à l'épreuve par l'opacité des systèmes humain-IA. 29
+
+### P — Processuelle 29
+
+### C — Cognitive 29
+
+## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement) 30
+
+## P2 — La transparence comme mécanisme médiateur 30
+
+## P3 — Les contingences acteur de la transparence substantive: littératie IA et aversion à l’algorithme 31
+
+### 4. CADRE D'OBSERVATION 32
+
+Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA: S1, S2, S3 32
+
+## Situations et observables 33
+
+### S1 — Sans IA 33
+
+### S2 — IA en silo 33
+
+### S3 — Co-création tripartite 34
+
+5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE 35
+
+## Une démarche qualitative exploratoire en deux temps 35
+
+## Un design d'étude de cas exemplaire en grandeur réelle (Yin) 36
+
+## Une posture assumée de praticien réflexif: l'autoethnographie analytique (Schön et Anderson) 36
+
+Le cas étudié est une mission de conseil dans laquelle le chercheur est lui-même engagé comme consultant à part entière. 36
+
+## Un dispositif de réflexivité renforcé face au risque de biais 37
+
+6. ILLUSTRATION 38
+
+## Scénario fictif d'une mission de conseil: audit de plateforme digitale sur 10 semaines 38
+
+## Phases du scenario de la mission fictive de conseil 38
+
+### 1. Cadrage – Sem. 1-3 38
+
+### 2. Analyse – Sem. 4-9 39
+
+### 3. Recommandations — Sem. 10 40
+
+### 4. Rétrospective — Post 40
+
+BIBLIOGRAPHIE 42
 
 [p. 16]
 

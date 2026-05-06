@@ -30,15 +30,22 @@ def bibliography_entry?(line)
 end
 
 def heading_level(line)
+  return 1 if line == "Cadre exploratoire et conception du design de recherche"
+  return 1 if line == "Plan prévisionnel détaillé de la thèse" || line == "Sommaire du cadre exploratoire"
+  return 2 if line.match?(/^Note préliminaire/)
   return 1 if line.match?(/^(1|2|3|4|5|6)\. [A-ZÉÈÊËÀÂÎÏÔÛÙÇ' -]+$/) || line == "BIBLIOGRAPHIE"
   return 2 if line.match?(/^(Problématisation|Intérêt de la recherche|De l'accomplissement social|P1 —|P2 —|P3 —|Comment l'IA|Les 3 sphères|Situations et observables|Une démarche|Un design|Une posture|Un dispositif|Scénario fictif|Phases du scenario)/)
   return 3 if line.match?(/^(R|P|C) — /) || line.match?(/^S[1-3] — /) || line.match?(/^[1-4]\. /) || line.match?(/— Sem\.|— Post|Exploration|Préparation|Analyse collaborative|Affinement|Validation mutuelle|Présentation au COMEX/)
   0
 end
 
-def to_markdown(text)
+def to_markdown(text, full_document: false)
   lines = text.gsub("\r\n", "\n").split("\n")
-  start = lines.index { |line| normalize_spaces(line) == "1. POSITIONNEMENT DE LA RECHERCHE" }
+  start = if full_document
+    0
+  else
+    lines.index { |line| normalize_spaces(line) == "1. POSITIONNEMENT DE LA RECHERCHE" }
+  end
   abort("Could not find exploratory-framework start marker.") unless start
 
   out = []
@@ -53,7 +60,7 @@ def to_markdown(text)
       next
     end
 
-    next if line == "\f" || line.start_with?("Sommaire du cadre exploratoire")
+    next if line == "\f"
 
     level = heading_level(line)
     if level.positive? && !bibliography_entry?(line)
@@ -104,26 +111,39 @@ def bibliography_entries(markdown)
 end
 
 def page_marked(markdown)
-  body = markdown.dup
-  [
-    ["# 1. POSITIONNEMENT DE LA RECHERCHE", "[p. 16]"],
-    ["# 2. CADRE THEORIQUE MOBILISÉ", "[p. 21]"],
-    ["# 3. CADRE PROPOSITIONNEL", "[p. 27]"],
-    ["## P1 — Reconfiguration multidimensionnelle de la valeur perçue", "[p. 28]"],
-    ["### R — Relationnelle", "[p. 29]"],
-    ["## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C", "[p. 30]"],
-    ["## P2 — La transparence comme mécanisme médiateur", "[p. 30]"],
-    ["## P3 — Les contingences acteur de la transparence substantive", "[p. 31]"],
-    ["# 4. CADRE D'OBSERVATION", "[p. 32]"],
-    ["## Situations et observables", "[p. 33]"],
-    ["# 5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE", "[p. 35]"],
-    ["# 6. ILLUSTRATION", "[p. 38]"],
-    ["# BIBLIOGRAPHIE", "[p. 42]"]
-  ].each do |marker, page|
-    index = body.index(marker)
-    body = body[0...index] + page + "\n\n" + body[index..] if index
+  markers = {
+    "## Note préliminaire:" => "[p. 3]",
+    "# Plan prévisionnel détaillé de la thèse" => "[p. 4]",
+    "# Sommaire du cadre exploratoire" => "[p. 14]",
+    "# 1. POSITIONNEMENT DE LA RECHERCHE" => "[p. 16]",
+    "# 2. CADRE THEORIQUE MOBILISÉ" => "[p. 21]",
+    "# 3. CADRE PROPOSITIONNEL" => "[p. 27]",
+    "## P1 — Reconfiguration multidimensionnelle de la valeur perçue" => "[p. 28]",
+    "### R — Relationnelle" => "[p. 29]",
+    "## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement)" => "[p. 30]",
+    "## P2 — La transparence comme mécanisme médiateur" => "[p. 30]",
+    "## P3 — Les contingences acteur de la transparence substantive: littératie IA et aversion à l’algorithme" => "[p. 31]",
+    "# 4. CADRE D'OBSERVATION" => "[p. 32]",
+    "## Situations et observables" => "[p. 33]",
+    "# 5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE" => "[p. 35]",
+    "# 6. ILLUSTRATION" => "[p. 38]",
+    "# BIBLIOGRAPHIE" => "[p. 42]"
+  }
+  seen = {}
+  out = []
+
+  markdown.each_line do |line|
+    clean = line.strip
+    page = markers[clean]
+    if page && !seen[clean]
+      out << page
+      out << ""
+      seen[clean] = true
+    end
+    out << line.chomp
   end
-  body
+
+  out.join("\n").gsub(/\n{3,}/, "\n\n").strip + "\n"
 end
 
 def markdown_to_html(markdown, lang, title)
@@ -318,7 +338,9 @@ end
 run("/usr/bin/textutil", "-convert", "txt", SOURCE_DOCX, "-output", TMP_TXT)
 source_text = File.read(TMP_TXT)
 markdown = to_markdown(source_text)
+full_markdown = to_markdown(source_text, full_document: true)
 marked_markdown = page_marked(markdown)
+marked_full_markdown = page_marked(full_markdown)
 content = load_content
 update_french_content(content, markdown)
 write_content(content)
@@ -326,7 +348,6 @@ write_content(content)
 File.write(FR_MARKDOWN_PATH, marked_markdown)
 File.write(
   SOURCE_MARKDOWN_PATH,
-  "# Cadre exploratoire - source primaire\n\nDocument source : Cadre_Exploratoire_YUNES_V1.0.docx\nVersion synchronisée avec l'application interactive.\nPérimètre conservé : sommaire du cadre exploratoire uniquement (sections 1 à 6 et bibliographie).\n\n#{marked_markdown}"
+  "# Cadre exploratoire - source primaire\n\nDocument source : Cadre_Exploratoire_YUNES_V0.docx\nVersion synchronisée avec l'application interactive.\nPérimètre chatbot : document complet, incluant note préliminaire, plan prévisionnel détaillé de la thèse, cadre exploratoire et bibliographie.\nPérimètre UX de l'application : cadre exploratoire uniquement, afin de ne pas alourdir la navigation.\n\n#{marked_full_markdown}"
 )
 File.write(FR_HTML_PATH, markdown_to_html(marked_markdown, "fr", "Cadre exploratoire - Yunes Clement"))
-markdown_to_docx(marked_markdown, FR_DOCX_PATH)
