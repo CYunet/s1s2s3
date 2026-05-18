@@ -53,6 +53,15 @@ The app exposes a language-aware download link in the header:
 
 The visual design and placement of the header link remain identical across local and deployed modes; only the download target is static.
 
+## UCPD Content Update Checklist
+
+When running the UCPD flow after loading a new French exploratory framework document, update both language versions before committing and deploying:
+
+- update the French app content, primary source Markdown and French companion files from the new source document
+- update the English app content and English companion files from the same source version, using the translated version of that document
+- verify that the header downloads point to the matching French and English Word files
+- commit, push and confirm that production serves the updated FR and EN assets
+
 ## Primary source library
 
 The chatbot now uses one sole primary source for framework-grounded answers:

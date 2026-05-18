@@ -307,6 +307,7 @@ The artefact is successful if:
 - the timeline clarifies how theory becomes observable in the mission
 - the chatbot gives source-grounded framework answers and clearly labelled practical extrapolations
 - both English and French remain coherent in content and UX
+- when a new French source document is loaded through the UCPD flow, the matching translated English version is loaded in the English page and English companion files before deployment
 - the French and English human-readable companion documents remain aligned with the site content and are updated when documentation is updated
 - the language-aware Word download provides the correct static companion document from the app header in both local and deployed modes
 
