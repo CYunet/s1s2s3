@@ -33,8 +33,8 @@ def heading_level(line)
   return 1 if line == "Cadre exploratoire et conception du design de recherche"
   return 1 if line == "Plan prévisionnel détaillé de la thèse" || line == "Sommaire du cadre exploratoire"
   return 2 if line.match?(/^Note préliminaire/)
-  return 1 if line.match?(/^(1|2|3|4|5|6)\. [A-ZÉÈÊËÀÂÎÏÔÛÙÇ' -]+$/) || line == "BIBLIOGRAPHIE"
-  return 2 if line.match?(/^(Problématisation|Intérêt de la recherche|De l'accomplissement social|P1 —|P2 —|P3 —|Comment l'IA|Les 3 sphères|Situations et observables|Une démarche|Un design|Une posture|Un dispositif|Scénario fictif|Phases du scenario)/)
+  return 1 if line.match?(/^(1|2|3|4|5|6|7)\. [A-ZÉÈÊËÀÂÎÏÔÛÙÇ’' -]+(\s| )*(:|$)/) || line == "BIBLIOGRAPHIE"
+  return 2 if line.match?(/^(Problématisation|Intérêt de la recherche|De l'accomplissement social|La finalité du conseil|L’intégration de l’IA|Penser l'IA|L’IA, comment|L’IA, une composante|Implication théorique|Implication praxéologique|La Service-Dominant Logic|L'interaction client-consultant|L’IA comme perturbateur|La Rencontre de Service Hybride|Synthèse du cadre théorique|P1 —|P1 –|P2 —|P2 –|P3 —|P3 –|Dimensions de la valeur|Comment l'IA|Opérationnalisation du cadre|S1 \(Sans IA\)|Les 3 sphères|Situations et observables|Une démarche|Un design|Une posture|Le cas étudié|Un dispositif|Scénario fictif|Phases du scenario)/)
   return 3 if line.match?(/^(R|P|C) — /) || line.match?(/^S[1-3] — /) || line.match?(/^[1-4]\. /) || line.match?(/— Sem\.|— Post|Exploration|Préparation|Analyse collaborative|Affinement|Validation mutuelle|Présentation au COMEX/)
   0
 end
@@ -44,7 +44,7 @@ def to_markdown(text, full_document: false)
   start = if full_document
     0
   else
-    lines.index { |line| normalize_spaces(line) == "1. POSITIONNEMENT DE LA RECHERCHE" }
+    lines.index { |line| normalize_spaces(line).start_with?("1. POSITIONNEMENT") && !line.include?("\t") }
   end
   abort("Could not find exploratory-framework start marker.") unless start
 
@@ -102,43 +102,59 @@ def section(markdown, start_marker, end_marker = nil)
   clean_block(markdown[start_index...end_index])
 end
 
+def heading_marker(markdown, prefix)
+  marker = markdown.each_line.find do |line|
+    line.sub(/^#+\s*/, "").strip.start_with?(prefix)
+  end
+  abort("Missing heading prefix: #{prefix}") unless marker
+  marker.strip
+end
+
+def section_prefix(markdown, start_prefix, end_prefix = nil)
+  section(
+    markdown,
+    heading_marker(markdown, start_prefix),
+    end_prefix ? heading_marker(markdown, end_prefix) : nil
+  )
+end
+
 def html_paragraphs(value)
   clean_block(value).split(/\n{2,}/).map { |paragraph| CGI.escapeHTML(paragraph) }.join("<br><br>")
 end
 
 def bibliography_entries(markdown)
-  section(markdown, "# BIBLIOGRAPHIE").split(/\n{2,}/).map { |entry| strip_inline(entry) }.reject(&:empty?)
+  section_prefix(markdown, "7. BIBLIOGRAPHIE").split(/\n{2,}/).map { |entry| strip_inline(entry) }.reject(&:empty?)
 end
 
 def page_marked(markdown)
-  markers = {
-    "## Note préliminaire:" => "[p. 3]",
-    "# Plan prévisionnel détaillé de la thèse" => "[p. 4]",
-    "# Sommaire du cadre exploratoire" => "[p. 14]",
-    "# 1. POSITIONNEMENT DE LA RECHERCHE" => "[p. 16]",
-    "# 2. CADRE THEORIQUE MOBILISÉ" => "[p. 21]",
-    "# 3. CADRE PROPOSITIONNEL" => "[p. 27]",
-    "## P1 — Reconfiguration multidimensionnelle de la valeur perçue" => "[p. 28]",
-    "### R — Relationnelle" => "[p. 29]",
-    "## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C (à tester empiriquement)" => "[p. 30]",
-    "## P2 — La transparence comme mécanisme médiateur" => "[p. 30]",
-    "## P3 — Les contingences acteur de la transparence substantive: littératie IA et aversion à l’algorithme" => "[p. 31]",
-    "# 4. CADRE D'OBSERVATION" => "[p. 32]",
-    "## Situations et observables" => "[p. 33]",
-    "# 5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE" => "[p. 35]",
-    "# 6. ILLUSTRATION" => "[p. 38]",
-    "# BIBLIOGRAPHIE" => "[p. 42]"
-  }
-  seen = {}
+  markers = [
+    ["Note préliminaire", "[p. 3]"],
+    ["Plan prévisionnel détaillé de la thèse", "[p. 4]"],
+    ["Sommaire du cadre exploratoire", "[p. 14]"],
+    ["1. POSITIONNEMENT", "[p. 17]"],
+    ["2. CADRE THÉORIQUE", "[p. 24]"],
+    ["3. CADRE PROPOSITIONNEL", "[p. 31]"],
+    ["P1", "[p. 32]"],
+    ["R — Relationnelle", "[p. 33]"],
+    ["Comment l'IA reconfigure", "[p. 34]"],
+    ["P2", "[p. 35]"],
+    ["P3", "[p. 35]"],
+    ["4. CADRE D’OBSERVATION", "[p. 36]"],
+    ["S1 (Sans IA)", "[p. 37]"],
+    ["5. DESIGN DE RECHERCHE", "[p. 39]"],
+    ["6. ILLUSTRATION", "[p. 43]"],
+    ["7. BIBLIOGRAPHIE", "[p. 47]"]
+  ]
   out = []
 
   markdown.each_line do |line|
-    clean = line.strip
-    page = markers[clean]
-    if page && !seen[clean]
+    raw = line.strip
+    clean = raw.sub(/^#+\s*/, "")
+    marker = raw.start_with?("#") ? markers.find { |item| clean.start_with?(item[0]) } : nil
+    if marker
+      page = marker[1]
       out << page
       out << ""
-      seen[clean] = true
     end
     out << line.chomp
   end
@@ -271,25 +287,28 @@ def update_french_content(content, markdown)
   fr["hero"]["subtitle"] = "Cadre exploratoire et conception du design de recherche"
   fr["hero"]["signature"] = "Yunes, Clément - Université de Bordeaux – Avril 2026 – 2e année de doctorat"
   fr["nav"] = [
-    { "id" => "why", "label" => "1. POSITIONNEMENT DE LA RECHERCHE" },
-    { "id" => "theory", "label" => "2. CADRE THEORIQUE MOBILISÉ" },
+    { "id" => "why", "label" => "1. POSITIONNEMENT" },
+    { "id" => "theory", "label" => "2. CADRE THÉORIQUE MOBILISÉ" },
     { "id" => "propositions", "label" => "3. CADRE PROPOSITIONNEL" },
     { "id" => "spheres", "label" => "4. CADRE D'OBSERVATION" },
-    { "id" => "posture", "label" => "5. POSTURE DU CHERCHEUR" },
+    { "id" => "posture", "label" => "5. DESIGN DE RECHERCHE" },
     { "id" => "illustration", "label" => "6. ILLUSTRATION" },
     { "id" => "bibliography", "label" => "BIBLIOGRAPHIE" }
   ]
 
-  fr["whyResearch"]["questionHtml"] = html_paragraphs(section(markdown, "## Problématisation", "## Intérêt de la recherche"))
-  fr["whyResearch"]["whyHtml"] = html_paragraphs(section(markdown, "## Intérêt de la recherche", "# 2. CADRE THEORIQUE MOBILISÉ"))
-  fr["whyResearch"]["gapHtml"] = html_paragraphs("En proposant de nouvelles dimensions de la valeur perçue, plus adaptées à l’intégration de l’IA dans les pratiques du conseil (le triptyque R-P-C), articulées à un cadre propositionnel (P1, P2, P3) et d’observation (configurations d'interaction S1, S2, S3) spécifiques, nous définissons une plateforme conceptuelle qui permet de mieux comprendre ce qui fait la valeur perçue du conseil à l'ère de l'IA.")
+  fr["whyResearch"]["questionHtml"] = html_paragraphs(section_prefix(markdown, "La finalité du conseil", "L’intégration de l’IA"))
+  fr["whyResearch"]["whyHtml"] = html_paragraphs(section_prefix(markdown, "L’intégration de l’IA", "Penser l'IA"))
+  fr["whyResearch"]["gapHtml"] = html_paragraphs(section_prefix(markdown, "Penser l'IA", "2. CADRE"))
 
   fr["theory"]["overviewBlocks"] = [
-    { "label" => "La valeur perçue du conseil, un accomplissement social", "text" => section(markdown, "La valeur perçue du conseil, un accomplissement social", "L’IA perturbateur de l’accomplissement social") },
-    { "label" => "L’IA perturbateur de l’accomplissement social : la perspective de l’enchevêtrement", "text" => section(markdown, "L’IA perturbateur de l’accomplissement social", "# 3. CADRE PROPOSITIONNEL") }
+    { "label" => "La Service-Dominant Logic : la valeur du conseil comme cocréation en sphère conjointe", "text" => section_prefix(markdown, "La Service-Dominant Logic", "L'interaction client-consultant") },
+    { "label" => "L'interaction client-consultant comme processus social de création de connaissances", "text" => section_prefix(markdown, "L'interaction client-consultant", "L’IA comme perturbateur") },
+    { "label" => "L’IA comme perturbateur de l'attribution de valeur", "text" => section_prefix(markdown, "L’IA comme perturbateur", "La Rencontre de Service Hybride") },
+    { "label" => "La Rencontre de Service Hybride : du design de l’IA au co-pilotage de la valeur", "text" => section_prefix(markdown, "La Rencontre de Service Hybride", "Synthèse du cadre théorique") },
+    { "label" => "Synthèse du cadre théorique : l'intelligibilité de l'intelligence hybride comme condition de la valeur perçue", "text" => section_prefix(markdown, "Synthèse du cadre théorique", "3. CADRE PROPOSITIONNEL") }
   ]
 
-  fr["propositions"]["introHtml"] = html_paragraphs(section(markdown, "# 3. CADRE PROPOSITIONNEL", "## P1 — Reconfiguration multidimensionnelle de la valeur perçue"))
+  fr["propositions"]["introHtml"] = html_paragraphs(section_prefix(markdown, "3. CADRE PROPOSITIONNEL", "P1"))
   fr["propositions"]["modelLabel"] = "LE TRIANGLE R - P - C"
   fr["propositions"]["sequenceHtml"] = "<strong>TRIANGLE</strong> <span class=\"sequence-pill sequence-pill--relational\">R</span><span class=\"sequence-arrow\">↔</span><span class=\"sequence-pill sequence-pill--processual\">P</span><span class=\"sequence-arrow\">↔</span><span class=\"sequence-pill sequence-pill--cognitive\">C</span>"
   fr["propositions"]["dimensionCards"] = [
@@ -298,34 +317,34 @@ def update_french_content(content, markdown)
     { "tone" => "cognitive", "label" => "Cognitive", "letter" => "C", "text" => "L'appropriation cognitive et la création de connaissances managériales, lorsque les productions deviennent intelligibles, évaluables et mobilisables par le client." }
   ]
   fr["propositions"]["rpcDiagram"]["title"] = "Comment l'IA reconfigure les trois interdépendances du triangle R - P – C"
-  fr["propositions"]["rpcDiagram"]["intro"] = section(markdown, "## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C", "## P2 — La transparence comme mécanisme médiateur")
+  fr["propositions"]["rpcDiagram"]["intro"] = section_prefix(markdown, "Comment l'IA reconfigure", "P2")
   fr["propositions"]["rpcDiagram"]["links"] = [
     { "label" => "R ↔ P", "positive" => "Une orchestration visible et crédible peut renforcer l'engagement processuel.", "negative" => "Un usage masqué de l'IA peut fragiliser la légitimité et délégitimer rétrospectivement le processus.", "contingency" => "Protégé par P2, modulé par la lisibilité, la littératie IA et l'aversion à l'algorithme." },
     { "label" => "P ↔ C", "positive" => "Une co-création visible avec l'IA peut enrichir l'appropriation et la création de connaissances.", "negative" => "L'IA peut découpler la connaissance de la co-production si le client reçoit des outputs sans participer à leur génération.", "contingency" => "Dépend de l'explicitation substantive du conseil, modulée par P3." },
     { "label" => "C ↔ R", "positive" => "La création de connaissances nouvelles peut renforcer rétroactivement la légitimité du conseil.", "negative" => "Une absence d'appropriation cognitive peut éroder la légitimité a posteriori.", "contingency" => "Lien à tester empiriquement dans l'étude de cas." }
   ]
   fr["propositions"]["propositionDetails"] = [
-    { "tone" => "relational", "badge" => "P1", "title" => "P1 — Reconfiguration multidimensionnelle de la valeur perçue", "text" => section(markdown, "## P1 — Reconfiguration multidimensionnelle de la valeur perçue", "## Comment l'IA reconfigure les trois interdépendances du triangle R - P – C") },
-    { "tone" => "processual", "badge" => "P2", "title" => "P2 — La transparence comme mécanisme médiateur", "text" => section(markdown, "## P2 — La transparence comme mécanisme médiateur", "## P3 — Les contingences acteur de la transparence substantive") },
-    { "tone" => "cognitive", "badge" => "P3", "title" => "P3 — Les contingences acteur de la transparence substantive", "text" => section(markdown, "## P3 — Les contingences acteur de la transparence substantive", "# 4. CADRE D'OBSERVATION") }
+    { "tone" => "relational", "badge" => "P1", "title" => "P1 — La reconfiguration multidimensionnelle de la valeur par l'IA", "text" => section_prefix(markdown, "P1", "Comment l'IA reconfigure") },
+    { "tone" => "processual", "badge" => "P2", "title" => "P2 — La transparence comme mécanisme médiateur face à la boîte noire", "text" => section_prefix(markdown, "P2", "P3") },
+    { "tone" => "cognitive", "badge" => "P3", "title" => "P3 — L’influence des profils d'acteurs", "text" => section_prefix(markdown, "P3", "4. CADRE") }
   ]
 
   fr["spheres"]["title"] = "Les 3 sphères de co-création de valeur perçue du conseil à l’ère de l’IA : S1, S2, S3"
-  fr["spheres"]["intro"] = section(markdown, "## Les 3 sphères", "## Situations et observables")
+  fr["spheres"]["intro"] = section_prefix(markdown, "4. CADRE", "S1 (Sans IA)")
   fr["spheres"]["cards"] = [
-    { "key" => "s1", "tone" => "s1", "title" => "S1 — Sans IA", "text" => section(markdown, "### S1 — Sans IA", "### S2 — IA en silo") },
-    { "key" => "s2", "tone" => "s2", "title" => "S2 — IA en silo", "text" => section(markdown, "### S2 — IA en silo", "### S3 — Co-création tripartite") },
-    { "key" => "s3", "tone" => "s3", "title" => "S3 — Co-création tripartite", "text" => section(markdown, "### S3 — Co-création tripartite", "# 5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE") }
+    { "key" => "s1", "tone" => "s1", "title" => "S1 — Sans IA", "text" => section_prefix(markdown, "S1 — Sans IA", "S2 — IA en silo") },
+    { "key" => "s2", "tone" => "s2", "title" => "S2 — IA en silo", "text" => section_prefix(markdown, "S2 — IA en silo", "S3 — Cocréation tripartite") },
+    { "key" => "s3", "tone" => "s3", "title" => "S3 — Cocréation tripartite", "text" => section_prefix(markdown, "S3 — Cocréation tripartite", "5. DESIGN") }
   ]
 
   fr["posture"] = {
-    "kicker" => "5. POSTURE DU CHERCHEUR ET DESIGN DE LA RECHERCHE",
-    "title" => "Posture du chercheur et design de la recherche",
+    "kicker" => "5. DESIGN DE RECHERCHE",
+    "title" => "Etude de cas exemplaire et auto-ethnographie d’un praticien réflexif",
     "blocks" => [
-      { "label" => "Une démarche qualitative exploratoire en deux temps", "text" => section(markdown, "## Une démarche qualitative exploratoire en deux temps", "## Un design d'étude de cas exemplaire") },
-      { "label" => "Un design d'étude de cas exemplaire en grandeur réelle", "text" => section(markdown, "## Un design d'étude de cas exemplaire", "## Une posture assumée de praticien réflexif") },
-      { "label" => "Une posture assumée de praticien réflexif", "text" => section(markdown, "## Une posture assumée de praticien réflexif", "## Un dispositif de réflexivité renforcé") },
-      { "label" => "Un dispositif de réflexivité renforcé face au risque de biais", "text" => section(markdown, "## Un dispositif de réflexivité renforcé", "# 6. ILLUSTRATION") }
+      { "label" => "Une démarche qualitative exploratoire en deux temps", "text" => section_prefix(markdown, "Une démarche qualitative exploratoire", "Un design d'étude de cas") },
+      { "label" => "Un design d'étude de cas exemplaire en grandeur réelle", "text" => section_prefix(markdown, "Un design d'étude de cas", "Une posture assumée") },
+      { "label" => "Une posture assumée de praticien réflexif", "text" => section_prefix(markdown, "Une posture assumée", "Un dispositif de réflexivité") },
+      { "label" => "Un dispositif de réflexivité renforcé face au risque de biais", "text" => section_prefix(markdown, "Un dispositif de réflexivité", "6. ILLUSTRATION") }
     ]
   }
 
@@ -353,6 +372,6 @@ write_content(content)
 File.write(FR_MARKDOWN_PATH, marked_markdown)
 File.write(
   SOURCE_MARKDOWN_PATH,
-  "# Cadre exploratoire - source primaire\n\nDocument source : Cadre_Exploratoire_YUNES_V0.docx\nVersion synchronisée avec l'application interactive.\nPérimètre chatbot : document complet, incluant note préliminaire, plan prévisionnel détaillé de la thèse, cadre exploratoire et bibliographie.\nPérimètre UX de l'application : cadre exploratoire uniquement, afin de ne pas alourdir la navigation.\n\n#{marked_full_markdown}"
+  "# Cadre exploratoire - source primaire\n\nDocument source : Cadre_Exploratoire_YUNES_V0.1.docx\nVersion synchronisée avec l'application interactive.\nPérimètre chatbot : document complet, incluant note préliminaire, plan prévisionnel détaillé de la thèse, cadre exploratoire et bibliographie.\nPérimètre UX de l'application : cadre exploratoire uniquement, afin de ne pas alourdir la navigation.\n\n#{marked_full_markdown}"
 )
 File.write(FR_HTML_PATH, markdown_to_html(marked_markdown, "fr", "Cadre exploratoire - Yunes Clement"))
